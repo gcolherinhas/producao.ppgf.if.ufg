@@ -9,8 +9,8 @@
 :root {
   --pad: 24px;
   --safe-top: 12px;
-  --header-actual-h: 118px;
-  --subheader-actual-h: 78px;
+  --header-actual-h: 130px;
+  --subheader-actual-h: 90px;
 }
 
 * {
@@ -40,17 +40,17 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 6px var(--pad);
+  padding: 10px var(--pad);
 }
 
 .header-inner {
   width: 100%;
-  max-width: 1300px;
+  max-width: 1400px;
 }
 
 .header-table {
   width: 100%;
-  max-width: 1080px;
+  max-width: 1250px;
   margin: 0 auto;
   border-collapse: collapse;
   table-layout: fixed;
@@ -63,12 +63,12 @@ header {
 }
 
 .header-cell-logos {
-  width: 220px;
+  width: 260px;
   text-align: center;
 }
 
 .header-cell-gap {
-  width: 60px;
+  width: 140px;
 }
 
 .header-cell-text {
@@ -79,11 +79,11 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 8px;
+  gap: 10px;
 }
 
 .header-logos img {
-  height: 58px;
+  height: 68px;
   width: auto;
   object-fit: contain;
   display: block;
@@ -92,9 +92,9 @@ header {
 
 .header-center {
   text-align: center;
-  font-size: 18px;
+  font-size: 22px;
   font-weight: 800;
-  line-height: 1.15;
+  line-height: 1.2;
 }
 
 .subheader {
@@ -108,36 +108,36 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 8px var(--pad) 10px var(--pad);
+  padding: 12px var(--pad) 14px var(--pad);
 }
 
 .subheader-inner {
   width: 100%;
-  max-width: 1200px;
+  max-width: 1400px;
 }
 
 .page-title {
   text-align: center;
-  font-size: 18px;
+  font-size: 24px;
   font-weight: 800;
   color: #fff;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
 }
 
 .anos-toolbar {
   display: flex;
-  gap: 10px;
+  gap: 12px;
   flex-wrap: wrap;
   justify-content: center;
 }
 
 .ano-btn {
-  min-height: 42px;
-  padding: 8px 16px;
-  border-radius: 9px;
+  min-height: 48px;
+  padding: 10px 18px;
+  border-radius: 10px;
   border: 1px solid #cfcfcf;
   background: #fff;
-  font-size: 15px;
+  font-size: 18px;
   font-weight: 800;
   cursor: pointer;
 }
@@ -296,31 +296,31 @@ main {
   }
 
   .header-table {
-    max-width: 980px;
+    max-width: 1100px;
   }
 
   .header-cell-logos {
-    width: 190px;
+    width: 220px;
   }
 
   .header-cell-gap {
-    width: 40px;
+    width: 100px;
   }
 
   .header-logos img {
-    height: 50px;
+    height: 58px;
   }
 
   .header-center {
-    font-size: 17px;
+    font-size: 19px;
   }
 
   .page-title {
-    font-size: 17px;
+    font-size: 21px;
   }
 
   .ano-btn {
-    font-size: 15px;
+    font-size: 16px;
   }
 
   .ano-titulo {
@@ -343,10 +343,6 @@ main {
     --safe-top: 10px;
   }
 
-  header {
-    padding: 8px var(--pad);
-  }
-
   .header-table,
   .header-table tbody,
   .header-table tr,
@@ -357,7 +353,7 @@ main {
 
   .header-cell-logos {
     width: 100%;
-    margin-bottom: 8px;
+    margin-bottom: 10px;
     text-align: center;
   }
 
@@ -372,28 +368,22 @@ main {
   }
 
   .header-logos img {
-    height: 48px;
+    height: 52px;
   }
 
   .header-center {
     text-align: center;
-    font-size: 16px;
-    line-height: 1.2;
-  }
-
-  .subheader {
-    padding: 8px var(--pad) 10px var(--pad);
+    font-size: 17px;
   }
 
   .page-title {
-    font-size: 17px;
-    margin-bottom: 10px;
+    font-size: 18px;
   }
 
   .ano-btn {
-    min-height: 40px;
-    font-size: 14px;
-    padding: 8px 13px;
+    min-height: 44px;
+    font-size: 15px;
+    padding: 8px 14px;
   }
 
   .ano-titulo {
@@ -435,11 +425,11 @@ main {
 
 @media (max-width: 480px) {
   .header-logos img {
-    height: 42px;
+    height: 44px;
   }
 
   .header-center {
-    font-size: 14px;
+    font-size: 15px;
   }
 
   .page-title {
@@ -447,7 +437,7 @@ main {
   }
 
   .ano-btn {
-    font-size: 13px;
+    font-size: 14px;
   }
 
   .ano-titulo {
