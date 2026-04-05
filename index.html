@@ -8,9 +8,9 @@
 <style>
 :root {
   --pad: 24px;
-  --safe-top: 12px;
-  --header-actual-h: 130px;
-  --subheader-actual-h: 90px;
+  --safe-top: 16px;
+  --header-actual-h: 140px;
+  --subheader-actual-h: 96px;
 }
 
 * {
@@ -49,11 +49,9 @@ header {
 }
 
 .header-table {
-  width: 100%;
-  max-width: 1250px;
+  width: auto;
   margin: 0 auto;
   border-collapse: collapse;
-  table-layout: fixed;
 }
 
 .header-table td {
@@ -63,16 +61,14 @@ header {
 }
 
 .header-cell-logos {
-  width: 260px;
+  width: 240px;
   text-align: center;
-}
-
-.header-cell-gap {
-  width: 140px;
+  padding-right: 28px !important;
 }
 
 .header-cell-text {
-  text-align: center;
+  text-align: left;
+  padding-left: 28px !important;
 }
 
 .header-logos {
@@ -91,10 +87,11 @@ header {
 }
 
 .header-center {
-  text-align: center;
+  text-align: left;
   font-size: 22px;
   font-weight: 800;
   line-height: 1.2;
+  word-break: break-word;
 }
 
 .subheader {
@@ -118,9 +115,10 @@ header {
 
 .page-title {
   text-align: center;
-  font-size: 24px;
+  font-size: 22px;
   font-weight: 800;
   color: #fff;
+  line-height: 1.35;
   margin-bottom: 12px;
 }
 
@@ -129,6 +127,7 @@ header {
   gap: 12px;
   flex-wrap: wrap;
   justify-content: center;
+  align-items: stretch;
 }
 
 .ano-btn {
@@ -140,6 +139,9 @@ header {
   font-size: 18px;
   font-weight: 800;
   cursor: pointer;
+  line-height: 1.2;
+  white-space: normal;
+  text-align: center;
 }
 
 .ano-btn.active {
@@ -295,16 +297,13 @@ main {
     --pad: 18px;
   }
 
-  .header-table {
-    max-width: 1100px;
-  }
-
   .header-cell-logos {
-    width: 220px;
+    width: 210px;
+    padding-right: 22px !important;
   }
 
-  .header-cell-gap {
-    width: 100px;
+  .header-cell-text {
+    padding-left: 22px !important;
   }
 
   .header-logos img {
@@ -316,11 +315,13 @@ main {
   }
 
   .page-title {
-    font-size: 21px;
+    font-size: 20px;
   }
 
   .ano-btn {
     font-size: 16px;
+    min-height: 46px;
+    padding: 10px 14px;
   }
 
   .ano-titulo {
@@ -343,6 +344,10 @@ main {
     --safe-top: 10px;
   }
 
+  header {
+    padding: 10px var(--pad);
+  }
+
   .header-table,
   .header-table tbody,
   .header-table tr,
@@ -354,17 +359,16 @@ main {
   .header-cell-logos {
     width: 100%;
     margin-bottom: 10px;
-    text-align: center;
-  }
-
-  .header-cell-gap {
-    display: none !important;
-    width: 0 !important;
-    height: 0 !important;
+    padding-right: 0 !important;
   }
 
   .header-cell-text {
+    padding-left: 0 !important;
     text-align: center;
+  }
+
+  .header-logos {
+    gap: 8px;
   }
 
   .header-logos img {
@@ -374,10 +378,16 @@ main {
   .header-center {
     text-align: center;
     font-size: 17px;
+    line-height: 1.25;
+  }
+
+  .subheader {
+    padding: 10px var(--pad) 12px var(--pad);
   }
 
   .page-title {
-    font-size: 18px;
+    font-size: 17px;
+    margin-bottom: 10px;
   }
 
   .ano-btn {
@@ -433,7 +443,7 @@ main {
   }
 
   .page-title {
-    font-size: 16px;
+    font-size: 15px;
   }
 
   .ano-btn {
@@ -507,12 +517,12 @@ window.addEventListener('DOMContentLoaded', function() {
             <img src="https://files.cercomp.ufg.br/weby/assets/level2/marca-ufg-677b562915f50ba83e8e1516f068bde65a0e00330471068ad6320189ac9f140a.svg" alt="Marca UFG">
           </div>
         </td>
-        <td class="header-cell-gap"></td>
         <td class="header-cell-text">
           <div class="header-center">
             Universidade Federal de Goiás - UFG<br>
             Instituto de Física - IF<br>
-            Programa de Pós-Graduação em Física - PPGF
+            Programa de Pós-Graduação em Física - PPGF<br>
+            Artigos Publicados pelos Docentes do PPGF
           </div>
         </td>
       </tr>
@@ -522,7 +532,9 @@ window.addEventListener('DOMContentLoaded', function() {
 
 <div class="subheader">
   <div class="subheader-inner">
-    <div class="page-title">Artigos publicados pelos docentes do PPGF</div>
+    <div class="page-title">
+      Última Atualização - 05/04/2026 - 10:54
+    </div>
     <div class="anos-toolbar">
       <button id="btn-2026" class="ano-btn" onclick="showYear('ano-2026', 'btn-2026')">2026</button>
 <button id="btn-2025" class="ano-btn" onclick="showYear('ano-2025', 'btn-2025')">2025</button>
@@ -540,7 +552,7 @@ window.addEventListener('DOMContentLoaded', function() {
         <section id="ano-2026" class="ano-section" style="display:none;">
           <div class="ano-header">
             <div class="ano-titulo">Artigos Publicados em 2026</div>
-            <div class="ano-total">Total: 36 artigo(s)</div>
+            <div class="ano-total">Total: 38 artigo(s)</div>
           </div>
           <div class="artigos-grid" id="artigos-grid-2026">
             
@@ -671,6 +683,15 @@ window.addEventListener('DOMContentLoaded', function() {
         
 
         <article class="artigo-card artigo-card-2026">
+          <div class="artigo-titulo">Cholesterol-Driven Optimization of Liposomal Systems for Ivermectin Capture: Insights from Experimental and Molecular Dynamics Studies</div>
+          <div class="artigo-ref">ACS Applied Materials &amp; Interfaces, n. 7, v. 18, p. 10832-10841, American Chemical Society (ACS), 25/02/2026</div>
+          <div class="artigo-citacoes">Citações: 0</div>
+          <div class="artigo-autores"><em>Alexandre C. M. Barros, Jader Pires, Karinna Mendanha, Lucas R. de Sousa, Bianca B. Fontanezi, Guilherme Colherinhas, Ana F. M. Botelho, Sebastião A. Mendanha, Eliana M. Lima</em></div>
+          <div class="artigo-link"><a href="https://doi.org/10.1021/acsami.5c21365" target="_blank" rel="noopener noreferrer">https://doi.org/10.1021/acsami.5c21365</a></div>
+        </article>
+        
+
+        <article class="artigo-card artigo-card-2026">
           <div class="artigo-titulo">Ester-Based Electrolyte Mixtures for Graphene Supercapacitors: A Molecular Dynamics Investigation</div>
           <div class="artigo-ref">The Journal of Physical Chemistry B, n. 7, v. 130, p. 2178-2193, American Chemical Society (ACS), 19/02/2026</div>
           <div class="artigo-citacoes">Citações: 1</div>
@@ -748,6 +769,15 @@ window.addEventListener('DOMContentLoaded', function() {
           <div class="artigo-citacoes">Citações: 0</div>
           <div class="artigo-autores"><em>J. Abhir, A. Biland, K. Brand, T. Bretz, D. Dorner, L. Eisenberger, D. Elsaesser, P. Günther, S. Hasan, D. Hildebrand, et al.</em></div>
           <div class="artigo-link"><a href="https://doi.org/10.3847/1538-4357/ae2c4e" target="_blank" rel="noopener noreferrer">https://doi.org/10.3847/1538-4357/ae2c4e</a></div>
+        </article>
+        
+
+        <article class="artigo-card artigo-card-2026">
+          <div class="artigo-titulo">Chloride substitution and hydration effects in [emim][bnz] electrolytes for lightweight supercapacitors</div>
+          <div class="artigo-ref">Journal of Molecular Liquids, v. 443, p. 129142, Elsevier BV, 01/02/2026</div>
+          <div class="artigo-citacoes">Citações: 0</div>
+          <div class="artigo-autores"><em>Leonardo B.A. Oliveira, Lucas de S. Silva, Tertius L. Fonseca, Guilherme Colherinhas</em></div>
+          <div class="artigo-link"><a href="https://doi.org/10.1016/j.molliq.2025.129142" target="_blank" rel="noopener noreferrer">https://doi.org/10.1016/j.molliq.2025.129142</a></div>
         </article>
         
 
@@ -881,10 +911,10 @@ window.addEventListener('DOMContentLoaded', function() {
         </thead>
         <tbody>
           <tr>
-            <td>36</td>
-            <td>27</td>
+            <td>38</td>
+            <td>29</td>
             <td>20</td>
-            <td>1379</td>
+            <td>1388</td>
           </tr>
         </tbody>
       </table>
@@ -2095,7 +2125,7 @@ window.addEventListener('DOMContentLoaded', function() {
         <section id="ano-2024" class="ano-section" style="display:none;">
           <div class="ano-header">
             <div class="ano-titulo">Artigos Publicados em 2024</div>
-            <div class="ano-total">Total: 146 artigo(s)</div>
+            <div class="ano-total">Total: 147 artigo(s)</div>
           </div>
           <div class="artigos-grid" id="artigos-grid-2024">
             
@@ -2201,7 +2231,7 @@ window.addEventListener('DOMContentLoaded', function() {
         <article class="artigo-card artigo-card-2024">
           <div class="artigo-titulo">White paper on light sterile neutrino searches and related phenomenology</div>
           <div class="artigo-ref">Journal of Physics G: Nuclear and Particle Physics, n. 12, v. 51, p. 120501, IOP Publishing, 01/12/2024</div>
-          <div class="artigo-citacoes">Citações: 26</div>
+          <div class="artigo-citacoes">Citações: 27</div>
           <div class="artigo-autores"><em>M A Acero, C A Argüelles, M Hostert, D Kalra, G Karagiorgi, K J Kelly, B R Littlejohn, P Machado, W Pettus, M Toups, et al.</em></div>
           <div class="artigo-link"><a href="https://doi.org/10.1088/1361-6471/ad307f" target="_blank" rel="noopener noreferrer">https://doi.org/10.1088/1361-6471/ad307f</a></div>
         </article>
@@ -2901,7 +2931,7 @@ window.addEventListener('DOMContentLoaded', function() {
         
 
         <article class="artigo-card artigo-card-2024">
-          <div class="artigo-titulo">Evaluating quantum entanglement generation in two-dimensional graphene systems through lithium ion interactions: A DFT-based study</div>
+          <div class="artigo-titulo">Evaluating quantum entanglement generation in two‐dimensional graphene systems through lithium ion interactions: A DFT‐based study</div>
           <div class="artigo-ref">Journal of Computational Chemistry, n. 13, v. 45, p. 1002-1007, Wiley, 15/05/2024</div>
           <div class="artigo-citacoes">Citações: 2</div>
           <div class="artigo-autores"><em>Lucas de S. Silva, Guilherme Colherinhas, Wesley B. Cardoso</em></div>
@@ -3182,7 +3212,7 @@ window.addEventListener('DOMContentLoaded', function() {
         <article class="artigo-card artigo-card-2024">
           <div class="artigo-titulo">Daylight photodynamic inactivation of cattle tick Rhipicephalus microplus by porphyrins: An alternative for the ectoparasite control</div>
           <div class="artigo-ref">Journal of Photochemistry and Photobiology B: Biology, v. 251, p. 112847, Elsevier BV, 01/02/2024</div>
-          <div class="artigo-citacoes">Citações: 5</div>
+          <div class="artigo-citacoes">Citações: 6</div>
           <div class="artigo-autores"><em>Isabela Castro Pereira Gomes, Lorena Dias Amor Divino, Fernanda Meneses Rodrigues, Cinthya Marques Fortes Fleury, Eli Silveira Alves Ducas, Jaqueline Cristine Desordi, Bernardo Almeida Iglesias, Ricardo Costa Santana, Caio Márcio Oliveira Monteiro, Welber Daniel Zanetti Lopes, et al.</em></div>
           <div class="artigo-link"><a href="https://doi.org/10.1016/j.jphotobiol.2024.112847" target="_blank" rel="noopener noreferrer">https://doi.org/10.1016/j.jphotobiol.2024.112847</a></div>
         </article>
@@ -3351,6 +3381,15 @@ window.addEventListener('DOMContentLoaded', function() {
         
 
         <article class="artigo-card artigo-card-2024">
+          <div class="artigo-titulo">Investigating ionic liquid hydration effects at high temperatures: Insights from classic molecular dynamics simulations</div>
+          <div class="artigo-ref">Journal of Molecular Liquids, v. 393, p. 123662, Elsevier BV, 01/01/2024</div>
+          <div class="artigo-citacoes">Citações: 8</div>
+          <div class="artigo-autores"><em>Leonardo Bruno Assis Oliveira, Tertius L. Fonseca, Guilherme Colherinhas</em></div>
+          <div class="artigo-link"><a href="https://doi.org/10.1016/j.molliq.2023.123662" target="_blank" rel="noopener noreferrer">https://doi.org/10.1016/j.molliq.2023.123662</a></div>
+        </article>
+        
+
+        <article class="artigo-card artigo-card-2024">
           <div class="artigo-titulo">Holographic transport coefficients and jet energy loss for the hot and dense quark-gluon plasma</div>
           <div class="artigo-ref">EPJ Web of Conferences, v. 296, p. 14014, EDP Sciences, 01/01/2024</div>
           <div class="artigo-citacoes">Citações: 2</div>
@@ -3426,9 +3465,9 @@ window.addEventListener('DOMContentLoaded', function() {
         </thead>
         <tbody>
           <tr>
-            <td>146</td>
+            <td>147</td>
             <td>91</td>
-            <td>1006</td>
+            <td>1016</td>
             <td>3846</td>
           </tr>
         </tbody>
@@ -3444,7 +3483,7 @@ window.addEventListener('DOMContentLoaded', function() {
         <section id="ano-2023" class="ano-section" style="display:none;">
           <div class="ano-header">
             <div class="ano-titulo">Artigos Publicados em 2023</div>
-            <div class="ano-total">Total: 135 artigo(s)</div>
+            <div class="ano-total">Total: 134 artigo(s)</div>
           </div>
           <div class="artigos-grid" id="artigos-grid-2023">
             
@@ -3472,15 +3511,6 @@ window.addEventListener('DOMContentLoaded', function() {
           <div class="artigo-citacoes">Citações: 3</div>
           <div class="artigo-autores"><em>Carlos Eduardo Gonçalves de Oliveira, Whemberton Martins de Araújo, Ana Beatriz Marinho de Jesus Teixeira, Gustavo Lopes Gonçalves, Emerson Nobuyuki Itikawa</em></div>
           <div class="artigo-link"><a href="https://doi.org/10.1088/1361-6560/ad0ddd" target="_blank" rel="noopener noreferrer">https://doi.org/10.1088/1361-6560/ad0ddd</a></div>
-        </article>
-        
-
-        <article class="artigo-card artigo-card-2023">
-          <div class="artigo-titulo">Investigating ionic liquid hydration effects at high temperatures: Insights from classic molecular dynamics simulations</div>
-          <div class="artigo-ref">Journal of Molecular Liquids, v. 393, p. 123662, Elsevier BV, 01/01/2024</div>
-          <div class="artigo-citacoes">Citações: 8</div>
-          <div class="artigo-autores"><em>Leonardo Bruno Assis Oliveira, Tertius L. Fonseca, Guilherme Colherinhas</em></div>
-          <div class="artigo-link"><a href="https://doi.org/10.1016/j.molliq.2023.123662" target="_blank" rel="noopener noreferrer">https://doi.org/10.1016/j.molliq.2023.123662</a></div>
         </article>
         
 
@@ -4261,7 +4291,7 @@ window.addEventListener('DOMContentLoaded', function() {
         <article class="artigo-card artigo-card-2023">
           <div class="artigo-titulo">Phase-space Properties and Chemistry of the Sagittarius Stellar Stream Down to the Extremely Metal-poor ([Fe/H] ≲ −3) Regime</div>
           <div class="artigo-ref">The Astrophysical Journal, n. 2, v. 946, p. 66, American Astronomical Society, 01/04/2023</div>
-          <div class="artigo-citacoes">Citações: 23</div>
+          <div class="artigo-citacoes">Citações: 24</div>
           <div class="artigo-autores"><em>Guilherme Limberg, Anna B. A. Queiroz, Hélio D. Perottoni, Silvia Rossi, João A. S. Amarante, Rafael M. Santucci, Cristina Chiappini, Angeles Pérez-Villegas, Young Sun Lee</em></div>
           <div class="artigo-link"><a href="https://doi.org/10.3847/1538-4357/acb694" target="_blank" rel="noopener noreferrer">https://doi.org/10.3847/1538-4357/acb694</a></div>
         </article>
@@ -4676,10 +4706,10 @@ window.addEventListener('DOMContentLoaded', function() {
         </thead>
         <tbody>
           <tr>
-            <td>135</td>
+            <td>134</td>
             <td>77</td>
-            <td>881</td>
-            <td>3431</td>
+            <td>874</td>
+            <td>3430</td>
           </tr>
         </tbody>
       </table>
@@ -5124,7 +5154,7 @@ window.addEventListener('DOMContentLoaded', function() {
         <article class="artigo-card artigo-card-2022">
           <div class="artigo-titulo">Improved measurement of neutrino oscillation parameters by the NOvA experiment</div>
           <div class="artigo-ref">Physical Review D, n. 3, v. 106, p. 032004, American Physical Society (APS), 03/08/2022</div>
-          <div class="artigo-citacoes">Citações: 137</div>
+          <div class="artigo-citacoes">Citações: 138</div>
           <div class="artigo-autores"><em>M. A. Acero, P. Adamson, L. Aliaga, N. Anfimov, A. Antoshkin, E. Arrieta-Diaz, L. Asquith, A. Aurisano, A. Back, C. Backhouse, et al.</em></div>
           <div class="artigo-link"><a href="https://doi.org/10.1103/physrevd.106.032004" target="_blank" rel="noopener noreferrer">https://doi.org/10.1103/physrevd.106.032004</a></div>
         </article>
@@ -5901,7 +5931,7 @@ window.addEventListener('DOMContentLoaded', function() {
           <tr>
             <td>132</td>
             <td>75</td>
-            <td>1426</td>
+            <td>1427</td>
             <td>2802</td>
           </tr>
         </tbody>
