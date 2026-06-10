@@ -1,0 +1,366 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Maickol Andrei Mendonça Rios · PPGF/UFG</title>
+  <style>
+:root {
+  --azul: #174a7c;
+  --azul-escuro: #0b2d4d;
+  --cinza: #f5f7fa;
+  --texto: #1f2937;
+  --borda: #d9e2ec;
+  --muted: #64748b;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--texto);
+  background: #eef3f8;
+  line-height: 1.45;
+}
+.page {
+  max-width: 1180px;
+  margin: 28px auto;
+  background: white;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, .12);
+}
+.header {
+  background: linear-gradient(135deg, var(--azul-escuro), var(--azul));
+  color: white;
+  text-align: center;
+  padding: 34px 24px 30px;
+}
+.instituicao {
+  font-size: 1.28rem;
+  font-weight: 700;
+  letter-spacing: .02em;
+  line-height: 1.55;
+  margin-bottom: 22px;
+}
+.nome-principal {
+  font-size: clamp(1.8rem, 3vw, 2.8rem);
+  font-weight: 800;
+  margin: 0;
+}
+.content { padding: 28px; }
+.profile {
+  display: grid;
+  grid-template-columns: 190px 1fr;
+  gap: 26px;
+  align-items: start;
+  margin-bottom: 28px;
+}
+.photo-wrap {
+  width: 190px;
+  min-height: 230px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--cinza);
+  border: 1px solid var(--borda);
+  border-radius: 16px;
+  overflow: hidden;
+}
+.photo-wrap img {
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+  display: block;
+}
+.placeholder {
+  color: var(--muted);
+  font-weight: 700;
+  text-align: center;
+  padding: 18px;
+}
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+.info-card, .tab-panel, .index-card {
+  border: 1px solid var(--borda);
+  background: #fff;
+  border-radius: 14px;
+}
+.info-card { padding: 14px 16px; }
+.label {
+  display: block;
+  color: var(--muted);
+  font-size: .82rem;
+  text-transform: uppercase;
+  letter-spacing: .06em;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+a { color: var(--azul); text-decoration: none; font-weight: 700; }
+a:hover { text-decoration: underline; }
+.tabs {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin: 18px 0 0;
+  border-bottom: 1px solid var(--borda);
+}
+.tab-button {
+  border: 1px solid var(--borda);
+  border-bottom: none;
+  background: #f8fafc;
+  padding: 12px 18px;
+  border-radius: 12px 12px 0 0;
+  cursor: pointer;
+  color: var(--azul-escuro);
+  font-weight: 800;
+}
+.tab-button.active { background: white; color: var(--azul); }
+.tab-panel {
+  display: none;
+  padding: 20px;
+  border-top-left-radius: 0;
+}
+.tab-panel.active { display: block; }
+.research-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+.research-item {
+  background: #f8fafc;
+  border: 1px solid var(--borda);
+  border-radius: 12px;
+  padding: 14px;
+}
+.table-wrap { overflow-x: auto; }
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: .94rem;
+}
+th, td {
+  border-bottom: 1px solid var(--borda);
+  padding: 10px 9px;
+  vertical-align: top;
+  text-align: left;
+}
+th {
+  background: #f1f5f9;
+  color: var(--azul-escuro);
+  font-size: .82rem;
+  text-transform: uppercase;
+  letter-spacing: .04em;
+}
+.empty {
+  padding: 18px;
+  color: var(--muted);
+  background: #f8fafc;
+  border: 1px dashed var(--borda);
+  border-radius: 12px;
+}
+.footer {
+  padding: 18px 28px 26px;
+  color: var(--muted);
+  font-size: .92rem;
+  text-align: center;
+}
+.index-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+  gap: 18px;
+}
+.index-card {
+  display: grid;
+  grid-template-columns: 88px 1fr;
+  gap: 14px;
+  padding: 14px;
+}
+.index-card img {
+  width: 88px;
+  height: 108px;
+  object-fit: cover;
+  border-radius: 12px;
+  background: #f1f5f9;
+}
+.index-card .mini-placeholder {
+  width: 88px;
+  height: 108px;
+  border-radius: 12px;
+  background: #f1f5f9;
+  color: var(--muted);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: .78rem;
+  font-weight: 700;
+  text-align: center;
+}
+.index-card h2 {
+  font-size: 1.05rem;
+  margin: 0 0 6px;
+}
+.index-card p { margin: 4px 0; color: var(--muted); font-size: .92rem; }
+.metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 14px;
+  margin-bottom: 22px;
+}
+.metric-card {
+  background: #f8fafc;
+  border: 1px solid var(--borda);
+  border-radius: 14px;
+  padding: 18px;
+}
+.metric-number {
+  display: block;
+  color: var(--azul);
+  font-size: 2.15rem;
+  font-weight: 900;
+  line-height: 1;
+  margin-bottom: 6px;
+}
+.metric-label {
+  color: var(--muted);
+  font-weight: 800;
+}
+.section-title {
+  margin: 22px 0 12px;
+  color: var(--azul-escuro);
+  font-size: 1.2rem;
+}
+.stats-chart {
+  display: grid;
+  gap: 10px;
+  margin-bottom: 18px;
+}
+.bar-row {
+  display: grid;
+  grid-template-columns: 72px 1fr 44px;
+  gap: 10px;
+  align-items: center;
+}
+.bar-label, .bar-value {
+  font-weight: 800;
+  color: var(--azul-escuro);
+}
+.bar-value { text-align: right; }
+.bar-track {
+  height: 14px;
+  background: #e2e8f0;
+  border-radius: 999px;
+  overflow: hidden;
+}
+.bar-fill {
+  height: 100%;
+  background: var(--azul);
+  border-radius: 999px;
+}
+.stats-table { margin-top: 8px; }
+@media (max-width: 760px) {
+  .profile { grid-template-columns: 1fr; }
+  .photo-wrap { width: 100%; max-width: 240px; margin: 0 auto; }
+  .info-grid, .research-grid { grid-template-columns: 1fr; }
+  .content { padding: 18px; }
+}
+</style>
+</head>
+<body>
+  <main class="page">
+    
+    <header class="header">
+      <div class="instituicao">
+        Universidade Federal de Goiás<br>
+        Instituto de Física<br>
+        Programa de Pós-Graduação em Física
+      </div>
+      <h1 class="nome-principal">Maickol Andrei Mendonça Rios</h1>
+    </header>
+    
+    <section class="content">
+      <section class="profile">
+        <div class="photo-wrap"><img src="data:image/jpeg;base64,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" alt="Foto de Maickol Andrei Mendonça Rios"></div>
+        <div class="info-grid">
+          <div class="info-card"><span class="label">E-mail institucional</span>---</div>
+          <div class="info-card"><span class="label">Sala</span>---</div>
+          <div class="info-card"><span class="label">Curso</span>Mestrado</div>
+          <div class="info-card"><span class="label">Orientador(a)</span>Prof. Dr. Renato Borges Pontes</div>
+        </div>
+      </section>
+
+      <section>
+        <div class="tabs">
+          <button class="tab-button active" data-tab="pesquisa">Pesquisa</button>
+          <button class="tab-button" data-tab="artigos">Artigos</button>
+          <button class="tab-button" data-tab="resumo">Resumo</button>
+          <button class="tab-button" data-tab="indicadores">Indicadores do PPGF</button>
+        </div>
+
+        <div id="pesquisa" class="tab-panel active">
+          <div class="research-grid">
+            <div class="research-item"><span class="label">Linha de pesquisa</span>Estrutura Eletrônica de Moléculas, Líquidos e Sólidos</div>
+            <div class="research-item"><span class="label">Título ou tema da pesquisa</span>---</div>
+            <div class="research-item"><span class="label">ORCID</span>---</div>
+            <div class="research-item"><span class="label">Lattes</span><a href="http://lattes.cnpq.br/4655565305631141" target="_blank" rel="noopener noreferrer">Curriculum Lattes</a></div>
+          </div>
+        </div>
+
+        <div id="artigos" class="tab-panel">
+          <div class="empty">Nenhum artigo foi encontrado automaticamente a partir do ORCID informado.</div>
+        </div>
+
+        <div id="resumo" class="tab-panel">
+          <div class="research-item">Possui graduação em Física pelo Instituto Federal de Educação, Ciência e Tecnologia de Goiás (2025). Atualmente, leciona física e matemática no ensino básico em Goiânia e cursa mestrado em física no Instituto de Física na Universidade Federal de Goiás.</div>
+        </div>
+
+        <div id="indicadores" class="tab-panel">
+          
+    <div class="metrics-grid">
+      <div class="metric-card"><span class="metric-number">40</span><span class="metric-label">Discentes de Mestrado</span></div>
+      <div class="metric-card"><span class="metric-number">40</span><span class="metric-label">Discentes de Doutorado</span></div>
+      <div class="metric-card"><span class="metric-number">22</span><span class="metric-label">Artigos únicos identificados</span></div>
+      <div class="metric-card"><span class="metric-number">1</span><span class="metric-label">Outros/sem curso identificado</span></div>
+    </div>
+    <h2 class="section-title">Artigos publicados pelos discentes por ano</h2>
+    
+        <div class="stats-chart" role="img" aria-label="Número de artigos publicados pelos discentes em cada ano">
+          <div class="bar-row"><span class="bar-label">2026</span><div class="bar-track"><div class="bar-fill" style="width: 60%"></div></div><span class="bar-value">6</span></div><div class="bar-row"><span class="bar-label">2025</span><div class="bar-track"><div class="bar-fill" style="width: 100%"></div></div><span class="bar-value">10</span></div><div class="bar-row"><span class="bar-label">2024</span><div class="bar-track"><div class="bar-fill" style="width: 30%"></div></div><span class="bar-value">3</span></div><div class="bar-row"><span class="bar-label">2023</span><div class="bar-track"><div class="bar-fill" style="width: 10%"></div></div><span class="bar-value">1</span></div><div class="bar-row"><span class="bar-label">2022</span><div class="bar-track"><div class="bar-fill" style="width: 10%"></div></div><span class="bar-value">1</span></div><div class="bar-row"><span class="bar-label">2021</span><div class="bar-track"><div class="bar-fill" style="width: 10%"></div></div><span class="bar-value">1</span></div>
+        </div>
+        <div class="table-wrap stats-table">
+          <table>
+            <thead>
+              <tr><th>Ano</th><th>Número de artigos</th></tr>
+            </thead>
+            <tbody><tr><td>2026</td><td>6</td></tr><tr><td>2025</td><td>10</td></tr><tr><td>2024</td><td>3</td></tr><tr><td>2023</td><td>1</td></tr><tr><td>2022</td><td>1</td></tr><tr><td>2021</td><td>1</td></tr></tbody>
+          </table>
+        </div>
+        
+    
+        </div>
+      </section>
+    </section>
+    <footer class="footer">Página gerada automaticamente. Data da última atualização: 10/06/2026 às 18:09:25</footer>
+  </main>
+  <script>
+document.addEventListener('DOMContentLoaded', function () {
+  document.querySelectorAll('.tabs').forEach(function (tabs) {
+    const buttons = tabs.querySelectorAll('.tab-button');
+    const root = tabs.parentElement;
+    buttons.forEach(function (button) {
+      button.addEventListener('click', function () {
+        const target = button.getAttribute('data-tab');
+        buttons.forEach(b => b.classList.remove('active'));
+        button.classList.add('active');
+        root.querySelectorAll('.tab-panel').forEach(function (panel) {
+          panel.classList.toggle('active', panel.id === target);
+        });
+      });
+    });
+  });
+});
+</script>
+</body>
+</html>
