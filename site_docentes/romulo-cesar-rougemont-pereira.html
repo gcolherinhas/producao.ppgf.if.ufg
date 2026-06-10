@@ -53,6 +53,16 @@ a:hover { text-decoration: underline; }
   opacity: 0.96;
 }
 .ufg-line strong { font-weight: 700; }
+.header-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  margin-bottom: 18px;
+  font-size: 1rem;
+  line-height: 1.35;
+  opacity: 0.96;
+}
+.header-stack span { display: block; }
 .header-title {
   margin: 0;
   font-size: clamp(1.75rem, 3vw, 2.7rem);
@@ -167,7 +177,9 @@ a:hover { text-decoration: underline; }
   margin-bottom: 7px;
 }
 .article-title { margin: 0 0 8px 0; font-size: 1.02rem; }
-.article-authors { color: var(--muted); font-size: 0.92rem; margin: 0; }
+.article-authors { color: var(--muted); font-size: 0.92rem; margin: 0 0 8px 0; }
+.article-meta { color: var(--text); font-size: 0.92rem; margin: 6px 0 0 0; }
+.article-meta .meta-label { font-size: 0.92rem; }
 .kpi-grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(120px, 1fr));
@@ -246,9 +258,10 @@ a:hover { text-decoration: underline; }
   <header class="site-header">
     <div class="bar"></div>
     <div class="header-inner">
-      <div class="ufg-line">
-        <span><strong>UNIVERSIDADE FEDERAL DE GOIÁS - UFG</strong><br>INSTITUTO DE FÍSICA · PROGRAMA DE PÓS-GRADUAÇÃO EM FÍSICA</span>
-        <span>PPGF/UFG</span>
+      <div class="header-stack" aria-label="Cabeçalho institucional">
+        <span>Universidade Federal de Goiás</span>
+        <span>Instituto de Física</span>
+        <span>Programa de Pós-Graduação em Física</span>
       </div>
       <h1 class="header-title">Rômulo César Rougemont Pereira</h1>
     </div>
@@ -262,174 +275,188 @@ a:hover { text-decoration: underline; }
         
         <h2>Rômulo César Rougemont Pereira</h2>
         <ul class="meta-list profile-details">
-          
-            <li><a class="profile-link" href="http://lattes.cnpq.br/9207462207391635" target="_blank" rel="noopener">Curriculum Lattes</a></li>
-          
-          <li><span class="meta-label">Apto(a) a orientar:</span> Física Teórica</li>
-          <li><span class="meta-label">Sala:</span> 202 (IF-2)</li>
-          <li><span class="meta-label">E-mail:</span> <a href="mailto:rougemont@ufg.br">rougemont@ufg.br</a></li>
-          <li><span class="meta-label">Telefone:</span> (62) 3521-1014</li>
-          <li><span class="meta-label">Pesquisa</span> &#34;Teorias Quânticas de Campos e Física Nuclear de Altas Energias&#34;</li>
-          
-            <li>Bolsista de Produtividade de CNPq - Nível 2</li>
-          
-          <li><span class="meta-label">Formação:</span> Doutorado em Física - UFRJ - 2013</li>
-          
-            <li><span class="meta-label">ORCID:</span> <a href="https://orcid.org/0000-0002-1558-1624" target="_blank" rel="noopener">0000-0002-1558-1624</a></li>
-          
+          <li><span class="meta-label">Curriculum Lattes:</span> <a class="profile-link" href="http://lattes.cnpq.br/9207462207391635" target="_blank" rel="noopener">http://lattes.cnpq.br/9207462207391635</a></li>
+          <li><span class="meta-label">ORCID:</span> <a href="https://orcid.org/0000-0002-1558-1624" target="_blank" rel="noopener">0000-0002-1558-1624</a></li>
+          <li><span class="meta-label">Apto(a) a orientar:</span> ---</li>
+          <li><span class="meta-label">Sala:</span> ---</li>
+          <li><span class="meta-label">E-mail:</span> <span class="missing-info">---</span></li>
+          <li><span class="meta-label">Telefone:</span> ---</li>
+          <li><span class="meta-label">Pesquisa:</span> ---</li>
+          <li><span class="meta-label">Bolsa:</span> ---</li>
+          <li><span class="meta-label">Formação:</span> ---</li>
           <li><span class="meta-label">Fonte do perfil:</span> <a href="https://posgraduacao.if.ufg.br/p/41256-docentes-ppgf-instituto-de-fisica-ufg" target="_blank" rel="noopener">Página do PPGF/UFG</a></li>
         </ul>
       </aside>
 
       <section class="content-card">
         <nav class="tabs" aria-label="Seções da página">
-          <button class="tab-button active" data-tab="artigos">Artigos publicados</button>
+          <button class="tab-button active" data-tab="artigos">Artigos relacionados</button>
           <button class="tab-button" data-tab="estatisticas">Estatísticas do docente</button>
         </nav>
 
         <div id="artigos" class="tab-panel active">
-          <h2>Artigos publicados</h2>
+          <h2>Artigos relacionados</h2>
           
             <div class="article-list">
               
                 <article class="article-item">
                   <span class="article-year">2026</span>
                   <h3 class="article-title">Merging multidimensional equations of state of strongly interacting matter via a statistical mixture</h3>
-                  <p class="article-authors">Yumu Yang; Prachi Garella; Musa R. Khan; Tulio E. Restrepo; Joaquin Grefa; Johannes Jahan; Mauricio Hippert; Jorge Noronha; Claudia Ratti; Romulo Rougemont</p>
-                  <p><a href="https://doi.org/10.1103/pvtc-zdyw" target="_blank" rel="noopener">DOI: 10.1103/pvtc-zdyw</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> Yumu Yang; Prachi Garella; Musa R. Khan; Tulio E. Restrepo; Joaquin Grefa; Johannes Jahan; Mauricio Hippert; Jorge Noronha; Claudia Ratti; Romulo Rougemont</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: Crossref; Pesquisador: Rômulo César Rougemont Pereira; ORCID: 0000-0002-1558-1624</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1103/pvtc-zdyw" target="_blank" rel="noopener">10.1103/pvtc-zdyw</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2025</span>
                   <h3 class="article-title">Bayesian location of the QCD critical point: A holographic perspective</h3>
-                  <p class="article-authors">Claudia Ratti; Joaquin Grefa; Maurício Hippert; T. Andrew Manning; Jorge Noronha; Jacquelyn Noronha-Hostler; Israel Portillo; Rômulo Rougemont; Michael Trujillo</p>
-                  <p><a href="https://doi.org/10.1051/epjconf/202531606004" target="_blank" rel="noopener">DOI: 10.1051/epjconf/202531606004</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> Claudia Ratti; Joaquin Grefa; Maurício Hippert; T. Andrew Manning; Jorge Noronha; Jacquelyn Noronha-Hostler; Israel Portillo; Rômulo Rougemont; Michael Trujillo</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: OpenAlex; Pesquisador: Rômulo César Rougemont Pereira; ORCID: 0000-0002-1558-1624</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1051/epjconf/202531606004" target="_blank" rel="noopener">10.1051/epjconf/202531606004</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2025</span>
                   <h3 class="article-title">Homogeneous isotropization dynamics and entropy production in a hot and dense strongly interacting fluid</h3>
-                  <p class="article-authors">Gustavo de Oliveira; Willians Barreto; Romulo Rougemont</p>
-                  <p><a href="https://doi.org/10.1007/jhep10(2025)106" target="_blank" rel="noopener">DOI: 10.1007/jhep10(2025)106</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> Gustavo de Oliveira; Willians Barreto; Romulo Rougemont</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: ORCID; Pesquisador: Rômulo César Rougemont Pereira; ORCID: 0000-0002-1558-1624</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1007/jhep10(2025)106" target="_blank" rel="noopener">10.1007/jhep10(2025)106</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2025</span>
                   <h3 class="article-title">Mutual information and holographic entanglement entropy for strongly coupled R -charged plasmas</h3>
-                  <p class="article-authors">Gustavo de Oliveira; Ronaldo F. Costa; Lucas C. Céleri; Romulo Rougemont</p>
-                  <p><a href="https://doi.org/10.1103/ylpl-96p1" target="_blank" rel="noopener">DOI: 10.1103/ylpl-96p1</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> Gustavo de Oliveira; Ronaldo F. Costa; Lucas C. Céleri; Romulo Rougemont</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: ORCID; Pesquisador: Rômulo César Rougemont Pereira; ORCID: 0000-0002-1558-1624</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1103/ylpl-96p1" target="_blank" rel="noopener">10.1103/ylpl-96p1</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2024</span>
                   <h3 class="article-title">Bayesian location of the QCD critical point from a holographic perspective</h3>
-                  <p class="article-authors">Mauricio Hippert; Joaquin Grefa; T. Andrew Manning; Jorge Noronha; Jacquelyn Noronha-Hostler; Israel Portillo Vazquez; Claudia Ratti; Romulo Rougemont; Michael Trujillo</p>
-                  <p><a href="https://doi.org/10.1103/physrevd.110.094006" target="_blank" rel="noopener">DOI: 10.1103/physrevd.110.094006</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> Mauricio Hippert; Joaquin Grefa; T. Andrew Manning; Jorge Noronha; Jacquelyn Noronha-Hostler; Israel Portillo Vazquez; Claudia Ratti; Romulo Rougemont; Michael Trujillo</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: ORCID; Pesquisador: Rômulo César Rougemont Pereira; ORCID: 0000-0002-1558-1624</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1103/physrevd.110.094006" target="_blank" rel="noopener">10.1103/physrevd.110.094006</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2024</span>
                   <h3 class="article-title">Holographic transport coefficients and jet energy loss for the hot and dense quark-gluon plasma</h3>
-                  <p class="article-authors">Joaquin Grefa; Maurício Hippert; R. Kunnawalkam Elayavalli; Jacquelyn Noronha-Hostler; Israel Portillo; Claudia Ratti; Rômulo Rougemont</p>
-                  <p><a href="https://doi.org/10.1051/epjconf/202429614014" target="_blank" rel="noopener">DOI: 10.1051/epjconf/202429614014</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> Joaquin Grefa; Maurício Hippert; R. Kunnawalkam Elayavalli; Jacquelyn Noronha-Hostler; Israel Portillo; Claudia Ratti; Rômulo Rougemont</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: OpenAlex; Pesquisador: Rômulo César Rougemont Pereira; ORCID: 0000-0002-1558-1624</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1051/epjconf/202429614014" target="_blank" rel="noopener">10.1051/epjconf/202429614014</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2024</span>
                   <h3 class="article-title">Hot QCD phase diagram from holographic Einstein–Maxwell–Dilaton models</h3>
-                  <p class="article-authors">Romulo Rougemont; Joaquin Grefa; Mauricio Hippert; Jorge Noronha; Jacquelyn Noronha-Hostler; Israel Portillo; Claudia Ratti</p>
-                  <p><a href="https://doi.org/10.1016/j.ppnp.2023.104093" target="_blank" rel="noopener">DOI: 10.1016/j.ppnp.2023.104093</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> Romulo Rougemont; Joaquin Grefa; Mauricio Hippert; Jorge Noronha; Jacquelyn Noronha-Hostler; Israel Portillo; Claudia Ratti</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: ORCID; Pesquisador: Rômulo César Rougemont Pereira; ORCID: 0000-0002-1558-1624</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1016/j.ppnp.2023.104093" target="_blank" rel="noopener">10.1016/j.ppnp.2023.104093</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2024</span>
                   <h3 class="article-title">Location of the QCD critical point predicted by holographic Bayesian analysis</h3>
-                  <p class="article-authors">Maurício Hippert; Joaquin Grefa; T. Andrew Manning; Jorge Noronha; Jacquelyn Noronha-Hostler; Israel Portillo; Claudia Ratti; Rômulo Rougemont; Michael Trujillo</p>
-                  <p><a href="https://doi.org/10.1051/epjconf/202429606003" target="_blank" rel="noopener">DOI: 10.1051/epjconf/202429606003</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> Maurício Hippert; Joaquin Grefa; T. Andrew Manning; Jorge Noronha; Jacquelyn Noronha-Hostler; Israel Portillo; Claudia Ratti; Rômulo Rougemont; Michael Trujillo</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: OpenAlex; Pesquisador: Rômulo César Rougemont Pereira; ORCID: 0000-0002-1558-1624</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1051/epjconf/202429606003" target="_blank" rel="noopener">10.1051/epjconf/202429606003</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2024</span>
                   <h3 class="article-title">New purely damped pairs of quasinormal modes in a hot and dense strongly-coupled plasma</h3>
-                  <p class="article-authors">Gustavo de Oliveira; Romulo Rougemont</p>
-                  <p><a href="https://doi.org/10.1007/jhep11(2024)079" target="_blank" rel="noopener">DOI: 10.1007/jhep11(2024)079</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> Gustavo de Oliveira; Romulo Rougemont</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: ORCID; Pesquisador: Rômulo César Rougemont Pereira; ORCID: 0000-0002-1558-1624</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1007/jhep11(2024)079" target="_blank" rel="noopener">10.1007/jhep11(2024)079</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2024</span>
                   <h3 class="article-title">Stairway to equilibrium entropy</h3>
-                  <p class="article-authors">Romulo Rougemont; Willians Barreto</p>
-                  <p><a href="https://doi.org/10.1103/physrevd.109.126009" target="_blank" rel="noopener">DOI: 10.1103/physrevd.109.126009</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> Romulo Rougemont; Willians Barreto</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: ORCID; Pesquisador: Rômulo César Rougemont Pereira; ORCID: 0000-0002-1558-1624</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1103/physrevd.109.126009" target="_blank" rel="noopener">10.1103/physrevd.109.126009</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2024</span>
                   <h3 class="article-title">Theoretical and experimental constraints for the equation of state of dense and hot matter</h3>
-                  <p class="article-authors">Rajesh Kumar; Veronica Dexheimer; Johannes Jahan; Jorge Noronha; Jacquelyn Noronha-Hostler; Claudia Ratti; Nico Yunes; Angel Rodrigo Nava Acuna; Mark Alford; Mahmudul Hasan Anik; Debarati Chatterjee; Katerina Chatziioannou; Hsin-Yu Chen; Alexander Clevinger; Carlos Conde; Nikolas Cruz-Camacho; Travis Dore; Christian Drischler; Hannah Elfner; Reed Essick; David Friedenberg; Suprovo Ghosh; Joaquin Grefa; Roland Haas; Alexander Haber; Jan Hammelmann; Steven Harris; Carl-Johan Haster; Tetsuo Hatsuda; Mauricio Hippert; Renan Hirayama; Jeremy W. Holt; Micheal Kahangirwe; Jamie Karthein; Toru Kojo; Philippe Landry; Zidu Lin; Matthew Luzum; Timothy Andrew Manning; Jordi Salinas San Martin; Cole Miller; Elias Roland Most; Debora Mroczek; Azwinndini Muronga; Nicolas Patino; Jeffrey Peterson; Christopher Plumberg; Damien Price; Constanca Providencia; Romulo Rougemont; Satyajit Roy; Romulo Rougemont</p>
-                  <p><a href="https://doi.org/10.1007/s41114-024-00049-6" target="_blank" rel="noopener">DOI: 10.1007/s41114-024-00049-6</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> Rajesh Kumar et al.</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: ORCID; Pesquisador: Rômulo César Rougemont Pereira; ORCID: 0000-0002-1558-1624</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1007/s41114-024-00049-6" target="_blank" rel="noopener">10.1007/s41114-024-00049-6</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2023</span>
                   <h3 class="article-title">Equation of State and Energy Loss of Hot and Dense Quark-Gluon matter from Holographic Black Holes</h3>
-                  <p class="article-authors">Joaquin Grefa; Maurício Hippert; Jorge Noronha; Jacquelyn Noronha-Hostler; Israel Portillo; Claudia Ratti; Rômulo Rougemont</p>
-                  <p><a href="https://doi.org/10.1051/epjconf/202327601013" target="_blank" rel="noopener">DOI: 10.1051/epjconf/202327601013</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> Joaquin Grefa; Maurício Hippert; Jorge Noronha; Jacquelyn Noronha-Hostler; Israel Portillo; Claudia Ratti; Rômulo Rougemont</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: OpenAlex; Pesquisador: Rômulo César Rougemont Pereira; ORCID: 0000-0002-1558-1624</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1051/epjconf/202327601013" target="_blank" rel="noopener">10.1051/epjconf/202327601013</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2022</span>
                   <h3 class="article-title">Holographic entropy production in a Bjorken expanding hot and dense strongly coupled quantum fluid</h3>
-                  
-                  <p><a href="https://doi.org/10.1103/physrevd.106.126023" target="_blank" rel="noopener">DOI: 10.1103/physrevd.106.126023</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> ---</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: ORCID; Pesquisador: Rômulo César Rougemont Pereira; ORCID: 0000-0002-1558-1624</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1103/physrevd.106.126023" target="_blank" rel="noopener">10.1103/physrevd.106.126023</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2022</span>
                   <h3 class="article-title">Holographic thermodynamics and transport for the hot and baryon dense quark-gluon plasma</h3>
-                  <p class="article-authors">Rômulo Rougemont</p>
-                  <p><a href="https://doi.org/10.1088/1742-6596/2340/1/012018" target="_blank" rel="noopener">DOI: 10.1088/1742-6596/2340/1/012018</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> Rômulo Rougemont</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: OpenAlex; Pesquisador: Rômulo César Rougemont Pereira; ORCID: 0000-0002-1558-1624</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1088/1742-6596/2340/1/012018" target="_blank" rel="noopener">10.1088/1742-6596/2340/1/012018</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2022</span>
                   <h3 class="article-title">Hydrodynamization times of a holographic fluid far from equilibrium</h3>
-                  
-                  <p><a href="https://doi.org/10.1103/physrevd.105.046009" target="_blank" rel="noopener">DOI: 10.1103/physrevd.105.046009</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> ---</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: ORCID; Pesquisador: Rômulo César Rougemont Pereira; ORCID: 0000-0002-1558-1624</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1103/physrevd.105.046009" target="_blank" rel="noopener">10.1103/physrevd.105.046009</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2022</span>
                   <h3 class="article-title">QCD Equation of State and Phase Diagram from Holographic Black Holes</h3>
-                  <p class="article-authors">Joaquin Grefa; Jorge Noronha; Jacquelyn Noronha-Hostler; Israel Portillo; Claudia Ratti; Rômulo Rougemont</p>
-                  <p><a href="https://doi.org/10.22323/1.400.0045" target="_blank" rel="noopener">DOI: 10.22323/1.400.0045</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> Joaquin Grefa; Jorge Noronha; Jacquelyn Noronha-Hostler; Israel Portillo; Claudia Ratti; Rômulo Rougemont</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: OpenAlex; Pesquisador: Rômulo César Rougemont Pereira; ORCID: 0000-0002-1558-1624</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.22323/1.400.0045" target="_blank" rel="noopener">10.22323/1.400.0045</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2022</span>
                   <h3 class="article-title">QCD Equilibrium and Dynamical Properties from Holographic Black Holes</h3>
-                  <p class="article-authors">Joaquin Grefa; Maurício Hippert; Jorge Noronha; Jacquelyn Noronha-Hostler; Israel Portillo; Claudia Ratti; Rômulo Rougemont</p>
-                  <p><a href="https://doi.org/10.31349/suplrevmexfis.3.040910" target="_blank" rel="noopener">DOI: 10.31349/suplrevmexfis.3.040910</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> Joaquin Grefa; Maurício Hippert; Jorge Noronha; Jacquelyn Noronha-Hostler; Israel Portillo; Claudia Ratti; Rômulo Rougemont</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: OpenAlex; Pesquisador: Rômulo César Rougemont Pereira; ORCID: 0000-0002-1558-1624</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.31349/suplrevmexfis.3.040910" target="_blank" rel="noopener">10.31349/suplrevmexfis.3.040910</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2022</span>
                   <h3 class="article-title">Transport coefficients of the quark-gluon plasma at the critical point and across the first-order line</h3>
-                  <p class="article-authors">Romulo Rougemont</p>
-                  <p><a href="https://doi.org/10.1103/physrevd.106.034024" target="_blank" rel="noopener">DOI: 10.1103/physrevd.106.034024</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> Romulo Rougemont</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: ORCID; Pesquisador: Rômulo César Rougemont Pereira; ORCID: 0000-0002-1558-1624</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1103/physrevd.106.034024" target="_blank" rel="noopener">10.1103/physrevd.106.034024</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2021</span>
                   <h3 class="article-title">Hot and dense quark-gluon plasma thermodynamics from holographic black holes</h3>
-                  
-                  <p><a href="https://doi.org/10.1103/physrevd.104.034002" target="_blank" rel="noopener">DOI: 10.1103/physrevd.104.034002</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> ---</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: ORCID; Pesquisador: Rômulo César Rougemont Pereira; ORCID: 0000-0002-1558-1624</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1103/physrevd.104.034002" target="_blank" rel="noopener">10.1103/physrevd.104.034002</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2021</span>
                   <h3 class="article-title">Violation of energy conditions and entropy production in holographic Bjorken flow</h3>
-                  
-                  <p><a href="https://doi.org/10.1103/physrevd.104.126012" target="_blank" rel="noopener">DOI: 10.1103/physrevd.104.126012</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> ---</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: ORCID; Pesquisador: Rômulo César Rougemont Pereira; ORCID: 0000-0002-1558-1624</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1103/physrevd.104.126012" target="_blank" rel="noopener">10.1103/physrevd.104.126012</a></p>
                 </article>
               
             </div>

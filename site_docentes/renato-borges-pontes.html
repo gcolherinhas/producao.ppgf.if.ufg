@@ -53,6 +53,16 @@ a:hover { text-decoration: underline; }
   opacity: 0.96;
 }
 .ufg-line strong { font-weight: 700; }
+.header-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  margin-bottom: 18px;
+  font-size: 1rem;
+  line-height: 1.35;
+  opacity: 0.96;
+}
+.header-stack span { display: block; }
 .header-title {
   margin: 0;
   font-size: clamp(1.75rem, 3vw, 2.7rem);
@@ -167,7 +177,9 @@ a:hover { text-decoration: underline; }
   margin-bottom: 7px;
 }
 .article-title { margin: 0 0 8px 0; font-size: 1.02rem; }
-.article-authors { color: var(--muted); font-size: 0.92rem; margin: 0; }
+.article-authors { color: var(--muted); font-size: 0.92rem; margin: 0 0 8px 0; }
+.article-meta { color: var(--text); font-size: 0.92rem; margin: 6px 0 0 0; }
+.article-meta .meta-label { font-size: 0.92rem; }
 .kpi-grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(120px, 1fr));
@@ -246,9 +258,10 @@ a:hover { text-decoration: underline; }
   <header class="site-header">
     <div class="bar"></div>
     <div class="header-inner">
-      <div class="ufg-line">
-        <span><strong>UNIVERSIDADE FEDERAL DE GOIÁS - UFG</strong><br>INSTITUTO DE FÍSICA · PROGRAMA DE PÓS-GRADUAÇÃO EM FÍSICA</span>
-        <span>PPGF/UFG</span>
+      <div class="header-stack" aria-label="Cabeçalho institucional">
+        <span>Universidade Federal de Goiás</span>
+        <span>Instituto de Física</span>
+        <span>Programa de Pós-Graduação em Física</span>
       </div>
       <h1 class="header-title">Renato Borges Pontes</h1>
     </div>
@@ -262,139 +275,148 @@ a:hover { text-decoration: underline; }
         
         <h2>Renato Borges Pontes</h2>
         <ul class="meta-list profile-details">
-          
-            <li><a class="profile-link" href="http://lattes.cnpq.br/2008125431826046" target="_blank" rel="noopener">Curriculum Lattes</a></li>
-          
-          <li><span class="meta-label">Apto(a) a orientar:</span> Física Teórica</li>
-          <li><span class="meta-label">Sala:</span> 208 (IF-2)</li>
-          <li><span class="meta-label">E-mail:</span> <a href="mailto:pontes@ufg.br">pontes@ufg.br</a></li>
-          <li><span class="meta-label">Telefone:</span> (62) 3521-2305</li>
-          <li><span class="meta-label">Pesquisa</span> &#34;Simulação Computacional de Materiais Nanoestruturados&#34;</li>
-          
-            <li>Bolsista de Produtividade em Pesquisa FAPEG/CNPq - PQ Nível C</li>
-          
-          <li><span class="meta-label">Formação:</span> Doutorado em Física - USP - 2007</li>
-          
-            <li><span class="meta-label">ORCID:</span> <a href="https://orcid.org/0000-0002-3336-3882" target="_blank" rel="noopener">0000-0002-3336-3882</a></li>
-          
+          <li><span class="meta-label">Curriculum Lattes:</span> <a class="profile-link" href="http://lattes.cnpq.br/2008125431826046" target="_blank" rel="noopener">http://lattes.cnpq.br/2008125431826046</a></li>
+          <li><span class="meta-label">ORCID:</span> <a href="https://orcid.org/0000-0002-3336-3882" target="_blank" rel="noopener">0000-0002-3336-3882</a></li>
+          <li><span class="meta-label">Apto(a) a orientar:</span> ---</li>
+          <li><span class="meta-label">Sala:</span> ---</li>
+          <li><span class="meta-label">E-mail:</span> <span class="missing-info">---</span></li>
+          <li><span class="meta-label">Telefone:</span> ---</li>
+          <li><span class="meta-label">Pesquisa:</span> ---</li>
+          <li><span class="meta-label">Bolsa:</span> ---</li>
+          <li><span class="meta-label">Formação:</span> ---</li>
           <li><span class="meta-label">Fonte do perfil:</span> <a href="https://posgraduacao.if.ufg.br/p/41256-docentes-ppgf-instituto-de-fisica-ufg" target="_blank" rel="noopener">Página do PPGF/UFG</a></li>
         </ul>
       </aside>
 
       <section class="content-card">
         <nav class="tabs" aria-label="Seções da página">
-          <button class="tab-button active" data-tab="artigos">Artigos publicados</button>
+          <button class="tab-button active" data-tab="artigos">Artigos relacionados</button>
           <button class="tab-button" data-tab="estatisticas">Estatísticas do docente</button>
         </nav>
 
         <div id="artigos" class="tab-panel active">
-          <h2>Artigos publicados</h2>
+          <h2>Artigos relacionados</h2>
           
             <div class="article-list">
               
                 <article class="article-item">
                   <span class="article-year">2026</span>
                   <h3 class="article-title">Electronic and optical properties of ultra-wide gap two-dimensional germanium dioxide</h3>
-                  <p class="article-authors">Rafael Franco Ribeiro Reis; Gabriel Elyas Gama Araújo; Danilo Kuritza; José Eduardo Padilha; Alexandre Cavalheiro Dias; Andréia Luisa da Rosa; Renato Borges Pontes</p>
-                  <p><a href="https://doi.org/10.1088/1361-648x/ae3af7" target="_blank" rel="noopener">DOI: 10.1088/1361-648x/ae3af7</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> Rafael Franco Ribeiro Reis; Gabriel Elyas Gama Araújo; Danilo Kuritza; José Eduardo Padilha; Alexandre Cavalheiro Dias; Andréia Luisa da Rosa; Renato Borges Pontes</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: ORCID; Pesquisador: Renato Borges Pontes; ORCID: 0000-0002-3336-3882</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1088/1361-648x/ae3af7" target="_blank" rel="noopener">10.1088/1361-648x/ae3af7</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2026</span>
                   <h3 class="article-title">Iron Age: Ionic-Liquid-Mediated Interfacial Charge Transfer Enables Selective CO2 Photoreduction to Formic Acid on Iron Oxide</h3>
-                  <p class="article-authors">Muhammad I. Qadir; Blendo A. da Silva; Sherdil Khan; Renato B. Pontes; Fabiano S. Rodembusch; Fabiano Mesquita; Brenno A. D. Neto; Paulo E. N. de Souza; Jairton Dupont</p>
-                  <p><a href="https://doi.org/10.1021/jacs.6c04801" target="_blank" rel="noopener">DOI: 10.1021/jacs.6c04801</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> Muhammad I. Qadir; Blendo A. da Silva; Sherdil Khan; Renato B. Pontes; Fabiano S. Rodembusch; Fabiano Mesquita; Brenno A. D. Neto; Paulo E. N. de Souza; Jairton Dupont</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: ORCID; Pesquisador: Renato Borges Pontes; ORCID: 0000-0002-3336-3882</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1021/jacs.6c04801" target="_blank" rel="noopener">10.1021/jacs.6c04801</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2025</span>
                   <h3 class="article-title">Hidden Carbenes: NHC-Al Species at the Al&lt;sub&gt;2&lt;/sub&gt;O&lt;sub&gt;3&lt;/sub&gt;–Ionic Liquid Interface</h3>
-                  <p class="article-authors">Muhammad I. Qadir; Camila P. Ebersol; Blendo A. da Silva; Marcus V. Castegnaro; Luciano M. Lião; Flávio O. Sanches-Neto; Heibbe C. B. de Oliveira; Renato B. Pontes; Günter Ebeling; Jaı̈rton Dupont</p>
-                  <p><a href="https://doi.org/10.1021/jacsau.5c00736" target="_blank" rel="noopener">DOI: 10.1021/jacsau.5c00736</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> Muhammad I. Qadir; Camila P. Ebersol; Blendo A. da Silva; Marcus V. Castegnaro; Luciano M. Lião; Flávio O. Sanches-Neto; Heibbe C. B. de Oliveira; Renato B. Pontes; Günter Ebeling; Jaı̈rton Dupont</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: OpenAlex; Pesquisador: Renato Borges Pontes; ORCID: 0000-0002-3336-3882</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1021/jacsau.5c00736" target="_blank" rel="noopener">10.1021/jacsau.5c00736</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2025</span>
                   <h3 class="article-title">Magnetostriction as the origin of the magnetodielectric effect in La2CoMnO6</h3>
-                  <p class="article-authors">M. Boldrin; A. Bagri; D. Barlettani; E. Teather; L. Squillante; M. de Souza; R. B. Pontes; A. G. Silva; T. J. A. Mori; R. Perry; R. Lora-Serrano; E. Granado; E. M. Bittar; L. S. I. Veiga; L. Bufaiçal</p>
-                  <p><a href="https://doi.org/10.1103/sjr4-6kdp" target="_blank" rel="noopener">DOI: 10.1103/sjr4-6kdp</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> M. Boldrin et al.</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: ORCID; Pesquisador: Renato Borges Pontes; ORCID: 0000-0002-3336-3882</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1103/sjr4-6kdp" target="_blank" rel="noopener">10.1103/sjr4-6kdp</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2025</span>
                   <h3 class="article-title">Surface palladium nanoparticles in ionic liquids modified with phosphorus ligands for enhanced catalytic semi-hydrogenation</h3>
-                  <p class="article-authors">Muhammad I. Qadir; Gustavo Chacón-Rosales; Camila P. Ebersol; Gabriel Abarca; Pedro H. F. Matias; Heibbe Cristhian. B. de Oliveira; Renato B. Pontes; Rafael Stieler; Jairton Dupont</p>
-                  <p><a href="https://doi.org/10.1039/d5nr00789e" target="_blank" rel="noopener">DOI: 10.1039/d5nr00789e</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> Muhammad I. Qadir; Gustavo Chacón-Rosales; Camila P. Ebersol; Gabriel Abarca; Pedro H. F. Matias; Heibbe Cristhian. B. de Oliveira; Renato B. Pontes; Rafael Stieler; Jairton Dupont</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: ORCID; Pesquisador: Renato Borges Pontes; ORCID: 0000-0002-3336-3882</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1039/d5nr00789e" target="_blank" rel="noopener">10.1039/d5nr00789e</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2024</span>
                   <h3 class="article-title">Near-room-temperature ferrimagnetism and half-metallicity in disordered Ca1.5La0.5MnRuO6</h3>
-                  <p class="article-authors">A. G. Silva; R. B. Pontes; M. Boldrin; H. V. S. Pessoni; L. S. I. Veiga; J. R. Jesus; H. Fabrelli; A. R. C. Gonzaga; E. M. Bittar; L. Bufaiçal</p>
-                  <p><a href="https://doi.org/10.1103/physrevb.110.144415" target="_blank" rel="noopener">DOI: 10.1103/physrevb.110.144415</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> A. G. Silva; R. B. Pontes; M. Boldrin; H. V. S. Pessoni; L. S. I. Veiga; J. R. Jesus; H. Fabrelli; A. R. C. Gonzaga; E. M. Bittar; L. Bufaiçal</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: ORCID; Pesquisador: Renato Borges Pontes; ORCID: 0000-0002-3336-3882</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1103/physrevb.110.144415" target="_blank" rel="noopener">10.1103/physrevb.110.144415</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2024</span>
                   <h3 class="article-title">Unlocking dynamic intermetallic synergy: Ir/Ni alloy nanoparticles catalyze CO2 hydrogenation to formic acid in ionic liquid environments</h3>
-                  <p class="article-authors">Rodrigo Webber; Muhammad I. Qadir; Marcus V. Castegnaro; Renato B. Pontes; Kácris I.M. da Silva; Jairton Dupont</p>
-                  <p><a href="https://doi.org/10.1016/j.jcat.2024.115791" target="_blank" rel="noopener">DOI: 10.1016/j.jcat.2024.115791</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> Rodrigo Webber; Muhammad I. Qadir; Marcus V. Castegnaro; Renato B. Pontes; Kácris I.M. da Silva; Jairton Dupont</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: ORCID; Pesquisador: Renato Borges Pontes; ORCID: 0000-0002-3336-3882</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1016/j.jcat.2024.115791" target="_blank" rel="noopener">10.1016/j.jcat.2024.115791</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2023</span>
                   <h3 class="article-title">Conformational Dependence of the First Hyperpolarizability of the Li@B10H14 in Solution</h3>
-                  <p class="article-authors">Idney Brandão; Tertius L. Fonseca; Herbert C. Georg; Marcos A. Castro; Renato B. Pontes</p>
-                  <p><a href="https://doi.org/10.3390/liquids3010012" target="_blank" rel="noopener">DOI: 10.3390/liquids3010012</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> Idney Brandão; Tertius L. Fonseca; Herbert C. Georg; Marcos A. Castro; Renato B. Pontes</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: ORCID; Pesquisador: Renato Borges Pontes; ORCID: 0000-0002-3336-3882</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.3390/liquids3010012" target="_blank" rel="noopener">10.3390/liquids3010012</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2023</span>
                   <h3 class="article-title">Dynamic tuning of naked ruthenium clusters/nanoparticles in ionic liquids cages to boost CO2 hydrogenation to formic acid</h3>
-                  <p class="article-authors">Muhammad I. Qadir; Marcus V. Castegnaro; Felipe Ferreira Selau; Daniel L. Baptista; Gustavo Chacón; Renato B. Pontes; Allan M. Lisbôa; Dario Eberhardt; Jaı̈rton Dupont</p>
-                  <p><a href="https://doi.org/10.1016/j.apcatb.2023.123315" target="_blank" rel="noopener">DOI: 10.1016/j.apcatb.2023.123315</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> Muhammad I. Qadir; Marcus V. Castegnaro; Felipe Ferreira Selau; Daniel L. Baptista; Gustavo Chacón; Renato B. Pontes; Allan M. Lisbôa; Dario Eberhardt; Jaı̈rton Dupont</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: OpenAlex; Pesquisador: Renato Borges Pontes; ORCID: 0000-0002-3336-3882</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1016/j.apcatb.2023.123315" target="_blank" rel="noopener">10.1016/j.apcatb.2023.123315</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2023</span>
                   <h3 class="article-title">Electronic and optical properties of Janus-like hexagonal monolayer materials of group IV-VI</h3>
-                  <p class="article-authors">Rafael Barbosa; Danilo Kuritza; Gabriel Perin; R. H. Miwa; R. B. Pontes; J. E. Padilha</p>
-                  <p><a href="https://doi.org/10.1103/physrevmaterials.7.014001" target="_blank" rel="noopener">DOI: 10.1103/physrevmaterials.7.014001</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> Rafael Barbosa; Danilo Kuritza; Gabriel Perin; R. H. Miwa; R. B. Pontes; J. E. Padilha</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: ORCID; Pesquisador: Renato Borges Pontes; ORCID: 0000-0002-3336-3882</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1103/physrevmaterials.7.014001" target="_blank" rel="noopener">10.1103/physrevmaterials.7.014001</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2023</span>
                   <h3 class="article-title">First-principles study of bilayers ZnX and CdX ( X=S,Se,Te ) direct band-gap semiconductors and their van der Waals heterostructures</h3>
-                  <p class="article-authors">Gabriel Perin; Danilo Kuritza; Rafael Barbosa; Gustavo Tresco; Renato B. Pontes; Roberto H. Miwa; José E. Padilha</p>
-                  <p><a href="https://doi.org/10.1103/physrevmaterials.7.104003" target="_blank" rel="noopener">DOI: 10.1103/physrevmaterials.7.104003</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> Gabriel Perin; Danilo Kuritza; Rafael Barbosa; Gustavo Tresco; Renato B. Pontes; Roberto H. Miwa; José E. Padilha</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: ORCID; Pesquisador: Renato Borges Pontes; ORCID: 0000-0002-3336-3882</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1103/physrevmaterials.7.104003" target="_blank" rel="noopener">10.1103/physrevmaterials.7.104003</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2023</span>
                   <h3 class="article-title">Second hyperpolarizabilities of alkali- and alkaline-earth-doped boron nitride nanotubes</h3>
-                  <p class="article-authors">Suélio Marques; Marcos A. Castro; Renato B. Pontes; Salviano A. Leão; Tertius L. Fonseca</p>
-                  <p><a href="https://doi.org/10.1016/j.cplett.2023.140473" target="_blank" rel="noopener">DOI: 10.1016/j.cplett.2023.140473</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> Suélio Marques; Marcos A. Castro; Renato B. Pontes; Salviano A. Leão; Tertius L. Fonseca</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: OpenAlex; Pesquisador: Renato Borges Pontes; ORCID: 0000-0002-3336-3882</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1016/j.cplett.2023.140473" target="_blank" rel="noopener">10.1016/j.cplett.2023.140473</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2022</span>
                   <h3 class="article-title">Stability of Subnanometer MoS Wires under a Realistic Environment</h3>
-                  <p class="article-authors">Dominike Pacine de Andrade Deus; Daniel F. Souza; Andréia Luísa da Rosa; Renato B. Pontes; Thomas Frauenheim</p>
-                  <p><a href="https://doi.org/10.1021/acs.jpclett.2c02575" target="_blank" rel="noopener">DOI: 10.1021/acs.jpclett.2c02575</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> Dominike Pacine de Andrade Deus; Daniel F. Souza; Andréia Luísa da Rosa; Renato B. Pontes; Thomas Frauenheim</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: OpenAlex; Pesquisador: Renato Borges Pontes; ORCID: 0000-0002-3336-3882</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1021/acs.jpclett.2c02575" target="_blank" rel="noopener">10.1021/acs.jpclett.2c02575</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2021</span>
                   <h3 class="article-title">New Pentaoctite Phase of Group‐V Nanostructures</h3>
-                  <p class="article-authors">Andréia Luísa da Rosa; Renato B. Pontes; Erika N. Lima; Thomas Frauenheim</p>
-                  <p><a href="https://doi.org/10.1002/pssb.202100112" target="_blank" rel="noopener">DOI: 10.1002/pssb.202100112</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> Andréia Luísa da Rosa; Renato B. Pontes; Erika N. Lima; Thomas Frauenheim</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: OpenAlex; Pesquisador: Renato Borges Pontes; ORCID: 0000-0002-3336-3882</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1002/pssb.202100112" target="_blank" rel="noopener">10.1002/pssb.202100112</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2021</span>
                   <h3 class="article-title">Tuning electronic and optical properties of bismuth monolayers by molecular adsorption</h3>
-                  <p class="article-authors">Andréia Luísa da Rosa; Erika Nascimento Lima; Maurício Chagas da Silva; Renato Borges Pontes; Tomé Mauro Schmidt; Thomas Frauenheim</p>
-                  <p><a href="https://doi.org/10.1016/j.susc.2021.121849" target="_blank" rel="noopener">DOI: 10.1016/j.susc.2021.121849</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> Andréia Luísa da Rosa; Erika Nascimento Lima; Maurício Chagas da Silva; Renato Borges Pontes; Tomé Mauro Schmidt; Thomas Frauenheim</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: ORCID; Pesquisador: Renato Borges Pontes; ORCID: 0000-0002-3336-3882</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1016/j.susc.2021.121849" target="_blank" rel="noopener">10.1016/j.susc.2021.121849</a></p>
                 </article>
               
             </div>

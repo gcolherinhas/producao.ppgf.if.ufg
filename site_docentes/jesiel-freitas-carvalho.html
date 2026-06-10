@@ -53,6 +53,16 @@ a:hover { text-decoration: underline; }
   opacity: 0.96;
 }
 .ufg-line strong { font-weight: 700; }
+.header-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  margin-bottom: 18px;
+  font-size: 1rem;
+  line-height: 1.35;
+  opacity: 0.96;
+}
+.header-stack span { display: block; }
 .header-title {
   margin: 0;
   font-size: clamp(1.75rem, 3vw, 2.7rem);
@@ -167,7 +177,9 @@ a:hover { text-decoration: underline; }
   margin-bottom: 7px;
 }
 .article-title { margin: 0 0 8px 0; font-size: 1.02rem; }
-.article-authors { color: var(--muted); font-size: 0.92rem; margin: 0; }
+.article-authors { color: var(--muted); font-size: 0.92rem; margin: 0 0 8px 0; }
+.article-meta { color: var(--text); font-size: 0.92rem; margin: 6px 0 0 0; }
+.article-meta .meta-label { font-size: 0.92rem; }
 .kpi-grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(120px, 1fr));
@@ -246,9 +258,10 @@ a:hover { text-decoration: underline; }
   <header class="site-header">
     <div class="bar"></div>
     <div class="header-inner">
-      <div class="ufg-line">
-        <span><strong>UNIVERSIDADE FEDERAL DE GOIÁS - UFG</strong><br>INSTITUTO DE FÍSICA · PROGRAMA DE PÓS-GRADUAÇÃO EM FÍSICA</span>
-        <span>PPGF/UFG</span>
+      <div class="header-stack" aria-label="Cabeçalho institucional">
+        <span>Universidade Federal de Goiás</span>
+        <span>Instituto de Física</span>
+        <span>Programa de Pós-Graduação em Física</span>
       </div>
       <h1 class="header-title">Jesiel Freitas Carvalho</h1>
     </div>
@@ -262,109 +275,116 @@ a:hover { text-decoration: underline; }
         
         <h2>Jesiel Freitas Carvalho</h2>
         <ul class="meta-list profile-details">
-          
-            <li><a class="profile-link" href="http://lattes.cnpq.br/5841291496427516" target="_blank" rel="noopener">Curriculum Lattes</a></li>
-          
-          <li><span class="meta-label">Apto(a) a orientar:</span> Física Experimental</li>
-          <li><span class="meta-label">Sala:</span> 116 (IF-1)</li>
-          <li><span class="meta-label">E-mail:</span> <a href="mailto:carvalho@ufg.br">carvalho@ufg.br</a></li>
-          <li><span class="meta-label">Telefone:</span> (62) 3521-2072</li>
-          <li><span class="meta-label">Pesquisa</span> &#34;Física de Materiais&#34;</li>
-          
-          <li><span class="meta-label">Formação:</span> Doutorado em Ciência e Engenharia de Materiais - USP - 1999</li>
-          
-            <li><span class="meta-label">ORCID:</span> <a href="https://orcid.org/0000-0002-2784-4129" target="_blank" rel="noopener">0000-0002-2784-4129</a></li>
-          
+          <li><span class="meta-label">Curriculum Lattes:</span> <a class="profile-link" href="http://lattes.cnpq.br/5841291496427516" target="_blank" rel="noopener">http://lattes.cnpq.br/5841291496427516</a></li>
+          <li><span class="meta-label">ORCID:</span> <a href="https://orcid.org/0000-0002-2784-4129" target="_blank" rel="noopener">0000-0002-2784-4129</a></li>
+          <li><span class="meta-label">Apto(a) a orientar:</span> ---</li>
+          <li><span class="meta-label">Sala:</span> ---</li>
+          <li><span class="meta-label">E-mail:</span> <span class="missing-info">---</span></li>
+          <li><span class="meta-label">Telefone:</span> ---</li>
+          <li><span class="meta-label">Pesquisa:</span> ---</li>
+          <li><span class="meta-label">Bolsa:</span> ---</li>
+          <li><span class="meta-label">Formação:</span> ---</li>
           <li><span class="meta-label">Fonte do perfil:</span> <a href="https://posgraduacao.if.ufg.br/p/41256-docentes-ppgf-instituto-de-fisica-ufg" target="_blank" rel="noopener">Página do PPGF/UFG</a></li>
         </ul>
       </aside>
 
       <section class="content-card">
         <nav class="tabs" aria-label="Seções da página">
-          <button class="tab-button active" data-tab="artigos">Artigos publicados</button>
+          <button class="tab-button active" data-tab="artigos">Artigos relacionados</button>
           <button class="tab-button" data-tab="estatisticas">Estatísticas do docente</button>
         </nav>
 
         <div id="artigos" class="tab-panel active">
-          <h2>Artigos publicados</h2>
+          <h2>Artigos relacionados</h2>
           
             <div class="article-list">
               
                 <article class="article-item">
                   <span class="article-year">2026</span>
                   <h3 class="article-title">Pathways to obtain high-entropy BiFeO3-based thin films modified by rare earth cations</h3>
-                  <p class="article-authors">Marco A.M. Teixeira; Konstantin Romanyuk; Fernando Brondani Minussi; Vladimir V. Shvartsman; Andréi L. Kholkin; Doru C. Lupascu; Soma Salamon; Heiko Wende; J.F. Carvalho; José A. Eiras; Eudes B. Araújo</p>
-                  <p><a href="https://doi.org/10.1016/j.ceramint.2026.01.401" target="_blank" rel="noopener">DOI: 10.1016/j.ceramint.2026.01.401</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> Marco A.M. Teixeira et al.</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: OpenAlex; Pesquisador: Jesiel Freitas Carvalho; ORCID: 0000-0002-2784-4129</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1016/j.ceramint.2026.01.401" target="_blank" rel="noopener">10.1016/j.ceramint.2026.01.401</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2024</span>
                   <h3 class="article-title">Exploring calcite Coprecipitation: Synthesis, Crystal Growth, and pH effect</h3>
-                  <p class="article-authors">Hannah Larissa Siqueira Matos-Pimentel; Cecília Maria Alves de Oliveira; Flávia Gomes de Souza; Gisane Gasparotto; Breno Leite; J.F. Carvalho</p>
-                  <p><a href="https://doi.org/10.1016/j.jcrysgro.2024.127808" target="_blank" rel="noopener">DOI: 10.1016/j.jcrysgro.2024.127808</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> Hannah Larissa Siqueira Matos-Pimentel; Cecília Maria Alves de Oliveira; Flávia Gomes de Souza; Gisane Gasparotto; Breno Leite; J.F. Carvalho</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: OpenAlex; Pesquisador: Jesiel Freitas Carvalho; ORCID: 0000-0002-2784-4129</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1016/j.jcrysgro.2024.127808" target="_blank" rel="noopener">10.1016/j.jcrysgro.2024.127808</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2024</span>
                   <h3 class="article-title">Study of fixing holographic gratings in Bi&lt;sub&gt;2&lt;/sub&gt;TeO&lt;sub&gt;5&lt;/sub&gt; photorefractive crystals</h3>
-                  <p class="article-authors">Ivan de Oliveira; J.F. Carvalho</p>
-                  <p><a href="https://doi.org/10.1364/josab.516444" target="_blank" rel="noopener">DOI: 10.1364/josab.516444</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> Ivan de Oliveira; J.F. Carvalho</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: OpenAlex; Pesquisador: Jesiel Freitas Carvalho; ORCID: 0000-0002-2784-4129</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1364/josab.516444" target="_blank" rel="noopener">10.1364/josab.516444</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2024</span>
                   <h3 class="article-title">Synthesis and Crystal Growth of Mg-Calcite and Dolomite</h3>
-                  <p class="article-authors">Hannah Larissa Siqueira Matos-Pimentel; Cecília Maria Alves de Oliveira; J.F. Carvalho</p>
-                  <p><a href="https://doi.org/10.1093/mam/ozae044.642" target="_blank" rel="noopener">DOI: 10.1093/mam/ozae044.642</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> Hannah Larissa Siqueira Matos-Pimentel; Cecília Maria Alves de Oliveira; J.F. Carvalho</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: OpenAlex; Pesquisador: Jesiel Freitas Carvalho; ORCID: 0000-0002-2784-4129</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1093/mam/ozae044.642" target="_blank" rel="noopener">10.1093/mam/ozae044.642</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2024</span>
                   <h3 class="article-title">Synthesis, luminescent and thermometric properties of the Tb3+ doped Gd2TeO6 phosphor</h3>
-                  <p class="article-authors">K.D. Ferreira; Luana Alves de Queiroz; J.F. Carvalho; Lauro June Queiroz Maia; Ricardo Costa de Santana</p>
-                  <p><a href="https://doi.org/10.1016/j.jallcom.2024.175369" target="_blank" rel="noopener">DOI: 10.1016/j.jallcom.2024.175369</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> K.D. Ferreira; Luana Alves de Queiroz; J.F. Carvalho; Lauro June Queiroz Maia; Ricardo Costa de Santana</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: OpenAlex; Pesquisador: Jesiel Freitas Carvalho; ORCID: 0000-0002-2784-4129</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1016/j.jallcom.2024.175369" target="_blank" rel="noopener">10.1016/j.jallcom.2024.175369</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2024</span>
                   <h3 class="article-title">Temperature dependent photoluminescence properties of a Y2Ge2O7:Tb3+ phosphors. A dual band ratiometric luminescent thermometer</h3>
-                  <p class="article-authors">Débora Evelyn Taborga dos Santos; Alisson Torquato; Itália Vallerini Barbosa; J.F. Carvalho; Lauro June Queiroz Maia; Ricardo Costa de Santana</p>
-                  <p><a href="https://doi.org/10.1016/j.jallcom.2024.177444" target="_blank" rel="noopener">DOI: 10.1016/j.jallcom.2024.177444</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> Débora Evelyn Taborga dos Santos; Alisson Torquato; Itália Vallerini Barbosa; J.F. Carvalho; Lauro June Queiroz Maia; Ricardo Costa de Santana</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: OpenAlex; Pesquisador: Jesiel Freitas Carvalho; ORCID: 0000-0002-2784-4129</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1016/j.jallcom.2024.177444" target="_blank" rel="noopener">10.1016/j.jallcom.2024.177444</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2024</span>
                   <h3 class="article-title">Thermal degradation in methylammonium–formamidinium–guanidinium lead iodide perovskites</h3>
-                  <p class="article-authors">Fernando Brondani Minussi; Rogério Marcos Silva; J.F. Carvalho; E. B. Araújo</p>
-                  <p><a href="https://doi.org/10.1039/d4tc00395k" target="_blank" rel="noopener">DOI: 10.1039/d4tc00395k</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> Fernando Brondani Minussi; Rogério Marcos Silva; J.F. Carvalho; E. B. Araújo</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: OpenAlex; Pesquisador: Jesiel Freitas Carvalho; ORCID: 0000-0002-2784-4129</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1039/d4tc00395k" target="_blank" rel="noopener">10.1039/d4tc00395k</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2023</span>
                   <h3 class="article-title">780 nm near-infrared photorefractive holograms recorded in undoped Bi12TiO20 crystal under the action of external electric field</h3>
-                  <p class="article-authors">André L. Moura; Askery Canabarro; Emerson de Lima; W. C. Soares; J.F. Carvalho; M. T. de Araújo; P. V. dos Santos</p>
-                  <p><a href="https://doi.org/10.1016/j.optmat.2023.114032" target="_blank" rel="noopener">DOI: 10.1016/j.optmat.2023.114032</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> André L. Moura; Askery Canabarro; Emerson de Lima; W. C. Soares; J.F. Carvalho; M. T. de Araújo; P. V. dos Santos</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: OpenAlex; Pesquisador: Jesiel Freitas Carvalho; ORCID: 0000-0002-2784-4129</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1016/j.optmat.2023.114032" target="_blank" rel="noopener">10.1016/j.optmat.2023.114032</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2022</span>
                   <h3 class="article-title">Guanidinium substitution-dependent phase transitions, ionic conductivity, and dielectric properties of MAPbI&lt;sub&gt;3&lt;/sub&gt;</h3>
-                  <p class="article-authors">Fernando Brondani Minussi; Eduardo M. Bertoletti; S. P. Reis; J.F. Carvalho; E. B. Araújo</p>
-                  <p><a href="https://doi.org/10.1039/d1cc06642k" target="_blank" rel="noopener">DOI: 10.1039/d1cc06642k</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> Fernando Brondani Minussi; Eduardo M. Bertoletti; S. P. Reis; J.F. Carvalho; E. B. Araújo</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: OpenAlex; Pesquisador: Jesiel Freitas Carvalho; ORCID: 0000-0002-2784-4129</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1039/d1cc06642k" target="_blank" rel="noopener">10.1039/d1cc06642k</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2022</span>
                   <h3 class="article-title">Hole-electron competition investigated by holographic recording in Bi12TiO20 crystal under applied electric field</h3>
-                  <p class="article-authors">Wibsson Ribeiro Lopes; P. V. dos Santos; Jerline Rocha; J.F. Carvalho; M. T. de Araújo</p>
-                  <p><a href="https://doi.org/10.1016/j.optmat.2022.112445" target="_blank" rel="noopener">DOI: 10.1016/j.optmat.2022.112445</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> Wibsson Ribeiro Lopes; P. V. dos Santos; Jerline Rocha; J.F. Carvalho; M. T. de Araújo</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: OpenAlex; Pesquisador: Jesiel Freitas Carvalho; ORCID: 0000-0002-2784-4129</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1016/j.optmat.2022.112445" target="_blank" rel="noopener">10.1016/j.optmat.2022.112445</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2021</span>
                   <h3 class="article-title">Continuous trap distribution and variation of optical properties with concentration in oxi-fluoroborate glass doped with Nd3+</h3>
-                  <p class="article-authors">Maurício Rodriguez Chialanza; Germán Azcune; Heinkel Bentos Pereira; Gisane Gasparotto; Ricardo Costa de Santana; Lauro June Queiroz Maia; J.F. Carvalho</p>
-                  <p><a href="https://doi.org/10.1016/j.jnoncrysol.2021.120683" target="_blank" rel="noopener">DOI: 10.1016/j.jnoncrysol.2021.120683</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> Maurício Rodriguez Chialanza; Germán Azcune; Heinkel Bentos Pereira; Gisane Gasparotto; Ricardo Costa de Santana; Lauro June Queiroz Maia; J.F. Carvalho</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: OpenAlex; Pesquisador: Jesiel Freitas Carvalho; ORCID: 0000-0002-2784-4129</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1016/j.jnoncrysol.2021.120683" target="_blank" rel="noopener">10.1016/j.jnoncrysol.2021.120683</a></p>
                 </article>
               
             </div>

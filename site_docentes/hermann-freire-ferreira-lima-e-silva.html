@@ -53,6 +53,16 @@ a:hover { text-decoration: underline; }
   opacity: 0.96;
 }
 .ufg-line strong { font-weight: 700; }
+.header-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  margin-bottom: 18px;
+  font-size: 1rem;
+  line-height: 1.35;
+  opacity: 0.96;
+}
+.header-stack span { display: block; }
 .header-title {
   margin: 0;
   font-size: clamp(1.75rem, 3vw, 2.7rem);
@@ -167,7 +177,9 @@ a:hover { text-decoration: underline; }
   margin-bottom: 7px;
 }
 .article-title { margin: 0 0 8px 0; font-size: 1.02rem; }
-.article-authors { color: var(--muted); font-size: 0.92rem; margin: 0; }
+.article-authors { color: var(--muted); font-size: 0.92rem; margin: 0 0 8px 0; }
+.article-meta { color: var(--text); font-size: 0.92rem; margin: 6px 0 0 0; }
+.article-meta .meta-label { font-size: 0.92rem; }
 .kpi-grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(120px, 1fr));
@@ -246,9 +258,10 @@ a:hover { text-decoration: underline; }
   <header class="site-header">
     <div class="bar"></div>
     <div class="header-inner">
-      <div class="ufg-line">
-        <span><strong>UNIVERSIDADE FEDERAL DE GOIÁS - UFG</strong><br>INSTITUTO DE FÍSICA · PROGRAMA DE PÓS-GRADUAÇÃO EM FÍSICA</span>
-        <span>PPGF/UFG</span>
+      <div class="header-stack" aria-label="Cabeçalho institucional">
+        <span>Universidade Federal de Goiás</span>
+        <span>Instituto de Física</span>
+        <span>Programa de Pós-Graduação em Física</span>
       </div>
       <h1 class="header-title">Hermann Freire Ferreira Lima e Silva</h1>
     </div>
@@ -262,139 +275,148 @@ a:hover { text-decoration: underline; }
         
         <h2>Hermann Freire Ferreira Lima e Silva</h2>
         <ul class="meta-list profile-details">
-          
-            <li><a class="profile-link" href="http://lattes.cnpq.br/7198902316435183" target="_blank" rel="noopener">Curriculum Lattes</a></li>
-          
-          <li><span class="meta-label">Apto(a) a orientar:</span> Física Teórica</li>
-          <li><span class="meta-label">Sala:</span> 224 (IF-2)</li>
-          <li><span class="meta-label">E-mail:</span> <a href="mailto:hermann_freire@ufg.br">hermann_freire@ufg.br</a></li>
-          <li><span class="meta-label">Telefone:</span> (62) 3521-2315</li>
-          <li><span class="meta-label">Pesquisa</span> &#34;Sistemas Fortemente Correlacionados&#34;</li>
-          
-            <li>Bolsista de Produtividade de CNPq - Nível 2</li>
-          
-          <li><span class="meta-label">Formação:</span> Doutorado em Física - Universidade de Brasília - 2006</li>
-          
-            <li><span class="meta-label">ORCID:</span> <a href="https://orcid.org/0000-0002-6470-2816" target="_blank" rel="noopener">0000-0002-6470-2816</a></li>
-          
+          <li><span class="meta-label">Curriculum Lattes:</span> <a class="profile-link" href="http://lattes.cnpq.br/7198902316435183" target="_blank" rel="noopener">http://lattes.cnpq.br/7198902316435183</a></li>
+          <li><span class="meta-label">ORCID:</span> <a href="https://orcid.org/0000-0002-6470-2816" target="_blank" rel="noopener">0000-0002-6470-2816</a></li>
+          <li><span class="meta-label">Apto(a) a orientar:</span> ---</li>
+          <li><span class="meta-label">Sala:</span> ---</li>
+          <li><span class="meta-label">E-mail:</span> <span class="missing-info">---</span></li>
+          <li><span class="meta-label">Telefone:</span> ---</li>
+          <li><span class="meta-label">Pesquisa:</span> ---</li>
+          <li><span class="meta-label">Bolsa:</span> ---</li>
+          <li><span class="meta-label">Formação:</span> ---</li>
           <li><span class="meta-label">Fonte do perfil:</span> <a href="https://posgraduacao.if.ufg.br/p/41256-docentes-ppgf-instituto-de-fisica-ufg" target="_blank" rel="noopener">Página do PPGF/UFG</a></li>
         </ul>
       </aside>
 
       <section class="content-card">
         <nav class="tabs" aria-label="Seções da página">
-          <button class="tab-button active" data-tab="artigos">Artigos publicados</button>
+          <button class="tab-button active" data-tab="artigos">Artigos relacionados</button>
           <button class="tab-button" data-tab="estatisticas">Estatísticas do docente</button>
         </nav>
 
         <div id="artigos" class="tab-panel active">
-          <h2>Artigos publicados</h2>
+          <h2>Artigos relacionados</h2>
           
             <div class="article-list">
               
                 <article class="article-item">
                   <span class="article-year">2025</span>
                   <h3 class="article-title">Efficiency of the superconducting diode effect of pair-density-wave states in two-dimensional 𝑑-wave altermagnets</h3>
-                  <p class="article-authors">Igor de M. Froldi; Hermann Freire</p>
-                  <p><a href="https://doi.org/10.1016/j.aop.2025.170273" target="_blank" rel="noopener">DOI: 10.1016/j.aop.2025.170273</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> Igor de M. Froldi; Hermann Freire</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: ORCID; Pesquisador: Hermann Freire Ferreira Lima e Silva; ORCID: 0000-0002-6470-2816</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1016/j.aop.2025.170273" target="_blank" rel="noopener">10.1016/j.aop.2025.170273</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2025</span>
                   <h3 class="article-title">Exact analysis of the interplay of charge order and unconventional pairings in the 2D Hatsugai-Kohmoto model</h3>
-                  <p class="article-authors">Carlos Eduardo S.P. Corsino; Hermann Freire</p>
-                  <p><a href="https://doi.org/10.1016/j.physleta.2025.131070" target="_blank" rel="noopener">DOI: 10.1016/j.physleta.2025.131070</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> Carlos Eduardo S.P. Corsino; Hermann Freire</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: ORCID; Pesquisador: Hermann Freire Ferreira Lima e Silva; ORCID: 0000-0002-6470-2816</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1016/j.physleta.2025.131070" target="_blank" rel="noopener">10.1016/j.physleta.2025.131070</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2024</span>
                   <h3 class="article-title">Strong pair-density-wave fluctuations in an exactly solvable doped Mott insulator</h3>
-                  <p class="article-authors">Igor de M. Froldi; Carlos Eduardo S. P. Corsino; Hermann Freire</p>
-                  <p><a href="https://doi.org/10.1103/physrevb.110.245136" target="_blank" rel="noopener">DOI: 10.1103/physrevb.110.245136</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> Igor de M. Froldi; Carlos Eduardo S. P. Corsino; Hermann Freire</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: ORCID; Pesquisador: Hermann Freire Ferreira Lima e Silva; ORCID: 0000-0002-6470-2816</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1103/physrevb.110.245136" target="_blank" rel="noopener">10.1103/physrevb.110.245136</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2024</span>
                   <h3 class="article-title">Transport properties in non-Fermi liquid phases of nodal-point semimetals</h3>
-                  <p class="article-authors">Ipsita Mandal; Hermann Freire</p>
-                  <p><a href="https://doi.org/10.1088/1361-648x/ad665e" target="_blank" rel="noopener">DOI: 10.1088/1361-648x/ad665e</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> Ipsita Mandal; Hermann Freire</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: ORCID; Pesquisador: Hermann Freire Ferreira Lima e Silva; ORCID: 0000-0002-6470-2816</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1088/1361-648x/ad665e" target="_blank" rel="noopener">10.1088/1361-648x/ad665e</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2024</span>
                   <h3 class="article-title">Unconventional superconductivity in altermagnets with spin-orbit coupling</h3>
-                  <p class="article-authors">Vanuildo S. de Carvalho; Hermann Freire</p>
-                  <p><a href="https://doi.org/10.1103/physrevb.110.l220503" target="_blank" rel="noopener">DOI: 10.1103/physrevb.110.l220503</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> Vanuildo S. de Carvalho; Hermann Freire</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: ORCID; Pesquisador: Hermann Freire Ferreira Lima e Silva; ORCID: 0000-0002-6470-2816</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1103/physrevb.110.l220503" target="_blank" rel="noopener">10.1103/physrevb.110.l220503</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2023</span>
                   <h3 class="article-title">Charge order and emergent symmetries in cuprate superconductors</h3>
-                  <p class="article-authors">C. Pépin; H. Freire</p>
-                  <p><a href="https://doi.org/10.1016/j.aop.2023.169233" target="_blank" rel="noopener">DOI: 10.1016/j.aop.2023.169233</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> C. Pépin; H. Freire</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: ORCID; Pesquisador: Hermann Freire Ferreira Lima e Silva; ORCID: 0000-0002-6470-2816</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1016/j.aop.2023.169233" target="_blank" rel="noopener">10.1016/j.aop.2023.169233</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2023</span>
                   <h3 class="article-title">Incoherent transport in a model for the strange metal phase: Memory-matrix formalism</h3>
-                  <p class="article-authors">Emile Pangburn; Anurag Banerjee; Hermann Freire; Catherine Pépin</p>
-                  <p><a href="https://doi.org/10.1103/physrevb.107.245109" target="_blank" rel="noopener">DOI: 10.1103/physrevb.107.245109</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> Emile Pangburn; Anurag Banerjee; Hermann Freire; Catherine Pépin</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: ORCID; Pesquisador: Hermann Freire Ferreira Lima e Silva; ORCID: 0000-0002-6470-2816</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1103/physrevb.107.245109" target="_blank" rel="noopener">10.1103/physrevb.107.245109</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2023</span>
                   <h3 class="article-title">Multipolar spin liquid in an exactly solvable model for j_eff=3/2 moments</h3>
-                  <p class="article-authors">Vanuildo Silva de Carvalho; Hermann Freire; Rodrigo Pereira</p>
-                  <p><a href="https://doi.org/10.1103/physrevb.108.094418" target="_blank" rel="noopener">DOI: 10.1103/physrevb.108.094418</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> Vanuildo Silva de Carvalho; Hermann Freire; Rodrigo Pereira</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: ORCID; Pesquisador: Hermann Freire Ferreira Lima e Silva; ORCID: 0000-0002-6470-2816</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1103/physrevb.108.094418" target="_blank" rel="noopener">10.1103/physrevb.108.094418</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2023</span>
                   <h3 class="article-title">Strange metallicity in an antiferromagnetic quantum critical model: A sign-problem-free quantum Monte Carlo study</h3>
-                  <p class="article-authors">Rafael M. P. Teixeira; Catherine Pépin; Hermann Freire</p>
-                  <p><a href="https://doi.org/10.1103/physrevb.108.085131" target="_blank" rel="noopener">DOI: 10.1103/physrevb.108.085131</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> Rafael M. P. Teixeira; Catherine Pépin; Hermann Freire</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: ORCID; Pesquisador: Hermann Freire Ferreira Lima e Silva; ORCID: 0000-0002-6470-2816</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1103/physrevb.108.085131" target="_blank" rel="noopener">10.1103/physrevb.108.085131</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2022</span>
                   <h3 class="article-title">Raman response and shear viscosity in the non-Fermi liquid phase of Luttinger semimetals</h3>
-                  
-                  <p><a href="https://doi.org/10.1088/1361-648x/ac6785" target="_blank" rel="noopener">DOI: 10.1088/1361-648x/ac6785</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> ---</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: ORCID; Pesquisador: Hermann Freire Ferreira Lima e Silva; ORCID: 0000-0002-6470-2816</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1088/1361-648x/ac6785" target="_blank" rel="noopener">10.1088/1361-648x/ac6785</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2022</span>
                   <h3 class="article-title">Superconductivity near a nematoelastic quantum critical point</h3>
-                  
-                  <p><a href="https://doi.org/10.1103/physrevb.105.l220501" target="_blank" rel="noopener">DOI: 10.1103/physrevb.105.l220501</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> ---</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: ORCID; Pesquisador: Hermann Freire Ferreira Lima e Silva; ORCID: 0000-0002-6470-2816</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1103/physrevb.105.l220501" target="_blank" rel="noopener">10.1103/physrevb.105.l220501</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2021</span>
                   <h3 class="article-title">Odd-frequency pair density wave in the Kitaev-Kondo lattice model</h3>
-                  
-                  <p><a href="https://doi.org/10.1103/physrevb.103.174512" target="_blank" rel="noopener">DOI: 10.1103/physrevb.103.174512</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> ---</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: ORCID; Pesquisador: Hermann Freire Ferreira Lima e Silva; ORCID: 0000-0002-6470-2816</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1103/physrevb.103.174512" target="_blank" rel="noopener">10.1103/physrevb.103.174512</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2021</span>
                   <h3 class="article-title">Strange metal from incoherent bosons</h3>
-                  
-                  <p><a href="https://doi.org/10.1103/physrevb.104.054513" target="_blank" rel="noopener">DOI: 10.1103/physrevb.104.054513</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> ---</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: ORCID; Pesquisador: Hermann Freire Ferreira Lima e Silva; ORCID: 0000-0002-6470-2816</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1103/physrevb.104.054513" target="_blank" rel="noopener">10.1103/physrevb.104.054513</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2021</span>
                   <h3 class="article-title">Thermoelectric and thermal properties of the weakly disordered non-Fermi liquid phase of Luttinger semimetals</h3>
-                  
-                  <p><a href="https://doi.org/10.1016/j.physleta.2021.127470" target="_blank" rel="noopener">DOI: 10.1016/j.physleta.2021.127470</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> ---</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: ORCID; Pesquisador: Hermann Freire Ferreira Lima e Silva; ORCID: 0000-0002-6470-2816</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1016/j.physleta.2021.127470" target="_blank" rel="noopener">10.1016/j.physleta.2021.127470</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2021</span>
                   <h3 class="article-title">Transport in the non-Fermi liquid phase of isotropic Luttinger semimetals</h3>
-                  
-                  <p><a href="https://doi.org/10.1103/physrevb.103.195116" target="_blank" rel="noopener">DOI: 10.1103/physrevb.103.195116</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> ---</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: ORCID; Pesquisador: Hermann Freire Ferreira Lima e Silva; ORCID: 0000-0002-6470-2816</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1103/physrevb.103.195116" target="_blank" rel="noopener">10.1103/physrevb.103.195116</a></p>
                 </article>
               
             </div>

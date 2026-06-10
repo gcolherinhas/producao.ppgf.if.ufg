@@ -53,6 +53,16 @@ a:hover { text-decoration: underline; }
   opacity: 0.96;
 }
 .ufg-line strong { font-weight: 700; }
+.header-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  margin-bottom: 18px;
+  font-size: 1rem;
+  line-height: 1.35;
+  opacity: 0.96;
+}
+.header-stack span { display: block; }
 .header-title {
   margin: 0;
   font-size: clamp(1.75rem, 3vw, 2.7rem);
@@ -167,7 +177,9 @@ a:hover { text-decoration: underline; }
   margin-bottom: 7px;
 }
 .article-title { margin: 0 0 8px 0; font-size: 1.02rem; }
-.article-authors { color: var(--muted); font-size: 0.92rem; margin: 0; }
+.article-authors { color: var(--muted); font-size: 0.92rem; margin: 0 0 8px 0; }
+.article-meta { color: var(--text); font-size: 0.92rem; margin: 6px 0 0 0; }
+.article-meta .meta-label { font-size: 0.92rem; }
 .kpi-grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(120px, 1fr));
@@ -246,9 +258,10 @@ a:hover { text-decoration: underline; }
   <header class="site-header">
     <div class="bar"></div>
     <div class="header-inner">
-      <div class="ufg-line">
-        <span><strong>UNIVERSIDADE FEDERAL DE GOIÁS - UFG</strong><br>INSTITUTO DE FÍSICA · PROGRAMA DE PÓS-GRADUAÇÃO EM FÍSICA</span>
-        <span>PPGF/UFG</span>
+      <div class="header-stack" aria-label="Cabeçalho institucional">
+        <span>Universidade Federal de Goiás</span>
+        <span>Instituto de Física</span>
+        <span>Programa de Pós-Graduação em Física</span>
       </div>
       <h1 class="header-title">Lucas Chibebe Céleri</h1>
     </div>
@@ -262,237 +275,260 @@ a:hover { text-decoration: underline; }
         
         <h2>Lucas Chibebe Céleri</h2>
         <ul class="meta-list profile-details">
-          
-            <li><a class="profile-link" href="http://lattes.cnpq.br/6630683190018665" target="_blank" rel="noopener">Curriculum Lattes</a></li>
-          
-          <li><span class="meta-label">Apto(a) a orientar:</span> Física Teórica</li>
-          <li><span class="meta-label">Sala:</span> 254 (IF-2)</li>
-          <li><span class="meta-label">E-mail:</span> <a href="mailto:lcceleri@ufg.br">lcceleri@ufg.br</a></li>
-          <li><span class="meta-label">Telefone:</span> (62) 3521-2330</li>
-          <li><span class="meta-label">Pesquisa</span> &#34;Informação Quântica&#34;</li>
-          
-            <li>Bolsista de Produtividade de CNPq - Nível 2</li>
-          
-          <li><span class="meta-label">Formação:</span> Doutorado em Física - UFSCar - 2008</li>
-          
-            <li><span class="meta-label">ORCID:</span> <a href="https://orcid.org/0000-0001-5120-8176" target="_blank" rel="noopener">0000-0001-5120-8176</a></li>
-          
+          <li><span class="meta-label">Curriculum Lattes:</span> <a class="profile-link" href="http://lattes.cnpq.br/6630683190018665" target="_blank" rel="noopener">http://lattes.cnpq.br/6630683190018665</a></li>
+          <li><span class="meta-label">ORCID:</span> <a href="https://orcid.org/0000-0001-5120-8176" target="_blank" rel="noopener">0000-0001-5120-8176</a></li>
+          <li><span class="meta-label">Apto(a) a orientar:</span> ---</li>
+          <li><span class="meta-label">Sala:</span> ---</li>
+          <li><span class="meta-label">E-mail:</span> <span class="missing-info">---</span></li>
+          <li><span class="meta-label">Telefone:</span> ---</li>
+          <li><span class="meta-label">Pesquisa:</span> ---</li>
+          <li><span class="meta-label">Bolsa:</span> ---</li>
+          <li><span class="meta-label">Formação:</span> ---</li>
           <li><span class="meta-label">Fonte do perfil:</span> <a href="https://posgraduacao.if.ufg.br/p/41256-docentes-ppgf-instituto-de-fisica-ufg" target="_blank" rel="noopener">Página do PPGF/UFG</a></li>
         </ul>
       </aside>
 
       <section class="content-card">
         <nav class="tabs" aria-label="Seções da página">
-          <button class="tab-button active" data-tab="artigos">Artigos publicados</button>
+          <button class="tab-button active" data-tab="artigos">Artigos relacionados</button>
           <button class="tab-button" data-tab="estatisticas">Estatísticas do docente</button>
         </nav>
 
         <div id="artigos" class="tab-panel active">
-          <h2>Artigos publicados</h2>
+          <h2>Artigos relacionados</h2>
           
             <div class="article-list">
               
                 <article class="article-item">
                   <span class="article-year">2026</span>
                   <h3 class="article-title">Asymmetry and irreversibility in the Lipkin-Meshkov-Glick model in the dynamical critical regime</h3>
-                  <p class="article-authors">Anonymous; Lucas C. Céleri</p>
-                  <p><a href="https://doi.org/10.1103/fvpd-dylq" target="_blank" rel="noopener">DOI: 10.1103/fvpd-dylq</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> Anonymous; Lucas C. Céleri</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: OpenAlex; Pesquisador: Lucas Chibebe Céleri; ORCID: 0000-0001-5120-8176</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1103/fvpd-dylq" target="_blank" rel="noopener">10.1103/fvpd-dylq</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2026</span>
                   <h3 class="article-title">Dynamical Casimir Effect Under the Action of Gravitational Waves</h3>
-                  <p class="article-authors">Gustavo de Oliveira; Thiago Henrique Moreira; Lucas Chibebe Céleri</p>
-                  <p><a href="https://doi.org/10.3390/e28020177" target="_blank" rel="noopener">DOI: 10.3390/e28020177</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> Gustavo de Oliveira; Thiago Henrique Moreira; Lucas Chibebe Céleri</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: ORCID; Pesquisador: Lucas Chibebe Céleri; ORCID: 0000-0001-5120-8176</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.3390/e28020177" target="_blank" rel="noopener">10.3390/e28020177</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2026</span>
                   <h3 class="article-title">Geometric quantum thermodynamics: A fiber bundle approach</h3>
-                  <p class="article-authors">T. Pernambuco; Lucas C. Céleri</p>
-                  <p><a href="https://doi.org/10.1103/cvyp-1pvn" target="_blank" rel="noopener">DOI: 10.1103/cvyp-1pvn</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> T. Pernambuco; Lucas C. Céleri</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: OpenAlex; Pesquisador: Lucas Chibebe Céleri; ORCID: 0000-0001-5120-8176</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1103/cvyp-1pvn" target="_blank" rel="noopener">10.1103/cvyp-1pvn</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2026</span>
                   <h3 class="article-title">Geometry of restricted information: The case of quantum thermodynamics</h3>
-                  <p class="article-authors">Anonymous; Lucas C. Céleri</p>
-                  <p><a href="https://doi.org/10.1103/xsqg-xvgc" target="_blank" rel="noopener">DOI: 10.1103/xsqg-xvgc</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> Anonymous; Lucas C. Céleri</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: OpenAlex; Pesquisador: Lucas Chibebe Céleri; ORCID: 0000-0001-5120-8176</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1103/xsqg-xvgc" target="_blank" rel="noopener">10.1103/xsqg-xvgc</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2026</span>
                   <h3 class="article-title">Gravitational decoherence of a composite particle: the interplay between gravitons and a classical Newtonian potential</h3>
-                  <p class="article-authors">Thiago Henrique Moreira; Lucas C. Céleri</p>
-                  <p><a href="https://doi.org/10.1088/1361-6382/ae76b4" target="_blank" rel="noopener">DOI: 10.1088/1361-6382/ae76b4</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> Thiago Henrique Moreira; Lucas C. Céleri</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: OpenAlex; Pesquisador: Lucas Chibebe Céleri; ORCID: 0000-0001-5120-8176</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1088/1361-6382/ae76b4" target="_blank" rel="noopener">10.1088/1361-6382/ae76b4</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2026</span>
                   <h3 class="article-title">Work distribution of quantum fields in static curved spacetimes</h3>
-                  <p class="article-authors">Rafael Lopes Costa; Marcos L. W. Basso; Jonas Maziero; Lucas C. Céleri</p>
-                  <p><a href="https://doi.org/10.1103/d26w-cj7z" target="_blank" rel="noopener">DOI: 10.1103/d26w-cj7z</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> Rafael Lopes Costa; Marcos L. W. Basso; Jonas Maziero; Lucas C. Céleri</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: OpenAlex; Pesquisador: Lucas Chibebe Céleri; ORCID: 0000-0001-5120-8176</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1103/d26w-cj7z" target="_blank" rel="noopener">10.1103/d26w-cj7z</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2025</span>
                   <h3 class="article-title">Entanglement Swapping for Partially Entangled Qudits and the Role of Quantum Complementarity</h3>
-                  <p class="article-authors">Diego S. S. Chrysosthemos; Marcos L. W. Basso; Lucas C. Céleri; Jonas Maziero</p>
-                  <p><a href="https://doi.org/10.1002/qute.202500674" target="_blank" rel="noopener">DOI: 10.1002/qute.202500674</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> Diego S. S. Chrysosthemos; Marcos L. W. Basso; Lucas C. Céleri; Jonas Maziero</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: OpenAlex; Pesquisador: Lucas Chibebe Céleri; ORCID: 0000-0001-5120-8176</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1002/qute.202500674" target="_blank" rel="noopener">10.1002/qute.202500674</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2025</span>
                   <h3 class="article-title">Mutual information and holographic entanglement entropy for strongly coupled &lt;mml:math xmlns:mml=&#34;http://www.w3.org/1998/Math/MathML&#34; display=&#34;inline&#34;&gt;&lt;mml:mrow&gt;&lt;mml:mi&gt;R&lt;/mml:mi&gt;&lt;/mml:mrow&gt;&lt;/mml:math&gt;-charged plasmas</h3>
-                  <p class="article-authors">Gustavo de Oliveira; Ronaldo F. Costa; Lucas C. Céleri; Rômulo Rougemont</p>
-                  <p><a href="https://doi.org/10.1103/ylpl-96p1" target="_blank" rel="noopener">DOI: 10.1103/ylpl-96p1</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> Gustavo de Oliveira; Ronaldo F. Costa; Lucas C. Céleri; Rômulo Rougemont</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: OpenAlex; Pesquisador: Lucas Chibebe Céleri; ORCID: 0000-0001-5120-8176</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1103/ylpl-96p1" target="_blank" rel="noopener">10.1103/ylpl-96p1</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2025</span>
                   <h3 class="article-title">Quantum Detailed Fluctuation Theorem in Curved Spacetimes: The Observer Dependent Nature of Entropy Production</h3>
-                  <p class="article-authors">Marcos L. W. Basso; Jonas Maziero; Lucas C. Céleri</p>
-                  <p><a href="https://doi.org/10.1103/physrevlett.134.050406" target="_blank" rel="noopener">DOI: 10.1103/physrevlett.134.050406</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> Marcos L. W. Basso; Jonas Maziero; Lucas C. Céleri</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: OpenAlex; Pesquisador: Lucas Chibebe Céleri; ORCID: 0000-0001-5120-8176</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1103/physrevlett.134.050406" target="_blank" rel="noopener">10.1103/physrevlett.134.050406</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2025</span>
                   <h3 class="article-title">Quantum thermodynamics as a gauge theory</h3>
-                  <p class="article-authors">Gabriel Fernandez Ferrari; Łukasz Rudnicki; Lucas C. Céleri</p>
-                  <p><a href="https://doi.org/10.1103/physreva.111.052209" target="_blank" rel="noopener">DOI: 10.1103/physreva.111.052209</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> Gabriel Fernandez Ferrari; Łukasz Rudnicki; Lucas C. Céleri</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: OpenAlex; Pesquisador: Lucas Chibebe Céleri; ORCID: 0000-0001-5120-8176</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1103/physreva.111.052209" target="_blank" rel="noopener">10.1103/physreva.111.052209</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2024</span>
                   <h3 class="article-title">Decoherence of a composite particle induced by a weak quantized gravitational field</h3>
-                  <p class="article-authors">Thiago H Moreira; Lucas C Céleri</p>
-                  <p><a href="https://doi.org/10.1088/1361-6382/ad0a53" target="_blank" rel="noopener">DOI: 10.1088/1361-6382/ad0a53</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> Thiago H Moreira; Lucas C Céleri</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: ORCID; Pesquisador: Lucas Chibebe Céleri; ORCID: 0000-0001-5120-8176</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1088/1361-6382/ad0a53" target="_blank" rel="noopener">10.1088/1361-6382/ad0a53</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2024</span>
                   <h3 class="article-title">Effects of reservoir squeezing on the amplification of quantum correlation and the quantum speed limit</h3>
-                  <p class="article-authors">Zhaorui Peng; Lucas C. Céleri; Abdul Basit; Gao Xianlong</p>
-                  <p><a href="https://doi.org/10.1103/physreva.110.052433" target="_blank" rel="noopener">DOI: 10.1103/physreva.110.052433</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> Zhaorui Peng; Lucas C. Céleri; Abdul Basit; Gao Xianlong</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: OpenAlex; Pesquisador: Lucas Chibebe Céleri; ORCID: 0000-0001-5120-8176</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1103/physreva.110.052433" target="_blank" rel="noopener">10.1103/physreva.110.052433</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2024</span>
                   <h3 class="article-title">Entropy production due to spacetime fluctuations</h3>
-                  <p class="article-authors">Thiago Henrique Moreira; Lucas C. Céleri</p>
-                  <p><a href="https://doi.org/10.1088/1361-6382/ada083" target="_blank" rel="noopener">DOI: 10.1088/1361-6382/ada083</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> Thiago Henrique Moreira; Lucas C. Céleri</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: OpenAlex; Pesquisador: Lucas Chibebe Céleri; ORCID: 0000-0001-5120-8176</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1088/1361-6382/ada083" target="_blank" rel="noopener">10.1088/1361-6382/ada083</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2024</span>
                   <h3 class="article-title">Gauge-Invariant Quantum Thermodynamics: Consequences for the First Law</h3>
-                  <p class="article-authors">Lucas C. Céleri; Łukasz Rudnicki</p>
-                  <p><a href="https://doi.org/10.3390/e26020111" target="_blank" rel="noopener">DOI: 10.3390/e26020111</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> Lucas C. Céleri; Łukasz Rudnicki</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: ORCID; Pesquisador: Lucas Chibebe Céleri; ORCID: 0000-0001-5120-8176</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.3390/e26020111" target="_blank" rel="noopener">10.3390/e26020111</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2024</span>
                   <h3 class="article-title">Krylov complexity and dynamical phase transition in the quenched Lipkin-Meshkov-Glick model</h3>
-                  <p class="article-authors">P. Bento; Adolfo del Campo; Lucas C. Céleri</p>
-                  <p><a href="https://doi.org/10.1103/physrevb.109.224304" target="_blank" rel="noopener">DOI: 10.1103/physrevb.109.224304</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> P. Bento; Adolfo del Campo; Lucas C. Céleri</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: OpenAlex; Pesquisador: Lucas Chibebe Céleri; ORCID: 0000-0001-5120-8176</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1103/physrevb.109.224304" target="_blank" rel="noopener">10.1103/physrevb.109.224304</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2024</span>
                   <h3 class="article-title">Landauer Principle and the Second Law in a Relativistic Communication Scenario</h3>
-                  <p class="article-authors">Yuri J. Alvim; Lucas C. Céleri</p>
-                  <p><a href="https://doi.org/10.3390/e26070613" target="_blank" rel="noopener">DOI: 10.3390/e26070613</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> Yuri J. Alvim; Lucas C. Céleri</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: OpenAlex; Pesquisador: Lucas Chibebe Céleri; ORCID: 0000-0001-5120-8176</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.3390/e26070613" target="_blank" rel="noopener">10.3390/e26070613</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2024</span>
                   <h3 class="article-title">Photonic entanglement with accelerated light</h3>
-                  <p class="article-authors">Raphael César de Souza Pimenta; Gustavo Henrique dos Santos; A. B. Barreto; Lucas C. Céleri; P. H. Souto Ribeiro</p>
-                  <p><a href="https://doi.org/10.22331/q-2024-04-30-1317" target="_blank" rel="noopener">DOI: 10.22331/q-2024-04-30-1317</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> Raphael César de Souza Pimenta; Gustavo Henrique dos Santos; A. B. Barreto; Lucas C. Céleri; P. H. Souto Ribeiro</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: OpenAlex; Pesquisador: Lucas Chibebe Céleri; ORCID: 0000-0001-5120-8176</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.22331/q-2024-04-30-1317" target="_blank" rel="noopener">10.22331/q-2024-04-30-1317</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2024</span>
                   <h3 class="article-title">Speedup of thermodynamic entropy production via quantum dynamical criticality</h3>
-                  <p class="article-authors">Andesson B. Nascimento; Lucas C. Céleri</p>
-                  <p><a href="https://doi.org/10.1103/physreva.110.052223" target="_blank" rel="noopener">DOI: 10.1103/physreva.110.052223</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> Andesson B. Nascimento; Lucas C. Céleri</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: OpenAlex; Pesquisador: Lucas Chibebe Céleri; ORCID: 0000-0001-5120-8176</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1103/physreva.110.052223" target="_blank" rel="noopener">10.1103/physreva.110.052223</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2024</span>
                   <h3 class="article-title">System-environment quantum information flow</h3>
-                  <p class="article-authors">Taysa M. Mendonça; Lucas C. Céleri; Mauro Paternostro; Diogo O. Soares-Pinto</p>
-                  <p><a href="https://doi.org/10.1103/physreva.110.l040401" target="_blank" rel="noopener">DOI: 10.1103/physreva.110.l040401</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> Taysa M. Mendonça; Lucas C. Céleri; Mauro Paternostro; Diogo O. Soares-Pinto</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: OpenAlex; Pesquisador: Lucas Chibebe Céleri; ORCID: 0000-0001-5120-8176</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1103/physreva.110.l040401" target="_blank" rel="noopener">10.1103/physreva.110.l040401</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2024</span>
                   <h3 class="article-title">Thermodynamic entropy production in the dynamical Casimir effect</h3>
-                  <p class="article-authors">Gustavo de Oliveira; Lucas C. Céleri</p>
-                  <p><a href="https://doi.org/10.1103/physreva.109.012807" target="_blank" rel="noopener">DOI: 10.1103/physreva.109.012807</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> Gustavo de Oliveira; Lucas C. Céleri</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: OpenAlex; Pesquisador: Lucas Chibebe Céleri; ORCID: 0000-0001-5120-8176</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1103/physreva.109.012807" target="_blank" rel="noopener">10.1103/physreva.109.012807</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2023</span>
                   <h3 class="article-title">Analogue Gravitational Lensing in Bose-Einstein Condensates</h3>
-                  <p class="article-authors">Decheng Ma; Chenglong Jia; Enrique Solano; Lucas Chibebe Céleri</p>
-                  <p><a href="https://doi.org/10.3390/universe9100443" target="_blank" rel="noopener">DOI: 10.3390/universe9100443</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> Decheng Ma; Chenglong Jia; Enrique Solano; Lucas Chibebe Céleri</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: ORCID; Pesquisador: Lucas Chibebe Céleri; ORCID: 0000-0001-5120-8176</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.3390/universe9100443" target="_blank" rel="noopener">10.3390/universe9100443</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2023</span>
                   <h3 class="article-title">Digital-Analog Quantum Simulation of Fermionic Models</h3>
-                  <p class="article-authors">Lucas C. Céleri; Daniel Huerga; Francisco Albarrán-Arriagada; Enrique Solano; Mikel Garcia de Andoin; Mikel Sanz</p>
-                  <p><a href="https://doi.org/10.1103/physrevapplied.19.064086" target="_blank" rel="noopener">DOI: 10.1103/physrevapplied.19.064086</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> Lucas C. Céleri; Daniel Huerga; Francisco Albarrán-Arriagada; Enrique Solano; Mikel Garcia de Andoin; Mikel Sanz</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: ORCID; Pesquisador: Lucas Chibebe Céleri; ORCID: 0000-0001-5120-8176</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1103/physrevapplied.19.064086" target="_blank" rel="noopener">10.1103/physrevapplied.19.064086</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2023</span>
                   <h3 class="article-title">Local predictability and coherence versus distributed entanglement in entanglement swapping from partially entangled pure states</h3>
-                  <p class="article-authors">Jonas Maziero; Marcos L.W. Basso; Lucas C. Céleri</p>
-                  <p><a href="https://doi.org/10.1016/j.physleta.2022.128576" target="_blank" rel="noopener">DOI: 10.1016/j.physleta.2022.128576</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> Jonas Maziero; Marcos L.W. Basso; Lucas C. Céleri</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: ORCID; Pesquisador: Lucas Chibebe Céleri; ORCID: 0000-0001-5120-8176</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1016/j.physleta.2022.128576" target="_blank" rel="noopener">10.1016/j.physleta.2022.128576</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2023</span>
                   <h3 class="article-title">Reassessing thermodynamic advantage from indefinite causal order</h3>
-                  <p class="article-authors">Matheus Capela; Harshit Verma; Fabio Costa; Lucas C. Céleri</p>
-                  <p><a href="https://doi.org/10.1103/physreva.107.062208" target="_blank" rel="noopener">DOI: 10.1103/physreva.107.062208</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> Matheus Capela; Harshit Verma; Fabio Costa; Lucas C. Céleri</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: ORCID; Pesquisador: Lucas Chibebe Céleri; ORCID: 0000-0001-5120-8176</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1103/physreva.107.062208" target="_blank" rel="noopener">10.1103/physreva.107.062208</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2023</span>
                   <h3 class="article-title">The irreversibility of relativistic time-dilation</h3>
-                  <p class="article-authors">Marcos L W Basso; Jonas Maziero; Lucas C Céleri</p>
-                  <p><a href="https://doi.org/10.1088/1361-6382/acf089" target="_blank" rel="noopener">DOI: 10.1088/1361-6382/acf089</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> Marcos L W Basso; Jonas Maziero; Lucas C Céleri</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: ORCID; Pesquisador: Lucas Chibebe Céleri; ORCID: 0000-0001-5120-8176</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1088/1361-6382/acf089" target="_blank" rel="noopener">10.1088/1361-6382/acf089</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2022</span>
                   <h3 class="article-title">Quantum Markov monogamy inequalities</h3>
-                  <p class="article-authors">Matheus Capela; Lucas C. Céleri; Rafael Chaves; Kavan Modi</p>
-                  <p><a href="https://doi.org/10.1103/physreva.106.022218" target="_blank" rel="noopener">DOI: 10.1103/physreva.106.022218</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> Matheus Capela; Lucas C. Céleri; Rafael Chaves; Kavan Modi</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: ORCID; Pesquisador: Lucas Chibebe Céleri; ORCID: 0000-0001-5120-8176</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1103/physreva.106.022218" target="_blank" rel="noopener">10.1103/physreva.106.022218</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2022</span>
                   <h3 class="article-title">Two-point measurement of entropy production from the outcomes of a single experiment with correlated photon pairs</h3>
-                  <p class="article-authors">Gabriel H. Aguilar; Thaís L. Silva; Thiago E. Guimarães; Rodrigo S. Piera; Lucas C. Céleri; Gabriel T. Landi</p>
-                  <p><a href="https://doi.org/10.1103/physreva.106.l020201" target="_blank" rel="noopener">DOI: 10.1103/physreva.106.l020201</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> Gabriel H. Aguilar; Thaís L. Silva; Thiago E. Guimarães; Rodrigo S. Piera; Lucas C. Céleri; Gabriel T. Landi</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: ORCID; Pesquisador: Lucas Chibebe Céleri; ORCID: 0000-0001-5120-8176</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1103/physreva.106.l020201" target="_blank" rel="noopener">10.1103/physreva.106.l020201</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2021</span>
                   <h3 class="article-title">Bounding generalized relative entropies: Nonasymptotic quantum speed limits</h3>
-                  <p class="article-authors">Diego Paiva Pires; Kavan Modi; Lucas Chibebe Céleri</p>
-                  <p><a href="https://doi.org/10.1103/physreve.103.032105" target="_blank" rel="noopener">DOI: 10.1103/physreve.103.032105</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> Diego Paiva Pires; Kavan Modi; Lucas Chibebe Céleri</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: ORCID; Pesquisador: Lucas Chibebe Céleri; ORCID: 0000-0001-5120-8176</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1103/physreve.103.032105" target="_blank" rel="noopener">10.1103/physreve.103.032105</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2021</span>
                   <h3 class="article-title">Digital-Analog Quantum Simulations Using the Cross-Resonance Effect</h3>
-                  <p class="article-authors">Tasio Gonzalez-Raya; Rodrigo Asensio-Perea; Ana Martin; Lucas C. Céleri; Mikel Sanz; Pavel Lougovski; Eugene F. Dumitrescu</p>
-                  <p><a href="https://doi.org/10.1103/prxquantum.2.020328" target="_blank" rel="noopener">DOI: 10.1103/prxquantum.2.020328</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> Tasio Gonzalez-Raya; Rodrigo Asensio-Perea; Ana Martin; Lucas C. Céleri; Mikel Sanz; Pavel Lougovski; Eugene F. Dumitrescu</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: ORCID; Pesquisador: Lucas Chibebe Céleri; ORCID: 0000-0001-5120-8176</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1103/prxquantum.2.020328" target="_blank" rel="noopener">10.1103/prxquantum.2.020328</a></p>
                 </article>
               
             </div>

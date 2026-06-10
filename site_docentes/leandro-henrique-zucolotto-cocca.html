@@ -53,6 +53,16 @@ a:hover { text-decoration: underline; }
   opacity: 0.96;
 }
 .ufg-line strong { font-weight: 700; }
+.header-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  margin-bottom: 18px;
+  font-size: 1rem;
+  line-height: 1.35;
+  opacity: 0.96;
+}
+.header-stack span { display: block; }
 .header-title {
   margin: 0;
   font-size: clamp(1.75rem, 3vw, 2.7rem);
@@ -167,7 +177,9 @@ a:hover { text-decoration: underline; }
   margin-bottom: 7px;
 }
 .article-title { margin: 0 0 8px 0; font-size: 1.02rem; }
-.article-authors { color: var(--muted); font-size: 0.92rem; margin: 0; }
+.article-authors { color: var(--muted); font-size: 0.92rem; margin: 0 0 8px 0; }
+.article-meta { color: var(--text); font-size: 0.92rem; margin: 6px 0 0 0; }
+.article-meta .meta-label { font-size: 0.92rem; }
 .kpi-grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(120px, 1fr));
@@ -246,9 +258,10 @@ a:hover { text-decoration: underline; }
   <header class="site-header">
     <div class="bar"></div>
     <div class="header-inner">
-      <div class="ufg-line">
-        <span><strong>UNIVERSIDADE FEDERAL DE GOIÁS - UFG</strong><br>INSTITUTO DE FÍSICA · PROGRAMA DE PÓS-GRADUAÇÃO EM FÍSICA</span>
-        <span>PPGF/UFG</span>
+      <div class="header-stack" aria-label="Cabeçalho institucional">
+        <span>Universidade Federal de Goiás</span>
+        <span>Instituto de Física</span>
+        <span>Programa de Pós-Graduação em Física</span>
       </div>
       <h1 class="header-title">Leandro Henrique Zucolotto Cocca</h1>
     </div>
@@ -262,349 +275,388 @@ a:hover { text-decoration: underline; }
         
         <h2>Leandro Henrique Zucolotto Cocca</h2>
         <ul class="meta-list profile-details">
-          
-            <li><a class="profile-link" href="http://lattes.cnpq.br/4277949941979816" target="_blank" rel="noopener">Curriculum Lattes</a></li>
-          
-          <li><span class="meta-label">Apto(a) a orientar:</span> Física Experimental</li>
-          <li><span class="meta-label">Sala:</span> 132 (IF-1)</li>
-          <li><span class="meta-label">E-mail:</span> <a href="mailto:leandro.zucolotto@ufg.br">leandro.zucolotto@ufg.br</a></li>
-          <li><span class="meta-label">Telefone:</span> (62) 3521-1014</li>
-          <li><span class="meta-label">Pesquisa</span> &#34;Óptica e Fotônica&#34;</li>
-          
-            <li>Bolsista de Produtividade de CNPq - Nível 2</li>
-          
-          <li><span class="meta-label">Formação:</span> Doutorado em Física Aplicada - USP - 2022</li>
-          
-            <li><span class="meta-label">ORCID:</span> <a href="https://orcid.org/0000-0003-4587-4062" target="_blank" rel="noopener">0000-0003-4587-4062</a></li>
-          
+          <li><span class="meta-label">Curriculum Lattes:</span> <a class="profile-link" href="http://lattes.cnpq.br/4277949941979816" target="_blank" rel="noopener">http://lattes.cnpq.br/4277949941979816</a></li>
+          <li><span class="meta-label">ORCID:</span> <a href="https://orcid.org/0000-0003-4587-4062" target="_blank" rel="noopener">0000-0003-4587-4062</a></li>
+          <li><span class="meta-label">Apto(a) a orientar:</span> ---</li>
+          <li><span class="meta-label">Sala:</span> ---</li>
+          <li><span class="meta-label">E-mail:</span> <span class="missing-info">---</span></li>
+          <li><span class="meta-label">Telefone:</span> ---</li>
+          <li><span class="meta-label">Pesquisa:</span> ---</li>
+          <li><span class="meta-label">Bolsa:</span> ---</li>
+          <li><span class="meta-label">Formação:</span> ---</li>
           <li><span class="meta-label">Fonte do perfil:</span> <a href="https://posgraduacao.if.ufg.br/p/41256-docentes-ppgf-instituto-de-fisica-ufg" target="_blank" rel="noopener">Página do PPGF/UFG</a></li>
         </ul>
       </aside>
 
       <section class="content-card">
         <nav class="tabs" aria-label="Seções da página">
-          <button class="tab-button active" data-tab="artigos">Artigos publicados</button>
+          <button class="tab-button active" data-tab="artigos">Artigos relacionados</button>
           <button class="tab-button" data-tab="estatisticas">Estatísticas do docente</button>
         </nav>
 
         <div id="artigos" class="tab-panel active">
-          <h2>Artigos publicados</h2>
+          <h2>Artigos relacionados</h2>
           
             <div class="article-list">
               
                 <article class="article-item">
                   <span class="article-year">2026</span>
                   <h3 class="article-title">Coumarin-Based Hybrids: From Linear Photophysical Properties to Multiphoton Excitation Behavior</h3>
-                  <p class="article-authors">Luis M. G. Abegão; Leonardo R de Almeida; Juliana G. M. Lima; Luciana M. Ramos; Hamilton B. Napolitano; João V. Valverde; Cleber R. Mendonça; Leonardo De Boni; Leandro H. Z. Cocca</p>
-                  <p><a href="https://doi.org/10.1021/acsphyschemau.6c00010" target="_blank" rel="noopener">DOI: 10.1021/acsphyschemau.6c00010</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> Luis M. G. Abegão; Leonardo R de Almeida; Juliana G. M. Lima; Luciana M. Ramos; Hamilton B. Napolitano; João V. Valverde; Cleber R. Mendonça; Leonardo De Boni; Leandro H. Z. Cocca</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: ORCID; Pesquisador: Leandro Henrique Zucolotto Cocca; ORCID: 0000-0003-4587-4062</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1021/acsphyschemau.6c00010" target="_blank" rel="noopener">10.1021/acsphyschemau.6c00010</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2025</span>
                   <h3 class="article-title">Advancements in organic fluorescent materials: unveiling the potential of peripheral group modification in dithienyl-diketopyrrolopyrrole derivatives for one- and two-photon bioimaging</h3>
-                  <p class="article-authors">Leandro H. Zucolotto Cocca; João V. P. Valverde; Celisnolia M. Leite; Natália S. Moreno; Alfredo L. Neto; Andreia G. Macedo; Sebastião Pratavieira; Daniel L. Silva; Paula C. Rodrigues; Valtencir Zucolotto; Cleber R. Mendonça; Leonardo De Boni</p>
-                  <p><a href="https://doi.org/10.1039/d4tb02291b" target="_blank" rel="noopener">DOI: 10.1039/d4tb02291b</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> Leandro H. Zucolotto Cocca et al.</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: ORCID; Pesquisador: Leandro Henrique Zucolotto Cocca; ORCID: 0000-0003-4587-4062</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1039/d4tb02291b" target="_blank" rel="noopener">10.1039/d4tb02291b</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2025</span>
                   <h3 class="article-title">Aggregation-Induced enhanced emission and twisted intramolecular charge transfer in a pyridylcarbodinitrile with tunable photoluminescence in solution, films, and OLEDs</h3>
-                  <p class="article-authors">Carolina Vesga-Hernández; Rafael dos Santos Carvalho; Arthur Barreto; Marlin Jeannette Pedrozo Peñafiel; Julia Rodrigues de Noronha; Luís Maqueira; Davi Back; Dayvid Mello Nascimento; Leandro H. Zucolotto Cocca; Ricardo Queiroz Aucélio; Leonardo de Boni; Marco Cremona; Jones Limberger</p>
-                  <p><a href="https://doi.org/10.1016/j.jphotochem.2025.116312" target="_blank" rel="noopener">DOI: 10.1016/j.jphotochem.2025.116312</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> Carolina Vesga-Hernández et al.</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: ORCID; Pesquisador: Leandro Henrique Zucolotto Cocca; ORCID: 0000-0003-4587-4062</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1016/j.jphotochem.2025.116312" target="_blank" rel="noopener">10.1016/j.jphotochem.2025.116312</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2025</span>
                   <h3 class="article-title">Corretion to “Nonlinear Investigation of Fluorene-Benzothiadiazole Copolymers with Multiphoton Absorption and Highlights as Optical Limiters”</h3>
-                  <p class="article-authors">Leandro H. Zucolotto Cocca; João V. P. Valverde; Elisa B. de Brito; Jilian Nei de Freitas; Maria de F. V. Marques; Cleber R. Mendonça; Leonardo De Boni</p>
-                  <p><a href="https://doi.org/10.1021/acsomega.5c06629" target="_blank" rel="noopener">DOI: 10.1021/acsomega.5c06629</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> Leandro H. Zucolotto Cocca; João V. P. Valverde; Elisa B. de Brito; Jilian Nei de Freitas; Maria de F. V. Marques; Cleber R. Mendonça; Leonardo De Boni</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: ORCID; Pesquisador: Leandro Henrique Zucolotto Cocca; ORCID: 0000-0003-4587-4062</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1021/acsomega.5c06629" target="_blank" rel="noopener">10.1021/acsomega.5c06629</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2025</span>
                   <h3 class="article-title">Enhancing the efficacy of antimicrobial photodynamic therapy through curcumin modifications</h3>
-                  <p class="article-authors">Priyanka Joshi; Jennifer M. Soares; Guilherme M. Martins; Leandro H. Zucolotto Cocca; Leonardo De Boni; Kleber T. de Oliveira; Vanderlei S. Bagnato; Kate C. Blanco</p>
-                  <p><a href="https://doi.org/10.1111/php.14000" target="_blank" rel="noopener">DOI: 10.1111/php.14000</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> Priyanka Joshi; Jennifer M. Soares; Guilherme M. Martins; Leandro H. Zucolotto Cocca; Leonardo De Boni; Kleber T. de Oliveira; Vanderlei S. Bagnato; Kate C. Blanco</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: ORCID; Pesquisador: Leandro Henrique Zucolotto Cocca; ORCID: 0000-0003-4587-4062</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1111/php.14000" target="_blank" rel="noopener">10.1111/php.14000</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2025</span>
                   <h3 class="article-title">Flexible and Portable Random Laser Devices: Integration of Electrospun Fibers and Doped Polymeric Substrates</h3>
-                  <p class="article-authors">Leandro H. Zucolotto Cocca; André L. S. Romero; Luiza A. Mercante; Kelcilene B. R. Teodoro; Cleber R. Mendonça; Leonardo De Boni; Daniel S. Correa</p>
-                  <p><a href="https://doi.org/10.1021/acsomega.5c03313" target="_blank" rel="noopener">DOI: 10.1021/acsomega.5c03313</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> Leandro H. Zucolotto Cocca; André L. S. Romero; Luiza A. Mercante; Kelcilene B. R. Teodoro; Cleber R. Mendonça; Leonardo De Boni; Daniel S. Correa</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: ORCID; Pesquisador: Leandro Henrique Zucolotto Cocca; ORCID: 0000-0003-4587-4062</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1021/acsomega.5c03313" target="_blank" rel="noopener">10.1021/acsomega.5c03313</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2025</span>
                   <h3 class="article-title">Nonlinear Investigation of Fluorene-Benzothiadiazole Copolymers with Multiphoton Absorption and Highlights as Optical Limiters</h3>
-                  <p class="article-authors">Leandro H. Zucolotto Cocca; João V. P. Valverde; Elisa B. de Brito; Jilian Nei de Freitas; Maria de F Vmarques; Cleber R. Mendonça; Leonardo De Boni</p>
-                  <p><a href="https://doi.org/10.1021/acsomega.4c11627" target="_blank" rel="noopener">DOI: 10.1021/acsomega.4c11627</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> Leandro H. Zucolotto Cocca; João V. P. Valverde; Elisa B. de Brito; Jilian Nei de Freitas; Maria de F Vmarques; Cleber R. Mendonça; Leonardo De Boni</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: ORCID; Pesquisador: Leandro Henrique Zucolotto Cocca; ORCID: 0000-0003-4587-4062</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1021/acsomega.4c11627" target="_blank" rel="noopener">10.1021/acsomega.4c11627</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2025</span>
                   <h3 class="article-title">Synthesis, Characterization, and Dual Functional Properties of Coumarin-Based Hybrids for Biological and Optical Applications</h3>
-                  <p class="article-authors">Juliana G. M. Lima; Jhonathan R. N. dos Santos; Luis M. G. Abegão; Leandro H. Zucolotto Cocca; Leonardo R. de Almeida; Hamilton B. Napolitano; Luciano Ribeiro; Luciana M. Ramos</p>
-                  <p><a href="https://doi.org/10.1021/acsomega.5c08426" target="_blank" rel="noopener">DOI: 10.1021/acsomega.5c08426</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> Juliana G. M. Lima; Jhonathan R. N. dos Santos; Luis M. G. Abegão; Leandro H. Zucolotto Cocca; Leonardo R. de Almeida; Hamilton B. Napolitano; Luciano Ribeiro; Luciana M. Ramos</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: ORCID; Pesquisador: Leandro Henrique Zucolotto Cocca; ORCID: 0000-0003-4587-4062</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1021/acsomega.5c08426" target="_blank" rel="noopener">10.1021/acsomega.5c08426</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2024</span>
                   <h3 class="article-title">Correlating scatterer concentration and intensity threshold of random laser in niobium oxide particle colloids with dye solution</h3>
-                  <p class="article-authors">Luis M.G. Abegão; Lauro J.Q. Maia; Leandro H.Z. Cocca; Hugo J.N.P.D. Mello; Márcio A.R.C. Alencar; José Joatan R. Jr</p>
-                  <p><a href="https://doi.org/10.1016/j.optmat.2024.116072" target="_blank" rel="noopener">DOI: 10.1016/j.optmat.2024.116072</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> Luis M.G. Abegão; Lauro J.Q. Maia; Leandro H.Z. Cocca; Hugo J.N.P.D. Mello; Márcio A.R.C. Alencar; José Joatan R. Jr</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: ORCID; Pesquisador: Leandro Henrique Zucolotto Cocca; ORCID: 0000-0003-4587-4062</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1016/j.optmat.2024.116072" target="_blank" rel="noopener">10.1016/j.optmat.2024.116072</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2024</span>
                   <h3 class="article-title">Diketopyrrolopyrrole derivatives: influence of peripheral groups in the excited states absorption process</h3>
-                  <p class="article-authors">Leandro H. Zucolotto Cocca; João Victor Pereira Valverde; Rafael Queiros Marcia; Alfredo Leithold Neto; Andréia G. Macedo; Paula C. Rodrigues; Cléber Renato Mendonça; Leonardo De Boni</p>
-                  <p><a href="https://doi.org/10.1117/12.3002662" target="_blank" rel="noopener">DOI: 10.1117/12.3002662</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> Leandro H. Zucolotto Cocca; João Victor Pereira Valverde; Rafael Queiros Marcia; Alfredo Leithold Neto; Andréia G. Macedo; Paula C. Rodrigues; Cléber Renato Mendonça; Leonardo De Boni</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: OpenAlex; Pesquisador: Leandro Henrique Zucolotto Cocca; ORCID: 0000-0003-4587-4062</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1117/12.3002662" target="_blank" rel="noopener">10.1117/12.3002662</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2024</span>
                   <h3 class="article-title">Exploring the two-photon absorption response in short π-chain organic compounds: Hydrazones and pyrazolines derivatives</h3>
-                  <p class="article-authors">Raiane S. Araújo; Luis M.G. Abegão; Leandro H.Z. Cocca; Aline A. da Silva; Marcelo S. Valle; José J. Rodrigues, Jr.; Cleber R. Mendonça; Leonardo De Boni; Márcio A.R.C. Alencar</p>
-                  <p><a href="https://doi.org/10.1016/j.optmat.2024.115448" target="_blank" rel="noopener">DOI: 10.1016/j.optmat.2024.115448</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> Raiane S. Araújo; Luis M.G. Abegão; Leandro H.Z. Cocca; Aline A. da Silva; Marcelo S. Valle; José J. Rodrigues, Jr.; Cleber R. Mendonça; Leonardo De Boni; Márcio A.R.C. Alencar</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: ORCID; Pesquisador: Leandro Henrique Zucolotto Cocca; ORCID: 0000-0003-4587-4062</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1016/j.optmat.2024.115448" target="_blank" rel="noopener">10.1016/j.optmat.2024.115448</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2024</span>
                   <h3 class="article-title">Nonlinear refraction in high terbium content borogermanate glass bulk and fiber</h3>
-                  <p class="article-authors">Franciele R. Henrique; André G. Pelosi; Juliana M.P. Almeida; Douglas F. Franco; Leandro H.Z. Cocca; J.L. Clabel H.; Marcelo Nalin; V.R. Mastelaro; L. De Boni; Cleber R. Mendonça</p>
-                  <p><a href="https://doi.org/10.1016/j.optmat.2023.114635" target="_blank" rel="noopener">DOI: 10.1016/j.optmat.2023.114635</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> Franciele R. Henrique; André G. Pelosi; Juliana M.P. Almeida; Douglas F. Franco; Leandro H.Z. Cocca; J.L. Clabel H.; Marcelo Nalin; V.R. Mastelaro; L. De Boni; Cleber R. Mendonça</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: ORCID; Pesquisador: Leandro Henrique Zucolotto Cocca; ORCID: 0000-0003-4587-4062</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1016/j.optmat.2023.114635" target="_blank" rel="noopener">10.1016/j.optmat.2023.114635</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2024</span>
                   <h3 class="article-title">Photophysical properties of 3-arylthioimidazo[1,2-a]pyridine derivatives: The role of peripheral electron-donating and electron-withdrawing groups in the advance of organic materials engineering</h3>
-                  <p class="article-authors">Leandro H. Zucolotto Cocca; João V.P. Valverde; Julie le Bescont; Chloé Breton-Patient; Sandrine Piguel; Daniel L. Silva; Cleber R. Mendonca; Leonardo De Boni</p>
-                  <p><a href="https://doi.org/10.1016/j.molstruc.2023.137221" target="_blank" rel="noopener">DOI: 10.1016/j.molstruc.2023.137221</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> Leandro H. Zucolotto Cocca; João V.P. Valverde; Julie le Bescont; Chloé Breton-Patient; Sandrine Piguel; Daniel L. Silva; Cleber R. Mendonca; Leonardo De Boni</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: ORCID; Pesquisador: Leandro Henrique Zucolotto Cocca; ORCID: 0000-0003-4587-4062</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1016/j.molstruc.2023.137221" target="_blank" rel="noopener">10.1016/j.molstruc.2023.137221</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2024</span>
                   <h3 class="article-title">Synthesis and characterization of novel fluorene–based green copolymers and their potential application in organic light-emitting diodes</h3>
-                  <p class="article-authors">Elisa Barbosa de Brito; Daniela Corrêa Santos; Taihana Parente de Paula; Andreia de Morais; Jilian Nei de Freitas; Rogério Valaski; Maria de Fátima Vieira Marques; Leandro Henrique Zucolotto Cocca; Andre Gasparotto Pelosi; Leonardo De Boni; Sergio Neves Monteiro</p>
-                  <p><a href="https://doi.org/10.1016/j.jmrt.2023.12.249" target="_blank" rel="noopener">DOI: 10.1016/j.jmrt.2023.12.249</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> Elisa Barbosa de Brito et al.</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: ORCID; Pesquisador: Leandro Henrique Zucolotto Cocca; ORCID: 0000-0003-4587-4062</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1016/j.jmrt.2023.12.249" target="_blank" rel="noopener">10.1016/j.jmrt.2023.12.249</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2024</span>
                   <h3 class="article-title">The integration of cerium oxide nanoparticles in solid-state random laser development</h3>
-                  <p class="article-authors">Abegao, Luis M. G.; Silva, Lucas H. P.; Cocca, Leandro H. Z.; Romero, Andre L. S.; Lopes, Ligyane H. T.; Mello, Hugo J. N. P. D.; Barbosa, Martin S.; De Boni, Leonardo</p>
-                  <p><a href="https://doi.org/10.1140/epjp/s13360-024-05433-3" target="_blank" rel="noopener">DOI: 10.1140/epjp/s13360-024-05433-3</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> Abegao, Luis M. G.; Silva, Lucas H. P.; Cocca, Leandro H. Z.; Romero, Andre L. S.; Lopes, Ligyane H. T.; Mello, Hugo J. N. P. D.; Barbosa, Martin S.; De Boni, Leonardo</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: ORCID; Pesquisador: Leandro Henrique Zucolotto Cocca; ORCID: 0000-0003-4587-4062</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1140/epjp/s13360-024-05433-3" target="_blank" rel="noopener">10.1140/epjp/s13360-024-05433-3</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2024</span>
                   <h3 class="article-title">Tuning the linear optical properties and two-photon absorption on the cinnamylideneacetophenone derivatives: The effect of methoxy group by a experimental and theoretical point of view</h3>
-                  <p class="article-authors">Carlos H.D. dos Santos; André G. Pelosi; João Victor Valverde; Leandro H.Z. Cocca; Diana C.G.A. Pinto; Maria Amparo F. Faustino; Cleber Renato Mendonça; Daniel L. da Silva; Leonardo De Boni</p>
-                  <p><a href="https://doi.org/10.1016/j.jphotochem.2024.115648" target="_blank" rel="noopener">DOI: 10.1016/j.jphotochem.2024.115648</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> Carlos H.D. dos Santos; André G. Pelosi; João Victor Valverde; Leandro H.Z. Cocca; Diana C.G.A. Pinto; Maria Amparo F. Faustino; Cleber Renato Mendonça; Daniel L. da Silva; Leonardo De Boni</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: ORCID; Pesquisador: Leandro Henrique Zucolotto Cocca; ORCID: 0000-0003-4587-4062</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1016/j.jphotochem.2024.115648" target="_blank" rel="noopener">10.1016/j.jphotochem.2024.115648</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2024</span>
                   <h3 class="article-title">Two-photon absorption in symmetric diketopyrrolopyrrole derivatives: influence of thienyl moiety and bromine atom</h3>
-                  <p class="article-authors">João Victor Pereira Valverde; Leandro H. Zucolotto Cocca; Alfredo Leithold Neto; Andréia G. Macedo; Daniel Luiz da Silva; Paulo Cristina Rodrigues; Leonardo De Boni; Cléber Renato Mendonça</p>
-                  <p><a href="https://doi.org/10.1117/12.3002475" target="_blank" rel="noopener">DOI: 10.1117/12.3002475</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> João Victor Pereira Valverde; Leandro H. Zucolotto Cocca; Alfredo Leithold Neto; Andréia G. Macedo; Daniel Luiz da Silva; Paulo Cristina Rodrigues; Leonardo De Boni; Cléber Renato Mendonça</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: OpenAlex; Pesquisador: Leandro Henrique Zucolotto Cocca; ORCID: 0000-0003-4587-4062</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1117/12.3002475" target="_blank" rel="noopener">10.1117/12.3002475</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2023</span>
                   <h3 class="article-title">3-arylthioimidazo[1,2-a]pyridine derivatives: A theoretical and experimental study of its photophysical properties</h3>
-                  <p class="article-authors">Zucolotto Cocca, L.H.; Pelosi, A.G.; Valverde, J.V.P.; le Bescont, J.; Breton-Patient, C.; Piguel, S.; Mendonça, C.R.; De Boni, L.</p>
-                  <p><a href="https://doi.org/10.1016/j.jphotochem.2023.114675" target="_blank" rel="noopener">DOI: 10.1016/j.jphotochem.2023.114675</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> Zucolotto Cocca, L.H.; Pelosi, A.G.; Valverde, J.V.P.; le Bescont, J.; Breton-Patient, C.; Piguel, S.; Mendonça, C.R.; De Boni, L.</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: ORCID; Pesquisador: Leandro Henrique Zucolotto Cocca; ORCID: 0000-0003-4587-4062</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1016/j.jphotochem.2023.114675" target="_blank" rel="noopener">10.1016/j.jphotochem.2023.114675</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2023</span>
                   <h3 class="article-title">Comparing two-photon absorption of chalcone, dibenzylideneacetone and thiosemicarbazone derivatives</h3>
-                  <p class="article-authors">Raiane S. Araújo; Lucas F. Sciuti; Leandro H.Z. Cocca; Thaís O. Lopes; Aline A. Silva; Luis M.G. Abegão; Marcelo S. Valle; José J. Rodrigues Jr; Cleber R. Mendonça; Leonardo De Boni; Márcio A.R.C. Alencar</p>
-                  <p><a href="https://doi.org/10.1016/j.optmat.2023.113510" target="_blank" rel="noopener">DOI: 10.1016/j.optmat.2023.113510</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> Raiane S. Araújo et al.</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: ORCID; Pesquisador: Leandro Henrique Zucolotto Cocca; ORCID: 0000-0003-4587-4062</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1016/j.optmat.2023.113510" target="_blank" rel="noopener">10.1016/j.optmat.2023.113510</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2023</span>
                   <h3 class="article-title">Influence of peripherical modifications in linear and nonlinear photophysical properties of imidazo[4,5-b]pyridine derivatives</h3>
-                  <p class="article-authors">O.D. Marbello; A.G. Pelosi; Leandro H.Z. Cocca; J.V.P. Valverde; S. Piguel; L. De Boni; C.R. Mendonça</p>
-                  <p><a href="https://doi.org/10.1016/j.molliq.2023.123092" target="_blank" rel="noopener">DOI: 10.1016/j.molliq.2023.123092</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> O.D. Marbello; A.G. Pelosi; Leandro H.Z. Cocca; J.V.P. Valverde; S. Piguel; L. De Boni; C.R. Mendonça</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: ORCID; Pesquisador: Leandro Henrique Zucolotto Cocca; ORCID: 0000-0003-4587-4062</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1016/j.molliq.2023.123092" target="_blank" rel="noopener">10.1016/j.molliq.2023.123092</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2023</span>
                   <h3 class="article-title">Observation of the two-photon transition enhanced first hyperpolarizability spectra in cinnamaldehyde derivatives: A femtosecond regime study</h3>
-                  <p class="article-authors">Carlos H. D. dos Santos; Leandro H. Zucolotto Cocca; André Gasparotto Pelosi; Vasco F. Batista; Diana C. G. A. Pinto; M. Amparo F. Faustino; Marcelo G. Vivas; Jonathas de Paula Siqueira; Cleber R. Mendonça; Leonardo De Boni</p>
-                  <p><a href="https://doi.org/10.1063/5.0151622" target="_blank" rel="noopener">DOI: 10.1063/5.0151622</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> Carlos H. D. dos Santos; Leandro H. Zucolotto Cocca; André Gasparotto Pelosi; Vasco F. Batista; Diana C. G. A. Pinto; M. Amparo F. Faustino; Marcelo G. Vivas; Jonathas de Paula Siqueira; Cleber R. Mendonça; Leonardo De Boni</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: ORCID; Pesquisador: Leandro Henrique Zucolotto Cocca; ORCID: 0000-0003-4587-4062</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1063/5.0151622" target="_blank" rel="noopener">10.1063/5.0151622</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2023</span>
                   <h3 class="article-title">Size-dependent photoinduced transparency in colloidal CdTe quantum dots in the strong confinement regime: an inverse linear relationship</h3>
-                  <p class="article-authors">Carlos H. D. Dos Santos; Diego L. Ferreira; Leandro H. Zucolotto Cocca; Rafael S. Mourão; Marco A. Schiavon; Cleber R. Mendonça; Leonardo De Boni; Marcelo G. Vivas</p>
-                  <p><a href="https://doi.org/10.1039/d2cp05006d" target="_blank" rel="noopener">DOI: 10.1039/d2cp05006d</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> Carlos H. D. Dos Santos; Diego L. Ferreira; Leandro H. Zucolotto Cocca; Rafael S. Mourão; Marco A. Schiavon; Cleber R. Mendonça; Leonardo De Boni; Marcelo G. Vivas</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: ORCID; Pesquisador: Leandro Henrique Zucolotto Cocca; ORCID: 0000-0003-4587-4062</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1039/d2cp05006d" target="_blank" rel="noopener">10.1039/d2cp05006d</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2023</span>
                   <h3 class="article-title">Studying the first order hyperpolarizability spectra in chalcone-based derivatives and the relation with one- and two-photon absorption transitions</h3>
-                  <p class="article-authors">Lucas F. Sciuti; Carlos H. D. dos Santos; Leandro H. Z. Cocca; André G. Pelosi; Rafaela G. M. da Costa; Jones Limberger; Cleber R. Mendonça; Leonardo De Boni</p>
-                  <p><a href="https://doi.org/10.1063/5.0166036" target="_blank" rel="noopener">DOI: 10.1063/5.0166036</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> Lucas F. Sciuti; Carlos H. D. dos Santos; Leandro H. Z. Cocca; André G. Pelosi; Rafaela G. M. da Costa; Jones Limberger; Cleber R. Mendonça; Leonardo De Boni</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: ORCID; Pesquisador: Leandro Henrique Zucolotto Cocca; ORCID: 0000-0003-4587-4062</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1063/5.0166036" target="_blank" rel="noopener">10.1063/5.0166036</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2023</span>
                   <h3 class="article-title">Two-Photon Absorption and Multiphoton Excited Fluorescence of Acetamide-Chalcone Derivatives: The Role of Dimethylamine Group on the Nonlinear Optical and Photophysical Properties</h3>
-                  <p class="article-authors">André Gasparotto Pelosi; Eli Silveira-Alves, Jr.; Leandro Henrique Zucolotto Cocca; João Victor Valverde; Guilherme Roberto Oliveira; Daniel Luiz da Silva; Leonardo De Boni; Pablo José Gonçalves; Cleber Renato Mendonca</p>
-                  <p><a href="https://doi.org/10.3390/molecules28041572" target="_blank" rel="noopener">DOI: 10.3390/molecules28041572</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> André Gasparotto Pelosi; Eli Silveira-Alves, Jr.; Leandro Henrique Zucolotto Cocca; João Victor Valverde; Guilherme Roberto Oliveira; Daniel Luiz da Silva; Leonardo De Boni; Pablo José Gonçalves; Cleber Renato Mendonca</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: ORCID; Pesquisador: Leandro Henrique Zucolotto Cocca; ORCID: 0000-0003-4587-4062</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.3390/molecules28041572" target="_blank" rel="noopener">10.3390/molecules28041572</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2023</span>
                   <h3 class="article-title">Two-photon absorption in imidazo[1,2-a]pyridine derivatives: Study of nonlinear optical response and dipolar properties</h3>
-                  <p class="article-authors">Valverde, Joao V. P.; Pelosi, Andre G.; Zucolotto Cocca, Leandro H.; Marbello, Orlando D.; le Bescont, Julie; Breton-Patient, Chloe; Piguel, Sandrine; Silva, Daniel L.; De Boni, Leonardo; Mendonca, Cleber R.</p>
-                  <p><a href="https://doi.org/10.1016/j.molliq.2023.121250" target="_blank" rel="noopener">DOI: 10.1016/j.molliq.2023.121250</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> Valverde, Joao V. P.; Pelosi, Andre G.; Zucolotto Cocca, Leandro H.; Marbello, Orlando D.; le Bescont, Julie; Breton-Patient, Chloe; Piguel, Sandrine; Silva, Daniel L.; De Boni, Leonardo; Mendonca, Cleber R.</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: ORCID; Pesquisador: Leandro Henrique Zucolotto Cocca; ORCID: 0000-0003-4587-4062</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1016/j.molliq.2023.121250" target="_blank" rel="noopener">10.1016/j.molliq.2023.121250</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2023</span>
                   <h3 class="article-title">Unveiling the molecular structure and two-photon absorption properties relationship of branched oligofluorenes</h3>
-                  <p class="article-authors">Leandro H. Zucolotto Cocca; André Gasparotto Pelosi; Luis M. G. Abegão; Rafael de Q. Garcia; Jean-Christophe Mulatier; Delphine Pitrat; Cyrille Barsu; Chantal Andraud; Cleber R. Mendonça; Marcelo G. Vivas; Leonardo De Boni</p>
-                  <p><a href="https://doi.org/10.1039/d2cp05189c" target="_blank" rel="noopener">DOI: 10.1039/d2cp05189c</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> Leandro H. Zucolotto Cocca et al.</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: ORCID; Pesquisador: Leandro Henrique Zucolotto Cocca; ORCID: 0000-0003-4587-4062</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1039/d2cp05189c" target="_blank" rel="noopener">10.1039/d2cp05189c</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2023</span>
                   <h3 class="article-title">Visible-Light-Induced Insertion of Sulfur Dioxide Mediated by Electron Donor-Acceptor Complex: Synthesis and Photophysical Properties of 3-Sulfonyl Indolizines</h3>
-                  <p class="article-authors">Naud-Martin, Delphine; Kosiuha, Marharyta; Zucolotto Cocca, Leandro H.; Retailleau, Pascal; Mahuteau-Betzer, Florence; De Boni, Leonardo; Piguel, Sandrine</p>
-                  <p><a href="https://doi.org/10.1002/ejoc.202300125" target="_blank" rel="noopener">DOI: 10.1002/ejoc.202300125</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> Naud-Martin, Delphine; Kosiuha, Marharyta; Zucolotto Cocca, Leandro H.; Retailleau, Pascal; Mahuteau-Betzer, Florence; De Boni, Leonardo; Piguel, Sandrine</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: ORCID; Pesquisador: Leandro Henrique Zucolotto Cocca; ORCID: 0000-0003-4587-4062</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1002/ejoc.202300125" target="_blank" rel="noopener">10.1002/ejoc.202300125</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2022</span>
                   <h3 class="article-title">Analysis of the nonlinear optical response in Imidazo[4,5-b]Pyridine derivatives</h3>
-                  <p class="article-authors">O.D. Marbello; André G. Pelosi; Leandro H. Zucolotto Cocca; João V. P. Valverde; Sandrine Piguel; Leonardo De Boni; Cléber Renato Mendonça</p>
-                  <p><a href="https://doi.org/10.1364/laop.2022.w4a.1" target="_blank" rel="noopener">DOI: 10.1364/laop.2022.w4a.1</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> O.D. Marbello; André G. Pelosi; Leandro H. Zucolotto Cocca; João V. P. Valverde; Sandrine Piguel; Leonardo De Boni; Cléber Renato Mendonça</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: OpenAlex; Pesquisador: Leandro Henrique Zucolotto Cocca; ORCID: 0000-0003-4587-4062</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1364/laop.2022.w4a.1" target="_blank" rel="noopener">10.1364/laop.2022.w4a.1</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2022</span>
                   <h3 class="article-title">Determination of linear and nonlinear optical properties of branched polyfluorenes in function of effective electron number</h3>
-                  <p class="article-authors">Leandro H. Zucolotto Cocca; André G. Pelosi; Luis M. G. Abegão; Chantal Andraud; Cléber Renato Mendonça; Marcelo G. Vivas; Leonardo De Boni</p>
-                  <p><a href="https://doi.org/10.1364/laop.2022.tu4a.55" target="_blank" rel="noopener">DOI: 10.1364/laop.2022.tu4a.55</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> Leandro H. Zucolotto Cocca; André G. Pelosi; Luis M. G. Abegão; Chantal Andraud; Cléber Renato Mendonça; Marcelo G. Vivas; Leonardo De Boni</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: OpenAlex; Pesquisador: Leandro Henrique Zucolotto Cocca; ORCID: 0000-0003-4587-4062</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1364/laop.2022.tu4a.55" target="_blank" rel="noopener">10.1364/laop.2022.tu4a.55</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2022</span>
                   <h3 class="article-title">Effect of peripherical groups on the two-photon brightness of (E)-3-benzyl-6-bromo-2-styryl-3H-imidazo[4,5-b]pyridine derivatives</h3>
-                  
-                  <p><a href="https://doi.org/10.1016/j.molliq.2022.119186" target="_blank" rel="noopener">DOI: 10.1016/j.molliq.2022.119186</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> ---</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: ORCID; Pesquisador: Leandro Henrique Zucolotto Cocca; ORCID: 0000-0003-4587-4062</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1016/j.molliq.2022.119186" target="_blank" rel="noopener">10.1016/j.molliq.2022.119186</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2022</span>
                   <h3 class="article-title">Enhanced Two-Photon Absorption of Chalcone and Dibenzylideneacetone Derivatives: Study of the structure-property relationship in nonlinear optical response</h3>
-                  <p class="article-authors">Raiane Sodré de Araújo; Lucas F. Sciuti; Leandro H. Zucolotto Cocca; Aline Alves da Silva; Marcelo Siqueira Valle; Luis M. G. Abegão; José J. Rodrigues; Leonardo De Boni; Márcio A. R. C. Alencar</p>
-                  <p><a href="https://doi.org/10.1364/laop.2022.w4a.7" target="_blank" rel="noopener">DOI: 10.1364/laop.2022.w4a.7</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> Raiane Sodré de Araújo; Lucas F. Sciuti; Leandro H. Zucolotto Cocca; Aline Alves da Silva; Marcelo Siqueira Valle; Luis M. G. Abegão; José J. Rodrigues; Leonardo De Boni; Márcio A. R. C. Alencar</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: OpenAlex; Pesquisador: Leandro Henrique Zucolotto Cocca; ORCID: 0000-0003-4587-4062</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1364/laop.2022.w4a.7" target="_blank" rel="noopener">10.1364/laop.2022.w4a.7</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2022</span>
                   <h3 class="article-title">Enhancement of optical properties of new purine nucleobases containing electron-donating and -withdrawing peripheral groups</h3>
-                  <p class="article-authors">Leandro Henrique Zucolotto Cocca</p>
-                  <p><a href="https://doi.org/10.1016/j.jphotobiol.2022.112524" target="_blank" rel="noopener">DOI: 10.1016/j.jphotobiol.2022.112524</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> Leandro Henrique Zucolotto Cocca</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: ORCID; Pesquisador: Leandro Henrique Zucolotto Cocca; ORCID: 0000-0003-4587-4062</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1016/j.jphotobiol.2022.112524" target="_blank" rel="noopener">10.1016/j.jphotobiol.2022.112524</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2022</span>
                   <h3 class="article-title">Incoherent Molecular Second-Order Scattering Dispersion Measured from One- and Two-Photon Absorption Photophysical Parameters</h3>
-                  <p class="article-authors">Lucas F. Sciuti; Luis M. G. Abegão; Carlos H. D. dos Santos; Leandro H. Zucolotto Cocca; Rafaela Gomes Martins da Costa; Jones Limberger; L. Misoguti; Cléber Renato Mendonça; Leonardo De Boni</p>
-                  <p><a href="https://doi.org/10.1364/laop.2022.w4a.5" target="_blank" rel="noopener">DOI: 10.1364/laop.2022.w4a.5</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> Lucas F. Sciuti; Luis M. G. Abegão; Carlos H. D. dos Santos; Leandro H. Zucolotto Cocca; Rafaela Gomes Martins da Costa; Jones Limberger; L. Misoguti; Cléber Renato Mendonça; Leonardo De Boni</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: OpenAlex; Pesquisador: Leandro Henrique Zucolotto Cocca; ORCID: 0000-0003-4587-4062</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1364/laop.2022.w4a.5" target="_blank" rel="noopener">10.1364/laop.2022.w4a.5</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2022</span>
                   <h3 class="article-title">Influence of electron-withdrawing groups in two-photon absorption of imidazopyridines derivatives</h3>
-                  <p class="article-authors">André Gasparotto Pelosi; Leandro Henrique Zucolotto Cocca; Luis M.G. Abegão; Lucas Fiocco Sciuti; Sandrine Piguel; Leonardo De Boni; Cleber R. Mendonça</p>
-                  <p><a href="https://doi.org/10.1016/j.dyepig.2021.109972" target="_blank" rel="noopener">DOI: 10.1016/j.dyepig.2021.109972</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> André Gasparotto Pelosi; Leandro Henrique Zucolotto Cocca; Luis M.G. Abegão; Lucas Fiocco Sciuti; Sandrine Piguel; Leonardo De Boni; Cleber R. Mendonça</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: ORCID; Pesquisador: Leandro Henrique Zucolotto Cocca; ORCID: 0000-0003-4587-4062</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1016/j.dyepig.2021.109972" target="_blank" rel="noopener">10.1016/j.dyepig.2021.109972</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2022</span>
                   <h3 class="article-title">Modeling the First-Order Molecular Hyperpolarizability Dispersion from Experimentally Obtained One- and Two-Photon Absorption</h3>
-                  
-                  <p><a href="https://doi.org/10.1021/acs.jpca.1c10559" target="_blank" rel="noopener">DOI: 10.1021/acs.jpca.1c10559</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> ---</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: ORCID; Pesquisador: Leandro Henrique Zucolotto Cocca; ORCID: 0000-0003-4587-4062</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1021/acs.jpca.1c10559" target="_blank" rel="noopener">10.1021/acs.jpca.1c10559</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2022</span>
                   <h3 class="article-title">Nonlinear Refractive Index of Terbium Doped Germanate Glass</h3>
-                  <p class="article-authors">André G. Pelosi; Franciele Renata Henrique; Juliana Mara Pinto de Almeida; Marcelo Nalin; Douglas F. Franco; Leandro H. Zucolotto Cocca; Cléber Renato Mendonça</p>
-                  <p><a href="https://doi.org/10.1364/laop.2022.tu4a.56" target="_blank" rel="noopener">DOI: 10.1364/laop.2022.tu4a.56</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> André G. Pelosi; Franciele Renata Henrique; Juliana Mara Pinto de Almeida; Marcelo Nalin; Douglas F. Franco; Leandro H. Zucolotto Cocca; Cléber Renato Mendonça</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: OpenAlex; Pesquisador: Leandro Henrique Zucolotto Cocca; ORCID: 0000-0003-4587-4062</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1364/laop.2022.tu4a.56" target="_blank" rel="noopener">10.1364/laop.2022.tu4a.56</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2022</span>
                   <h3 class="article-title">Second- and third-order nonlinear optical properties of mono-substituted terpenoid-like chalcones</h3>
-                  
-                  <p><a href="https://doi.org/10.1016/j.jphotochem.2022.113898" target="_blank" rel="noopener">DOI: 10.1016/j.jphotochem.2022.113898</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> ---</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: ORCID; Pesquisador: Leandro Henrique Zucolotto Cocca; ORCID: 0000-0003-4587-4062</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1016/j.jphotochem.2022.113898" target="_blank" rel="noopener">10.1016/j.jphotochem.2022.113898</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2022</span>
                   <h3 class="article-title">Spectral Dependence of the First Order Hyperpolarizability β in Butadiene Derivatives by HRS Technique Applying Ultrashort Pulses Laser</h3>
-                  <p class="article-authors">Carlos H. D. dos Santos; Leandro H. Zucolotto Cocca; André G. Pelosi; Cléber Renato Mendonça; Leonardo De Boni</p>
-                  <p><a href="https://doi.org/10.1364/laop.2022.w1a.3" target="_blank" rel="noopener">DOI: 10.1364/laop.2022.w1a.3</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> Carlos H. D. dos Santos; Leandro H. Zucolotto Cocca; André G. Pelosi; Cléber Renato Mendonça; Leonardo De Boni</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: OpenAlex; Pesquisador: Leandro Henrique Zucolotto Cocca; ORCID: 0000-0003-4587-4062</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1364/laop.2022.w1a.3" target="_blank" rel="noopener">10.1364/laop.2022.w1a.3</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2022</span>
                   <h3 class="article-title">Spectroscopy Study in Styryl Imidazo[4,5-b]Pyridine Derivatives</h3>
-                  <p class="article-authors">André G. Pelosi; Leandro H. Zucolotto Cocca; Sandrine Piguel; Leonardo De Boni; Cléber Renato Mendonça</p>
-                  <p><a href="https://doi.org/10.1364/laop.2022.m2a.3" target="_blank" rel="noopener">DOI: 10.1364/laop.2022.m2a.3</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> André G. Pelosi; Leandro H. Zucolotto Cocca; Sandrine Piguel; Leonardo De Boni; Cléber Renato Mendonça</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: OpenAlex; Pesquisador: Leandro Henrique Zucolotto Cocca; ORCID: 0000-0003-4587-4062</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1364/laop.2022.m2a.3" target="_blank" rel="noopener">10.1364/laop.2022.m2a.3</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2022</span>
                   <h3 class="article-title">Study of Two-Photon Absorption in Imidazo[1,2-a]Pyridines Derivatives</h3>
-                  <p class="article-authors">João V. P. Valverde; André G. Pelosi; Leandro H. Zucolotto Cocca; O.D. Marbello; Sandrine Piguel; Leonardo De Boni; Cléber Renato Mendonça</p>
-                  <p><a href="https://doi.org/10.1364/laop.2022.tu4a.57" target="_blank" rel="noopener">DOI: 10.1364/laop.2022.tu4a.57</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> João V. P. Valverde; André G. Pelosi; Leandro H. Zucolotto Cocca; O.D. Marbello; Sandrine Piguel; Leonardo De Boni; Cléber Renato Mendonça</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: OpenAlex; Pesquisador: Leandro Henrique Zucolotto Cocca; ORCID: 0000-0003-4587-4062</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1364/laop.2022.tu4a.57" target="_blank" rel="noopener">10.1364/laop.2022.tu4a.57</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2022</span>
                   <h3 class="article-title">Two - photon Brightness is increased in push-pull purines nucleobases</h3>
-                  <p class="article-authors">Leandro H. Zucolotto Cocca; André G. Pelosi; Sandrine Piguel; Cléber Renato Mendonça; Leonardo De Boni</p>
-                  <p><a href="https://doi.org/10.1364/laop.2022.tu4a.54" target="_blank" rel="noopener">DOI: 10.1364/laop.2022.tu4a.54</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> Leandro H. Zucolotto Cocca; André G. Pelosi; Sandrine Piguel; Cléber Renato Mendonça; Leonardo De Boni</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: OpenAlex; Pesquisador: Leandro Henrique Zucolotto Cocca; ORCID: 0000-0003-4587-4062</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1364/laop.2022.tu4a.54" target="_blank" rel="noopener">10.1364/laop.2022.tu4a.54</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2022</span>
                   <h3 class="article-title">Two-photon brightness of highly fluorescent imidazopyridine derivatives: Two-photon and ultrafast transient absorption studies</h3>
-                  
-                  <p><a href="https://doi.org/10.1016/j.molliq.2021.118379" target="_blank" rel="noopener">DOI: 10.1016/j.molliq.2021.118379</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> ---</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: ORCID; Pesquisador: Leandro Henrique Zucolotto Cocca; ORCID: 0000-0003-4587-4062</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1016/j.molliq.2021.118379" target="_blank" rel="noopener">10.1016/j.molliq.2021.118379</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2021</span>
                   <h3 class="article-title">Dependent excited state absorption and dynamic of β-BF2 substituted metalloporphyrins: The metal ion effect</h3>
-                  
-                  <p><a href="https://doi.org/10.1016/j.saa.2021.119911" target="_blank" rel="noopener">DOI: 10.1016/j.saa.2021.119911</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> ---</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: ORCID; Pesquisador: Leandro Henrique Zucolotto Cocca; ORCID: 0000-0003-4587-4062</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1016/j.saa.2021.119911" target="_blank" rel="noopener">10.1016/j.saa.2021.119911</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2021</span>
                   <h3 class="article-title">Effective π-electron number and symmetry perturbation effect on the two-photon absorption of oligofluorenes</h3>
-                  
-                  <p><a href="https://doi.org/10.1039/d1cp02553h" target="_blank" rel="noopener">DOI: 10.1039/d1cp02553h</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> ---</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: ORCID; Pesquisador: Leandro Henrique Zucolotto Cocca; ORCID: 0000-0003-4587-4062</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1039/d1cp02553h" target="_blank" rel="noopener">10.1039/d1cp02553h</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2021</span>
                   <h3 class="article-title">Second-order nonlinear optical properties of two chalcone derivatives: insights from sum-over-states</h3>
-                  
-                  <p><a href="https://doi.org/10.1039/d0cp06469f" target="_blank" rel="noopener">DOI: 10.1039/d0cp06469f</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> ---</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: ORCID; Pesquisador: Leandro Henrique Zucolotto Cocca; ORCID: 0000-0003-4587-4062</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1039/d0cp06469f" target="_blank" rel="noopener">10.1039/d0cp06469f</a></p>
                 </article>
               
             </div>

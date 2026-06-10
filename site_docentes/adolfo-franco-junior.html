@@ -53,6 +53,16 @@ a:hover { text-decoration: underline; }
   opacity: 0.96;
 }
 .ufg-line strong { font-weight: 700; }
+.header-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  margin-bottom: 18px;
+  font-size: 1rem;
+  line-height: 1.35;
+  opacity: 0.96;
+}
+.header-stack span { display: block; }
 .header-title {
   margin: 0;
   font-size: clamp(1.75rem, 3vw, 2.7rem);
@@ -167,7 +177,9 @@ a:hover { text-decoration: underline; }
   margin-bottom: 7px;
 }
 .article-title { margin: 0 0 8px 0; font-size: 1.02rem; }
-.article-authors { color: var(--muted); font-size: 0.92rem; margin: 0; }
+.article-authors { color: var(--muted); font-size: 0.92rem; margin: 0 0 8px 0; }
+.article-meta { color: var(--text); font-size: 0.92rem; margin: 6px 0 0 0; }
+.article-meta .meta-label { font-size: 0.92rem; }
 .kpi-grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(120px, 1fr));
@@ -246,9 +258,10 @@ a:hover { text-decoration: underline; }
   <header class="site-header">
     <div class="bar"></div>
     <div class="header-inner">
-      <div class="ufg-line">
-        <span><strong>UNIVERSIDADE FEDERAL DE GOIÁS - UFG</strong><br>INSTITUTO DE FÍSICA · PROGRAMA DE PÓS-GRADUAÇÃO EM FÍSICA</span>
-        <span>PPGF/UFG</span>
+      <div class="header-stack" aria-label="Cabeçalho institucional">
+        <span>Universidade Federal de Goiás</span>
+        <span>Instituto de Física</span>
+        <span>Programa de Pós-Graduação em Física</span>
       </div>
       <h1 class="header-title">Adolfo Franco Júnior</h1>
     </div>
@@ -262,314 +275,348 @@ a:hover { text-decoration: underline; }
         
         <h2>Adolfo Franco Júnior</h2>
         <ul class="meta-list profile-details">
-          
-            <li><a class="profile-link" href="http://lattes.cnpq.br/0187547195548392" target="_blank" rel="noopener">Curriculum Lattes</a></li>
-          
-          <li><span class="meta-label">Apto(a) a orientar:</span> Física Experimental</li>
-          <li><span class="meta-label">Sala:</span> 112 (IF-1)</li>
-          <li><span class="meta-label">E-mail:</span> <a href="mailto:franco@ufg.br">franco@ufg.br</a></li>
-          <li><span class="meta-label">Telefone:</span> (62) 3521-2070</li>
-          <li><span class="meta-label">Pesquisa</span> &#34;Física da Matéria Condensada e Materiais&#34;</li>
-          
-            <li>Bolsista de Produtividade de CNPq - Nível 1C</li>
-          
-          <li><span class="meta-label">Formação:</span> Ph.D University of Oxford - UK - 1996</li>
-          
-            <li><span class="meta-label">ORCID:</span> <a href="https://orcid.org/0000-0001-6428-6640" target="_blank" rel="noopener">0000-0001-6428-6640</a></li>
-          
+          <li><span class="meta-label">Curriculum Lattes:</span> <a class="profile-link" href="http://lattes.cnpq.br/0187547195548392" target="_blank" rel="noopener">http://lattes.cnpq.br/0187547195548392</a></li>
+          <li><span class="meta-label">ORCID:</span> <a href="https://orcid.org/0000-0001-6428-6640" target="_blank" rel="noopener">0000-0001-6428-6640</a></li>
+          <li><span class="meta-label">Apto(a) a orientar:</span> ---</li>
+          <li><span class="meta-label">Sala:</span> ---</li>
+          <li><span class="meta-label">E-mail:</span> <span class="missing-info">---</span></li>
+          <li><span class="meta-label">Telefone:</span> ---</li>
+          <li><span class="meta-label">Pesquisa:</span> ---</li>
+          <li><span class="meta-label">Bolsa:</span> ---</li>
+          <li><span class="meta-label">Formação:</span> ---</li>
           <li><span class="meta-label">Fonte do perfil:</span> <a href="https://posgraduacao.if.ufg.br/p/41256-docentes-ppgf-instituto-de-fisica-ufg" target="_blank" rel="noopener">Página do PPGF/UFG</a></li>
         </ul>
       </aside>
 
       <section class="content-card">
         <nav class="tabs" aria-label="Seções da página">
-          <button class="tab-button active" data-tab="artigos">Artigos publicados</button>
+          <button class="tab-button active" data-tab="artigos">Artigos relacionados</button>
           <button class="tab-button" data-tab="estatisticas">Estatísticas do docente</button>
         </nav>
 
         <div id="artigos" class="tab-panel active">
-          <h2>Artigos publicados</h2>
+          <h2>Artigos relacionados</h2>
           
             <div class="article-list">
               
                 <article class="article-item">
                   <span class="article-year">2026</span>
                   <h3 class="article-title">Compositional Optimizations and Magnetic Performances of CoxFe3−xO4$${\mathrm{Co}}_x{\mathrm{Fe}}_{3-x}{\mathrm O}_4$$ Nanoclusters</h3>
-                  <p class="article-authors">Prasun Banerjee; Adolfo Franco Júnior</p>
-                  <p><a href="https://doi.org/10.1002/cnma.202500449" target="_blank" rel="noopener">DOI: 10.1002/cnma.202500449</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> Prasun Banerjee; Adolfo Franco Júnior</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: ORCID; Pesquisador: Adolfo Franco Júnior; ORCID: 0000-0001-6428-6640</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1002/cnma.202500449" target="_blank" rel="noopener">10.1002/cnma.202500449</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2026</span>
                   <h3 class="article-title">Low-temperature magnetic anomalies in orthorhombic yttrium chromite nanoparticles: Indications of magnetic frustration and glassy-like behavior</h3>
-                  <p class="article-authors">Italo Nuta; A. Franco, Jr.</p>
-                  <p><a href="https://doi.org/10.1016/j.jmmm.2026.174012" target="_blank" rel="noopener">DOI: 10.1016/j.jmmm.2026.174012</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> Italo Nuta; A. Franco, Jr.</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: ORCID; Pesquisador: Adolfo Franco Júnior; ORCID: 0000-0001-6428-6640</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1016/j.jmmm.2026.174012" target="_blank" rel="noopener">10.1016/j.jmmm.2026.174012</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2026</span>
                   <h3 class="article-title">Room-temperature magnetic behavior of Bi-doped Co0.6Zn0.4Fe2O4ferrite nanoparticles</h3>
-                  <p class="article-authors">Ribeiro Italo Nuta; Isabella Rocha de Macedo; Marcio Solino Pessoa; Prasun Banerjee; Adolfo Franco Junior</p>
-                  <p><a href="https://doi.org/10.1016/j.physb.2025.418079" target="_blank" rel="noopener">DOI: 10.1016/j.physb.2025.418079</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> Ribeiro Italo Nuta; Isabella Rocha de Macedo; Marcio Solino Pessoa; Prasun Banerjee; Adolfo Franco Junior</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: ORCID; Pesquisador: Adolfo Franco Júnior; ORCID: 0000-0001-6428-6640</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1016/j.physb.2025.418079" target="_blank" rel="noopener">10.1016/j.physb.2025.418079</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2025</span>
                   <h3 class="article-title">Cobalt Ferrite–Silica–Gold Nanocomposite: Synthesis, Structural Characterization, and Magneto‐Plasmonic Properties</h3>
-                  <p class="article-authors">Thiago. E. P. Alves; Thatielly F. Almeida; Adolfo Franco, Jr; Clemens Burda</p>
-                  <p><a href="https://doi.org/10.1002/ppsc.202400170" target="_blank" rel="noopener">DOI: 10.1002/ppsc.202400170</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> Thiago. E. P. Alves; Thatielly F. Almeida; Adolfo Franco, Jr; Clemens Burda</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: ORCID; Pesquisador: Adolfo Franco Júnior; ORCID: 0000-0001-6428-6640</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1002/ppsc.202400170" target="_blank" rel="noopener">10.1002/ppsc.202400170</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2025</span>
                   <h3 class="article-title">Deciphering temperature-driven magnetic transformations and canting mechanism in the Y&lt;sub&gt;3&lt;/sub&gt;Fe&lt;sub&gt;5-&lt;i&gt;x&lt;/i&gt; &lt;/sub&gt;Cd&lt;i&gt; &lt;sub&gt;x&lt;/sub&gt; &lt;/i&gt;O&lt;sub&gt;12&lt;/sub&gt; compound: a coupled molecular field and phenomenological analysis</h3>
-                  <p class="article-authors">J. Matilla-Arias; F. Guerrero; Y. Guerra; A. Franco; E. Padrón‐Hernández; R. Peña‐Garcia</p>
-                  <p><a href="https://doi.org/10.1088/1361-648x/adf3a2" target="_blank" rel="noopener">DOI: 10.1088/1361-648x/adf3a2</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> J. Matilla-Arias; F. Guerrero; Y. Guerra; A. Franco; E. Padrón‐Hernández; R. Peña‐Garcia</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: OpenAlex; Pesquisador: Adolfo Franco Júnior; ORCID: 0000-0001-6428-6640</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1088/1361-648x/adf3a2" target="_blank" rel="noopener">10.1088/1361-648x/adf3a2</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2025</span>
                   <h3 class="article-title">Diabetes Mellitus: pré e pós gestacional</h3>
-                  <p class="article-authors">A. Franco; Francielle Silva de Oliveira; Maria Eduarda Pereira dos Santos; Dario L. Santos</p>
-                  <p><a href="https://doi.org/10.47224/revistamaster.v10i19.698" target="_blank" rel="noopener">DOI: 10.47224/revistamaster.v10i19.698</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> A. Franco; Francielle Silva de Oliveira; Maria Eduarda Pereira dos Santos; Dario L. Santos</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: OpenAlex; Pesquisador: Adolfo Franco Júnior; ORCID: 0000-0001-6428-6640</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.47224/revistamaster.v10i19.698" target="_blank" rel="noopener">10.47224/revistamaster.v10i19.698</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2025</span>
                   <h3 class="article-title">Exploring temperature-dependent negative permittivity in zinc oxide multifunctional metamaterials</h3>
-                  <p class="article-authors">Raphael Lucas de Sousa e Silva; Prasun Banerjee; Adolfo Franco</p>
-                  <p><a href="https://doi.org/10.1063/5.0277733" target="_blank" rel="noopener">DOI: 10.1063/5.0277733</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> Raphael Lucas de Sousa e Silva; Prasun Banerjee; Adolfo Franco</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: ORCID; Pesquisador: Adolfo Franco Júnior; ORCID: 0000-0001-6428-6640</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1063/5.0277733" target="_blank" rel="noopener">10.1063/5.0277733</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2025</span>
                   <h3 class="article-title">Optimizing superparamagnetic CoFe2O4 nanoparticles: bridging theoretical models and experimental observations</h3>
-                  <p class="article-authors">Prasun Banerjee; A Franco Júnior</p>
-                  <p><a href="https://doi.org/10.1088/1402-4896/ae0841" target="_blank" rel="noopener">DOI: 10.1088/1402-4896/ae0841</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> Prasun Banerjee; A Franco Júnior</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: ORCID; Pesquisador: Adolfo Franco Júnior; ORCID: 0000-0001-6428-6640</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1088/1402-4896/ae0841" target="_blank" rel="noopener">10.1088/1402-4896/ae0841</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2025</span>
                   <h3 class="article-title">Resistência ao Desgaste do Aço Ferramenta AISI D2 em Condições de Revenimento Estimadas pelo Parâmetro de Hollomon-Jaffe</h3>
-                  <p class="article-authors">Maycoln Depianti Conci; Arthur Barbosa Bezerra; A. Franco; Julio Cesar Araujo Toqueiro; Paula Fernanda da Silva Farina</p>
-                  <p><a href="https://doi.org/10.26678/abcm.cobef2025.cof25-0047" target="_blank" rel="noopener">DOI: 10.26678/abcm.cobef2025.cof25-0047</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> Maycoln Depianti Conci; Arthur Barbosa Bezerra; A. Franco; Julio Cesar Araujo Toqueiro; Paula Fernanda da Silva Farina</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: OpenAlex; Pesquisador: Adolfo Franco Júnior; ORCID: 0000-0001-6428-6640</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.26678/abcm.cobef2025.cof25-0047" target="_blank" rel="noopener">10.26678/abcm.cobef2025.cof25-0047</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2025</span>
                   <h3 class="article-title">Torpedo Car Lining With Unfired Zero-Carbon Bricks: Performance and Energy Savings Achievements</h3>
-                  <p class="article-authors">C. Pagliosa; Tiago Moreira Pereira; A. Franco; C. Guedes Soares</p>
-                  <p><a href="https://doi.org/10.33313/389/289" target="_blank" rel="noopener">DOI: 10.33313/389/289</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> C. Pagliosa; Tiago Moreira Pereira; A. Franco; C. Guedes Soares</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: OpenAlex; Pesquisador: Adolfo Franco Júnior; ORCID: 0000-0001-6428-6640</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.33313/389/289" target="_blank" rel="noopener">10.33313/389/289</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2024</span>
                   <h3 class="article-title">Effects of rare Earth doping on the structural and dielectric properties of sodium bismuth titanate perovskites</h3>
-                  <p class="article-authors">Stefane Oliveira de Lira; Clemens Burda; A. Franco, Jr.</p>
-                  <p><a href="https://doi.org/10.1016/j.jpcs.2024.112133" target="_blank" rel="noopener">DOI: 10.1016/j.jpcs.2024.112133</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> Stefane Oliveira de Lira; Clemens Burda; A. Franco, Jr.</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: ORCID; Pesquisador: Adolfo Franco Júnior; ORCID: 0000-0001-6428-6640</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1016/j.jpcs.2024.112133" target="_blank" rel="noopener">10.1016/j.jpcs.2024.112133</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2024</span>
                   <h3 class="article-title">Investigation of the role of yttrium sesquioxide nanoparticles on the properties of zinc oxide ceramics</h3>
-                  <p class="article-authors">Mônica Pereira Soares; Girija Atrey; Prasun Banerjee; Adolfo Franco Junior</p>
-                  <p><a href="https://doi.org/10.1088/2632-959x/ad5d82" target="_blank" rel="noopener">DOI: 10.1088/2632-959x/ad5d82</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> Mônica Pereira Soares; Girija Atrey; Prasun Banerjee; Adolfo Franco Junior</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: ORCID; Pesquisador: Adolfo Franco Júnior; ORCID: 0000-0001-6428-6640</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1088/2632-959x/ad5d82" target="_blank" rel="noopener">10.1088/2632-959x/ad5d82</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2024</span>
                   <h3 class="article-title">Narrativa Interativa Gamificada - NIG: Jornada da Mel</h3>
-                  <p class="article-authors">Juliana Evaristo Costa; José Aires de Castro Filho; José Gilvan Rodrigues Maia; Francisco Bruno Nascimento da Rocha; A. Franco; C. de Oliveira; Gabriel Marques do Nascimento; Pedro Jorge Rodrigues Garcia; Júlio Nathanael Silva Mesquita</p>
-                  <p><a href="https://doi.org/10.5753/cbie_estendido.2024.244324" target="_blank" rel="noopener">DOI: 10.5753/cbie_estendido.2024.244324</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> Juliana Evaristo Costa; José Aires de Castro Filho; José Gilvan Rodrigues Maia; Francisco Bruno Nascimento da Rocha; A. Franco; C. de Oliveira; Gabriel Marques do Nascimento; Pedro Jorge Rodrigues Garcia; Júlio Nathanael Silva Mesquita</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: OpenAlex; Pesquisador: Adolfo Franco Júnior; ORCID: 0000-0001-6428-6640</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.5753/cbie_estendido.2024.244324" target="_blank" rel="noopener">10.5753/cbie_estendido.2024.244324</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2024</span>
                   <h3 class="article-title">Preparation Regimens to Improve Capsule Endoscopy visualization and diagnostic yield (PrepRICE) – a multicentric randomized trial</h3>
-                  <p class="article-authors">María Manuela Estevinho; M. Sarmento-Costa; A. Franco; Inês Pestana; Pedro Cardoso; Sara Archer; Maria Inês Canha; João Correia; Pedro Mesquita; Lídia Roque-Ramos; Adélia Rodrigues; Catarina Gomes; Sandra Lopes; Rolando Pinho</p>
-                  <p><a href="https://doi.org/10.1055/s-0044-1782824" target="_blank" rel="noopener">DOI: 10.1055/s-0044-1782824</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> María Manuela Estevinho et al.</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: OpenAlex; Pesquisador: Adolfo Franco Júnior; ORCID: 0000-0001-6428-6640</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1055/s-0044-1782824" target="_blank" rel="noopener">10.1055/s-0044-1782824</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2024</span>
                   <h3 class="article-title">TUBERCULOSE NO ESTADO DO CEARÁ: UM ESTUDO CLÍNICO-EPIDEMIOLÓGICO</h3>
-                  <p class="article-authors">Francisco Iuri da Silva Martins; A. Franco; José Aurelio de Almeida Martins; Gustavo da Penha de Paula; Marcelo Vítor de Paiva Amorim; Luanne Eugênia Nunes</p>
-                  <p><a href="https://doi.org/10.51161/v-conais/39472" target="_blank" rel="noopener">DOI: 10.51161/v-conais/39472</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> Francisco Iuri da Silva Martins; A. Franco; José Aurelio de Almeida Martins; Gustavo da Penha de Paula; Marcelo Vítor de Paiva Amorim; Luanne Eugênia Nunes</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: OpenAlex; Pesquisador: Adolfo Franco Júnior; ORCID: 0000-0001-6428-6640</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.51161/v-conais/39472" target="_blank" rel="noopener">10.51161/v-conais/39472</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2024</span>
                   <h3 class="article-title">Tailoring the structural and optical properties of lead-free Na0.5(Bi1-xSmx)0.5TiO3 multifunctional ceramics by Sm-doping</h3>
-                  <p class="article-authors">Fabien Volpi; T.J. Castro; A. Franco; Stéfane Oliveira de Lira; P.C. Morais; S.W. da Silva</p>
-                  <p><a href="https://doi.org/10.1016/j.jallcom.2024.175963" target="_blank" rel="noopener">DOI: 10.1016/j.jallcom.2024.175963</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> Fabien Volpi; T.J. Castro; A. Franco; Stéfane Oliveira de Lira; P.C. Morais; S.W. da Silva</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: OpenAlex; Pesquisador: Adolfo Franco Júnior; ORCID: 0000-0001-6428-6640</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1016/j.jallcom.2024.175963" target="_blank" rel="noopener">10.1016/j.jallcom.2024.175963</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2023</span>
                   <h3 class="article-title">An elegant alternative to surgery for the management of an epibronchial esophageal diverticulum</h3>
-                  <p class="article-authors">A. Franco; Inês Simão; Roberta Hack Mendes; André Mascarenhas; Catarina O’Neill; Rui Mendo; Pablo Barreiro</p>
-                  <p><a href="https://doi.org/10.1055/s-0043-1765458" target="_blank" rel="noopener">DOI: 10.1055/s-0043-1765458</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> A. Franco; Inês Simão; Roberta Hack Mendes; André Mascarenhas; Catarina O’Neill; Rui Mendo; Pablo Barreiro</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: OpenAlex; Pesquisador: Adolfo Franco Júnior; ORCID: 0000-0001-6428-6640</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1055/s-0043-1765458" target="_blank" rel="noopener">10.1055/s-0043-1765458</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2023</span>
                   <h3 class="article-title">Complete endoscopic removal of right hepatolithiasis after left hepatectomy</h3>
-                  <p class="article-authors">A. Franco; Inês Simão; Roberta Hack Mendes; André Mascarenhas; Catarina O’Neill; Rui Mendo; T. Bana; Eva Fieira Costa</p>
-                  <p><a href="https://doi.org/10.1055/s-0043-1765319" target="_blank" rel="noopener">DOI: 10.1055/s-0043-1765319</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> A. Franco; Inês Simão; Roberta Hack Mendes; André Mascarenhas; Catarina O’Neill; Rui Mendo; T. Bana; Eva Fieira Costa</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: OpenAlex; Pesquisador: Adolfo Franco Júnior; ORCID: 0000-0001-6428-6640</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1055/s-0043-1765319" target="_blank" rel="noopener">10.1055/s-0043-1765319</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2023</span>
                   <h3 class="article-title">Controlled defects and trap-assisted mitigation in Li-intercalated zinc oxide ceramics</h3>
-                  <p class="article-authors">Bhargavi Koneru; P. Banerjee; A. Franco</p>
-                  <p><a href="https://doi.org/10.1007/s42247-023-00450-x" target="_blank" rel="noopener">DOI: 10.1007/s42247-023-00450-x</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> Bhargavi Koneru; P. Banerjee; A. Franco</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: OpenAlex; Pesquisador: Adolfo Franco Júnior; ORCID: 0000-0001-6428-6640</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1007/s42247-023-00450-x" target="_blank" rel="noopener">10.1007/s42247-023-00450-x</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2023</span>
                   <h3 class="article-title">ERCP-directed eletrohydraulic lithotripsy for treatment of cystic duct remnant lithiasis</h3>
-                  <p class="article-authors">A. Franco; Inês Simão; R Mendes; André Mascarenhas; Catarina O’Neill; Rui Mendo; Pedro Figueiredo; T. Bana; Eva Fieira Costa</p>
-                  <p><a href="https://doi.org/10.1055/s-0043-1765524" target="_blank" rel="noopener">DOI: 10.1055/s-0043-1765524</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> A. Franco; Inês Simão; R Mendes; André Mascarenhas; Catarina O’Neill; Rui Mendo; Pedro Figueiredo; T. Bana; Eva Fieira Costa</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: OpenAlex; Pesquisador: Adolfo Franco Júnior; ORCID: 0000-0001-6428-6640</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1055/s-0043-1765524" target="_blank" rel="noopener">10.1055/s-0043-1765524</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2023</span>
                   <h3 class="article-title">Endoscopic intermuscular dissection of a rectal GIST: a breakthrough in the management of subepithelial lesions</h3>
-                  <p class="article-authors">André Mascarenhas; A. Franco; Roberta Hack Mendes; Catarina O’Neill; A. L. Alves; C Chagas; Pablo Barreiro</p>
-                  <p><a href="https://doi.org/10.1055/s-0043-1765293" target="_blank" rel="noopener">DOI: 10.1055/s-0043-1765293</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> André Mascarenhas; A. Franco; Roberta Hack Mendes; Catarina O’Neill; A. L. Alves; C Chagas; Pablo Barreiro</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: OpenAlex; Pesquisador: Adolfo Franco Júnior; ORCID: 0000-0001-6428-6640</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1055/s-0043-1765293" target="_blank" rel="noopener">10.1055/s-0043-1765293</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2023</span>
                   <h3 class="article-title">Investigation of the ion dynamics by a particular excitation due to the stoichiometric imbalances on BiFeO3 ceramics</h3>
-                  <p class="article-authors">Bhargavi Koneru; Jhilmil Swapnalin; Srinivasan Natarajan; A. Franco, Jr.; P. Banerjee</p>
-                  <p><a href="https://doi.org/10.1016/j.physb.2022.414463" target="_blank" rel="noopener">DOI: 10.1016/j.physb.2022.414463</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> Bhargavi Koneru; Jhilmil Swapnalin; Srinivasan Natarajan; A. Franco, Jr.; P. Banerjee</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: ORCID; Pesquisador: Adolfo Franco Júnior; ORCID: 0000-0001-6428-6640</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1016/j.physb.2022.414463" target="_blank" rel="noopener">10.1016/j.physb.2022.414463</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2023</span>
                   <h3 class="article-title">Magnetization of Zn1−Co O nanoparticles: single-ion anisotropy and spin clustering</h3>
-                  <p class="article-authors">X. Gratens; B. de Abreu Silva; Maria Inês Basso Bernardi; H. B. de Carvalho; A. Franco; V. A. Chitta</p>
-                  <p><a href="https://doi.org/10.1016/j.jallcom.2023.168840" target="_blank" rel="noopener">DOI: 10.1016/j.jallcom.2023.168840</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> X. Gratens; B. de Abreu Silva; Maria Inês Basso Bernardi; H. B. de Carvalho; A. Franco; V. A. Chitta</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: OpenAlex; Pesquisador: Adolfo Franco Júnior; ORCID: 0000-0001-6428-6640</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1016/j.jallcom.2023.168840" target="_blank" rel="noopener">10.1016/j.jallcom.2023.168840</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2023</span>
                   <h3 class="article-title">Zero-Carbon Tempered MgO-ZnO Brick as an Alternative of Fired Magnesia Chrome for Safety Lining of Stainless Steel LadleBárbara</h3>
-                  <p class="article-authors">B. Borges de Melo; A. Franco; C. Lares; C. Pagliosa</p>
-                  <p><a href="https://doi.org/10.33313/387/267" target="_blank" rel="noopener">DOI: 10.33313/387/267</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> B. Borges de Melo; A. Franco; C. Lares; C. Pagliosa</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: OpenAlex; Pesquisador: Adolfo Franco Júnior; ORCID: 0000-0001-6428-6640</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.33313/387/267" target="_blank" rel="noopener">10.33313/387/267</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2022</span>
                   <h3 class="article-title">Intercalation of Nanoscale Multiferroic Spacers between the Two-Dimensional Interlayers of MXene</h3>
-                  <p class="article-authors">Bhargavi Koneru; Jhilmil Swapnalin; Srinivasan Natarajan; Adolfo Franco Jr; Prasun Banerjee</p>
-                  <p><a href="https://doi.org/10.1021/acsomega.2c02471" target="_blank" rel="noopener">DOI: 10.1021/acsomega.2c02471</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> Bhargavi Koneru; Jhilmil Swapnalin; Srinivasan Natarajan; Adolfo Franco Jr; Prasun Banerjee</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: ORCID; Pesquisador: Adolfo Franco Júnior; ORCID: 0000-0001-6428-6640</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1021/acsomega.2c02471" target="_blank" rel="noopener">10.1021/acsomega.2c02471</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2022</span>
                   <h3 class="article-title">Investigation of structural, optical and magnetic properties of Y3-xCexFe5-yEryO12 compound</h3>
-                  <p class="article-authors">A, Franco Jr</p>
-                  <p><a href="https://doi.org/10.1016/j.physb.2022.414231" target="_blank" rel="noopener">DOI: 10.1016/j.physb.2022.414231</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> A, Franco Jr</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: ORCID; Pesquisador: Adolfo Franco Júnior; ORCID: 0000-0001-6428-6640</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1016/j.physb.2022.414231" target="_blank" rel="noopener">10.1016/j.physb.2022.414231</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2022</span>
                   <h3 class="article-title">Magnetic properties in randomly diluted magnetic systems: Co-doped ZnO polycrystalline ceramics</h3>
-                  <p class="article-authors">H.V.S. Pessoni; A. Franco</p>
-                  <p><a href="https://doi.org/10.1016/j.jallcom.2022.166264" target="_blank" rel="noopener">DOI: 10.1016/j.jallcom.2022.166264</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> H.V.S. Pessoni; A. Franco</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: OpenAlex; Pesquisador: Adolfo Franco Júnior; ORCID: 0000-0001-6428-6640</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1016/j.jallcom.2022.166264" target="_blank" rel="noopener">10.1016/j.jallcom.2022.166264</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2022</span>
                   <h3 class="article-title">Magnetic-plasmonic properties of CoFe2O4@Au nanocomposite</h3>
-                  <p class="article-authors">A, Franco Jr; T.E.P. Alves; H.V.S. Pessoni; A. Franco; C. Burda; A.C.S. Samia</p>
-                  <p><a href="https://doi.org/10.1016/j.jpcs.2022.110630" target="_blank" rel="noopener">DOI: 10.1016/j.jpcs.2022.110630</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> A, Franco Jr; T.E.P. Alves; H.V.S. Pessoni; A. Franco; C. Burda; A.C.S. Samia</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: ORCID; Pesquisador: Adolfo Franco Júnior; ORCID: 0000-0001-6428-6640</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1016/j.jpcs.2022.110630" target="_blank" rel="noopener">10.1016/j.jpcs.2022.110630</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2022</span>
                   <h3 class="article-title">Multilayer intercalation: MXene/cobalt ferrite electromagnetic wave absorbing two-dimensional materials</h3>
-                  <p class="article-authors">A, Franco Jr; Jhilmil Swapnalin; Bhargavi Koneru; P. Banerjee; Srinivasan Natarajan; A. Franco</p>
-                  <p><a href="https://doi.org/10.1016/j.jpcs.2022.110797" target="_blank" rel="noopener">DOI: 10.1016/j.jpcs.2022.110797</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> A, Franco Jr; Jhilmil Swapnalin; Bhargavi Koneru; P. Banerjee; Srinivasan Natarajan; A. Franco</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: ORCID; Pesquisador: Adolfo Franco Júnior; ORCID: 0000-0001-6428-6640</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1016/j.jpcs.2022.110797" target="_blank" rel="noopener">10.1016/j.jpcs.2022.110797</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2022</span>
                   <h3 class="article-title">Nanoscale-driven single-domain structure in nickel substituted superparamagnetic cobalt ferrites</h3>
-                  <p class="article-authors">A, Franco Jr</p>
-                  <p><a href="https://doi.org/10.1016/j.ssc.2021.114560" target="_blank" rel="noopener">DOI: 10.1016/j.ssc.2021.114560</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> A, Franco Jr</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: ORCID; Pesquisador: Adolfo Franco Júnior; ORCID: 0000-0001-6428-6640</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1016/j.ssc.2021.114560" target="_blank" rel="noopener">10.1016/j.ssc.2021.114560</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2022</span>
                   <h3 class="article-title">Spin canting and weak long-range ferromagnetic order in a rigid supramolecular framework</h3>
-                  <p class="article-authors">Maykon Alves Lemes; Felipe Terra Martins; H.V.S. Pessoni; A. Franco, Jr.</p>
-                  <p><a href="https://doi.org/10.1016/j.physb.2022.414157" target="_blank" rel="noopener">DOI: 10.1016/j.physb.2022.414157</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> Maykon Alves Lemes; Felipe Terra Martins; H.V.S. Pessoni; A. Franco, Jr.</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: ORCID; Pesquisador: Adolfo Franco Júnior; ORCID: 0000-0001-6428-6640</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1016/j.physb.2022.414157" target="_blank" rel="noopener">10.1016/j.physb.2022.414157</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2022</span>
                   <h3 class="article-title">Tailoring the magnetic properties of Zn doped nickel, magnesium and cobalt ferrite ceramics</h3>
-                  <p class="article-authors">Pedro Victor Valadares Romanholo; Thiago Eduardo Pereira Alves; Jhilmil Swapnalin; P. Banerjee; A. Franco, Jr.</p>
-                  <p><a href="https://doi.org/10.1016/j.matchemphys.2022.126072" target="_blank" rel="noopener">DOI: 10.1016/j.matchemphys.2022.126072</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> Pedro Victor Valadares Romanholo; Thiago Eduardo Pereira Alves; Jhilmil Swapnalin; P. Banerjee; A. Franco, Jr.</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: ORCID; Pesquisador: Adolfo Franco Júnior; ORCID: 0000-0001-6428-6640</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1016/j.matchemphys.2022.126072" target="_blank" rel="noopener">10.1016/j.matchemphys.2022.126072</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2021</span>
                   <h3 class="article-title">Effect of Gd3+ ion on the structural and magnetic properties of (Nb and Al) co-doped rutile &lt;mml:math xmlns:mml=&#34;http://www.w3.org/1998/Math/MathML&#34; altimg=&#34;si1.svg&#34;&gt;&lt;mml:mrow&gt;&lt;mml:msub&gt;&lt;mml:mtext&gt;TiO&lt;/mml:mtext&gt;&lt;mml:mn&gt;2&lt;/mml:mn&gt;&lt;/mml:msub&gt;&lt;/mml:mrow&gt;&lt;/mml:math&gt; single crystal</h3>
-                  <p class="article-authors">A, Franco Jr; H.V.S. Pessoni; F.S. Oliveira; L.S.de Faria; A.J.S. Machado; A. Franco</p>
-                  <p><a href="https://doi.org/10.1016/j.ceramint.2020.11.013" target="_blank" rel="noopener">DOI: 10.1016/j.ceramint.2020.11.013</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> A, Franco Jr; H.V.S. Pessoni; F.S. Oliveira; L.S.de Faria; A.J.S. Machado; A. Franco</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: ORCID; Pesquisador: Adolfo Franco Júnior; ORCID: 0000-0001-6428-6640</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1016/j.ceramint.2020.11.013" target="_blank" rel="noopener">10.1016/j.ceramint.2020.11.013</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2021</span>
                   <h3 class="article-title">Effects of Y and Ni co-doping in Bi2Fe4O9 - BiFeO3 based multiferroic ceramics</h3>
-                  <p class="article-authors">A, Franco Jr; P. Banerjee; A. Franco; R.Z. Xiao</p>
-                  <p><a href="https://doi.org/10.1016/j.matpr.2020.10.302" target="_blank" rel="noopener">DOI: 10.1016/j.matpr.2020.10.302</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> A, Franco Jr; P. Banerjee; A. Franco; R.Z. Xiao</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: ORCID; Pesquisador: Adolfo Franco Júnior; ORCID: 0000-0001-6428-6640</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1016/j.matpr.2020.10.302" target="_blank" rel="noopener">10.1016/j.matpr.2020.10.302</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2021</span>
                   <h3 class="article-title">Enhancing the electrical properties of NBT ceramics by the addition of small amounts of Yb</h3>
-                  <p class="article-authors">A, Franco Jr</p>
-                  <p><a href="https://doi.org/10.1016/j.jallcom.2021.159845" target="_blank" rel="noopener">DOI: 10.1016/j.jallcom.2021.159845</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> A, Franco Jr</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: ORCID; Pesquisador: Adolfo Franco Júnior; ORCID: 0000-0001-6428-6640</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1016/j.jallcom.2021.159845" target="_blank" rel="noopener">10.1016/j.jallcom.2021.159845</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2021</span>
                   <h3 class="article-title">Morphological, magnetic and EPR studies of ZnO nanostructures doped and co-doped with Ni and Sr</h3>
-                  <p class="article-authors">A, Franco Jr</p>
-                  <p><a href="https://doi.org/10.1016/j.ceramint.2021.07.030" target="_blank" rel="noopener">DOI: 10.1016/j.ceramint.2021.07.030</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> A, Franco Jr</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: ORCID; Pesquisador: Adolfo Franco Júnior; ORCID: 0000-0001-6428-6640</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1016/j.ceramint.2021.07.030" target="_blank" rel="noopener">10.1016/j.ceramint.2021.07.030</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2021</span>
                   <h3 class="article-title">On the correlation of the magnetic properties with the structural parameters in Fe-doped europium chromite</h3>
-                  <p class="article-authors">A, Franco Jr</p>
-                  <p><a href="https://doi.org/10.1063/9.0000010" target="_blank" rel="noopener">DOI: 10.1063/9.0000010</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> A, Franco Jr</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: ORCID; Pesquisador: Adolfo Franco Júnior; ORCID: 0000-0001-6428-6640</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1063/9.0000010" target="_blank" rel="noopener">10.1063/9.0000010</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2021</span>
                   <h3 class="article-title">Raman spectroscopy study of Ga-doped ZnO ceramics: An estimative of the structural disorder degree</h3>
-                  <p class="article-authors">Gabriela Gomes Miranda; Raphael Lucas de Sousa e Silva; Hermínia Veridiana dos Santos Pessoni; A. Franco, Jr.</p>
-                  <p><a href="https://doi.org/10.1016/j.physb.2020.412726" target="_blank" rel="noopener">DOI: 10.1016/j.physb.2020.412726</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> Gabriela Gomes Miranda; Raphael Lucas de Sousa e Silva; Hermínia Veridiana dos Santos Pessoni; A. Franco, Jr.</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: ORCID; Pesquisador: Adolfo Franco Júnior; ORCID: 0000-0001-6428-6640</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1016/j.physb.2020.412726" target="_blank" rel="noopener">10.1016/j.physb.2020.412726</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2021</span>
                   <h3 class="article-title">Recent Developments in Nanomaterials Based Adsorbents for Water Purification Techniques</h3>
-                  <p class="article-authors">Maheshwara Reddy; Bhargavi Koneru; A. Franco; Dinesh Rangappa; P. Banerjee; J Fendler; M Huerta-Fontela; M Galceran; F Ventura; X Qu; J Brame; Q Li; P Alvarez; Y Musico; C Santos; M Dalida; D Rodrigues; V Gupta; I Ali; T Saleh; A Nayak; S Agarwal; H Hu; Q Jin; P Kavan; K Defriend; M Wiesner; A Barron; B Stanton; J Harris; M Miller; M Bruening; Ultrathin; D Bhattacharyya; J Hestekin; P Brushaber; L Cullen; L Bachas; S Sikdar; D Dotzauer; J Dai; L Sun; M Bruening; M Arkas; L Eleades; C Paleos; D Tsiourvas; H Zhang; X Quan; S Chen; H Zhao; Y Zhao; C Athanasekou; G Romanos; F Katsaros; K Kordatos; V Likodimos; P Falaras; R Allabashi; M Arkas; G Hrmann; D Tsiourvas; W Song; R Justice; C Jones; V Grassian; S Larsen; Synthesis; C Orha; A Pop; C Lazau; I Grozescu; V Tiponut; F Manea; X Peng; Y Li; Z Luan; Z Di; H Wang; B Tian; Z Jia; Z.-C Di; J Ding; X.-J Peng; Y.-H Li; Z.-K Luan; J Liang; K Salipira; B Mamba; R Krause; T Malefetse; S Durbach; R Khaydarov; R Khaydarov; O Gapurova; G Poinern; D Parsonage; T Issa; M Ghosh; E Paling</p>
-                  <p><a href="https://doi.org/10.33263/briac125.58215835" target="_blank" rel="noopener">DOI: 10.33263/briac125.58215835</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> Maheshwara Reddy et al.</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: OpenAlex; Pesquisador: Adolfo Franco Júnior; ORCID: 0000-0001-6428-6640</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.33263/briac125.58215835" target="_blank" rel="noopener">10.33263/briac125.58215835</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2021</span>
                   <h3 class="article-title">Structural, optical and magnetic properties of CoAl Fe2-O4 nanoparticles prepared by combustion reaction method</h3>
-                  <p class="article-authors">A, Franco Jr</p>
-                  <p><a href="https://doi.org/10.1016/j.jallcom.2021.161398" target="_blank" rel="noopener">DOI: 10.1016/j.jallcom.2021.161398</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> A, Franco Jr</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: ORCID; Pesquisador: Adolfo Franco Júnior; ORCID: 0000-0001-6428-6640</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1016/j.jallcom.2021.161398" target="_blank" rel="noopener">10.1016/j.jallcom.2021.161398</a></p>
                 </article>
               
             </div>

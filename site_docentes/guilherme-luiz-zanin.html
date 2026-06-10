@@ -53,6 +53,16 @@ a:hover { text-decoration: underline; }
   opacity: 0.96;
 }
 .ufg-line strong { font-weight: 700; }
+.header-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  margin-bottom: 18px;
+  font-size: 1rem;
+  line-height: 1.35;
+  opacity: 0.96;
+}
+.header-stack span { display: block; }
 .header-title {
   margin: 0;
   font-size: clamp(1.75rem, 3vw, 2.7rem);
@@ -167,7 +177,9 @@ a:hover { text-decoration: underline; }
   margin-bottom: 7px;
 }
 .article-title { margin: 0 0 8px 0; font-size: 1.02rem; }
-.article-authors { color: var(--muted); font-size: 0.92rem; margin: 0; }
+.article-authors { color: var(--muted); font-size: 0.92rem; margin: 0 0 8px 0; }
+.article-meta { color: var(--text); font-size: 0.92rem; margin: 6px 0 0 0; }
+.article-meta .meta-label { font-size: 0.92rem; }
 .kpi-grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(120px, 1fr));
@@ -246,9 +258,10 @@ a:hover { text-decoration: underline; }
   <header class="site-header">
     <div class="bar"></div>
     <div class="header-inner">
-      <div class="ufg-line">
-        <span><strong>UNIVERSIDADE FEDERAL DE GOIÁS - UFG</strong><br>INSTITUTO DE FÍSICA · PROGRAMA DE PÓS-GRADUAÇÃO EM FÍSICA</span>
-        <span>PPGF/UFG</span>
+      <div class="header-stack" aria-label="Cabeçalho institucional">
+        <span>Universidade Federal de Goiás</span>
+        <span>Instituto de Física</span>
+        <span>Programa de Pós-Graduação em Física</span>
       </div>
       <h1 class="header-title">Guilherme Luiz Zanin</h1>
     </div>
@@ -262,81 +275,84 @@ a:hover { text-decoration: underline; }
         
         <h2>Guilherme Luiz Zanin</h2>
         <ul class="meta-list profile-details">
-          
-            <li><a class="profile-link" href="http://lattes.cnpq.br/1176793437897235" target="_blank" rel="noopener">Curriculum Lattes</a></li>
-          
-          <li><span class="meta-label">Apto(a) a orientar:</span> Física Experimental</li>
-          <li><span class="meta-label">Sala:</span> 214C (IF-1)</li>
-          <li><span class="meta-label">E-mail:</span> <a href="mailto:guilherme_zanin@ufg.br">guilherme_zanin@ufg.br</a></li>
-          <li><span class="meta-label">Telefone:</span> (62) 3521-1014</li>
-          <li><span class="meta-label">Pesquisa</span> &#34;Óptica Quântica&#34;</li>
-          
-          <li><span class="meta-label">Formação:</span> Doutorado em Física - UFSC - 2021</li>
-          
-            <li><span class="meta-label">ORCID:</span> <a href="https://orcid.org/0000-0003-4178-7818" target="_blank" rel="noopener">0000-0003-4178-7818</a></li>
-          
+          <li><span class="meta-label">Curriculum Lattes:</span> <a class="profile-link" href="http://lattes.cnpq.br/1176793437897235" target="_blank" rel="noopener">http://lattes.cnpq.br/1176793437897235</a></li>
+          <li><span class="meta-label">ORCID:</span> <a href="https://orcid.org/0000-0003-4178-7818" target="_blank" rel="noopener">0000-0003-4178-7818</a></li>
+          <li><span class="meta-label">Apto(a) a orientar:</span> ---</li>
+          <li><span class="meta-label">Sala:</span> ---</li>
+          <li><span class="meta-label">E-mail:</span> <span class="missing-info">---</span></li>
+          <li><span class="meta-label">Telefone:</span> ---</li>
+          <li><span class="meta-label">Pesquisa:</span> ---</li>
+          <li><span class="meta-label">Bolsa:</span> ---</li>
+          <li><span class="meta-label">Formação:</span> ---</li>
           <li><span class="meta-label">Fonte do perfil:</span> <a href="https://posgraduacao.if.ufg.br/p/41256-docentes-ppgf-instituto-de-fisica-ufg" target="_blank" rel="noopener">Página do PPGF/UFG</a></li>
         </ul>
       </aside>
 
       <section class="content-card">
         <nav class="tabs" aria-label="Seções da página">
-          <button class="tab-button active" data-tab="artigos">Artigos publicados</button>
+          <button class="tab-button active" data-tab="artigos">Artigos relacionados</button>
           <button class="tab-button" data-tab="estatisticas">Estatísticas do docente</button>
         </nav>
 
         <div id="artigos" class="tab-panel active">
-          <h2>Artigos publicados</h2>
+          <h2>Artigos relacionados</h2>
           
             <div class="article-list">
               
                 <article class="article-item">
                   <span class="article-year">2025</span>
                   <h3 class="article-title">Optical algorithm for derivative of real-valued functions</h3>
-                  <p class="article-authors">Murilo H. Magiotto; Guilherme L. Zanin; Wesley B. Cardoso; Ardiley T. Avelar; Rafael M. Gomes</p>
-                  <p><a href="https://doi.org/10.1016/j.optlastec.2024.112137" target="_blank" rel="noopener">DOI: 10.1016/j.optlastec.2024.112137</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> Murilo H. Magiotto; Guilherme L. Zanin; Wesley B. Cardoso; Ardiley T. Avelar; Rafael M. Gomes</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: ORCID; Pesquisador: Guilherme Luiz Zanin; ORCID: 0000-0003-4178-7818</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1016/j.optlastec.2024.112137" target="_blank" rel="noopener">10.1016/j.optlastec.2024.112137</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2024</span>
                   <h3 class="article-title">Multimode squeezed state for reconfigurable quantum networks at telecommunication wavelengths</h3>
-                  <p class="article-authors">Victor Roman-Rodriguez; David Fainsin; Guilherme L. Zanin; Nicolas Treps; Eleni Diamanti; Valentina Parigi</p>
-                  <p><a href="https://doi.org/10.1103/physrevresearch.6.043113" target="_blank" rel="noopener">DOI: 10.1103/physrevresearch.6.043113</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> Victor Roman-Rodriguez; David Fainsin; Guilherme L. Zanin; Nicolas Treps; Eleni Diamanti; Valentina Parigi</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: ORCID; Pesquisador: Guilherme Luiz Zanin; ORCID: 0000-0003-4178-7818</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1103/physrevresearch.6.043113" target="_blank" rel="noopener">10.1103/physrevresearch.6.043113</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2024</span>
                   <h3 class="article-title">Waveguide-based reconfigurable quantum network at telecom wavelength</h3>
-                  <p class="article-authors">Leonardo Mejia Rincon; David Fainsin; Peter Namdar; Victor Roman-Rodriguez; Guilherme L. Zanin; Nicolas Treps; Eleni Diamanti; Valentina Parigi</p>
-                  <p><a href="https://doi.org/10.1364/quantum.2024.qm2b.5" target="_blank" rel="noopener">DOI: 10.1364/quantum.2024.qm2b.5</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> Leonardo Mejia Rincon; David Fainsin; Peter Namdar; Victor Roman-Rodriguez; Guilherme L. Zanin; Nicolas Treps; Eleni Diamanti; Valentina Parigi</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: OpenAlex; Pesquisador: Guilherme Luiz Zanin; ORCID: 0000-0003-4178-7818</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1364/quantum.2024.qm2b.5" target="_blank" rel="noopener">10.1364/quantum.2024.qm2b.5</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2023</span>
                   <h3 class="article-title">Spectrally Multimode Squeezed States of Light in the Telecom Band using Waveguides</h3>
-                  <p class="article-authors">Victor R. Rodriguez; David Fainsin; Guilherme L. Zanin; Nicolas Treps; Eleni Diamanti; Valentina Parigi</p>
-                  <p><a href="https://doi.org/10.1364/quantum.2023.qm4a.5" target="_blank" rel="noopener">DOI: 10.1364/quantum.2023.qm4a.5</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> Victor R. Rodriguez; David Fainsin; Guilherme L. Zanin; Nicolas Treps; Eleni Diamanti; Valentina Parigi</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: OpenAlex; Pesquisador: Guilherme Luiz Zanin; ORCID: 0000-0003-4178-7818</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1364/quantum.2023.qm4a.5" target="_blank" rel="noopener">10.1364/quantum.2023.qm4a.5</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2022</span>
                   <h3 class="article-title">Enhanced Photonic Maxwell&amp;amp;apos;s Demon with Correlated Baths</h3>
-                  <p class="article-authors">Guilherme L. Zanin; Michael Antesberger; Maxime J. Jacquet; Paulo H. Souto Ribeiro; Lee A. Rozema; Philip Walther</p>
-                  <p><a href="https://doi.org/10.22331/q-2022-09-20-810" target="_blank" rel="noopener">DOI: 10.22331/q-2022-09-20-810</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> Guilherme L. Zanin; Michael Antesberger; Maxime J. Jacquet; Paulo H. Souto Ribeiro; Lee A. Rozema; Philip Walther</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: ORCID; Pesquisador: Guilherme Luiz Zanin; ORCID: 0000-0003-4178-7818</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.22331/q-2022-09-20-810" target="_blank" rel="noopener">10.22331/q-2022-09-20-810</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2022</span>
                   <h3 class="article-title">Photonic Maxwell’s Demon: Feed-forward methods for photonic thermodynamic tasks</h3>
-                  <p class="article-authors">Maxime J. Jacquet; Guilherme L. Zanin; Michael Antesberger; Paulo Souto Ribeiro; Lee A. Rozema; Philip Walther</p>
-                  <p><a href="https://doi.org/10.1051/epjconf/202226608018" target="_blank" rel="noopener">DOI: 10.1051/epjconf/202226608018</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> Maxime J. Jacquet; Guilherme L. Zanin; Michael Antesberger; Paulo Souto Ribeiro; Lee A. Rozema; Philip Walther</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: OpenAlex; Pesquisador: Guilherme Luiz Zanin; ORCID: 0000-0003-4178-7818</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1051/epjconf/202226608018" target="_blank" rel="noopener">10.1051/epjconf/202226608018</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2021</span>
                   <h3 class="article-title">Fiber-compatible photonic feed-forward with 99% fidelity</h3>
-                  <p class="article-authors">Guilherme Luiz Zanin; Maxime J Jacquet; Michele Spagnolo; Peter Schiansky; Irati Alonso Calafell; Lee A Rozema; Philip Walther</p>
-                  <p><a href="https://doi.org/10.1364/oe.409867" target="_blank" rel="noopener">DOI: 10.1364/oe.409867</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> Guilherme Luiz Zanin; Maxime J Jacquet; Michele Spagnolo; Peter Schiansky; Irati Alonso Calafell; Lee A Rozema; Philip Walther</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: ORCID; Pesquisador: Guilherme Luiz Zanin; ORCID: 0000-0003-4178-7818</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1364/oe.409867" target="_blank" rel="noopener">10.1364/oe.409867</a></p>
                 </article>
               
             </div>

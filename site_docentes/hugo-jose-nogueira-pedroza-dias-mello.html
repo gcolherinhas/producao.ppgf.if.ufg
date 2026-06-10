@@ -53,6 +53,16 @@ a:hover { text-decoration: underline; }
   opacity: 0.96;
 }
 .ufg-line strong { font-weight: 700; }
+.header-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  margin-bottom: 18px;
+  font-size: 1rem;
+  line-height: 1.35;
+  opacity: 0.96;
+}
+.header-stack span { display: block; }
 .header-title {
   margin: 0;
   font-size: clamp(1.75rem, 3vw, 2.7rem);
@@ -167,7 +177,9 @@ a:hover { text-decoration: underline; }
   margin-bottom: 7px;
 }
 .article-title { margin: 0 0 8px 0; font-size: 1.02rem; }
-.article-authors { color: var(--muted); font-size: 0.92rem; margin: 0; }
+.article-authors { color: var(--muted); font-size: 0.92rem; margin: 0 0 8px 0; }
+.article-meta { color: var(--text); font-size: 0.92rem; margin: 6px 0 0 0; }
+.article-meta .meta-label { font-size: 0.92rem; }
 .kpi-grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(120px, 1fr));
@@ -246,9 +258,10 @@ a:hover { text-decoration: underline; }
   <header class="site-header">
     <div class="bar"></div>
     <div class="header-inner">
-      <div class="ufg-line">
-        <span><strong>UNIVERSIDADE FEDERAL DE GOIÁS - UFG</strong><br>INSTITUTO DE FÍSICA · PROGRAMA DE PÓS-GRADUAÇÃO EM FÍSICA</span>
-        <span>PPGF/UFG</span>
+      <div class="header-stack" aria-label="Cabeçalho institucional">
+        <span>Universidade Federal de Goiás</span>
+        <span>Instituto de Física</span>
+        <span>Programa de Pós-Graduação em Física</span>
       </div>
       <h1 class="header-title">Hugo José Nogueira Pedroza Dias Mello</h1>
     </div>
@@ -262,139 +275,148 @@ a:hover { text-decoration: underline; }
         
         <h2>Hugo José Nogueira Pedroza Dias Mello</h2>
         <ul class="meta-list profile-details">
-          
-            <li><a class="profile-link" href="http://lattes.cnpq.br/9322890299309036" target="_blank" rel="noopener">Curriculum Lattes</a></li>
-          
-          <li><span class="meta-label">Apto(a) a orientar:</span> Física Experimental</li>
-          <li><span class="meta-label">Sala:</span> 120 (IF-2)</li>
-          <li><span class="meta-label">E-mail:</span> <a href="mailto:hugomello@ufg.br">hugomello@ufg.br</a></li>
-          <li><span class="meta-label">Telefone:</span> (62) 3521-1014</li>
-          <li><span class="meta-label">Pesquisa</span> &#34;Física de Materiais e Dispositivos&#34;</li>
-          
-            <li>Bolsista de Produtividade em Pesquisa FAPEG/CNPq - Nível C</li>
-          
-          <li><span class="meta-label">Formação:</span> Doutorado em Ciências - USP - 2019</li>
-          
-            <li><span class="meta-label">ORCID:</span> <a href="https://orcid.org/0000-0003-2676-3826" target="_blank" rel="noopener">0000-0003-2676-3826</a></li>
-          
+          <li><span class="meta-label">Curriculum Lattes:</span> <a class="profile-link" href="http://lattes.cnpq.br/9322890299309036" target="_blank" rel="noopener">http://lattes.cnpq.br/9322890299309036</a></li>
+          <li><span class="meta-label">ORCID:</span> <a href="https://orcid.org/0000-0003-2676-3826" target="_blank" rel="noopener">0000-0003-2676-3826</a></li>
+          <li><span class="meta-label">Apto(a) a orientar:</span> ---</li>
+          <li><span class="meta-label">Sala:</span> ---</li>
+          <li><span class="meta-label">E-mail:</span> <span class="missing-info">---</span></li>
+          <li><span class="meta-label">Telefone:</span> ---</li>
+          <li><span class="meta-label">Pesquisa:</span> ---</li>
+          <li><span class="meta-label">Bolsa:</span> ---</li>
+          <li><span class="meta-label">Formação:</span> ---</li>
           <li><span class="meta-label">Fonte do perfil:</span> <a href="https://posgraduacao.if.ufg.br/p/41256-docentes-ppgf-instituto-de-fisica-ufg" target="_blank" rel="noopener">Página do PPGF/UFG</a></li>
         </ul>
       </aside>
 
       <section class="content-card">
         <nav class="tabs" aria-label="Seções da página">
-          <button class="tab-button active" data-tab="artigos">Artigos publicados</button>
+          <button class="tab-button active" data-tab="artigos">Artigos relacionados</button>
           <button class="tab-button" data-tab="estatisticas">Estatísticas do docente</button>
         </nav>
 
         <div id="artigos" class="tab-panel active">
-          <h2>Artigos publicados</h2>
+          <h2>Artigos relacionados</h2>
           
             <div class="article-list">
               
                 <article class="article-item">
                   <span class="article-year">2026</span>
                   <h3 class="article-title">Modular enzymatic biosensor based on electrolyte-gated organic field-effect transistor for glucose and urea sensing</h3>
-                  <p class="article-authors">H. J. N. P. D. Mello; S. Dalgleish; G. Ligorio; M. Mulato; E. J. W. List-Kratochvil</p>
-                  <p><a href="https://doi.org/10.1007/s00339-026-09485-3" target="_blank" rel="noopener">DOI: 10.1007/s00339-026-09485-3</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> H. J. N. P. D. Mello; S. Dalgleish; G. Ligorio; M. Mulato; E. J. W. List-Kratochvil</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: ORCID; Pesquisador: Hugo José Nogueira Pedroza Dias Mello; ORCID: 0000-0003-2676-3826</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1007/s00339-026-09485-3" target="_blank" rel="noopener">10.1007/s00339-026-09485-3</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2025</span>
                   <h3 class="article-title">Fingerprinting PANI/V₂O₅ composite thin films: PCA-based classification beyond conventional sensor performance</h3>
-                  <p class="article-authors">Hugo José Nogueira Pedroza Dias Mello; Ricardo Estéfani França Rocha; Marcelo Mulato</p>
-                  <p><a href="https://doi.org/10.1007/s00339-025-09033-5" target="_blank" rel="noopener">DOI: 10.1007/s00339-025-09033-5</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> Hugo José Nogueira Pedroza Dias Mello; Ricardo Estéfani França Rocha; Marcelo Mulato</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: ORCID; Pesquisador: Hugo José Nogueira Pedroza Dias Mello; ORCID: 0000-0003-2676-3826</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1007/s00339-025-09033-5" target="_blank" rel="noopener">10.1007/s00339-025-09033-5</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2025</span>
                   <h3 class="article-title">First-order molecular hyperpolarizability of xanthoangelol derivatives</h3>
-                  <p class="article-authors">Felipe A. Santos; Hugo J. N. P. D. Mello; Martin S. Barbosa; Luis M. G. Abegão</p>
-                  <p><a href="https://doi.org/10.1140/epjp/s13360-025-06830-y" target="_blank" rel="noopener">DOI: 10.1140/epjp/s13360-025-06830-y</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> Felipe A. Santos; Hugo J. N. P. D. Mello; Martin S. Barbosa; Luis M. G. Abegão</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: ORCID; Pesquisador: Hugo José Nogueira Pedroza Dias Mello; ORCID: 0000-0003-2676-3826</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1140/epjp/s13360-025-06830-y" target="_blank" rel="noopener">10.1140/epjp/s13360-025-06830-y</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2025</span>
                   <h3 class="article-title">Mixed (Mo,W) oxide/sulfide composite nanostructures: Synthesis and gas-sensing properties</h3>
-                  <p class="article-authors">Gustavo N. Pereira; Rafael C. Barbosa; Beatriz C. Rossignatti; Rafael A. da Silva; Ranilson A. da Silva; Hugo J.N.P.D. Mello; Marcelo O. Orlandi; Martin S. Barbosa</p>
-                  <p><a href="https://doi.org/10.1016/j.jacomc.2025.100072" target="_blank" rel="noopener">DOI: 10.1016/j.jacomc.2025.100072</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> Gustavo N. Pereira; Rafael C. Barbosa; Beatriz C. Rossignatti; Rafael A. da Silva; Ranilson A. da Silva; Hugo J.N.P.D. Mello; Marcelo O. Orlandi; Martin S. Barbosa</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: ORCID; Pesquisador: Hugo José Nogueira Pedroza Dias Mello; ORCID: 0000-0003-2676-3826</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1016/j.jacomc.2025.100072" target="_blank" rel="noopener">10.1016/j.jacomc.2025.100072</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2024</span>
                   <h3 class="article-title">Correlating scatterer concentration and intensity threshold of random laser in niobium oxide particle colloids with dye solution</h3>
-                  <p class="article-authors">Abegão, L.M.G.; Maia, L.J.Q.; Cocca, L.H.Z.; Mello, H.J.N.P.D.; Alencar, M.A.R.C.; Jr, J.J.R.</p>
-                  <p><a href="https://doi.org/10.1016/j.optmat.2024.116072" target="_blank" rel="noopener">DOI: 10.1016/j.optmat.2024.116072</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> Abegão, L.M.G.; Maia, L.J.Q.; Cocca, L.H.Z.; Mello, H.J.N.P.D.; Alencar, M.A.R.C.; Jr, J.J.R.</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: ORCID; Pesquisador: Hugo José Nogueira Pedroza Dias Mello; ORCID: 0000-0003-2676-3826</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1016/j.optmat.2024.116072" target="_blank" rel="noopener">10.1016/j.optmat.2024.116072</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2024</span>
                   <h3 class="article-title">Gold-enhanced aptasensors for highly sensitive dengue detection: a cost-effective approach</h3>
-                  <p class="article-authors">Bassam Bachour Junior; Beatriz Cotting Rossignatti; Hugo José Nogueira Pedroza Dias Mello; Éder José Guidelli; Marcelo Mulato</p>
-                  <p><a href="https://doi.org/10.1016/j.surfin.2024.105282" target="_blank" rel="noopener">DOI: 10.1016/j.surfin.2024.105282</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> Bassam Bachour Junior; Beatriz Cotting Rossignatti; Hugo José Nogueira Pedroza Dias Mello; Éder José Guidelli; Marcelo Mulato</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: ORCID; Pesquisador: Hugo José Nogueira Pedroza Dias Mello; ORCID: 0000-0003-2676-3826</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1016/j.surfin.2024.105282" target="_blank" rel="noopener">10.1016/j.surfin.2024.105282</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2024</span>
                   <h3 class="article-title">Optimized Drop-Casted Polyaniline Thin Films for High-Sensitivity Electrochemical and Optical pH Sensors</h3>
-                  <p class="article-authors">Bruna Eduarda Darolt Mücke; Beatriz Cotting Rossignatti; Luis Miguel Gomes Abegão; Martin Schwellberger Barbosa; Hugo José Nogueira Pedroza Dias Mello</p>
-                  <p><a href="https://doi.org/10.3390/polym16192789" target="_blank" rel="noopener">DOI: 10.3390/polym16192789</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> Bruna Eduarda Darolt Mücke; Beatriz Cotting Rossignatti; Luis Miguel Gomes Abegão; Martin Schwellberger Barbosa; Hugo José Nogueira Pedroza Dias Mello</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: ORCID; Pesquisador: Hugo José Nogueira Pedroza Dias Mello; ORCID: 0000-0003-2676-3826</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.3390/polym16192789" target="_blank" rel="noopener">10.3390/polym16192789</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2024</span>
                   <h3 class="article-title">Optimizing pH sensor performance with PANI/PMMA composite thin films: Impedimetric and capacitive transduction approaches</h3>
-                  <p class="article-authors">Rossignatti, B.C.; Mulato, M.; Mello, H.J.N.P.D.</p>
-                  <p><a href="https://doi.org/10.1016/j.synthmet.2024.117728" target="_blank" rel="noopener">DOI: 10.1016/j.synthmet.2024.117728</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> Rossignatti, B.C.; Mulato, M.; Mello, H.J.N.P.D.</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: ORCID; Pesquisador: Hugo José Nogueira Pedroza Dias Mello; ORCID: 0000-0003-2676-3826</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1016/j.synthmet.2024.117728" target="_blank" rel="noopener">10.1016/j.synthmet.2024.117728</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2024</span>
                   <h3 class="article-title">The integration of cerium oxide nanoparticles in solid-state random laser development</h3>
-                  <p class="article-authors">Abegão, L.M.G.; Silva, L.H.P.; Cocca, L.H.Z.; Romero, A.L.S.; Lopes, L.H.T.; Mello, H.J.N.P.D.; Barbosa, M.S.; De Boni, L.</p>
-                  <p><a href="https://doi.org/10.1140/epjp/s13360-024-05433-3" target="_blank" rel="noopener">DOI: 10.1140/epjp/s13360-024-05433-3</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> Abegão, L.M.G.; Silva, L.H.P.; Cocca, L.H.Z.; Romero, A.L.S.; Lopes, L.H.T.; Mello, H.J.N.P.D.; Barbosa, M.S.; De Boni, L.</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: ORCID; Pesquisador: Hugo José Nogueira Pedroza Dias Mello; ORCID: 0000-0003-2676-3826</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1140/epjp/s13360-024-05433-3" target="_blank" rel="noopener">10.1140/epjp/s13360-024-05433-3</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2023</span>
                   <h3 class="article-title">Thin Films of Polyaniline-Based Nanocomposites with CeO2 and WO3 Metal Oxides Applied to the Impedimetric and Capacitive Transducer Stages in Chemical Sensors</h3>
-                  <p class="article-authors">Beatriz Cotting Rossignatti; Amanda Portes Vieira; Martin Schwellberger Barbosa; Luís Miguel Gomes Abegão; Hugo José Nogueira Pedroza Dias Mello</p>
-                  <p><a href="https://doi.org/10.3390/polym15030578" target="_blank" rel="noopener">DOI: 10.3390/polym15030578</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> Beatriz Cotting Rossignatti; Amanda Portes Vieira; Martin Schwellberger Barbosa; Luís Miguel Gomes Abegão; Hugo José Nogueira Pedroza Dias Mello</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: ORCID; Pesquisador: Hugo José Nogueira Pedroza Dias Mello; ORCID: 0000-0003-2676-3826</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.3390/polym15030578" target="_blank" rel="noopener">10.3390/polym15030578</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2023</span>
                   <h3 class="article-title">Understanding the Effect of Deposition Technique on the Structure–Property Relationship of Polyaniline Thin Films Applied in Potentiometric pH Sensor</h3>
-                  <p class="article-authors">Fraga, V.M.; Lovi, I.T.; Abegão, L.M.G.; Mello, H.J.N.P.D.</p>
-                  <p><a href="https://doi.org/10.3390/polym15163450" target="_blank" rel="noopener">DOI: 10.3390/polym15163450</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> Fraga, V.M.; Lovi, I.T.; Abegão, L.M.G.; Mello, H.J.N.P.D.</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: ORCID; Pesquisador: Hugo José Nogueira Pedroza Dias Mello; ORCID: 0000-0003-2676-3826</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.3390/polym15163450" target="_blank" rel="noopener">10.3390/polym15163450</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2022</span>
                   <h3 class="article-title">Electrochemically activated polyaniline based ambipolar organic electrochemical transistor</h3>
-                  <p class="article-authors">Mello, H.J.N.P.D.; Faleiros, M.C.; Mulato, M.</p>
-                  <p><a href="https://doi.org/10.1002/elsa.202100176" target="_blank" rel="noopener">DOI: 10.1002/elsa.202100176</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> Mello, H.J.N.P.D.; Faleiros, M.C.; Mulato, M.</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: ORCID; Pesquisador: Hugo José Nogueira Pedroza Dias Mello; ORCID: 0000-0003-2676-3826</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1002/elsa.202100176" target="_blank" rel="noopener">10.1002/elsa.202100176</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2022</span>
                   <h3 class="article-title">Impedimetric and Capacitive Transducer Platform for Chemical Sensors Based on Electrodeposited Polyaniline Thin Films</h3>
-                  <p class="article-authors">Hugo José Nogueira Pedroza Dias Mello</p>
-                  <p><a href="https://doi.org/10.1021/acs.jpcc.2c02736" target="_blank" rel="noopener">DOI: 10.1021/acs.jpcc.2c02736</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> Hugo José Nogueira Pedroza Dias Mello</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: ORCID; Pesquisador: Hugo José Nogueira Pedroza Dias Mello; ORCID: 0000-0003-2676-3826</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1021/acs.jpcc.2c02736" target="_blank" rel="noopener">10.1021/acs.jpcc.2c02736</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2021</span>
                   <h3 class="article-title">Model improvement for super-Nernstian pH sensors: the effect of surface hydration</h3>
-                  
-                  <p><a href="https://doi.org/10.1007/s10853-020-05412-w" target="_blank" rel="noopener">DOI: 10.1007/s10853-020-05412-w</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> ---</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: ORCID; Pesquisador: Hugo José Nogueira Pedroza Dias Mello; ORCID: 0000-0003-2676-3826</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1007/s10853-020-05412-w" target="_blank" rel="noopener">10.1007/s10853-020-05412-w</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2021</span>
                   <h3 class="article-title">Polyaniline-based field effect transistor for DNA/RNA biomarker sensing: Comparison to electrochemical impedance and inorganic layer</h3>
-                  
-                  <p><a href="https://doi.org/10.1016/j.sna.2020.112481" target="_blank" rel="noopener">DOI: 10.1016/j.sna.2020.112481</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> ---</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: ORCID; Pesquisador: Hugo José Nogueira Pedroza Dias Mello; ORCID: 0000-0003-2676-3826</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1016/j.sna.2020.112481" target="_blank" rel="noopener">10.1016/j.sna.2020.112481</a></p>
                 </article>
               
             </div>

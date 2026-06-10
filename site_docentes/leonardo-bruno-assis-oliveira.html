@@ -53,6 +53,16 @@ a:hover { text-decoration: underline; }
   opacity: 0.96;
 }
 .ufg-line strong { font-weight: 700; }
+.header-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  margin-bottom: 18px;
+  font-size: 1rem;
+  line-height: 1.35;
+  opacity: 0.96;
+}
+.header-stack span { display: block; }
 .header-title {
   margin: 0;
   font-size: clamp(1.75rem, 3vw, 2.7rem);
@@ -167,7 +177,9 @@ a:hover { text-decoration: underline; }
   margin-bottom: 7px;
 }
 .article-title { margin: 0 0 8px 0; font-size: 1.02rem; }
-.article-authors { color: var(--muted); font-size: 0.92rem; margin: 0; }
+.article-authors { color: var(--muted); font-size: 0.92rem; margin: 0 0 8px 0; }
+.article-meta { color: var(--text); font-size: 0.92rem; margin: 6px 0 0 0; }
+.article-meta .meta-label { font-size: 0.92rem; }
 .kpi-grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(120px, 1fr));
@@ -246,9 +258,10 @@ a:hover { text-decoration: underline; }
   <header class="site-header">
     <div class="bar"></div>
     <div class="header-inner">
-      <div class="ufg-line">
-        <span><strong>UNIVERSIDADE FEDERAL DE GOIÁS - UFG</strong><br>INSTITUTO DE FÍSICA · PROGRAMA DE PÓS-GRADUAÇÃO EM FÍSICA</span>
-        <span>PPGF/UFG</span>
+      <div class="header-stack" aria-label="Cabeçalho institucional">
+        <span>Universidade Federal de Goiás</span>
+        <span>Instituto de Física</span>
+        <span>Programa de Pós-Graduação em Física</span>
       </div>
       <h1 class="header-title">Leonardo Bruno Assis Oliveira</h1>
     </div>
@@ -262,104 +275,108 @@ a:hover { text-decoration: underline; }
         
         <h2>Leonardo Bruno Assis Oliveira</h2>
         <ul class="meta-list profile-details">
-          
-            <li><a class="profile-link" href="http://lattes.cnpq.br/1324616109366783" target="_blank" rel="noopener">Curriculum Lattes</a></li>
-          
-          <li><span class="meta-label">Apto(a) a orientar:</span> Física Teórica</li>
-          <li><span class="meta-label">Sala:</span> Departamento de Física - CEPAE/UFG</li>
-          <li><span class="meta-label">E-mail:</span> <a href="mailto:leonardobruno.assis@ufg.br">leonardobruno.assis@ufg.br</a></li>
-          <li><span class="meta-label">Telefone:</span> (62) 3521-1297</li>
-          <li><span class="meta-label">Pesquisa</span> &#34;Física Atômica e Molecular&#34;</li>
-          
-            <li>Bolsista de Produtividade de CNPq - Nível 2</li>
-          
-          <li><span class="meta-label">Formação:</span> Doutorado em Física - UFG - 2012</li>
-          
-            <li><span class="meta-label">ORCID:</span> <a href="https://orcid.org/0000-0003-0915-5722" target="_blank" rel="noopener">0000-0003-0915-5722</a></li>
-          
+          <li><span class="meta-label">Curriculum Lattes:</span> <a class="profile-link" href="http://lattes.cnpq.br/1324616109366783" target="_blank" rel="noopener">http://lattes.cnpq.br/1324616109366783</a></li>
+          <li><span class="meta-label">ORCID:</span> <a href="https://orcid.org/0000-0003-0915-5722" target="_blank" rel="noopener">0000-0003-0915-5722</a></li>
+          <li><span class="meta-label">Apto(a) a orientar:</span> ---</li>
+          <li><span class="meta-label">Sala:</span> ---</li>
+          <li><span class="meta-label">E-mail:</span> <span class="missing-info">---</span></li>
+          <li><span class="meta-label">Telefone:</span> ---</li>
+          <li><span class="meta-label">Pesquisa:</span> ---</li>
+          <li><span class="meta-label">Bolsa:</span> ---</li>
+          <li><span class="meta-label">Formação:</span> ---</li>
           <li><span class="meta-label">Fonte do perfil:</span> <a href="https://posgraduacao.if.ufg.br/p/41256-docentes-ppgf-instituto-de-fisica-ufg" target="_blank" rel="noopener">Página do PPGF/UFG</a></li>
         </ul>
       </aside>
 
       <section class="content-card">
         <nav class="tabs" aria-label="Seções da página">
-          <button class="tab-button active" data-tab="artigos">Artigos publicados</button>
+          <button class="tab-button active" data-tab="artigos">Artigos relacionados</button>
           <button class="tab-button" data-tab="estatisticas">Estatísticas do docente</button>
         </nav>
 
         <div id="artigos" class="tab-panel active">
-          <h2>Artigos publicados</h2>
+          <h2>Artigos relacionados</h2>
           
             <div class="article-list">
               
                 <article class="article-item">
                   <span class="article-year">2025</span>
                   <h3 class="article-title">Impact of Chloride and Bromide Composition in Ionic Liquid/Water Electrolytes on the Electrochemical Performance of Graphene-Based Supercapacitors: A Molecular Dynamics Study</h3>
-                  <p class="article-authors">Leonardo Bruno Assis Oliveira; Lucas de S. Silva; Henrique de Araujo Chagas; Tertius L. Fonseca; Guilherme Colherinhas</p>
-                  <p><a href="https://doi.org/10.1021/acs.jpcc.5c01816" target="_blank" rel="noopener">DOI: 10.1021/acs.jpcc.5c01816</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> Leonardo Bruno Assis Oliveira; Lucas de S. Silva; Henrique de Araujo Chagas; Tertius L. Fonseca; Guilherme Colherinhas</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: OpenAlex; Pesquisador: Leonardo Bruno Assis Oliveira; ORCID: 0000-0003-0915-5722</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1021/acs.jpcc.5c01816" target="_blank" rel="noopener">10.1021/acs.jpcc.5c01816</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2025</span>
                   <h3 class="article-title">Structural and electrochemical properties of graphene-based supercapacitors with water and methanol-co-solvated ionic liquids: a molecular dynamics study</h3>
-                  <p class="article-authors">Lucas de S. Silva; Leonardo Bruno Assis Oliveira; Tertius L. Fonseca; Guilherme Colherinhas</p>
-                  <p><a href="https://doi.org/10.1016/j.molliq.2025.128041" target="_blank" rel="noopener">DOI: 10.1016/j.molliq.2025.128041</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> Lucas de S. Silva; Leonardo Bruno Assis Oliveira; Tertius L. Fonseca; Guilherme Colherinhas</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: OpenAlex; Pesquisador: Leonardo Bruno Assis Oliveira; ORCID: 0000-0003-0915-5722</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1016/j.molliq.2025.128041" target="_blank" rel="noopener">10.1016/j.molliq.2025.128041</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2024</span>
                   <h3 class="article-title">Employing molecular dynamics simulations and DFT calculations to elucidate the energetic, structural, and spectroscopic attributes of (poly)valines in water solution</h3>
-                  <p class="article-authors">R.C. Prado; K. Mendanha; L.B.A. Oliveira; G. Colherinhas</p>
-                  <p><a href="https://doi.org/10.1016/j.cplett.2024.141364" target="_blank" rel="noopener">DOI: 10.1016/j.cplett.2024.141364</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> R.C. Prado; K. Mendanha; L.B.A. Oliveira; G. Colherinhas</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: ORCID; Pesquisador: Leonardo Bruno Assis Oliveira; ORCID: 0000-0003-0915-5722</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1016/j.cplett.2024.141364" target="_blank" rel="noopener">10.1016/j.cplett.2024.141364</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2024</span>
                   <h3 class="article-title">Solvent effects on the spectroscopic properties of cannabinoids derivatives: A theoretical study using &lt;scp&gt;PCM&lt;/scp&gt;</h3>
-                  <p class="article-authors">Richard Costa Prado; Verônyca Santos Filho; Samanta Aparecida Portes; Guilherme Colherinhas; Leonardo Bruno Assis Oliveira</p>
-                  <p><a href="https://doi.org/10.1002/qua.27417" target="_blank" rel="noopener">DOI: 10.1002/qua.27417</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> Richard Costa Prado; Verônyca Santos Filho; Samanta Aparecida Portes; Guilherme Colherinhas; Leonardo Bruno Assis Oliveira</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: OpenAlex; Pesquisador: Leonardo Bruno Assis Oliveira; ORCID: 0000-0003-0915-5722</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1002/qua.27417" target="_blank" rel="noopener">10.1002/qua.27417</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2024</span>
                   <h3 class="article-title">Systematic analysis to evaluate the impact of hydration on electrolytes [emim][BF4] and [cho][gly] in supercapacitors formed by graphene or graphyne electrodes</h3>
-                  <p class="article-authors">Henrique de Araujo Chagas; Leonardo Bruno Assis Oliveira; Tertius L. Fonseca; Guilherme Colherinhas</p>
-                  <p><a href="https://doi.org/10.1016/j.molliq.2024.126280" target="_blank" rel="noopener">DOI: 10.1016/j.molliq.2024.126280</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> Henrique de Araujo Chagas; Leonardo Bruno Assis Oliveira; Tertius L. Fonseca; Guilherme Colherinhas</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: OpenAlex; Pesquisador: Leonardo Bruno Assis Oliveira; ORCID: 0000-0003-0915-5722</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1016/j.molliq.2024.126280" target="_blank" rel="noopener">10.1016/j.molliq.2024.126280</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2023</span>
                   <h3 class="article-title">Investigating ionic liquid hydration effects at high temperatures: Insights from classic molecular dynamics simulations</h3>
-                  <p class="article-authors">Leonardo Bruno Assis Oliveira; Tertius L. Fonseca; Guilherme Colherinhas</p>
-                  <p><a href="https://doi.org/10.1016/j.molliq.2023.123662" target="_blank" rel="noopener">DOI: 10.1016/j.molliq.2023.123662</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> Leonardo Bruno Assis Oliveira; Tertius L. Fonseca; Guilherme Colherinhas</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: OpenAlex; Pesquisador: Leonardo Bruno Assis Oliveira; ORCID: 0000-0003-0915-5722</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1016/j.molliq.2023.123662" target="_blank" rel="noopener">10.1016/j.molliq.2023.123662</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2022</span>
                   <h3 class="article-title">Modeling, energetic and structural analysis of peptide membranes formed by arginine and phenylalanine (R2F4R2) using fully atomistic molecular dynamics</h3>
-                  <p class="article-authors">Karinna Mendanha; Leonardo Bruno Assis Oliveira; Guilherme Colherinhas</p>
-                  <p><a href="https://doi.org/10.1016/j.molliq.2022.120498" target="_blank" rel="noopener">DOI: 10.1016/j.molliq.2022.120498</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> Karinna Mendanha; Leonardo Bruno Assis Oliveira; Guilherme Colherinhas</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: OpenAlex; Pesquisador: Leonardo Bruno Assis Oliveira; ORCID: 0000-0003-0915-5722</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1016/j.molliq.2022.120498" target="_blank" rel="noopener">10.1016/j.molliq.2022.120498</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2021</span>
                   <h3 class="article-title">Hydroxylic, sulfur-containing and amidic amino acids in water solution: Atomic charges parameters for computational modeling using molecular dynamics simulation and DFT calculations</h3>
-                  <p class="article-authors">Leonardo Bruno Assis Oliveira; Wesley B. Cardoso; Guilherme Colherinhas</p>
-                  <p><a href="https://doi.org/10.1016/j.molliq.2021.116815" target="_blank" rel="noopener">DOI: 10.1016/j.molliq.2021.116815</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> Leonardo Bruno Assis Oliveira; Wesley B. Cardoso; Guilherme Colherinhas</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: OpenAlex; Pesquisador: Leonardo Bruno Assis Oliveira; ORCID: 0000-0003-0915-5722</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1016/j.molliq.2021.116815" target="_blank" rel="noopener">10.1016/j.molliq.2021.116815</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2021</span>
                   <h3 class="article-title">Preferential solvation and optical properties of eumelanin building blocks in binary mixture of methanol and water</h3>
-                  <p class="article-authors">Leonardo Bruno Assis Oliveira; Tertius L. Fonseca; Benedito J. C. Cabral; Kaline Coutinho; Sylvio Canuto</p>
-                  <p><a href="https://doi.org/10.1063/5.0065723" target="_blank" rel="noopener">DOI: 10.1063/5.0065723</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> Leonardo Bruno Assis Oliveira; Tertius L. Fonseca; Benedito J. C. Cabral; Kaline Coutinho; Sylvio Canuto</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: ORCID; Pesquisador: Leonardo Bruno Assis Oliveira; ORCID: 0000-0003-0915-5722</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1063/5.0065723" target="_blank" rel="noopener">10.1063/5.0065723</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2021</span>
                   <h3 class="article-title">TD-DFT absorption spectrum of (poly)threonine in water: A study combining molecular dynamics and quantum mechanics calculations</h3>
-                  <p class="article-authors">Karinna Mendanha; Richard Costa Prado; Leonardo Bruno Assis Oliveira; Guilherme Colherinhas</p>
-                  <p><a href="https://doi.org/10.1016/j.cplett.2021.138876" target="_blank" rel="noopener">DOI: 10.1016/j.cplett.2021.138876</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> Karinna Mendanha; Richard Costa Prado; Leonardo Bruno Assis Oliveira; Guilherme Colherinhas</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: OpenAlex; Pesquisador: Leonardo Bruno Assis Oliveira; ORCID: 0000-0003-0915-5722</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1016/j.cplett.2021.138876" target="_blank" rel="noopener">10.1016/j.cplett.2021.138876</a></p>
                 </article>
               
             </div>

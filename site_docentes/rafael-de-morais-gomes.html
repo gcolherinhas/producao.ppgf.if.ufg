@@ -53,6 +53,16 @@ a:hover { text-decoration: underline; }
   opacity: 0.96;
 }
 .ufg-line strong { font-weight: 700; }
+.header-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  margin-bottom: 18px;
+  font-size: 1rem;
+  line-height: 1.35;
+  opacity: 0.96;
+}
+.header-stack span { display: block; }
 .header-title {
   margin: 0;
   font-size: clamp(1.75rem, 3vw, 2.7rem);
@@ -167,7 +177,9 @@ a:hover { text-decoration: underline; }
   margin-bottom: 7px;
 }
 .article-title { margin: 0 0 8px 0; font-size: 1.02rem; }
-.article-authors { color: var(--muted); font-size: 0.92rem; margin: 0; }
+.article-authors { color: var(--muted); font-size: 0.92rem; margin: 0 0 8px 0; }
+.article-meta { color: var(--text); font-size: 0.92rem; margin: 6px 0 0 0; }
+.article-meta .meta-label { font-size: 0.92rem; }
 .kpi-grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(120px, 1fr));
@@ -246,9 +258,10 @@ a:hover { text-decoration: underline; }
   <header class="site-header">
     <div class="bar"></div>
     <div class="header-inner">
-      <div class="ufg-line">
-        <span><strong>UNIVERSIDADE FEDERAL DE GOIÁS - UFG</strong><br>INSTITUTO DE FÍSICA · PROGRAMA DE PÓS-GRADUAÇÃO EM FÍSICA</span>
-        <span>PPGF/UFG</span>
+      <div class="header-stack" aria-label="Cabeçalho institucional">
+        <span>Universidade Federal de Goiás</span>
+        <span>Instituto de Física</span>
+        <span>Programa de Pós-Graduação em Física</span>
       </div>
       <h1 class="header-title">Rafael de Morais Gomes</h1>
     </div>
@@ -262,81 +275,84 @@ a:hover { text-decoration: underline; }
         
         <h2>Rafael de Morais Gomes</h2>
         <ul class="meta-list profile-details">
-          
-            <li><a class="profile-link" href="http://lattes.cnpq.br/8596984874039527" target="_blank" rel="noopener">Curriculum Lattes</a></li>
-          
-          <li><span class="meta-label">Apto(a) a orientar:</span> Física Experimental</li>
-          <li><span class="meta-label">Sala:</span> 236 (IF-2)</li>
-          <li><span class="meta-label">E-mail:</span> <a href="mailto:rafaelgomes@ufg.br">rafaelgomes@ufg.br</a></li>
-          <li><span class="meta-label">Telefone:</span> (62) 3521-2321</li>
-          <li><span class="meta-label">Pesquisa</span> &#34;Óptica Quântica&#34;</li>
-          
-          <li><span class="meta-label">Formação:</span> Doutorado em Física - UFRJ - 2012</li>
-          
-            <li><span class="meta-label">ORCID:</span> <a href="https://orcid.org/0000-0002-9417-1147" target="_blank" rel="noopener">0000-0002-9417-1147</a></li>
-          
+          <li><span class="meta-label">Curriculum Lattes:</span> <a class="profile-link" href="http://lattes.cnpq.br/8596984874039527" target="_blank" rel="noopener">http://lattes.cnpq.br/8596984874039527</a></li>
+          <li><span class="meta-label">ORCID:</span> <a href="https://orcid.org/0000-0002-9417-1147" target="_blank" rel="noopener">0000-0002-9417-1147</a></li>
+          <li><span class="meta-label">Apto(a) a orientar:</span> ---</li>
+          <li><span class="meta-label">Sala:</span> ---</li>
+          <li><span class="meta-label">E-mail:</span> <span class="missing-info">---</span></li>
+          <li><span class="meta-label">Telefone:</span> ---</li>
+          <li><span class="meta-label">Pesquisa:</span> ---</li>
+          <li><span class="meta-label">Bolsa:</span> ---</li>
+          <li><span class="meta-label">Formação:</span> ---</li>
           <li><span class="meta-label">Fonte do perfil:</span> <a href="https://posgraduacao.if.ufg.br/p/41256-docentes-ppgf-instituto-de-fisica-ufg" target="_blank" rel="noopener">Página do PPGF/UFG</a></li>
         </ul>
       </aside>
 
       <section class="content-card">
         <nav class="tabs" aria-label="Seções da página">
-          <button class="tab-button active" data-tab="artigos">Artigos publicados</button>
+          <button class="tab-button active" data-tab="artigos">Artigos relacionados</button>
           <button class="tab-button" data-tab="estatisticas">Estatísticas do docente</button>
         </nav>
 
         <div id="artigos" class="tab-panel active">
-          <h2>Artigos publicados</h2>
+          <h2>Artigos relacionados</h2>
           
             <div class="article-list">
               
                 <article class="article-item">
                   <span class="article-year">2025</span>
                   <h3 class="article-title">331P Experience of durvalumab in unresectable advanced or metastatic biliary tract cancer: A multicenter study in Portugal</h3>
-                  <p class="article-authors">Rita Marques; Francisco Veiga; Anil Aranha; Jason De Melo; Masahiro Oura; Fernando Brito e Abreu; M. Falcão; Alexandra Marques; Gonçalo Cunha; Alexandra Guedes; J. Leite Basilio; J. Marinho; Rafael M. Gomes; A. L. F. de Barros; Isabel Schausltz Pereira Faustino; Inês Rego; Ana Terezinha Marques Mesquita; N. Bonito; Catarina Rodrigues; Marta C. Nunes</p>
-                  <p><a href="https://doi.org/10.1016/j.annonc.2025.05.346" target="_blank" rel="noopener">DOI: 10.1016/j.annonc.2025.05.346</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> Rita Marques et al.</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: OpenAlex; Pesquisador: Rafael de Morais Gomes; ORCID: 0000-0002-9417-1147</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1016/j.annonc.2025.05.346" target="_blank" rel="noopener">10.1016/j.annonc.2025.05.346</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2025</span>
                   <h3 class="article-title">Optical algorithm for derivative of real-valued functions</h3>
-                  <p class="article-authors">Murilo H. Magiotto; Guilherme L. Zanin; Wesley B. Cardoso; Ardiley T. Avelar; Rafael M. Gomes</p>
-                  <p><a href="https://doi.org/10.1016/j.optlastec.2024.112137" target="_blank" rel="noopener">DOI: 10.1016/j.optlastec.2024.112137</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> Murilo H. Magiotto; Guilherme L. Zanin; Wesley B. Cardoso; Ardiley T. Avelar; Rafael M. Gomes</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: ORCID; Pesquisador: Rafael de Morais Gomes; ORCID: 0000-0002-9417-1147</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1016/j.optlastec.2024.112137" target="_blank" rel="noopener">10.1016/j.optlastec.2024.112137</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2024</span>
                   <h3 class="article-title">Single photon hybrid quantum key distribution</h3>
-                  <p class="article-authors">Laryssa F Ferro; Ardiley T Avelar; Wesley B Cardoso; Rafael M Gomes</p>
-                  <p><a href="https://doi.org/10.1088/1402-4896/ad185c" target="_blank" rel="noopener">DOI: 10.1088/1402-4896/ad185c</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> Laryssa F Ferro; Ardiley T Avelar; Wesley B Cardoso; Rafael M Gomes</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: ORCID; Pesquisador: Rafael de Morais Gomes; ORCID: 0000-0002-9417-1147</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1088/1402-4896/ad185c" target="_blank" rel="noopener">10.1088/1402-4896/ad185c</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2022</span>
                   <h3 class="article-title">Observation of a triangular-lattice pattern in nonlinear wave mixing with optical vortices</h3>
-                  <p class="article-authors">da Silva, B. Pinheiro; dos Santos, G. H.; de Oliveira, A. G.; da Silva, N. Rubiano; Buono, W. T.; Gomes, R. M.; Soares, W. C.; Jesus-Silva, A. J.; Fonseca, E. J. S.; Ribeiro, P. H. Souto; Khoury, A. Z.</p>
-                  <p><a href="https://doi.org/10.1364/optica.459812" target="_blank" rel="noopener">DOI: 10.1364/optica.459812</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> da Silva, B. Pinheiro et al.</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: ORCID; Pesquisador: Rafael de Morais Gomes; ORCID: 0000-0002-9417-1147</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1364/optica.459812" target="_blank" rel="noopener">10.1364/optica.459812</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2022</span>
                   <h3 class="article-title">Observation of triangular-lattice pattern in nonlinear wave mixing with optical vortices</h3>
-                  <p class="article-authors">B. Pinheiro da Silva; Gustavo Henrique dos Santos; André Gonçalves de Oliveira; Nara Rubiano da Silva; Wagner Tavares Buono; Rafael M. Gomes; W. C. Soares; Alcenísio J. Jesus‐Silva; E. J. S. Fonseca; P. H. Souto Ribeiro; A. Z. Khoury</p>
-                  <p><a href="https://doi.org/10.1364/fio.2022.jtu5a.17" target="_blank" rel="noopener">DOI: 10.1364/fio.2022.jtu5a.17</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> B. Pinheiro da Silva et al.</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: OpenAlex; Pesquisador: Rafael de Morais Gomes; ORCID: 0000-0002-9417-1147</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1364/fio.2022.jtu5a.17" target="_blank" rel="noopener">10.1364/fio.2022.jtu5a.17</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2021</span>
                   <h3 class="article-title">Proposal for Anderson localization in transverse spatial degrees of freedom of photons</h3>
-                  <p class="article-authors">Rafael M. Gomes; Wesley B. Cardoso; Ardiley T. Avelar</p>
-                  <p><a href="https://doi.org/10.1016/j.optcom.2021.127225" target="_blank" rel="noopener">DOI: 10.1016/j.optcom.2021.127225</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> Rafael M. Gomes; Wesley B. Cardoso; Ardiley T. Avelar</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: ORCID; Pesquisador: Rafael de Morais Gomes; ORCID: 0000-0002-9417-1147</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1016/j.optcom.2021.127225" target="_blank" rel="noopener">10.1016/j.optcom.2021.127225</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2021</span>
                   <h3 class="article-title">Stimulated Parametric Down-Conversion with Vector Vortex Beams</h3>
-                  <p class="article-authors">da Silva, N. Rubiano; de Oliveira, A. G.; Arruda, M. F. Z.; de Araujo, R. Medeiros; Soares, W. C.; Walborn, S. P.; Gomes, R. M.; Ribeiro, P. H. Souto</p>
-                  <p><a href="https://doi.org/10.1103/physrevapplied.15.024039" target="_blank" rel="noopener">DOI: 10.1103/physrevapplied.15.024039</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> da Silva, N. Rubiano; de Oliveira, A. G.; Arruda, M. F. Z.; de Araujo, R. Medeiros; Soares, W. C.; Walborn, S. P.; Gomes, R. M.; Ribeiro, P. H. Souto</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: ORCID; Pesquisador: Rafael de Morais Gomes; ORCID: 0000-0002-9417-1147</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1103/physrevapplied.15.024039" target="_blank" rel="noopener">10.1103/physrevapplied.15.024039</a></p>
                 </article>
               
             </div>

@@ -53,6 +53,16 @@ a:hover { text-decoration: underline; }
   opacity: 0.96;
 }
 .ufg-line strong { font-weight: 700; }
+.header-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  margin-bottom: 18px;
+  font-size: 1rem;
+  line-height: 1.35;
+  opacity: 0.96;
+}
+.header-stack span { display: block; }
 .header-title {
   margin: 0;
   font-size: clamp(1.75rem, 3vw, 2.7rem);
@@ -167,7 +177,9 @@ a:hover { text-decoration: underline; }
   margin-bottom: 7px;
 }
 .article-title { margin: 0 0 8px 0; font-size: 1.02rem; }
-.article-authors { color: var(--muted); font-size: 0.92rem; margin: 0; }
+.article-authors { color: var(--muted); font-size: 0.92rem; margin: 0 0 8px 0; }
+.article-meta { color: var(--text); font-size: 0.92rem; margin: 6px 0 0 0; }
+.article-meta .meta-label { font-size: 0.92rem; }
 .kpi-grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(120px, 1fr));
@@ -246,9 +258,10 @@ a:hover { text-decoration: underline; }
   <header class="site-header">
     <div class="bar"></div>
     <div class="header-inner">
-      <div class="ufg-line">
-        <span><strong>UNIVERSIDADE FEDERAL DE GOIÁS - UFG</strong><br>INSTITUTO DE FÍSICA · PROGRAMA DE PÓS-GRADUAÇÃO EM FÍSICA</span>
-        <span>PPGF/UFG</span>
+      <div class="header-stack" aria-label="Cabeçalho institucional">
+        <span>Universidade Federal de Goiás</span>
+        <span>Instituto de Física</span>
+        <span>Programa de Pós-Graduação em Física</span>
       </div>
       <h1 class="header-title">Herbert de Castro Georg</h1>
     </div>
@@ -262,116 +275,124 @@ a:hover { text-decoration: underline; }
         
         <h2>Herbert de Castro Georg</h2>
         <ul class="meta-list profile-details">
-          
-            <li><a class="profile-link" href="http://lattes.cnpq.br/8026419467214372" target="_blank" rel="noopener">Curriculum Lattes</a></li>
-          
-          <li><span class="meta-label">Apto(a) a orientar:</span> Física Teórica</li>
-          <li><span class="meta-label">Sala:</span> 210-IF2</li>
-          <li><span class="meta-label">E-mail:</span> <a href="mailto:hcgeorg@ufg.br">hcgeorg@ufg.br</a></li>
-          <li><span class="meta-label">Telefone:</span> (62) 3521-2306</li>
-          <li><span class="meta-label">Pesquisa</span> &#34;Física Molecular e Simulação Computacional de Sistemas Moleculares&#34;</li>
-          
-          <li><span class="meta-label">Formação:</span> Doutorado em Física - USP - 2006</li>
-          
-            <li><span class="meta-label">ORCID:</span> <a href="https://orcid.org/0000-0001-5788-0094" target="_blank" rel="noopener">0000-0001-5788-0094</a></li>
-          
+          <li><span class="meta-label">Curriculum Lattes:</span> <a class="profile-link" href="http://lattes.cnpq.br/8026419467214372" target="_blank" rel="noopener">http://lattes.cnpq.br/8026419467214372</a></li>
+          <li><span class="meta-label">ORCID:</span> <a href="https://orcid.org/0000-0001-5788-0094" target="_blank" rel="noopener">0000-0001-5788-0094</a></li>
+          <li><span class="meta-label">Apto(a) a orientar:</span> ---</li>
+          <li><span class="meta-label">Sala:</span> ---</li>
+          <li><span class="meta-label">E-mail:</span> <span class="missing-info">---</span></li>
+          <li><span class="meta-label">Telefone:</span> ---</li>
+          <li><span class="meta-label">Pesquisa:</span> ---</li>
+          <li><span class="meta-label">Bolsa:</span> ---</li>
+          <li><span class="meta-label">Formação:</span> ---</li>
           <li><span class="meta-label">Fonte do perfil:</span> <a href="https://posgraduacao.if.ufg.br/p/41256-docentes-ppgf-instituto-de-fisica-ufg" target="_blank" rel="noopener">Página do PPGF/UFG</a></li>
         </ul>
       </aside>
 
       <section class="content-card">
         <nav class="tabs" aria-label="Seções da página">
-          <button class="tab-button active" data-tab="artigos">Artigos publicados</button>
+          <button class="tab-button active" data-tab="artigos">Artigos relacionados</button>
           <button class="tab-button" data-tab="estatisticas">Estatísticas do docente</button>
         </nav>
 
         <div id="artigos" class="tab-panel active">
-          <h2>Artigos publicados</h2>
+          <h2>Artigos relacionados</h2>
           
             <div class="article-list">
               
                 <article class="article-item">
                   <span class="article-year">2026</span>
                   <h3 class="article-title">Solvent Polarity as a Selective Modulator of the First Hyperpolarizability in Para-Substituted Azo–Carbazole Dyes</h3>
-                  <p class="article-authors">Murilo B. M. Ferreira (23812651); Herbert C. Georg; Marcos A. Castro; Tertius L. Fonseca</p>
-                  <p><a href="https://doi.org/10.1021/acsomega.5c12352" target="_blank" rel="noopener">DOI: 10.1021/acsomega.5c12352</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> Murilo B. M. Ferreira (23812651); Herbert C. Georg; Marcos A. Castro; Tertius L. Fonseca</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: OpenAlex; Pesquisador: Herbert de Castro Georg; ORCID: 0000-0001-5788-0094</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1021/acsomega.5c12352" target="_blank" rel="noopener">10.1021/acsomega.5c12352</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2025</span>
                   <h3 class="article-title">Analysis of the NMR Parameters Shielding and Spin–Spin Coupling Constants of Glycine Conformers</h3>
-                  <p class="article-authors">Danillo Valverde; Herbert C. Georg; Gabriel I. Pagola; Patricio F. Provasi</p>
-                  <p><a href="https://doi.org/10.1021/acs.jpca.4c06527" target="_blank" rel="noopener">DOI: 10.1021/acs.jpca.4c06527</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> Danillo Valverde; Herbert C. Georg; Gabriel I. Pagola; Patricio F. Provasi</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: OpenAlex; Pesquisador: Herbert de Castro Georg; ORCID: 0000-0001-5788-0094</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1021/acs.jpca.4c06527" target="_blank" rel="noopener">10.1021/acs.jpca.4c06527</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2025</span>
                   <h3 class="article-title">Antioxidant and chelating properties of phenolic compounds of agro-industrial waste of Carapa guianensis: theoretical insights for food and pharmaceutical applications</h3>
-                  <p class="article-authors">Neidy S. S. dos Santos; Loubenky Surfin; William Silva; Antônio R. da Cunha; Herbert C. Georg; Kaline Coutinho; Sylvio Canuto; Rodrigo Gester</p>
-                  <p><a href="https://doi.org/10.1007/s00894-025-06517-2" target="_blank" rel="noopener">DOI: 10.1007/s00894-025-06517-2</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> Neidy S. S. dos Santos; Loubenky Surfin; William Silva; Antônio R. da Cunha; Herbert C. Georg; Kaline Coutinho; Sylvio Canuto; Rodrigo Gester</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: OpenAlex; Pesquisador: Herbert de Castro Georg; ORCID: 0000-0001-5788-0094</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1007/s00894-025-06517-2" target="_blank" rel="noopener">10.1007/s00894-025-06517-2</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2024</span>
                   <h3 class="article-title">Calculation of the geometry, absorption spectrum, and first hyperpolarizability of 4,5-dicyanoimidazole derivatives in solution. A multiscale ASEC–FEG study</h3>
-                  <p class="article-authors">Idney Brandão; Herbert C. Georg; Marcos A. Castro; Tertius L. Fonseca</p>
-                  <p><a href="https://doi.org/10.1063/5.0215931" target="_blank" rel="noopener">DOI: 10.1063/5.0215931</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> Idney Brandão; Herbert C. Georg; Marcos A. Castro; Tertius L. Fonseca</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: ORCID; Pesquisador: Herbert de Castro Georg; ORCID: 0000-0001-5788-0094</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1063/5.0215931" target="_blank" rel="noopener">10.1063/5.0215931</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2024</span>
                   <h3 class="article-title">Elucidating the Photophysics and Nonlinear Optical Properties of a Novel Azo Prototype for Possible Photonic Applications: A Quantum Chemical Analysis</h3>
-                  <p class="article-authors">Sávio Fonseca; Neidy S. S. dos Santos; Herbert C. Georg; Tertius L. Fonseca; Patricio F. Provasi; Kaline Coutinho; Sylvio Canuto; Antônio R. da Cunha; Rodrigo Gester</p>
-                  <p><a href="https://doi.org/10.1021/acsomega.4c04240" target="_blank" rel="noopener">DOI: 10.1021/acsomega.4c04240</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> Sávio Fonseca; Neidy S. S. dos Santos; Herbert C. Georg; Tertius L. Fonseca; Patricio F. Provasi; Kaline Coutinho; Sylvio Canuto; Antônio R. da Cunha; Rodrigo Gester</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: OpenAlex; Pesquisador: Herbert de Castro Georg; ORCID: 0000-0001-5788-0094</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1021/acsomega.4c04240" target="_blank" rel="noopener">10.1021/acsomega.4c04240</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2024</span>
                   <h3 class="article-title">Theoretical and experimental study of a new antioxidant xanthone: Solvent and intramolecular hydrogen bond effects</h3>
-                  <p class="article-authors">Neidy S. S. dos Santos; Hellen Bertoletti Barbieri; Marcelo Maia Pinheiro; Taícia Pacheco Fill; Murillo H. Queiroz; João Pina; Ezequiel Belo; Herbert C. Georg; Antônio R. da Cunha; Patrícia Santana Barbosa Marinho; Andrey M. R. Marinho; Kaline Coutinho; Sylvio Canuto; Rodrigo Gester</p>
-                  <p><a href="https://doi.org/10.1016/j.molliq.2024.125045" target="_blank" rel="noopener">DOI: 10.1016/j.molliq.2024.125045</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> Neidy S. S. dos Santos et al.</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: OpenAlex; Pesquisador: Herbert de Castro Georg; ORCID: 0000-0001-5788-0094</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1016/j.molliq.2024.125045" target="_blank" rel="noopener">10.1016/j.molliq.2024.125045</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2024</span>
                   <h3 class="article-title">Using proton abstraction as a nonlinear optical amplifier in xanthone-based molecules: A DFT perspective</h3>
-                  <p class="article-authors">Neidy S. S. dos Santos; Alberto Torres; Herbert C. Georg; Patricio F. Provasi; Kaline Coutinho; Sylvio Canuto; Rodrigo Gester</p>
-                  <p><a href="https://doi.org/10.1016/j.cplett.2024.141834" target="_blank" rel="noopener">DOI: 10.1016/j.cplett.2024.141834</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> Neidy S. S. dos Santos; Alberto Torres; Herbert C. Georg; Patricio F. Provasi; Kaline Coutinho; Sylvio Canuto; Rodrigo Gester</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: OpenAlex; Pesquisador: Herbert de Castro Georg; ORCID: 0000-0001-5788-0094</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1016/j.cplett.2024.141834" target="_blank" rel="noopener">10.1016/j.cplett.2024.141834</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2023</span>
                   <h3 class="article-title">Conformational Dependence of the First Hyperpolarizability of the Li@B10H14 in Solution</h3>
-                  <p class="article-authors">Idney Brandão; Tertius L. Fonseca; Herbert C. Georg; Marcos A. Castro; Renato B. Pontes</p>
-                  <p><a href="https://doi.org/10.3390/liquids3010012" target="_blank" rel="noopener">DOI: 10.3390/liquids3010012</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> Idney Brandão; Tertius L. Fonseca; Herbert C. Georg; Marcos A. Castro; Renato B. Pontes</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: OpenAlex; Pesquisador: Herbert de Castro Georg; ORCID: 0000-0001-5788-0094</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.3390/liquids3010012" target="_blank" rel="noopener">10.3390/liquids3010012</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2023</span>
                   <h3 class="article-title">Elucidating the conformational change and electronic absorption spectrum of p-dimethylamino-cinnamaldehyde merocyanine across different solvent polarities</h3>
-                  <p class="article-authors">Leandro R. Franco; Tertius L. Fonseca; Kaline Coutinho; Herbert C. Georg</p>
-                  <p><a href="https://doi.org/10.1063/5.0158994" target="_blank" rel="noopener">DOI: 10.1063/5.0158994</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> Leandro R. Franco; Tertius L. Fonseca; Kaline Coutinho; Herbert C. Georg</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: ORCID; Pesquisador: Herbert de Castro Georg; ORCID: 0000-0001-5788-0094</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1063/5.0158994" target="_blank" rel="noopener">10.1063/5.0158994</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2022</span>
                   <h3 class="article-title">Density functional theory investigation of the second hyperpolarizability of the phenol blue in solution</h3>
-                  <p class="article-authors">Brandão, I.; Fonseca, T.L.; Franco, L.R.; Georg, H.C.; Castro, M.A.</p>
-                  <p><a href="https://doi.org/10.1016/j.cplett.2022.139549" target="_blank" rel="noopener">DOI: 10.1016/j.cplett.2022.139549</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> Brandão, I.; Fonseca, T.L.; Franco, L.R.; Georg, H.C.; Castro, M.A.</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: ORCID; Pesquisador: Herbert de Castro Georg; ORCID: 0000-0001-5788-0094</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1016/j.cplett.2022.139549" target="_blank" rel="noopener">10.1016/j.cplett.2022.139549</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2022</span>
                   <h3 class="article-title">Free-Energy Landscape of the S&lt;sub&gt;N&lt;/sub&gt;2 Reaction CH&lt;sub&gt;3&lt;/sub&gt;Br + Cl&lt;sup&gt;-&lt;/sup&gt;→ CH&lt;sub&gt;3&lt;/sub&gt;Cl + Br&lt;sup&gt;-&lt;/sup&gt;in Different Liquid Environments</h3>
-                  <p class="article-authors">Valverde, D.; Georg, H.C.; Canuto, S.</p>
-                  <p><a href="https://doi.org/10.1021/acs.jpcb.1c10282" target="_blank" rel="noopener">DOI: 10.1021/acs.jpcb.1c10282</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> Valverde, D.; Georg, H.C.; Canuto, S.</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: ORCID; Pesquisador: Herbert de Castro Georg; ORCID: 0000-0001-5788-0094</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1021/acs.jpcb.1c10282" target="_blank" rel="noopener">10.1021/acs.jpcb.1c10282</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2021</span>
                   <h3 class="article-title">Applicability of DFT functionals for evaluating the first hyperpolarizability of phenol blue in solution</h3>
-                  <p class="article-authors">Brandão, I.; Fonseca, T.L.; Franco, L.R.; Georg, H.C.; Castro, M.A.</p>
-                  <p><a href="https://doi.org/10.1063/5.0033134" target="_blank" rel="noopener">DOI: 10.1063/5.0033134</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> Brandão, I.; Fonseca, T.L.; Franco, L.R.; Georg, H.C.; Castro, M.A.</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: ORCID; Pesquisador: Herbert de Castro Georg; ORCID: 0000-0001-5788-0094</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1063/5.0033134" target="_blank" rel="noopener">10.1063/5.0033134</a></p>
                 </article>
               
             </div>

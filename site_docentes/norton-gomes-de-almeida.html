@@ -53,6 +53,16 @@ a:hover { text-decoration: underline; }
   opacity: 0.96;
 }
 .ufg-line strong { font-weight: 700; }
+.header-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  margin-bottom: 18px;
+  font-size: 1rem;
+  line-height: 1.35;
+  opacity: 0.96;
+}
+.header-stack span { display: block; }
 .header-title {
   margin: 0;
   font-size: clamp(1.75rem, 3vw, 2.7rem);
@@ -167,7 +177,9 @@ a:hover { text-decoration: underline; }
   margin-bottom: 7px;
 }
 .article-title { margin: 0 0 8px 0; font-size: 1.02rem; }
-.article-authors { color: var(--muted); font-size: 0.92rem; margin: 0; }
+.article-authors { color: var(--muted); font-size: 0.92rem; margin: 0 0 8px 0; }
+.article-meta { color: var(--text); font-size: 0.92rem; margin: 6px 0 0 0; }
+.article-meta .meta-label { font-size: 0.92rem; }
 .kpi-grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(120px, 1fr));
@@ -246,9 +258,10 @@ a:hover { text-decoration: underline; }
   <header class="site-header">
     <div class="bar"></div>
     <div class="header-inner">
-      <div class="ufg-line">
-        <span><strong>UNIVERSIDADE FEDERAL DE GOIÁS - UFG</strong><br>INSTITUTO DE FÍSICA · PROGRAMA DE PÓS-GRADUAÇÃO EM FÍSICA</span>
-        <span>PPGF/UFG</span>
+      <div class="header-stack" aria-label="Cabeçalho institucional">
+        <span>Universidade Federal de Goiás</span>
+        <span>Instituto de Física</span>
+        <span>Programa de Pós-Graduação em Física</span>
       </div>
       <h1 class="header-title">Norton Gomes de Almeida</h1>
     </div>
@@ -262,146 +275,156 @@ a:hover { text-decoration: underline; }
         
         <h2>Norton Gomes de Almeida</h2>
         <ul class="meta-list profile-details">
-          
-            <li><a class="profile-link" href="http://lattes.cnpq.br/3182841849332242" target="_blank" rel="noopener">Curriculum Lattes</a></li>
-          
-          <li><span class="meta-label">Apto(a) a orientar:</span> Física Teórica</li>
-          <li><span class="meta-label">Sala:</span> 222 (IF-1)</li>
-          <li><span class="meta-label">E-mail:</span> <a href="mailto:norton@ufg.br">norton@ufg.br</a></li>
-          <li><span class="meta-label">Telefone:</span> (62) 3521-2081</li>
-          <li><span class="meta-label">Pesquisa</span> &#34;Óptica Quântica&#34;</li>
-          
-            <li>Bolsista de Produtividade de CNPq - Nível 2</li>
-          
-          <li><span class="meta-label">Formação:</span> Doutorado em Física - UFSCar - 2006</li>
-          
-            <li><span class="meta-label">ORCID:</span> <a href="https://orcid.org/0000-0001-8517-6774" target="_blank" rel="noopener">0000-0001-8517-6774</a></li>
-          
+          <li><span class="meta-label">Curriculum Lattes:</span> <a class="profile-link" href="http://lattes.cnpq.br/3182841849332242" target="_blank" rel="noopener">http://lattes.cnpq.br/3182841849332242</a></li>
+          <li><span class="meta-label">ORCID:</span> <a href="https://orcid.org/0000-0001-8517-6774" target="_blank" rel="noopener">0000-0001-8517-6774</a></li>
+          <li><span class="meta-label">Apto(a) a orientar:</span> ---</li>
+          <li><span class="meta-label">Sala:</span> ---</li>
+          <li><span class="meta-label">E-mail:</span> <span class="missing-info">---</span></li>
+          <li><span class="meta-label">Telefone:</span> ---</li>
+          <li><span class="meta-label">Pesquisa:</span> ---</li>
+          <li><span class="meta-label">Bolsa:</span> ---</li>
+          <li><span class="meta-label">Formação:</span> ---</li>
           <li><span class="meta-label">Fonte do perfil:</span> <a href="https://posgraduacao.if.ufg.br/p/41256-docentes-ppgf-instituto-de-fisica-ufg" target="_blank" rel="noopener">Página do PPGF/UFG</a></li>
         </ul>
       </aside>
 
       <section class="content-card">
         <nav class="tabs" aria-label="Seções da página">
-          <button class="tab-button active" data-tab="artigos">Artigos publicados</button>
+          <button class="tab-button active" data-tab="artigos">Artigos relacionados</button>
           <button class="tab-button" data-tab="estatisticas">Estatísticas do docente</button>
         </nav>
 
         <div id="artigos" class="tab-panel active">
-          <h2>Artigos publicados</h2>
+          <h2>Artigos relacionados</h2>
           
             <div class="article-list">
               
                 <article class="article-item">
                   <span class="article-year">2026</span>
                   <h3 class="article-title">Engineered Kerr nonlinearities for precise quantum control of Fock states</h3>
-                  <p class="article-authors">Gabriella G. Damas; Ciro Micheletti Diniz; Norton G. de Almeida; Celso J. Villas-Bôas; G.D. de Moraes Neto</p>
-                  <p><a href="https://doi.org/10.1103/2q95-sfjs" target="_blank" rel="noopener">DOI: 10.1103/2q95-sfjs</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> Gabriella G. Damas; Ciro Micheletti Diniz; Norton G. de Almeida; Celso J. Villas-Bôas; G.D. de Moraes Neto</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: ORCID; Pesquisador: Norton Gomes de Almeida; ORCID: 0000-0001-8517-6774</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1103/2q95-sfjs" target="_blank" rel="noopener">10.1103/2q95-sfjs</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2026</span>
                   <h3 class="article-title">From superradiance to collective electromagnetically induced transparency in three-level ensembles</h3>
-                  <p class="article-authors">H. Sanchez; L.F. Alves da Silva; M.A. Ponte; M.H.Y. Moussa; Norton G. de Almeida</p>
-                  <p><a href="https://doi.org/10.1103/bjmf-j7zv" target="_blank" rel="noopener">DOI: 10.1103/bjmf-j7zv</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> H. Sanchez; L.F. Alves da Silva; M.A. Ponte; M.H.Y. Moussa; Norton G. de Almeida</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: ORCID; Pesquisador: Norton Gomes de Almeida; ORCID: 0000-0001-8517-6774</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1103/bjmf-j7zv" target="_blank" rel="noopener">10.1103/bjmf-j7zv</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2026</span>
                   <h3 class="article-title">Pseudo-Hermitian thermal machines</h3>
-                  <p class="article-authors">L.F.A. da Silva; H. Sanchez; M.A. de Ponte; M.H.Y. Moussa; N.G. de Almeida</p>
-                  <p><a href="https://doi.org/10.1016/j.physa.2026.131622" target="_blank" rel="noopener">DOI: 10.1016/j.physa.2026.131622</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> L.F.A. da Silva; H. Sanchez; M.A. de Ponte; M.H.Y. Moussa; N.G. de Almeida</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: ORCID; Pesquisador: Norton Gomes de Almeida; ORCID: 0000-0001-8517-6774</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1016/j.physa.2026.131622" target="_blank" rel="noopener">10.1016/j.physa.2026.131622</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2025</span>
                   <h3 class="article-title">Fundamental limits and experimental implementation of dispersive quantum thermometry</h3>
-                  <p class="article-authors">Daniel Y Akamatsu; Lucas Ferreira R de Moura; Gabriella G Damas; Gentil D de Moraes Neto; Victor Montenegro; Norton G de Almeida</p>
-                  <p><a href="https://doi.org/10.1088/2058-9565/ae0f4e" target="_blank" rel="noopener">DOI: 10.1088/2058-9565/ae0f4e</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> Daniel Y Akamatsu; Lucas Ferreira R de Moura; Gabriella G Damas; Gentil D de Moraes Neto; Victor Montenegro; Norton G de Almeida</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: ORCID; Pesquisador: Norton Gomes de Almeida; ORCID: 0000-0001-8517-6774</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1088/2058-9565/ae0f4e" target="_blank" rel="noopener">10.1088/2058-9565/ae0f4e</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2025</span>
                   <h3 class="article-title">Quantum Features of the Thermal Two‐Qubit Quantum Rabi Model in Ultra‐ and Deep‐Strong Regimes</h3>
-                  <p class="article-authors">Ciro Micheletti Diniz; Gabriella G. Damas; Norton G. de Almeida; Celso J. Villas‐Boas; Gentil D. de Moraes Neto</p>
-                  <p><a href="https://doi.org/10.1002/qute.202500250" target="_blank" rel="noopener">DOI: 10.1002/qute.202500250</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> Ciro Micheletti Diniz; Gabriella G. Damas; Norton G. de Almeida; Celso J. Villas‐Boas; Gentil D. de Moraes Neto</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: ORCID; Pesquisador: Norton Gomes de Almeida; ORCID: 0000-0001-8517-6774</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1002/qute.202500250" target="_blank" rel="noopener">10.1002/qute.202500250</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2025</span>
                   <h3 class="article-title">Quantum Thermodynamic Cycles and Non-Equilibrium Work in Confined Systems</h3>
-                  <p class="article-authors">Cler Trindade Garcez; N. G. de Almeida</p>
-                  <p><a href="https://doi.org/10.1364/fio.2025.jtu5a.36" target="_blank" rel="noopener">DOI: 10.1364/fio.2025.jtu5a.36</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> Cler Trindade Garcez; N. G. de Almeida</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: OpenAlex; Pesquisador: Norton Gomes de Almeida; ORCID: 0000-0001-8517-6774</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1364/fio.2025.jtu5a.36" target="_blank" rel="noopener">10.1364/fio.2025.jtu5a.36</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2024</span>
                   <h3 class="article-title">Exploring the role of criticality in the quantum Otto cycle fueled by the anisotropic quantum Rabi-Stark model</h3>
-                  <p class="article-authors">He-Guang Xu; Jiasen Jin; Norton G. de Almeida; G. D. de Moraes Neto</p>
-                  <p><a href="https://doi.org/10.1103/physrevb.110.134318" target="_blank" rel="noopener">DOI: 10.1103/physrevb.110.134318</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> He-Guang Xu; Jiasen Jin; Norton G. de Almeida; G. D. de Moraes Neto</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: ORCID; Pesquisador: Norton Gomes de Almeida; ORCID: 0000-0001-8517-6774</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1103/physrevb.110.134318" target="_blank" rel="noopener">10.1103/physrevb.110.134318</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2024</span>
                   <h3 class="article-title">FATORES QUE INFLUENCIAM A RECORRÊNCIA DA DOAÇÃO DE SANGUE NA FUNDAÇÃO HEMOPA, BELÉM, PARÁ</h3>
-                  <p class="article-authors">N. G. de Almeida; L. Xavier de Silva; N Mandujano Ramos; JCE Correa; NP Rodrigues; RBH Castro</p>
-                  <p><a href="https://doi.org/10.1016/j.htct.2024.09.1303" target="_blank" rel="noopener">DOI: 10.1016/j.htct.2024.09.1303</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> N. G. de Almeida; L. Xavier de Silva; N Mandujano Ramos; JCE Correa; NP Rodrigues; RBH Castro</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: OpenAlex; Pesquisador: Norton Gomes de Almeida; ORCID: 0000-0001-8517-6774</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1016/j.htct.2024.09.1303" target="_blank" rel="noopener">10.1016/j.htct.2024.09.1303</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2024</span>
                   <h3 class="article-title">Universal quantum Otto heat machine based on the Dicke model</h3>
-                  <p class="article-authors">He-Guang Xu; Jiasen Jin; G. D. M. Neto; Norton G. de Almeida</p>
-                  <p><a href="https://doi.org/10.1103/physreve.109.014122" target="_blank" rel="noopener">DOI: 10.1103/physreve.109.014122</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> He-Guang Xu; Jiasen Jin; G. D. M. Neto; Norton G. de Almeida</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: ORCID; Pesquisador: Norton Gomes de Almeida; ORCID: 0000-0001-8517-6774</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1103/physreve.109.014122" target="_blank" rel="noopener">10.1103/physreve.109.014122</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2023</span>
                   <h3 class="article-title">Cooling with fermionic thermal reservoirs</h3>
-                  <p class="article-authors">Gabriella G. Damas; Rogério J. de Assis; Norton G. de Almeida</p>
-                  <p><a href="https://doi.org/10.1103/physreve.107.034128" target="_blank" rel="noopener">DOI: 10.1103/physreve.107.034128</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> Gabriella G. Damas; Rogério J. de Assis; Norton G. de Almeida</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: ORCID; Pesquisador: Norton Gomes de Almeida; ORCID: 0000-0001-8517-6774</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1103/physreve.107.034128" target="_blank" rel="noopener">10.1103/physreve.107.034128</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2023</span>
                   <h3 class="article-title">Negative temperature is cool for cooling</h3>
-                  <p class="article-authors">Gabriella G. Damas; Rogério J. de Assis; Norton G. de Almeida</p>
-                  <p><a href="https://doi.org/10.1016/j.physleta.2023.129038" target="_blank" rel="noopener">DOI: 10.1016/j.physleta.2023.129038</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> Gabriella G. Damas; Rogério J. de Assis; Norton G. de Almeida</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: ORCID; Pesquisador: Norton Gomes de Almeida; ORCID: 0000-0001-8517-6774</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1016/j.physleta.2023.129038" target="_blank" rel="noopener">10.1016/j.physleta.2023.129038</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2023</span>
                   <h3 class="article-title">Optimizing resetting of superconducting qubits</h3>
-                  <p class="article-authors">Ciro Micheletti Diniz; Rogério Jorge de Assis; Norton G. de Almeida; Celso J. Villas-Boas</p>
-                  <p><a href="https://doi.org/10.1103/physreva.108.052605" target="_blank" rel="noopener">DOI: 10.1103/physreva.108.052605</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> Ciro Micheletti Diniz; Rogério Jorge de Assis; Norton G. de Almeida; Celso J. Villas-Boas</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: ORCID; Pesquisador: Norton Gomes de Almeida; ORCID: 0000-0001-8517-6774</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1103/physreva.108.052605" target="_blank" rel="noopener">10.1103/physreva.108.052605</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2023</span>
                   <h3 class="article-title">Quantum Otto-type heat engine with fixed frequency</h3>
-                  <p class="article-authors">Richard Q. Matos; Rogério J. de Assis; Norton G. de Almeida</p>
-                  <p><a href="https://doi.org/10.1103/physreve.108.054131" target="_blank" rel="noopener">DOI: 10.1103/physreve.108.054131</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> Richard Q. Matos; Rogério J. de Assis; Norton G. de Almeida</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: ORCID; Pesquisador: Norton Gomes de Almeida; ORCID: 0000-0001-8517-6774</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1103/physreve.108.054131" target="_blank" rel="noopener">10.1103/physreve.108.054131</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2023</span>
                   <h3 class="article-title">Thermodynamics of the Ramsey Zone</h3>
-                  <p class="article-authors">Rogério J. de Assis; Ciro Micheletti Diniz; N. G. de Almeida; Celso Jorge Villas-Bôas</p>
-                  <p><a href="https://doi.org/10.3390/e25101430" target="_blank" rel="noopener">DOI: 10.3390/e25101430</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> Rogério J. de Assis; Ciro Micheletti Diniz; N. G. de Almeida; Celso Jorge Villas-Bôas</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: OpenAlex; Pesquisador: Norton Gomes de Almeida; ORCID: 0000-0001-8517-6774</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.3390/e25101430" target="_blank" rel="noopener">10.3390/e25101430</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2021</span>
                   <h3 class="article-title">Quantum Otto thermal machines powered by Kerr nonlinearity</h3>
-                  <p class="article-authors">Udson C Mendes; José S Sales; Norton G de Almeida</p>
-                  <p><a href="https://doi.org/10.1088/1361-6455/ac291a" target="_blank" rel="noopener">DOI: 10.1088/1361-6455/ac291a</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> Udson C Mendes; José S Sales; Norton G de Almeida</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: ORCID; Pesquisador: Norton Gomes de Almeida; ORCID: 0000-0001-8517-6774</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1088/1361-6455/ac291a" target="_blank" rel="noopener">10.1088/1361-6455/ac291a</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2021</span>
                   <h3 class="article-title">Two-level quantum Otto heat engine operating with unit efficiency far from the quasi-static regime under a squeezed reservoir</h3>
-                  <p class="article-authors">Rogério J de Assis; José S Sales; Udson C Mendes; Norton G de Almeida</p>
-                  <p><a href="https://doi.org/10.1088/1361-6455/abcfd9" target="_blank" rel="noopener">DOI: 10.1088/1361-6455/abcfd9</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> Rogério J de Assis; José S Sales; Udson C Mendes; Norton G de Almeida</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: ORCID; Pesquisador: Norton Gomes de Almeida; ORCID: 0000-0001-8517-6774</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1088/1361-6455/abcfd9" target="_blank" rel="noopener">10.1088/1361-6455/abcfd9</a></p>
                 </article>
               
             </div>

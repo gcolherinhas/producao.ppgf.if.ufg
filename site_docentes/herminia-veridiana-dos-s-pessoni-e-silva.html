@@ -53,6 +53,16 @@ a:hover { text-decoration: underline; }
   opacity: 0.96;
 }
 .ufg-line strong { font-weight: 700; }
+.header-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  margin-bottom: 18px;
+  font-size: 1rem;
+  line-height: 1.35;
+  opacity: 0.96;
+}
+.header-stack span { display: block; }
 .header-title {
   margin: 0;
   font-size: clamp(1.75rem, 3vw, 2.7rem);
@@ -167,7 +177,9 @@ a:hover { text-decoration: underline; }
   margin-bottom: 7px;
 }
 .article-title { margin: 0 0 8px 0; font-size: 1.02rem; }
-.article-authors { color: var(--muted); font-size: 0.92rem; margin: 0; }
+.article-authors { color: var(--muted); font-size: 0.92rem; margin: 0 0 8px 0; }
+.article-meta { color: var(--text); font-size: 0.92rem; margin: 6px 0 0 0; }
+.article-meta .meta-label { font-size: 0.92rem; }
 .kpi-grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(120px, 1fr));
@@ -246,9 +258,10 @@ a:hover { text-decoration: underline; }
   <header class="site-header">
     <div class="bar"></div>
     <div class="header-inner">
-      <div class="ufg-line">
-        <span><strong>UNIVERSIDADE FEDERAL DE GOIÁS - UFG</strong><br>INSTITUTO DE FÍSICA · PROGRAMA DE PÓS-GRADUAÇÃO EM FÍSICA</span>
-        <span>PPGF/UFG</span>
+      <div class="header-stack" aria-label="Cabeçalho institucional">
+        <span>Universidade Federal de Goiás</span>
+        <span>Instituto de Física</span>
+        <span>Programa de Pós-Graduação em Física</span>
       </div>
       <h1 class="header-title">Hermínia Veridiana dos S. Pessoni e Silva</h1>
     </div>
@@ -262,76 +275,76 @@ a:hover { text-decoration: underline; }
         
         <h2>Hermínia Veridiana dos S. Pessoni e Silva</h2>
         <ul class="meta-list profile-details">
-          
-            <li><a class="profile-link" href="http://lattes.cnpq.br/4405303818219930" target="_blank" rel="noopener">Curriculum Lattes</a></li>
-          
-          <li><span class="meta-label">Apto(a) a orientar:</span> Física Experimental</li>
-          <li><span class="meta-label">Sala:</span> 138 (IF-1)</li>
-          <li><span class="meta-label">E-mail:</span> <a href="mailto:pessoni@ufg.br">pessoni@ufg.br</a></li>
-          <li><span class="meta-label">Telefone:</span> (62) 3521-2319</li>
-          <li><span class="meta-label">Pesquisa</span> &#34;Materiais Multifuncionais&#34;</li>
-          
-            <li>Bolsista de Produtividade de CNPq - Nível 2</li>
-          
-          <li><span class="meta-label">Formação:</span> Doutorado em Física - UFG - 2019</li>
-          
-            <li><span class="meta-label">ORCID:</span> <a href="https://orcid.org/0000-0002-3279-3901" target="_blank" rel="noopener">0000-0002-3279-3901</a></li>
-          
+          <li><span class="meta-label">Curriculum Lattes:</span> <a class="profile-link" href="http://lattes.cnpq.br/4405303818219930" target="_blank" rel="noopener">http://lattes.cnpq.br/4405303818219930</a></li>
+          <li><span class="meta-label">ORCID:</span> <a href="https://orcid.org/0000-0002-3279-3901" target="_blank" rel="noopener">0000-0002-3279-3901</a></li>
+          <li><span class="meta-label">Apto(a) a orientar:</span> ---</li>
+          <li><span class="meta-label">Sala:</span> ---</li>
+          <li><span class="meta-label">E-mail:</span> <span class="missing-info">---</span></li>
+          <li><span class="meta-label">Telefone:</span> ---</li>
+          <li><span class="meta-label">Pesquisa:</span> ---</li>
+          <li><span class="meta-label">Bolsa:</span> ---</li>
+          <li><span class="meta-label">Formação:</span> ---</li>
           <li><span class="meta-label">Fonte do perfil:</span> <a href="https://posgraduacao.if.ufg.br/p/41256-docentes-ppgf-instituto-de-fisica-ufg" target="_blank" rel="noopener">Página do PPGF/UFG</a></li>
         </ul>
       </aside>
 
       <section class="content-card">
         <nav class="tabs" aria-label="Seções da página">
-          <button class="tab-button active" data-tab="artigos">Artigos publicados</button>
+          <button class="tab-button active" data-tab="artigos">Artigos relacionados</button>
           <button class="tab-button" data-tab="estatisticas">Estatísticas do docente</button>
         </nav>
 
         <div id="artigos" class="tab-panel active">
-          <h2>Artigos publicados</h2>
+          <h2>Artigos relacionados</h2>
           
             <div class="article-list">
               
                 <article class="article-item">
                   <span class="article-year">2024</span>
                   <h3 class="article-title">Near-room-temperature ferrimagnetism and half-metallicity in disordered Ca1.5La0.5MnRuO6</h3>
-                  <p class="article-authors">Silva, A.G.; Pontes, R.B.; Boldrin, M.; Pessoni, H.V.S.; Veiga, L.S.I.; Jesus, J.R.; Fabrelli, H.; Gonzaga, A.R.C.; Bittar, E.M.; Bufaiçal, L.</p>
-                  <p><a href="https://doi.org/10.1103/physrevb.110.144415" target="_blank" rel="noopener">DOI: 10.1103/physrevb.110.144415</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> Silva, A.G.; Pontes, R.B.; Boldrin, M.; Pessoni, H.V.S.; Veiga, L.S.I.; Jesus, J.R.; Fabrelli, H.; Gonzaga, A.R.C.; Bittar, E.M.; Bufaiçal, L.</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: ORCID; Pesquisador: Hermínia Veridiana dos S. Pessoni e Silva; ORCID: 0000-0002-3279-3901</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1103/physrevb.110.144415" target="_blank" rel="noopener">10.1103/physrevb.110.144415</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2022</span>
                   <h3 class="article-title">Magnetic properties in randomly diluted magnetic systems: Co-doped ZnO polycrystalline ceramics</h3>
-                  <p class="article-authors">Pessoni, H.V.S.; Franco Jr., A.</p>
-                  <p><a href="https://doi.org/10.1016/j.jallcom.2022.166264" target="_blank" rel="noopener">DOI: 10.1016/j.jallcom.2022.166264</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> Pessoni, H.V.S.; Franco Jr., A.</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: ORCID; Pesquisador: Hermínia Veridiana dos S. Pessoni e Silva; ORCID: 0000-0002-3279-3901</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1016/j.jallcom.2022.166264" target="_blank" rel="noopener">10.1016/j.jallcom.2022.166264</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2022</span>
                   <h3 class="article-title">Magnetic-plasmonic properties of CoFe&lt;sub&gt;2&lt;/sub&gt;O&lt;sub&gt;4&lt;/sub&gt;@Au nanocomposite</h3>
-                  <p class="article-authors">Alves, T.E.P.; Pessoni, H.V.S.; Franco, A.; Burda, C.; Samia, A.C.S.</p>
-                  <p><a href="https://doi.org/10.1016/j.jpcs.2022.110630" target="_blank" rel="noopener">DOI: 10.1016/j.jpcs.2022.110630</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> Alves, T.E.P.; Pessoni, H.V.S.; Franco, A.; Burda, C.; Samia, A.C.S.</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: ORCID; Pesquisador: Hermínia Veridiana dos S. Pessoni e Silva; ORCID: 0000-0002-3279-3901</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1016/j.jpcs.2022.110630" target="_blank" rel="noopener">10.1016/j.jpcs.2022.110630</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2022</span>
                   <h3 class="article-title">Spin canting and weak long-range ferromagnetic order in a rigid supramolecular framework</h3>
-                  <p class="article-authors">Lemes, M.A.; Martins, F.T.; Pessoni, H.V.S.; Franco, A.</p>
-                  <p><a href="https://doi.org/10.1016/j.physb.2022.414157" target="_blank" rel="noopener">DOI: 10.1016/j.physb.2022.414157</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> Lemes, M.A.; Martins, F.T.; Pessoni, H.V.S.; Franco, A.</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: ORCID; Pesquisador: Hermínia Veridiana dos S. Pessoni e Silva; ORCID: 0000-0002-3279-3901</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1016/j.physb.2022.414157" target="_blank" rel="noopener">10.1016/j.physb.2022.414157</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2021</span>
                   <h3 class="article-title">Effect of Gd&lt;sup&gt;3+&lt;/sup&gt; ion on the structural and magnetic properties of (Nb and Al) co-doped rutile TiO&lt;sub&gt;2&lt;/sub&gt; single crystal</h3>
-                  <p class="article-authors">Pessoni, H.V.S.; Oliveira, F.S.; Faria, L.S.S.; Machado, A.J.S.; Franco, A.</p>
-                  <p><a href="https://doi.org/10.1016/j.ceramint.2020.11.013" target="_blank" rel="noopener">DOI: 10.1016/j.ceramint.2020.11.013</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> Pessoni, H.V.S.; Oliveira, F.S.; Faria, L.S.S.; Machado, A.J.S.; Franco, A.</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: ORCID; Pesquisador: Hermínia Veridiana dos S. Pessoni e Silva; ORCID: 0000-0002-3279-3901</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1016/j.ceramint.2020.11.013" target="_blank" rel="noopener">10.1016/j.ceramint.2020.11.013</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2021</span>
                   <h3 class="article-title">Raman spectroscopy study of Ga-doped ZnO ceramics: An estimative of the structural disorder degree</h3>
-                  <p class="article-authors">Miranda, G.G.; de Sousa e Silva, R.L.; dos Santos Pessoni, H.V.; Franco, A.</p>
-                  <p><a href="https://doi.org/10.1016/j.physb.2020.412726" target="_blank" rel="noopener">DOI: 10.1016/j.physb.2020.412726</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> Miranda, G.G.; de Sousa e Silva, R.L.; dos Santos Pessoni, H.V.; Franco, A.</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: ORCID; Pesquisador: Hermínia Veridiana dos S. Pessoni e Silva; ORCID: 0000-0002-3279-3901</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1016/j.physb.2020.412726" target="_blank" rel="noopener">10.1016/j.physb.2020.412726</a></p>
                 </article>
               
             </div>

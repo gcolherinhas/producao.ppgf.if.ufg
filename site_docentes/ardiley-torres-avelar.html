@@ -53,6 +53,16 @@ a:hover { text-decoration: underline; }
   opacity: 0.96;
 }
 .ufg-line strong { font-weight: 700; }
+.header-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  margin-bottom: 18px;
+  font-size: 1rem;
+  line-height: 1.35;
+  opacity: 0.96;
+}
+.header-stack span { display: block; }
 .header-title {
   margin: 0;
   font-size: clamp(1.75rem, 3vw, 2.7rem);
@@ -167,7 +177,9 @@ a:hover { text-decoration: underline; }
   margin-bottom: 7px;
 }
 .article-title { margin: 0 0 8px 0; font-size: 1.02rem; }
-.article-authors { color: var(--muted); font-size: 0.92rem; margin: 0; }
+.article-authors { color: var(--muted); font-size: 0.92rem; margin: 0 0 8px 0; }
+.article-meta { color: var(--text); font-size: 0.92rem; margin: 6px 0 0 0; }
+.article-meta .meta-label { font-size: 0.92rem; }
 .kpi-grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(120px, 1fr));
@@ -246,9 +258,10 @@ a:hover { text-decoration: underline; }
   <header class="site-header">
     <div class="bar"></div>
     <div class="header-inner">
-      <div class="ufg-line">
-        <span><strong>UNIVERSIDADE FEDERAL DE GOIÁS - UFG</strong><br>INSTITUTO DE FÍSICA · PROGRAMA DE PÓS-GRADUAÇÃO EM FÍSICA</span>
-        <span>PPGF/UFG</span>
+      <div class="header-stack" aria-label="Cabeçalho institucional">
+        <span>Universidade Federal de Goiás</span>
+        <span>Instituto de Física</span>
+        <span>Programa de Pós-Graduação em Física</span>
       </div>
       <h1 class="header-title">Ardiley Torres Avelar</h1>
     </div>
@@ -262,153 +275,164 @@ a:hover { text-decoration: underline; }
         
         <h2>Ardiley Torres Avelar</h2>
         <ul class="meta-list profile-details">
-          
-            <li><a class="profile-link" href="http://lattes.cnpq.br/5732286631137637" target="_blank" rel="noopener">Curriculum Lattes</a></li>
-          
-          <li><span class="meta-label">Apto(a) a orientar:</span> Física Teórica</li>
-          <li><span class="meta-label">Sala:</span> 246 (IF-2)</li>
-          <li><span class="meta-label">E-mail:</span> <a href="mailto:avelar@ufg.br">avelar@ufg.br</a></li>
-          <li><span class="meta-label">Telefone:</span> (62) 3521-2326</li>
-          <li><span class="meta-label">Pesquisa</span> &#34;Óptica Quântica e Informação Quântica&#34;</li>
-          
-            <li>Bolsista de Produtividade de CNPq - Nível 1D</li>
-          
-          <li><span class="meta-label">Formação:</span> Doutorado em Física - UnB - 2006</li>
-          
-            <li><span class="meta-label">ORCID:</span> <a href="https://orcid.org/0000-0003-1733-6937" target="_blank" rel="noopener">0000-0003-1733-6937</a></li>
-          
+          <li><span class="meta-label">Curriculum Lattes:</span> <a class="profile-link" href="http://lattes.cnpq.br/5732286631137637" target="_blank" rel="noopener">http://lattes.cnpq.br/5732286631137637</a></li>
+          <li><span class="meta-label">ORCID:</span> <a href="https://orcid.org/0000-0003-1733-6937" target="_blank" rel="noopener">0000-0003-1733-6937</a></li>
+          <li><span class="meta-label">Apto(a) a orientar:</span> ---</li>
+          <li><span class="meta-label">Sala:</span> ---</li>
+          <li><span class="meta-label">E-mail:</span> <span class="missing-info">---</span></li>
+          <li><span class="meta-label">Telefone:</span> ---</li>
+          <li><span class="meta-label">Pesquisa:</span> ---</li>
+          <li><span class="meta-label">Bolsa:</span> ---</li>
+          <li><span class="meta-label">Formação:</span> ---</li>
           <li><span class="meta-label">Fonte do perfil:</span> <a href="https://posgraduacao.if.ufg.br/p/41256-docentes-ppgf-instituto-de-fisica-ufg" target="_blank" rel="noopener">Página do PPGF/UFG</a></li>
         </ul>
       </aside>
 
       <section class="content-card">
         <nav class="tabs" aria-label="Seções da página">
-          <button class="tab-button active" data-tab="artigos">Artigos publicados</button>
+          <button class="tab-button active" data-tab="artigos">Artigos relacionados</button>
           <button class="tab-button" data-tab="estatisticas">Estatísticas do docente</button>
         </nav>
 
         <div id="artigos" class="tab-panel active">
-          <h2>Artigos publicados</h2>
+          <h2>Artigos relacionados</h2>
           
             <div class="article-list">
               
                 <article class="article-item">
                   <span class="article-year">2026</span>
                   <h3 class="article-title">Coupling-induced localization in linearly coupled waveguides with spatially modulated nonlinearity</h3>
-                  <p class="article-authors">Bruno M. Miranda; Ardiley T. Avelar; Wesley B. Cardoso</p>
-                  <p><a href="https://doi.org/10.1007/s11082-026-08918-w" target="_blank" rel="noopener">DOI: 10.1007/s11082-026-08918-w</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> Bruno M. Miranda; Ardiley T. Avelar; Wesley B. Cardoso</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: ORCID; Pesquisador: Ardiley Torres Avelar; ORCID: 0000-0003-1733-6937</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1007/s11082-026-08918-w" target="_blank" rel="noopener">10.1007/s11082-026-08918-w</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2026</span>
                   <h3 class="article-title">Influence of fourth-order dispersion on the formation of localized states in systems with inhomogeneous defocusing nonlinearity</h3>
-                  <p class="article-authors">Fang C. Lee; Mateus C.P. dos Santos; Ardiley T. Avelar; Wesley B. Cardoso</p>
-                  <p><a href="https://doi.org/10.1016/j.chaos.2025.117629" target="_blank" rel="noopener">DOI: 10.1016/j.chaos.2025.117629</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> Fang C. Lee; Mateus C.P. dos Santos; Ardiley T. Avelar; Wesley B. Cardoso</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: ORCID; Pesquisador: Ardiley Torres Avelar; ORCID: 0000-0003-1733-6937</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1016/j.chaos.2025.117629" target="_blank" rel="noopener">10.1016/j.chaos.2025.117629</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2025</span>
                   <h3 class="article-title">Optical algorithm for derivative of real-valued functions</h3>
-                  <p class="article-authors">Murilo H. Magiotto; Guilherme L. Zanin; Wesley B. Cardoso; Ardiley T. Avelar; Rafael M. Gomes</p>
-                  <p><a href="https://doi.org/10.1016/j.optlastec.2024.112137" target="_blank" rel="noopener">DOI: 10.1016/j.optlastec.2024.112137</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> Murilo H. Magiotto; Guilherme L. Zanin; Wesley B. Cardoso; Ardiley T. Avelar; Rafael M. Gomes</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: ORCID; Pesquisador: Ardiley Torres Avelar; ORCID: 0000-0003-1733-6937</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1016/j.optlastec.2024.112137" target="_blank" rel="noopener">10.1016/j.optlastec.2024.112137</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2025</span>
                   <h3 class="article-title">Spontaneous symmetry breaking induced by inhomogeneous nonlinearity in the coupled nonlinear Schrödinger equation</h3>
-                  <p class="article-authors">Mateus C. P. dos Santos; Dionisio Bazeia; Ardiley T. Avelar; Wesley B. Cardoso</p>
-                  <p><a href="https://doi.org/10.1007/s11071-024-10274-x" target="_blank" rel="noopener">DOI: 10.1007/s11071-024-10274-x</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> Mateus C. P. dos Santos; Dionisio Bazeia; Ardiley T. Avelar; Wesley B. Cardoso</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: ORCID; Pesquisador: Ardiley Torres Avelar; ORCID: 0000-0003-1733-6937</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1007/s11071-024-10274-x" target="_blank" rel="noopener">10.1007/s11071-024-10274-x</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2024</span>
                   <h3 class="article-title">Analyzing lump-type solutions in scalar field models through configurational information measure</h3>
-                  <p class="article-authors">M.A. Feitosa; Wesley B. Cardoso; D. Bazeia; A. T. Avelar</p>
-                  <p><a href="https://doi.org/10.1016/j.physleta.2024.130096" target="_blank" rel="noopener">DOI: 10.1016/j.physleta.2024.130096</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> M.A. Feitosa; Wesley B. Cardoso; D. Bazeia; A. T. Avelar</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: OpenAlex; Pesquisador: Ardiley Torres Avelar; ORCID: 0000-0003-1733-6937</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1016/j.physleta.2024.130096" target="_blank" rel="noopener">10.1016/j.physleta.2024.130096</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2024</span>
                   <h3 class="article-title">Can machine learning efficiently predict symmetry breaking in physical problems like Bose-Einstein condensates?</h3>
-                  <p class="article-authors">Bruno M. Miranda; Agnaldo R. de Almeida; A. T. Avelar; Wesley B. Cardoso; Guilherme Colherinhas</p>
-                  <p><a href="https://doi.org/10.1016/j.physd.2024.134198" target="_blank" rel="noopener">DOI: 10.1016/j.physd.2024.134198</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> Bruno M. Miranda; Agnaldo R. de Almeida; A. T. Avelar; Wesley B. Cardoso; Guilherme Colherinhas</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: OpenAlex; Pesquisador: Ardiley Torres Avelar; ORCID: 0000-0003-1733-6937</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1016/j.physd.2024.134198" target="_blank" rel="noopener">10.1016/j.physd.2024.134198</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2024</span>
                   <h3 class="article-title">Dynamics of localized solutions in three core coupled waveguides with quasi-periodic nonlinearity</h3>
-                  <p class="article-authors">Bruno M. Miranda; A. T. Avelar; Wesley B. Cardoso; D. Bazeia</p>
-                  <p><a href="https://doi.org/10.1007/s11082-024-07757-x" target="_blank" rel="noopener">DOI: 10.1007/s11082-024-07757-x</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> Bruno M. Miranda; A. T. Avelar; Wesley B. Cardoso; D. Bazeia</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: OpenAlex; Pesquisador: Ardiley Torres Avelar; ORCID: 0000-0003-1733-6937</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1007/s11082-024-07757-x" target="_blank" rel="noopener">10.1007/s11082-024-07757-x</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2024</span>
                   <h3 class="article-title">Effective 1D-equation with a Lambert W function nonlinearity for cigar-shaped Bose–Einstein condensates</h3>
-                  <p class="article-authors">Hugo L. C. Couto; A. T. Avelar; Wesley B. Cardoso</p>
-                  <p><a href="https://doi.org/10.1016/j.cnsns.2024.108447" target="_blank" rel="noopener">DOI: 10.1016/j.cnsns.2024.108447</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> Hugo L. C. Couto; A. T. Avelar; Wesley B. Cardoso</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: OpenAlex; Pesquisador: Ardiley Torres Avelar; ORCID: 0000-0003-1733-6937</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1016/j.cnsns.2024.108447" target="_blank" rel="noopener">10.1016/j.cnsns.2024.108447</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2024</span>
                   <h3 class="article-title">Single photon hybrid quantum key distribution</h3>
-                  <p class="article-authors">Laryssa F Ferro; Ardiley T Avelar; Wesley B Cardoso; Rafael M Gomes</p>
-                  <p><a href="https://doi.org/10.1088/1402-4896/ad185c" target="_blank" rel="noopener">DOI: 10.1088/1402-4896/ad185c</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> Laryssa F Ferro; Ardiley T Avelar; Wesley B Cardoso; Rafael M Gomes</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: ORCID; Pesquisador: Ardiley Torres Avelar; ORCID: 0000-0003-1733-6937</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1088/1402-4896/ad185c" target="_blank" rel="noopener">10.1088/1402-4896/ad185c</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2022</span>
                   <h3 class="article-title">Localized solutions of inhomogeneous saturable nonlinear Schrödinger equation</h3>
-                  <p class="article-authors">Maurilho R. da Rocha; A. T. Avelar; Wesley B. Cardoso</p>
-                  <p><a href="https://doi.org/10.1007/s11071-022-08104-z" target="_blank" rel="noopener">DOI: 10.1007/s11071-022-08104-z</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> Maurilho R. da Rocha; A. T. Avelar; Wesley B. Cardoso</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: OpenAlex; Pesquisador: Ardiley Torres Avelar; ORCID: 0000-0003-1733-6937</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1007/s11071-022-08104-z" target="_blank" rel="noopener">10.1007/s11071-022-08104-z</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2022</span>
                   <h3 class="article-title">Nonclassical properties and Anderson localization of quantum states in coupled waveguides</h3>
-                  <p class="article-authors">Thais de Lima Silva; Wesley B. Cardoso; A. T. Avelar; J. M. C. Malbouisson</p>
-                  <p><a href="https://doi.org/10.1103/physreva.105.023710" target="_blank" rel="noopener">DOI: 10.1103/physreva.105.023710</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> Thais de Lima Silva; Wesley B. Cardoso; A. T. Avelar; J. M. C. Malbouisson</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: OpenAlex; Pesquisador: Ardiley Torres Avelar; ORCID: 0000-0003-1733-6937</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1103/physreva.105.023710" target="_blank" rel="noopener">10.1103/physreva.105.023710</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2021</span>
                   <h3 class="article-title">Effects of chaotic perturbations on a nonlinear system undergoing two-soliton collisions</h3>
-                  <p class="article-authors">W. B. Cardoso; A. T. Avelar; D. Bazeia</p>
-                  <p><a href="https://doi.org/10.1007/s11071-021-06962-7" target="_blank" rel="noopener">DOI: 10.1007/s11071-021-06962-7</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> W. B. Cardoso; A. T. Avelar; D. Bazeia</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: ORCID; Pesquisador: Ardiley Torres Avelar; ORCID: 0000-0003-1733-6937</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1007/s11071-021-06962-7" target="_blank" rel="noopener">10.1007/s11071-021-06962-7</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2021</span>
                   <h3 class="article-title">Linear semi-infinite programming approach for entanglement quantification</h3>
-                  <p class="article-authors">Thiago Mureebe Carrijo; Wesley Bueno Cardoso; Ardiley Torres Avelar</p>
-                  <p><a href="https://doi.org/10.1103/physreva.104.022413" target="_blank" rel="noopener">DOI: 10.1103/physreva.104.022413</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> Thiago Mureebe Carrijo; Wesley Bueno Cardoso; Ardiley Torres Avelar</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: ORCID; Pesquisador: Ardiley Torres Avelar; ORCID: 0000-0003-1733-6937</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1103/physreva.104.022413" target="_blank" rel="noopener">10.1103/physreva.104.022413</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2021</span>
                   <h3 class="article-title">Propagation of Solitons in Quasi-periodic Nonlinear Coupled Waveguides</h3>
-                  <p class="article-authors">Cardoso, W.B.; Avelar, A.T.; Bazeia, D.</p>
-                  <p><a href="https://doi.org/10.1007/s13538-020-00836-w" target="_blank" rel="noopener">DOI: 10.1007/s13538-020-00836-w</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> Cardoso, W.B.; Avelar, A.T.; Bazeia, D.</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: ORCID; Pesquisador: Ardiley Torres Avelar; ORCID: 0000-0003-1733-6937</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1007/s13538-020-00836-w" target="_blank" rel="noopener">10.1007/s13538-020-00836-w</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2021</span>
                   <h3 class="article-title">Proper-time approach to localization</h3>
-                  <p class="article-authors">E. R. F. Taillebois; A. T. Avelar</p>
-                  <p><a href="https://doi.org/10.1103/physreva.103.062223" target="_blank" rel="noopener">DOI: 10.1103/physreva.103.062223</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> E. R. F. Taillebois; A. T. Avelar</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: ORCID; Pesquisador: Ardiley Torres Avelar; ORCID: 0000-0003-1733-6937</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1103/physreva.103.062223" target="_blank" rel="noopener">10.1103/physreva.103.062223</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2021</span>
                   <h3 class="article-title">Proposal for Anderson localization in transverse spatial degrees of freedom of photons</h3>
-                  <p class="article-authors">Gomes, R.M.; Cardoso, W.B.; Avelar, A.T.</p>
-                  <p><a href="https://doi.org/10.1016/j.optcom.2021.127225" target="_blank" rel="noopener">DOI: 10.1016/j.optcom.2021.127225</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> Gomes, R.M.; Cardoso, W.B.; Avelar, A.T.</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: ORCID; Pesquisador: Ardiley Torres Avelar; ORCID: 0000-0003-1733-6937</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1016/j.optcom.2021.127225" target="_blank" rel="noopener">10.1016/j.optcom.2021.127225</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2021</span>
                   <h3 class="article-title">Relativistic spin operator must be intrinsic</h3>
-                  <p class="article-authors">Taillebois, E.R.F.; Avelar, A.T.</p>
-                  <p><a href="https://doi.org/10.1016/j.physleta.2021.127166" target="_blank" rel="noopener">DOI: 10.1016/j.physleta.2021.127166</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> Taillebois, E.R.F.; Avelar, A.T.</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: ORCID; Pesquisador: Ardiley Torres Avelar; ORCID: 0000-0003-1733-6937</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1016/j.physleta.2021.127166" target="_blank" rel="noopener">10.1016/j.physleta.2021.127166</a></p>
                 </article>
               
             </div>

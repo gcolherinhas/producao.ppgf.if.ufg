@@ -53,6 +53,16 @@ a:hover { text-decoration: underline; }
   opacity: 0.96;
 }
 .ufg-line strong { font-weight: 700; }
+.header-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  margin-bottom: 18px;
+  font-size: 1rem;
+  line-height: 1.35;
+  opacity: 0.96;
+}
+.header-stack span { display: block; }
 .header-title {
   margin: 0;
   font-size: clamp(1.75rem, 3vw, 2.7rem);
@@ -167,7 +177,9 @@ a:hover { text-decoration: underline; }
   margin-bottom: 7px;
 }
 .article-title { margin: 0 0 8px 0; font-size: 1.02rem; }
-.article-authors { color: var(--muted); font-size: 0.92rem; margin: 0; }
+.article-authors { color: var(--muted); font-size: 0.92rem; margin: 0 0 8px 0; }
+.article-meta { color: var(--text); font-size: 0.92rem; margin: 6px 0 0 0; }
+.article-meta .meta-label { font-size: 0.92rem; }
 .kpi-grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(120px, 1fr));
@@ -246,9 +258,10 @@ a:hover { text-decoration: underline; }
   <header class="site-header">
     <div class="bar"></div>
     <div class="header-inner">
-      <div class="ufg-line">
-        <span><strong>UNIVERSIDADE FEDERAL DE GOIÁS - UFG</strong><br>INSTITUTO DE FÍSICA · PROGRAMA DE PÓS-GRADUAÇÃO EM FÍSICA</span>
-        <span>PPGF/UFG</span>
+      <div class="header-stack" aria-label="Cabeçalho institucional">
+        <span>Universidade Federal de Goiás</span>
+        <span>Instituto de Física</span>
+        <span>Programa de Pós-Graduação em Física</span>
       </div>
       <h1 class="header-title">Antônio Alonso</h1>
     </div>
@@ -262,244 +275,268 @@ a:hover { text-decoration: underline; }
         
         <h2>Antônio Alonso</h2>
         <ul class="meta-list profile-details">
-          
-            <li><a class="profile-link" href="http://lattes.cnpq.br/5013069863616789" target="_blank" rel="noopener">Curriculum Lattes</a></li>
-          
-          <li><span class="meta-label">Apto(a) a orientar:</span> Física Experimental</li>
-          <li><span class="meta-label">Sala:</span> 113 (IF-2)</li>
-          <li><span class="meta-label">E-mail:</span> <a href="mailto:alonso@ufg.br">alonso@ufg.br</a></li>
-          <li><span class="meta-label">Telefone:</span> (62) 3521-2301</li>
-          <li><span class="meta-label">Pesquisa</span> &#34;Biofísica&#34;</li>
-          
-            <li>Bolsista de Produtividade de CNPq - Nível 2</li>
-          
-          <li><span class="meta-label">Formação:</span> Doutorado em Física</li>
-          
-            <li><span class="meta-label">ORCID:</span> <a href="https://orcid.org/0000-0003-4768-6372" target="_blank" rel="noopener">0000-0003-4768-6372</a></li>
-          
+          <li><span class="meta-label">Curriculum Lattes:</span> <a class="profile-link" href="http://lattes.cnpq.br/5013069863616789" target="_blank" rel="noopener">http://lattes.cnpq.br/5013069863616789</a></li>
+          <li><span class="meta-label">ORCID:</span> <a href="https://orcid.org/0000-0003-4768-6372" target="_blank" rel="noopener">0000-0003-4768-6372</a></li>
+          <li><span class="meta-label">Apto(a) a orientar:</span> ---</li>
+          <li><span class="meta-label">Sala:</span> ---</li>
+          <li><span class="meta-label">E-mail:</span> <span class="missing-info">---</span></li>
+          <li><span class="meta-label">Telefone:</span> ---</li>
+          <li><span class="meta-label">Pesquisa:</span> ---</li>
+          <li><span class="meta-label">Bolsa:</span> ---</li>
+          <li><span class="meta-label">Formação:</span> ---</li>
           <li><span class="meta-label">Fonte do perfil:</span> <a href="https://posgraduacao.if.ufg.br/p/41256-docentes-ppgf-instituto-de-fisica-ufg" target="_blank" rel="noopener">Página do PPGF/UFG</a></li>
         </ul>
       </aside>
 
       <section class="content-card">
         <nav class="tabs" aria-label="Seções da página">
-          <button class="tab-button active" data-tab="artigos">Artigos publicados</button>
+          <button class="tab-button active" data-tab="artigos">Artigos relacionados</button>
           <button class="tab-button" data-tab="estatisticas">Estatísticas do docente</button>
         </nav>
 
         <div id="artigos" class="tab-panel active">
-          <h2>Artigos publicados</h2>
+          <h2>Artigos relacionados</h2>
           
             <div class="article-list">
               
                 <article class="article-item">
                   <span class="article-year">2026</span>
                   <h3 class="article-title">Nerolidol and a zwitterionic surfactant induce membrane rigidity in and infected macrophages</h3>
-                  <p class="article-authors">Ellyêssa Nascimento Borges; Kleber Santiago Freitas e Silva; Éder Jéferson Souza Cardoso; Rodrigo Saar Gomes; Eliana Martins Lima; Sebastião Antônio Mendanha; Antonio Alonso</p>
-                  <p><a href="https://doi.org/10.1016/j.colsurfb.2025.115156" target="_blank" rel="noopener">DOI: 10.1016/j.colsurfb.2025.115156</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> Ellyêssa Nascimento Borges; Kleber Santiago Freitas e Silva; Éder Jéferson Souza Cardoso; Rodrigo Saar Gomes; Eliana Martins Lima; Sebastião Antônio Mendanha; Antonio Alonso</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: ORCID; Pesquisador: Antônio Alonso; ORCID: 0000-0003-4768-6372</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1016/j.colsurfb.2025.115156" target="_blank" rel="noopener">10.1016/j.colsurfb.2025.115156</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2026</span>
                   <h3 class="article-title">Photodynamic action of Pd(II)/porphyrin complexes against melanoma cells</h3>
-                  <p class="article-authors">E C F Moraes; Marcos Vinícius Palmeira-Mello; Lívia do Carmo Silva; Juliana Santana de Curcio; Alex M. Graça; Jocely Lucena Dutra; Antônio Alonso; Guilherme Rocha Lino de Souza; Alzir A. Batista; Elisângela de Paula Silveira-Lacerda; Pablo José Gonçalves</p>
-                  <p><a href="https://doi.org/10.1016/j.ejmech.2026.118751" target="_blank" rel="noopener">DOI: 10.1016/j.ejmech.2026.118751</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> E C F Moraes et al.</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: OpenAlex; Pesquisador: Antônio Alonso; ORCID: 0000-0003-4768-6372</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1016/j.ejmech.2026.118751" target="_blank" rel="noopener">10.1016/j.ejmech.2026.118751</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2025</span>
                   <h3 class="article-title">Antileishmanial, cytotoxic activities, and membrane rigidity effects of three synthetic compounds</h3>
-                  <p class="article-authors">Cardoso, Eder Jeferson Souza; Borges, Ellyessa Nascimento; Freitas e Silva, Kleber Santiago; Gomes, Rodrigo Saar; Boni, Fabiana Taniguchi; Pereira, Jhon Kennedy Alves; Mangoba, Paula Maria Alexandre; Morais, Luciano; Menegatti, Ricardo; Alonso, Antonio</p>
-                  <p><a href="https://doi.org/10.1016/j.bbamem.2025.184450" target="_blank" rel="noopener">DOI: 10.1016/j.bbamem.2025.184450</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> Cardoso, Eder Jeferson Souza; Borges, Ellyessa Nascimento; Freitas e Silva, Kleber Santiago; Gomes, Rodrigo Saar; Boni, Fabiana Taniguchi; Pereira, Jhon Kennedy Alves; Mangoba, Paula Maria Alexandre; Morais, Luciano; Menegatti, Ricardo; Alonso, Antonio</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: ORCID; Pesquisador: Antônio Alonso; ORCID: 0000-0003-4768-6372</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1016/j.bbamem.2025.184450" target="_blank" rel="noopener">10.1016/j.bbamem.2025.184450</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2025</span>
                   <h3 class="article-title">Characterization of Mn1.3FeTi2Ow and Fe4Mn6V7Ow Nanocomposites by Ferromagnetic Resonance (FMR)</h3>
-                  <p class="article-authors">Samuel Lamarão Alves Monticeli; J. G. Santos; Alessandro Martins; Mauro Guilherme Ferreira Bezerra; Daniela Alves; Antônio Alonso; L. B. Silveira; Laercio do Carmo Rodrigues</p>
-                  <p><a href="https://doi.org/10.54033/cadpedv22n8-064" target="_blank" rel="noopener">DOI: 10.54033/cadpedv22n8-064</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> Samuel Lamarão Alves Monticeli; J. G. Santos; Alessandro Martins; Mauro Guilherme Ferreira Bezerra; Daniela Alves; Antônio Alonso; L. B. Silveira; Laercio do Carmo Rodrigues</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: OpenAlex; Pesquisador: Antônio Alonso; ORCID: 0000-0003-4768-6372</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.54033/cadpedv22n8-064" target="_blank" rel="noopener">10.54033/cadpedv22n8-064</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2025</span>
                   <h3 class="article-title">Miltefosine analogues with comparable antileishmanial activity and significantly reduced macrophage cytotoxicity</h3>
-                  <p class="article-authors">Lais Alonso; Laís Flávia Nunes Lemes; George E Magoulas; Brenda de Lucena Costa; Rodrigo Saar Gomes; Miriam Leandro Dorta; Maria Laura Bolognesi; Luiz Antonio Soares Romeiro; Theodora Calogeropoulou; Antonio Alonso</p>
-                  <p><a href="https://doi.org/10.1590/0074-02760240219" target="_blank" rel="noopener">DOI: 10.1590/0074-02760240219</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> Lais Alonso; Laís Flávia Nunes Lemes; George E Magoulas; Brenda de Lucena Costa; Rodrigo Saar Gomes; Miriam Leandro Dorta; Maria Laura Bolognesi; Luiz Antonio Soares Romeiro; Theodora Calogeropoulou; Antonio Alonso</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: ORCID; Pesquisador: Antônio Alonso; ORCID: 0000-0003-4768-6372</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1590/0074-02760240219" target="_blank" rel="noopener">10.1590/0074-02760240219</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2025</span>
                   <h3 class="article-title">Miltefosine and amphoterin B induce membrane rigidity in Leishmania amazonensis and Leishmania-infected macrophages</h3>
-                  <p class="article-authors">Ellyêssa Nascimento Borges; Kleber Santiago Freitas e Silva; Éder Jéferson Souza Cardoso; Eliana Martins Lima; Sebastião Antonio Mendanha; Antonio Alonso</p>
-                  <p><a href="https://doi.org/10.1016/j.abb.2025.110417" target="_blank" rel="noopener">DOI: 10.1016/j.abb.2025.110417</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> Ellyêssa Nascimento Borges; Kleber Santiago Freitas e Silva; Éder Jéferson Souza Cardoso; Eliana Martins Lima; Sebastião Antonio Mendanha; Antonio Alonso</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: ORCID; Pesquisador: Antônio Alonso; ORCID: 0000-0003-4768-6372</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1016/j.abb.2025.110417" target="_blank" rel="noopener">10.1016/j.abb.2025.110417</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2025</span>
                   <h3 class="article-title">Sustainable Antiparasitic Agents from an Agro-Industrial Waste: Mitochondria-Targeting Cashew Nutshell Liquid-Derived Phosphonium and Ammonium Salts</h3>
-                  <p class="article-authors">Martinengo, Bianca; Baldassarri, Cecilia; Ilbeigi, Kayhan; Alkhalaf, Hamed E.; Sarode, Aditya; Elmahallawy, Ehab Kotb; Kwon, Ba Reum; Agyei, Amos Sarpong; Abdimanova, Aigerim; de Almeida Fiuza, Ludmila Ferreira; Azevedo, Raquel; da Conceicao, Ketlym; Batista, Marcos Meuser; Borges, Ellyessa Nascimento; Silva, Kleber Santiago; Cardoso, Eder Jeferson Souza; Monteiro, Natalia Cipriano; Lemes, Lais Flavia Nunes; Romeiro, Luiz Antonio Soares; Alonso, Antonio; Soeiro, Maria de Nazare Correia; Caljon, Guy; Brooks, Bryan W.; De Koning, Harry P.; Bolognesi, Maria Laura</p>
-                  <p><a href="https://doi.org/10.1021/acs.jmedchem.5c01617" target="_blank" rel="noopener">DOI: 10.1021/acs.jmedchem.5c01617</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> Martinengo, Bianca et al.</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: ORCID; Pesquisador: Antônio Alonso; ORCID: 0000-0003-4768-6372</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1021/acs.jmedchem.5c01617" target="_blank" rel="noopener">10.1021/acs.jmedchem.5c01617</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2025</span>
                   <h3 class="article-title">Synthesis Of Mn1.3FeTi2Ow Nanocomposite By Urea Catalyzed Thermal Combustion</h3>
-                  <p class="article-authors">Samuel Lamarão Alves Monticeli; Judes Gonçalves Dos Santos; Luciene Batista Da Silveira; Antônio Alonso; Fernando Fabris</p>
-                  <p><a href="https://doi.org/10.9790/4861-1703020110" target="_blank" rel="noopener">DOI: 10.9790/4861-1703020110</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> Samuel Lamarão Alves Monticeli; Judes Gonçalves Dos Santos; Luciene Batista Da Silveira; Antônio Alonso; Fernando Fabris</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: OpenAlex; Pesquisador: Antônio Alonso; ORCID: 0000-0003-4768-6372</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.9790/4861-1703020110" target="_blank" rel="noopener">10.9790/4861-1703020110</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2024</span>
                   <h3 class="article-title">Anti-Staphy Peptides Rationally Designed from Cry10Aa Bacterial Protein</h3>
-                  <p class="article-authors">Rios, Thuanny Borba; Maximiano, Mariana Rocha; Fernandes, Fabiano Cavalcanti; Amorim, Gabriella Cavalcante; Porto, William Farias; Buccini, Danieli Fernanda; Marin, Valentina Nieto; Feitosa, Gabriel Cidade; Freitas, Carlos Daniel Pereira; Barra, Juliana Bueno; Alonso, Antonio; de Sa, Maria Fatima Grossi; Liao, Luciano Morais; Franco, Octavio Luiz</p>
-                  <p><a href="https://doi.org/10.1021/acsomega.3c07455" target="_blank" rel="noopener">DOI: 10.1021/acsomega.3c07455</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> Rios, Thuanny Borba et al.</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: ORCID; Pesquisador: Antônio Alonso; ORCID: 0000-0003-4768-6372</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1021/acsomega.3c07455" target="_blank" rel="noopener">10.1021/acsomega.3c07455</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2024</span>
                   <h3 class="article-title">Characterization of hair lipid and protein dynamics using EPR spectroscopy and treatment effects</h3>
-                  <p class="article-authors">Ellyêssa Nascimento Borges; Diógenes de Souza Neto; Antonio Alonso</p>
-                  <p><a href="https://doi.org/10.1016/j.molstruc.2023.137225" target="_blank" rel="noopener">DOI: 10.1016/j.molstruc.2023.137225</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> Ellyêssa Nascimento Borges; Diógenes de Souza Neto; Antonio Alonso</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: ORCID; Pesquisador: Antônio Alonso; ORCID: 0000-0003-4768-6372</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1016/j.molstruc.2023.137225" target="_blank" rel="noopener">10.1016/j.molstruc.2023.137225</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2024</span>
                   <h3 class="article-title">Effect of cationic surfactant on the physicochemical and antibacterial properties of colloidal systems (emulsions and microemulsions)</h3>
-                  <p class="article-authors">M. K. D. Rambo; R. F. Lins; F. L. N Silva; A. Alonso; M. C. D. Rambo; J. E. C Leal; D. de Sousa-Neto</p>
-                  <p><a href="https://doi.org/10.1590/1519-6984.278013" target="_blank" rel="noopener">DOI: 10.1590/1519-6984.278013</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> M. K. D. Rambo; R. F. Lins; F. L. N Silva; A. Alonso; M. C. D. Rambo; J. E. C Leal; D. de Sousa-Neto</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: ORCID; Pesquisador: Antônio Alonso; ORCID: 0000-0003-4768-6372</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1590/1519-6984.278013" target="_blank" rel="noopener">10.1590/1519-6984.278013</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2024</span>
                   <h3 class="article-title">Ibrutinib topical delivery for melanoma treatment: The effect of nanostructured lipid carriers&#39; composition on the controlled drug skin deposition</h3>
-                  <p class="article-authors">Albuquerque, Lucas F. F.; V. Lins, Fernanda; Bispo, Elizabete C. I.; Borges, Ellyessa N.; Silva, Mateus T.; Gratieri, Tais; Cunha-Filho, Marcilio; Alonso, Antonio; Carvalho, Juliana L.; Saldanha-Araujo, Felipe; Gelfuso, Guilherme M.</p>
-                  <p><a href="https://doi.org/10.1016/j.colsurfb.2024.113875" target="_blank" rel="noopener">DOI: 10.1016/j.colsurfb.2024.113875</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> Albuquerque, Lucas F. F. et al.</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: ORCID; Pesquisador: Antônio Alonso; ORCID: 0000-0003-4768-6372</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1016/j.colsurfb.2024.113875" target="_blank" rel="noopener">10.1016/j.colsurfb.2024.113875</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2023</span>
                   <h3 class="article-title">Antileishmanial activities of three chalcone derivatives and their association with plasma membrane rigidity as assessed by EPR spectroscopy</h3>
-                  <p class="article-authors">Borges, E.N.; Alonso, L.; Silveira, M.B.; Balbinot, R.B.; Nakamura, C.V.; da Rocha, A.L.B.; Arruda, E.L.; dos Santos, G.F.; Vaz, B.G.; Gomides, C.D.; Lião, L.M.; Menegatti, R.; Alonso, A.</p>
-                  <p><a href="https://doi.org/10.1016/j.molstruc.2023.136123" target="_blank" rel="noopener">DOI: 10.1016/j.molstruc.2023.136123</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> Borges, E.N. et al.</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: ORCID; Pesquisador: Antônio Alonso; ORCID: 0000-0003-4768-6372</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1016/j.molstruc.2023.136123" target="_blank" rel="noopener">10.1016/j.molstruc.2023.136123</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2023</span>
                   <h3 class="article-title">Antiprotozoal Activity of Benzoylthiourea Derivatives against Trypanosoma cruzi: Insights into Mechanism of Action</h3>
-                  <p class="article-authors">Pereira, P.M.L.; Fernandes, B.T.; dos Santos, V.R.; Cabral, W.R.C.; Lovo-Martins, M.I.; Alonso, L.; Lancheros, C.A.C.; de Paula, J.C.; Camargo, P.G.; Suzukawa, H.T.; Alonso, A.; Macedo, F.; Nakamura, C.V.; Tavares, E.R.; de Lima Ferreira Bispo, M.; Yamauchi, L.M.; Pinge-Filho, P.; Yamada-Ogatta, S.F.</p>
-                  <p><a href="https://doi.org/10.3390/pathogens12081012" target="_blank" rel="noopener">DOI: 10.3390/pathogens12081012</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> Pereira, P.M.L. et al.</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: ORCID; Pesquisador: Antônio Alonso; ORCID: 0000-0003-4768-6372</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.3390/pathogens12081012" target="_blank" rel="noopener">10.3390/pathogens12081012</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2023</span>
                   <h3 class="article-title">Multidisciplinary development of the Geriatric Core Dataset for a national registry of cancer</h3>
-                  <p class="article-authors">M.G. Maria-José; C. Sánchez-Castellano; Juana María Cano; Mercedes Muñoz Hornillos; Gema Paterna Mellinas; Antônio Alonso; R. Morales Chamorro; Brigitte Montès; AA Rodriguez; A.I. Hormigo-Sánchez; Pablo Cerezuela; José Antonio Serra Rexach; Javier Cassinello; P. López-Pardo; R. Blanco Guerrero; J. Gómez Pavón; R. Feijoo Lorza; Myriam Rodríguez Couso; Raquel Ramírez-Martín; Maria C. Bertomeu; Carmen Guillén‐Ponce</p>
-                  <p><a href="https://doi.org/10.1016/s1879-4068(23)00378-8" target="_blank" rel="noopener">DOI: 10.1016/s1879-4068(23)00378-8</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> M.G. Maria-José et al.</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: OpenAlex; Pesquisador: Antônio Alonso; ORCID: 0000-0003-4768-6372</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1016/s1879-4068(23)00378-8" target="_blank" rel="noopener">10.1016/s1879-4068(23)00378-8</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2023</span>
                   <h3 class="article-title">Paracoccidioides brasiliensis plasma membrane characterization by EPR spectroscopy and interactions with amphotericin B, miltefosine and nerolidol</h3>
-                  <p class="article-authors">Alonso, L.; Rocha, O.B.; de Carvalho Junior, M.A.B.; Soares, C.M.D.A.; Pereira, M.; Alonso, A.</p>
-                  <p><a href="https://doi.org/10.1080/07391102.2022.2093274" target="_blank" rel="noopener">DOI: 10.1080/07391102.2022.2093274</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> Alonso, L.; Rocha, O.B.; de Carvalho Junior, M.A.B.; Soares, C.M.D.A.; Pereira, M.; Alonso, A.</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: ORCID; Pesquisador: Antônio Alonso; ORCID: 0000-0003-4768-6372</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1080/07391102.2022.2093274" target="_blank" rel="noopener">10.1080/07391102.2022.2093274</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2023</span>
                   <h3 class="article-title">Proteomic Identification of Metabolic Changes in Paracoccidioides Brasiliensis Induced by a Nitroheteroarylchalcone</h3>
-                  <p class="article-authors">Marcos ABC Júnior; Lívia C Silva; Olivia B Rocha; Amanda A Oliveira; Igor G Portis; Antonio Alonso; Lais Alonso; Kleber SF Silva; Marcelo N Gomes; Carolina H Andrade; Célia MA Soares; Maristela Pereira</p>
-                  <p><a href="https://doi.org/10.2217/fmb-2022-0150" target="_blank" rel="noopener">DOI: 10.2217/fmb-2022-0150</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> Marcos ABC Júnior et al.</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: ORCID; Pesquisador: Antônio Alonso; ORCID: 0000-0003-4768-6372</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.2217/fmb-2022-0150" target="_blank" rel="noopener">10.2217/fmb-2022-0150</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2023</span>
                   <h3 class="article-title">Proteomic Profiling of &lt;i&gt;Paracoccidioides brasiliensis&lt;/i&gt; in Response to Phenacylideneoxindol Derivative: Unveiling Molecular Targets and Pathways</h3>
-                  <p class="article-authors">Silva, Livia do Carmo; Rocha, Olivia Basso; Portis, Igor Godinho; Santos, Thaynara Gonzaga; Freitas e Silva, Kleber Santiago; dos Santos Filho, Raimundo Francisco; Cunha, Silvio; Alonso, Antonio; Soares, Celia Maria de Almeida; Pereira, Maristela</p>
-                  <p><a href="https://doi.org/10.3390/jof9080854" target="_blank" rel="noopener">DOI: 10.3390/jof9080854</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> Silva, Livia do Carmo; Rocha, Olivia Basso; Portis, Igor Godinho; Santos, Thaynara Gonzaga; Freitas e Silva, Kleber Santiago; dos Santos Filho, Raimundo Francisco; Cunha, Silvio; Alonso, Antonio; Soares, Celia Maria de Almeida; Pereira, Maristela</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: ORCID; Pesquisador: Antônio Alonso; ORCID: 0000-0003-4768-6372</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.3390/jof9080854" target="_blank" rel="noopener">10.3390/jof9080854</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2023</span>
                   <h3 class="article-title">Synergistic antifungal interaction of N-(butylcarbamothioyl) benzamide and amphotericin B against Cryptococcus neoformans</h3>
-                  <p class="article-authors">Andriani, G.M.; Spoladori, L.F.D.A.; Fabris, M.; Camargo, P.G.; Pereira, P.M.L.; Santos, J.P.; Bartolomeu-Gonçalves, G.; Alonso, L.; Lancheros, C.A.C.; Alonso, A.; Nakamura, C.V.; Macedo, F.; Pinge-Filho, P.; Yamauchi, L.M.; Bispo, M.D.L.F.; Tavares, E.R.; Yamada-Ogatta, S.F.</p>
-                  <p><a href="https://doi.org/10.3389/fmicb.2023.1040671" target="_blank" rel="noopener">DOI: 10.3389/fmicb.2023.1040671</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> Andriani, G.M. et al.</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: ORCID; Pesquisador: Antônio Alonso; ORCID: 0000-0003-4768-6372</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.3389/fmicb.2023.1040671" target="_blank" rel="noopener">10.3389/fmicb.2023.1040671</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2022</span>
                   <h3 class="article-title">5G architecture for hybrid and multi-cloud environments</h3>
-                  <p class="article-authors">Antônio Alonso; Henrik Saavedra Persson; Hossein Kassaei</p>
-                  <p><a href="https://doi.org/10.23919/etr.2022.9904693" target="_blank" rel="noopener">DOI: 10.23919/etr.2022.9904693</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> Antônio Alonso; Henrik Saavedra Persson; Hossein Kassaei</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: OpenAlex; Pesquisador: Antônio Alonso; ORCID: 0000-0003-4768-6372</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.23919/etr.2022.9904693" target="_blank" rel="noopener">10.23919/etr.2022.9904693</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2022</span>
                   <h3 class="article-title">Antileishmanial activity of 3,4,5-trisubstituted isoxazoles by interaction with Leishmania amazonensis plasma membrane</h3>
-                  <p class="article-authors">Alonso, L.; Pianoski, K.E.; Alonso, A.; Rosa, F.A.</p>
-                  <p><a href="https://doi.org/10.1016/j.molstruc.2021.131604" target="_blank" rel="noopener">DOI: 10.1016/j.molstruc.2021.131604</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> Alonso, L.; Pianoski, K.E.; Alonso, A.; Rosa, F.A.</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: ORCID; Pesquisador: Antônio Alonso; ORCID: 0000-0003-4768-6372</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1016/j.molstruc.2021.131604" target="_blank" rel="noopener">10.1016/j.molstruc.2021.131604</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2022</span>
                   <h3 class="article-title">Combination of lipid nanoparticles and iontophoresis for enhanced lopinavir skin permeation: Impact of electric current on lipid dynamics</h3>
-                  <p class="article-authors">Moura, R.B.P.; Andrade, L.M.; Alonso, L.; Alonso, A.; Marreto, R.N.; Taveira, S.F.</p>
-                  <p><a href="https://doi.org/10.1016/j.ejps.2021.106048" target="_blank" rel="noopener">DOI: 10.1016/j.ejps.2021.106048</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> Moura, R.B.P.; Andrade, L.M.; Alonso, L.; Alonso, A.; Marreto, R.N.; Taveira, S.F.</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: ORCID; Pesquisador: Antônio Alonso; ORCID: 0000-0003-4768-6372</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1016/j.ejps.2021.106048" target="_blank" rel="noopener">10.1016/j.ejps.2021.106048</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2022</span>
                   <h3 class="article-title">Ivermectin and curcumin cause plasma membrane rigidity in Leishmania amazonensis due to oxidative stress</h3>
-                  <p class="article-authors">Alonso, L.; Dorta, M.L.; Alonso, A.</p>
-                  <p><a href="https://doi.org/10.1016/j.bbamem.2022.183977" target="_blank" rel="noopener">DOI: 10.1016/j.bbamem.2022.183977</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> Alonso, L.; Dorta, M.L.; Alonso, A.</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: ORCID; Pesquisador: Antônio Alonso; ORCID: 0000-0003-4768-6372</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1016/j.bbamem.2022.183977" target="_blank" rel="noopener">10.1016/j.bbamem.2022.183977</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2022</span>
                   <h3 class="article-title">Mycobacterium abscessus cell wall and plasma membrane characterization by EPR spectroscopy and effects of amphotericin B, miltefosine and nerolidol</h3>
-                  <p class="article-authors">Alonso, L.; Pimenta, L.K.L.; Kipnis, A.; Alonso, A.</p>
-                  <p><a href="https://doi.org/10.1016/j.bbamem.2022.183872" target="_blank" rel="noopener">DOI: 10.1016/j.bbamem.2022.183872</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> Alonso, L.; Pimenta, L.K.L.; Kipnis, A.; Alonso, A.</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: ORCID; Pesquisador: Antônio Alonso; ORCID: 0000-0003-4768-6372</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1016/j.bbamem.2022.183872" target="_blank" rel="noopener">10.1016/j.bbamem.2022.183872</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2022</span>
                   <h3 class="article-title">Plasma membrane rigidity effects of 4-hydroxy-2-nonenal in Leishmania, erythrocyte and macrophage</h3>
-                  <p class="article-authors">Alonso, L.; Menegatti, R.; Dorta, M.L.; Alonso, A.</p>
-                  <p><a href="https://doi.org/10.1016/j.tiv.2021.105294" target="_blank" rel="noopener">DOI: 10.1016/j.tiv.2021.105294</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> Alonso, L.; Menegatti, R.; Dorta, M.L.; Alonso, A.</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: ORCID; Pesquisador: Antônio Alonso; ORCID: 0000-0003-4768-6372</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1016/j.tiv.2021.105294" target="_blank" rel="noopener">10.1016/j.tiv.2021.105294</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2022</span>
                   <h3 class="article-title">Proteomic alterations in Paracoccidioides brasiliensis caused by exposure to curcumin</h3>
-                  <p class="article-authors">Rocha, O.B.; Freitas e Silva, K.S.; de Carvalho Junior, M.A.B.; Moraes, D.; Alonso, A.; Alonso, L.; do Carmo Silva, L.; Soares, C.M.A.; Pereira, M.</p>
-                  <p><a href="https://doi.org/10.1016/j.jprot.2022.104683" target="_blank" rel="noopener">DOI: 10.1016/j.jprot.2022.104683</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> Rocha, O.B.; Freitas e Silva, K.S.; de Carvalho Junior, M.A.B.; Moraes, D.; Alonso, A.; Alonso, L.; do Carmo Silva, L.; Soares, C.M.A.; Pereira, M.</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: ORCID; Pesquisador: Antônio Alonso; ORCID: 0000-0003-4768-6372</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1016/j.jprot.2022.104683" target="_blank" rel="noopener">10.1016/j.jprot.2022.104683</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2021</span>
                   <h3 class="article-title">Comparative EPR spectroscopy analysis of amphotericin B and miltefosine interactions with Leishmania, erythrocyte and macrophage membranes</h3>
-                  <p class="article-authors">Lais Alonso; Sebastião Antônio Mendanha; Rodrigo Saar Gomes; Miriam Leandro Dorta; Antonio Alonso</p>
-                  <p><a href="https://doi.org/10.1016/j.ejps.2021.105859" target="_blank" rel="noopener">DOI: 10.1016/j.ejps.2021.105859</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> Lais Alonso; Sebastião Antônio Mendanha; Rodrigo Saar Gomes; Miriam Leandro Dorta; Antonio Alonso</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: ORCID; Pesquisador: Antônio Alonso; ORCID: 0000-0003-4768-6372</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1016/j.ejps.2021.105859" target="_blank" rel="noopener">10.1016/j.ejps.2021.105859</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2021</span>
                   <h3 class="article-title">Enhanced nail delivery of voriconazole-loaded nanomicelles by thioglycolic acid pretreatment: A study of protein dynamics and disulfide bond rupture</h3>
-                  <p class="article-authors">Krawczyk-Santos, A.P.; da Rocha, P.B.R.; Kloppel, L.L.; Souza, B.D.S.; Anjos, J.L.V.; Alonso, A.; de Faria, D.L.A.; Gil, O.M.; Gratieri, T.; Marreto, R.N.; Taveira, S.F.</p>
-                  <p><a href="https://doi.org/10.1016/j.ijpharm.2021.120597" target="_blank" rel="noopener">DOI: 10.1016/j.ijpharm.2021.120597</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> Krawczyk-Santos, A.P. et al.</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: ORCID; Pesquisador: Antônio Alonso; ORCID: 0000-0003-4768-6372</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1016/j.ijpharm.2021.120597" target="_blank" rel="noopener">10.1016/j.ijpharm.2021.120597</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2021</span>
                   <h3 class="article-title">Membrane dynamics in Leishmania amazonensis and antileishmanial activities of β-carboline derivatives</h3>
-                  <p class="article-authors">Alonso, L.; de Paula, J.C.; Baréa, P.; Sarragiotto, M.H.; Ueda-Nakamura, T.; Alonso, A.; de Souza Fernandes, N.; Lancheros, C.A.C.; Volpato, H.; Lazarin-Bidóia, D.; Nakamura, C.V.</p>
-                  <p><a href="https://doi.org/10.1016/j.bbamem.2020.183473" target="_blank" rel="noopener">DOI: 10.1016/j.bbamem.2020.183473</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> Alonso, L. et al.</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: ORCID; Pesquisador: Antônio Alonso; ORCID: 0000-0003-4768-6372</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1016/j.bbamem.2020.183473" target="_blank" rel="noopener">10.1016/j.bbamem.2020.183473</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2021</span>
                   <h3 class="article-title">Nanostructured lipid carriers for hair follicle-targeted delivery of clindamycin and rifampicin to hidradenitis suppurativa treatment</h3>
-                  <p class="article-authors">Pereira, M.N.; Tolentino, S.; Pires, F.Q.; Anjos, J.L.V.; Alonso, A.; Gratieri, T.; Cunha-Filho, M.; Gelfuso, G.M.</p>
-                  <p><a href="https://doi.org/10.1016/j.colsurfb.2020.111448" target="_blank" rel="noopener">DOI: 10.1016/j.colsurfb.2020.111448</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> Pereira, M.N.; Tolentino, S.; Pires, F.Q.; Anjos, J.L.V.; Alonso, A.; Gratieri, T.; Cunha-Filho, M.; Gelfuso, G.M.</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: ORCID; Pesquisador: Antônio Alonso; ORCID: 0000-0003-4768-6372</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1016/j.colsurfb.2020.111448" target="_blank" rel="noopener">10.1016/j.colsurfb.2020.111448</a></p>
                 </article>
               
             </div>

@@ -53,6 +53,16 @@ a:hover { text-decoration: underline; }
   opacity: 0.96;
 }
 .ufg-line strong { font-weight: 700; }
+.header-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  margin-bottom: 18px;
+  font-size: 1rem;
+  line-height: 1.35;
+  opacity: 0.96;
+}
+.header-stack span { display: block; }
 .header-title {
   margin: 0;
   font-size: clamp(1.75rem, 3vw, 2.7rem);
@@ -167,7 +177,9 @@ a:hover { text-decoration: underline; }
   margin-bottom: 7px;
 }
 .article-title { margin: 0 0 8px 0; font-size: 1.02rem; }
-.article-authors { color: var(--muted); font-size: 0.92rem; margin: 0; }
+.article-authors { color: var(--muted); font-size: 0.92rem; margin: 0 0 8px 0; }
+.article-meta { color: var(--text); font-size: 0.92rem; margin: 6px 0 0 0; }
+.article-meta .meta-label { font-size: 0.92rem; }
 .kpi-grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(120px, 1fr));
@@ -246,9 +258,10 @@ a:hover { text-decoration: underline; }
   <header class="site-header">
     <div class="bar"></div>
     <div class="header-inner">
-      <div class="ufg-line">
-        <span><strong>UNIVERSIDADE FEDERAL DE GOIÁS - UFG</strong><br>INSTITUTO DE FÍSICA · PROGRAMA DE PÓS-GRADUAÇÃO EM FÍSICA</span>
-        <span>PPGF/UFG</span>
+      <div class="header-stack" aria-label="Cabeçalho institucional">
+        <span>Universidade Federal de Goiás</span>
+        <span>Instituto de Física</span>
+        <span>Programa de Pós-Graduação em Física</span>
       </div>
       <h1 class="header-title">Leandro Félix de Sousa Bufaiçal</h1>
     </div>
@@ -262,146 +275,156 @@ a:hover { text-decoration: underline; }
         
         <h2>Leandro Félix de Sousa Bufaiçal</h2>
         <ul class="meta-list profile-details">
-          
-            <li><a class="profile-link" href="http://lattes.cnpq.br/1392206843733548" target="_blank" rel="noopener">Curriculum Lattes</a></li>
-          
-          <li><span class="meta-label">Apto(a) a orientar:</span> Física Experimental</li>
-          <li><span class="meta-label">Sala:</span> 108 (IF-1)</li>
-          <li><span class="meta-label">E-mail:</span> <a href="mailto:lbufaical@ufg.br">lbufaical@ufg.br</a></li>
-          <li><span class="meta-label">Telefone:</span> (62) 3521-2068</li>
-          <li><span class="meta-label">Pesquisa</span> &#34;Física dos Materiais&#34;</li>
-          
-            <li>Bolsista de Produtividade de CNPq - Nível 2</li>
-          
-          <li><span class="meta-label">Formação:</span> Doutorado em Física - Unicamp - 2010</li>
-          
-            <li><span class="meta-label">ORCID:</span> <a href="https://orcid.org/0000-0001-7304-7334" target="_blank" rel="noopener">0000-0001-7304-7334</a></li>
-          
+          <li><span class="meta-label">Curriculum Lattes:</span> <a class="profile-link" href="http://lattes.cnpq.br/1392206843733548" target="_blank" rel="noopener">http://lattes.cnpq.br/1392206843733548</a></li>
+          <li><span class="meta-label">ORCID:</span> <a href="https://orcid.org/0000-0001-7304-7334" target="_blank" rel="noopener">0000-0001-7304-7334</a></li>
+          <li><span class="meta-label">Apto(a) a orientar:</span> ---</li>
+          <li><span class="meta-label">Sala:</span> ---</li>
+          <li><span class="meta-label">E-mail:</span> <span class="missing-info">---</span></li>
+          <li><span class="meta-label">Telefone:</span> ---</li>
+          <li><span class="meta-label">Pesquisa:</span> ---</li>
+          <li><span class="meta-label">Bolsa:</span> ---</li>
+          <li><span class="meta-label">Formação:</span> ---</li>
           <li><span class="meta-label">Fonte do perfil:</span> <a href="https://posgraduacao.if.ufg.br/p/41256-docentes-ppgf-instituto-de-fisica-ufg" target="_blank" rel="noopener">Página do PPGF/UFG</a></li>
         </ul>
       </aside>
 
       <section class="content-card">
         <nav class="tabs" aria-label="Seções da página">
-          <button class="tab-button active" data-tab="artigos">Artigos publicados</button>
+          <button class="tab-button active" data-tab="artigos">Artigos relacionados</button>
           <button class="tab-button" data-tab="estatisticas">Estatísticas do docente</button>
         </nav>
 
         <div id="artigos" class="tab-panel active">
-          <h2>Artigos publicados</h2>
+          <h2>Artigos relacionados</h2>
           
             <div class="article-list">
               
                 <article class="article-item">
                   <span class="article-year">2026</span>
                   <h3 class="article-title">A Novel Sol-Gel Synthesis Strategy of Co-Based Sillenite Composites for Enhanced Electrocatalysis of Water Splitting</h3>
-                  <p class="article-authors">Acioli, Mayara; Bufaical, Leandro; de Oliveira, P. R. A.; de Sena Silva, Yngrid Synara; Liu, Liying; Silva, Ana Luisa; Carvalho, Nakedia M. F.</p>
-                  <p><a href="https://doi.org/10.1021/acsomega.5c09012" target="_blank" rel="noopener">DOI: 10.1021/acsomega.5c09012</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> Acioli, Mayara; Bufaical, Leandro; de Oliveira, P. R. A.; de Sena Silva, Yngrid Synara; Liu, Liying; Silva, Ana Luisa; Carvalho, Nakedia M. F.</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: ORCID; Pesquisador: Leandro Félix de Sousa Bufaiçal; ORCID: 0000-0001-7304-7334</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1021/acsomega.5c09012" target="_blank" rel="noopener">10.1021/acsomega.5c09012</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2026</span>
                   <h3 class="article-title">Controlling Oxygen Vacancies in BiFeO3 Thin Films via Pyrolysis Temperature and O2 Annealing</h3>
-                  <p class="article-authors">Saulo P. Reis; Marco Antonio M. Teixeira; Fernando B. Minussi; Maria Jesus Hortigüela; Gonzalo Otero-Irurueta; Leandro Bufaiçal; Eudes B. Araújo</p>
-                  <p><a href="https://doi.org/10.3390/nano16070395" target="_blank" rel="noopener">DOI: 10.3390/nano16070395</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> Saulo P. Reis; Marco Antonio M. Teixeira; Fernando B. Minussi; Maria Jesus Hortigüela; Gonzalo Otero-Irurueta; Leandro Bufaiçal; Eudes B. Araújo</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: ORCID; Pesquisador: Leandro Félix de Sousa Bufaiçal; ORCID: 0000-0001-7304-7334</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.3390/nano16070395" target="_blank" rel="noopener">10.3390/nano16070395</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2025</span>
                   <h3 class="article-title">Ba-substitution induced evolution of structural and magnetic properties of La2-xBaxCoIrO6 double perovskites</h3>
-                  <p class="article-authors">Vieira, C. A. S.; Santos, B. J.; Duque, J. G.; Bittar, E. M.; Bufaical, L.</p>
-                  <p><a href="https://doi.org/10.1016/j.jmmm.2025.173678" target="_blank" rel="noopener">DOI: 10.1016/j.jmmm.2025.173678</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> Vieira, C. A. S.; Santos, B. J.; Duque, J. G.; Bittar, E. M.; Bufaical, L.</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: ORCID; Pesquisador: Leandro Félix de Sousa Bufaiçal; ORCID: 0000-0001-7304-7334</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1016/j.jmmm.2025.173678" target="_blank" rel="noopener">10.1016/j.jmmm.2025.173678</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2025</span>
                   <h3 class="article-title">Magnetostriction as the origin of the magnetodielectric effect in &lt;mml:math xmlns:mml=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;mml:mrow&gt;&lt;mml:msub&gt;&lt;mml:mi&gt;La&lt;/mml:mi&gt;&lt;mml:mn&gt;2&lt;/mml:mn&gt;&lt;/mml:msub&gt;&lt;mml:msub&gt;&lt;mml:mi&gt;CoMnO&lt;/mml:mi&gt;&lt;mml:mn&gt;6&lt;/mml:mn&gt;&lt;/mml:msub&gt;&lt;/mml:mrow&gt;&lt;/mml:math&gt;</h3>
-                  <p class="article-authors">M. Boldrin; Akbar Bagri; D. Barlettani; Eleanor Teather; Lucas Squillante; M De Souza; Renato B. Pontes; A. G. Silva; Thiago J. A. Mori; Robin Perry; R. Lora‐Serrano; E. Granado; E. M. Bittar; L. S. I. Veiga; L. Bufaiçal</p>
-                  <p><a href="https://doi.org/10.1103/sjr4-6kdp" target="_blank" rel="noopener">DOI: 10.1103/sjr4-6kdp</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> M. Boldrin et al.</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: OpenAlex; Pesquisador: Leandro Félix de Sousa Bufaiçal; ORCID: 0000-0001-7304-7334</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1103/sjr4-6kdp" target="_blank" rel="noopener">10.1103/sjr4-6kdp</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2024</span>
                   <h3 class="article-title">Essential aspects of the spontaneous exchange bias effect</h3>
-                  <p class="article-authors">L. Bufaiçal; E.M. Bittar</p>
-                  <p><a href="https://doi.org/10.1016/j.jmmm.2024.172109" target="_blank" rel="noopener">DOI: 10.1016/j.jmmm.2024.172109</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> L. Bufaiçal; E.M. Bittar</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: ORCID; Pesquisador: Leandro Félix de Sousa Bufaiçal; ORCID: 0000-0001-7304-7334</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1016/j.jmmm.2024.172109" target="_blank" rel="noopener">10.1016/j.jmmm.2024.172109</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2024</span>
                   <h3 class="article-title">Near-room-temperature ferrimagnetism and half-metallicity in disordered Ca1.5La0.5MnRuO6</h3>
-                  <p class="article-authors">A. G. Silva; R. B. Pontes; M. Boldrin; H. V. S. Pessoni; L. S. I. Veiga; J. R. Jesus; H. Fabrelli; A. R. C. Gonzaga; E. M. Bittar; L. Bufaiçal</p>
-                  <p><a href="https://doi.org/10.1103/physrevb.110.144415" target="_blank" rel="noopener">DOI: 10.1103/physrevb.110.144415</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> A. G. Silva; R. B. Pontes; M. Boldrin; H. V. S. Pessoni; L. S. I. Veiga; J. R. Jesus; H. Fabrelli; A. R. C. Gonzaga; E. M. Bittar; L. Bufaiçal</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: ORCID; Pesquisador: Leandro Félix de Sousa Bufaiçal; ORCID: 0000-0001-7304-7334</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1103/physrevb.110.144415" target="_blank" rel="noopener">10.1103/physrevb.110.144415</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2024</span>
                   <h3 class="article-title">Tuning the spontaneous exchange bias effect in &lt;mml:math xmlns:mml=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;mml:mrow&gt;&lt;mml:msub&gt;&lt;mml:mi&gt;La&lt;/mml:mi&gt;&lt;mml:mrow&gt;&lt;mml:mn&gt;1.5&lt;/mml:mn&gt;&lt;/mml:mrow&gt;&lt;/mml:msub&gt;&lt;mml:msub&gt;&lt;mml:mi&gt;Sr&lt;/mml:mi&gt;&lt;mml:mrow&gt;&lt;mml:mn&gt;0.5&lt;/mml:mn&gt;&lt;/mml:mrow&gt;&lt;/mml:msub&gt;&lt;mml:msub&gt;&lt;mml:mi&gt;CoMnO&lt;/mml:mi&gt;&lt;mml:mn&gt;6&lt;/mml:mn&gt;&lt;/mml:msub&gt;&lt;/mml:mrow&gt;&lt;/mml:math&gt; with sintering temperature</h3>
-                  <p class="article-authors">C. Macchiutti; J. R. Jesus; F. B. Carneiro; L. Bufaiçal; Ryan A. Klein; Qiang Zhang; Melanie Kirkham; Chris Brown; R. D. dos Reis; Gloria Ortega Pérez; E. M. Bittar</p>
-                  <p><a href="https://doi.org/10.1103/physrevmaterials.8.044408" target="_blank" rel="noopener">DOI: 10.1103/physrevmaterials.8.044408</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> C. Macchiutti et al.</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: OpenAlex; Pesquisador: Leandro Félix de Sousa Bufaiçal; ORCID: 0000-0001-7304-7334</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1103/physrevmaterials.8.044408" target="_blank" rel="noopener">10.1103/physrevmaterials.8.044408</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2023</span>
                   <h3 class="article-title">3d and 5d electronic structures and orbital hybridization in Ba- and Ca-doped La2CoIrO6 double perovskites</h3>
-                  <p class="article-authors">J. R. L. Mardegan; L. S. I. Veiga; T. Pohlmann; S. S. Dhesi; S. Francoual; J. R. Jesus; C. Macchiutti; E. M. Bittar; L. Bufaiçal</p>
-                  <p><a href="https://doi.org/10.1103/physrevb.107.214427" target="_blank" rel="noopener">DOI: 10.1103/physrevb.107.214427</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> J. R. L. Mardegan; L. S. I. Veiga; T. Pohlmann; S. S. Dhesi; S. Francoual; J. R. Jesus; C. Macchiutti; E. M. Bittar; L. Bufaiçal</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: ORCID; Pesquisador: Leandro Félix de Sousa Bufaiçal; ORCID: 0000-0001-7304-7334</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1103/physrevb.107.214427" target="_blank" rel="noopener">10.1103/physrevb.107.214427</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2023</span>
                   <h3 class="article-title">Structural transitions and spontaneous exchange bias in La2_xBaxCoMnO6 series</h3>
-                  <p class="article-authors">Fabrelli, H.; Silva, A. G.; Boldrin, M.; Bittar, E. M.; Bufaical, L.</p>
-                  <p><a href="https://doi.org/10.1016/j.jssc.2023.123944" target="_blank" rel="noopener">DOI: 10.1016/j.jssc.2023.123944</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> Fabrelli, H.; Silva, A. G.; Boldrin, M.; Bittar, E. M.; Bufaical, L.</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: ORCID; Pesquisador: Leandro Félix de Sousa Bufaiçal; ORCID: 0000-0001-7304-7334</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1016/j.jssc.2023.123944" target="_blank" rel="noopener">10.1016/j.jssc.2023.123944</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2023</span>
                   <h3 class="article-title">The Co2+-Ir5+orbital hybridization in LaCaCoIrO6 double perovskite</h3>
-                  <p class="article-authors">Bufaical, L.; Veiga, L. S. I.; Mardegan, J. R. L.; Pohlmann, T.; Francoual, S.; Dhesi, S. S.; Fontes, M. B.; Bittar, E. M.</p>
-                  <p><a href="https://doi.org/10.1016/j.jmmm.2023.171276" target="_blank" rel="noopener">DOI: 10.1016/j.jmmm.2023.171276</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> Bufaical, L.; Veiga, L. S. I.; Mardegan, J. R. L.; Pohlmann, T.; Francoual, S.; Dhesi, S. S.; Fontes, M. B.; Bittar, E. M.</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: ORCID; Pesquisador: Leandro Félix de Sousa Bufaiçal; ORCID: 0000-0001-7304-7334</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1016/j.jmmm.2023.171276" target="_blank" rel="noopener">10.1016/j.jmmm.2023.171276</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2022</span>
                   <h3 class="article-title">A stretched exponential-based approach for the magnetic properties of spin glasses</h3>
-                  <p class="article-authors">L. Bufaiçal</p>
-                  <p><a href="https://doi.org/10.1016/j.jmmm.2022.169780" target="_blank" rel="noopener">DOI: 10.1016/j.jmmm.2022.169780</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> L. Bufaiçal</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: ORCID; Pesquisador: Leandro Félix de Sousa Bufaiçal; ORCID: 0000-0001-7304-7334</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1016/j.jmmm.2022.169780" target="_blank" rel="noopener">10.1016/j.jmmm.2022.169780</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2022</span>
                   <h3 class="article-title">Influence of the gas atmosphere on the obtention of cobalt and iron based nanocomposites and core/shell nanoparticles by calcination in the presence of chitosan</h3>
-                  <p class="article-authors">da Silva, R. B.; Carrico, A. S.; Silva Filho, E. D.; da Silva, Fausthon F.; Bufaical, L.; Soares, J. M.; da Costa, J. A. P.; de Araujo, J. H.; Morales, M. A.</p>
-                  <p><a href="https://doi.org/10.1016/j.jssc.2022.123225" target="_blank" rel="noopener">DOI: 10.1016/j.jssc.2022.123225</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> da Silva, R. B.; Carrico, A. S.; Silva Filho, E. D.; da Silva, Fausthon F.; Bufaical, L.; Soares, J. M.; da Costa, J. A. P.; de Araujo, J. H.; Morales, M. A.</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: ORCID; Pesquisador: Leandro Félix de Sousa Bufaiçal; ORCID: 0000-0001-7304-7334</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1016/j.jssc.2022.123225" target="_blank" rel="noopener">10.1016/j.jssc.2022.123225</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2022</span>
                   <h3 class="article-title">Structural, electronic and magnetic properties of La1.5Ca0.5(Co0.5Fe0.5)IrO6 double perovskite</h3>
-                  <p class="article-authors">L. Bufaiçal; M.A.V. Heringer; J.R. Jesus; A. Caytuero; C. Macchiutti; E.M. Bittar; E. Baggio-Saitovitch</p>
-                  <p><a href="https://doi.org/10.1016/j.jmmm.2022.169408" target="_blank" rel="noopener">DOI: 10.1016/j.jmmm.2022.169408</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> L. Bufaiçal; M.A.V. Heringer; J.R. Jesus; A. Caytuero; C. Macchiutti; E.M. Bittar; E. Baggio-Saitovitch</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: ORCID; Pesquisador: Leandro Félix de Sousa Bufaiçal; ORCID: 0000-0001-7304-7334</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1016/j.jmmm.2022.169408" target="_blank" rel="noopener">10.1016/j.jmmm.2022.169408</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2022</span>
                   <h3 class="article-title">The spontaneous exchange bias effect in La2−xCaxCoMnO6 series</h3>
-                  <p class="article-authors">J.R. Jesus; L. Bufaiçal; E.M. Bittar</p>
-                  <p><a href="https://doi.org/10.1016/j.jmmm.2022.169402" target="_blank" rel="noopener">DOI: 10.1016/j.jmmm.2022.169402</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> J.R. Jesus; L. Bufaiçal; E.M. Bittar</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: ORCID; Pesquisador: Leandro Félix de Sousa Bufaiçal; ORCID: 0000-0001-7304-7334</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1016/j.jmmm.2022.169402" target="_blank" rel="noopener">10.1016/j.jmmm.2022.169402</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2021</span>
                   <h3 class="article-title">Absence of zero-field-cooled exchange bias effect in single crystalline La2−xAx CoMnO6 (A=Ca,Sr) compounds</h3>
-                  <p class="article-authors">C. Macchiutti; J. R. Jesus; F. B. Carneiro; L. Bufaiçal; M. Ciomaga Hatnean; G. Balakrishnan; E. M. Bittar</p>
-                  <p><a href="https://doi.org/10.1103/physrevmaterials.5.094402" target="_blank" rel="noopener">DOI: 10.1103/physrevmaterials.5.094402</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> C. Macchiutti; J. R. Jesus; F. B. Carneiro; L. Bufaiçal; M. Ciomaga Hatnean; G. Balakrishnan; E. M. Bittar</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: ORCID; Pesquisador: Leandro Félix de Sousa Bufaiçal; ORCID: 0000-0001-7304-7334</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1103/physrevmaterials.5.094402" target="_blank" rel="noopener">10.1103/physrevmaterials.5.094402</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2021</span>
                   <h3 class="article-title">Griffiths phase and spontaneous exchange bias in La1.5Sr0.5CoMn0.5Fe0.5O6</h3>
-                  <p class="article-authors">A G Silva; K L Salcedo Rodríguez; C P Contreras Medrano; G S G Lourenço; M Boldrin; E Baggio-Saitovitch; L Bufaiçal</p>
-                  <p><a href="https://doi.org/10.1088/1361-648x/abc595" target="_blank" rel="noopener">DOI: 10.1088/1361-648x/abc595</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> A G Silva; K L Salcedo Rodríguez; C P Contreras Medrano; G S G Lourenço; M Boldrin; E Baggio-Saitovitch; L Bufaiçal</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: ORCID; Pesquisador: Leandro Félix de Sousa Bufaiçal; ORCID: 0000-0001-7304-7334</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1088/1361-648x/abc595" target="_blank" rel="noopener">10.1088/1361-648x/abc595</a></p>
                 </article>
               
             </div>

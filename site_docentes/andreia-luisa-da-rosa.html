@@ -53,6 +53,16 @@ a:hover { text-decoration: underline; }
   opacity: 0.96;
 }
 .ufg-line strong { font-weight: 700; }
+.header-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  margin-bottom: 18px;
+  font-size: 1rem;
+  line-height: 1.35;
+  opacity: 0.96;
+}
+.header-stack span { display: block; }
 .header-title {
   margin: 0;
   font-size: clamp(1.75rem, 3vw, 2.7rem);
@@ -167,7 +177,9 @@ a:hover { text-decoration: underline; }
   margin-bottom: 7px;
 }
 .article-title { margin: 0 0 8px 0; font-size: 1.02rem; }
-.article-authors { color: var(--muted); font-size: 0.92rem; margin: 0; }
+.article-authors { color: var(--muted); font-size: 0.92rem; margin: 0 0 8px 0; }
+.article-meta { color: var(--text); font-size: 0.92rem; margin: 6px 0 0 0; }
+.article-meta .meta-label { font-size: 0.92rem; }
 .kpi-grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(120px, 1fr));
@@ -246,9 +258,10 @@ a:hover { text-decoration: underline; }
   <header class="site-header">
     <div class="bar"></div>
     <div class="header-inner">
-      <div class="ufg-line">
-        <span><strong>UNIVERSIDADE FEDERAL DE GOIÁS - UFG</strong><br>INSTITUTO DE FÍSICA · PROGRAMA DE PÓS-GRADUAÇÃO EM FÍSICA</span>
-        <span>PPGF/UFG</span>
+      <div class="header-stack" aria-label="Cabeçalho institucional">
+        <span>Universidade Federal de Goiás</span>
+        <span>Instituto de Física</span>
+        <span>Programa de Pós-Graduação em Física</span>
       </div>
       <h1 class="header-title">Andréia Luísa da Rosa</h1>
     </div>
@@ -262,132 +275,140 @@ a:hover { text-decoration: underline; }
         
         <h2>Andréia Luísa da Rosa</h2>
         <ul class="meta-list profile-details">
-          
-            <li><a class="profile-link" href="http://lattes.cnpq.br/1038061895538870" target="_blank" rel="noopener">Curriculum Lattes</a></li>
-          
-          <li><span class="meta-label">Apto(a) a orientar:</span> Física Teórica</li>
-          <li><span class="meta-label">Sala:</span> 252 (IF-2)</li>
-          <li><span class="meta-label">E-mail:</span> <a href="mailto:andreialuisa@ufg.br">andreialuisa@ufg.br</a></li>
-          <li><span class="meta-label">Telefone:</span> (62) 3521-2329</li>
-          <li><span class="meta-label">Pesquisa</span> &#34;Física dos Materiais e Simulação de Sólidos&#34;</li>
-          
-            <li>Bolsista de Produtividade de CNPq - Nível 2</li>
-          
-          <li><span class="meta-label">Formação:</span> Doutorado em Física - Fritz-Haber Institut da Sociedade Max Planck, Berlim (Alemanha)</li>
-          
-            <li><span class="meta-label">ORCID:</span> <a href="https://orcid.org/0000-0002-2780-6448" target="_blank" rel="noopener">0000-0002-2780-6448</a></li>
-          
+          <li><span class="meta-label">Curriculum Lattes:</span> <a class="profile-link" href="http://lattes.cnpq.br/1038061895538870" target="_blank" rel="noopener">http://lattes.cnpq.br/1038061895538870</a></li>
+          <li><span class="meta-label">ORCID:</span> <a href="https://orcid.org/0000-0002-2780-6448" target="_blank" rel="noopener">0000-0002-2780-6448</a></li>
+          <li><span class="meta-label">Apto(a) a orientar:</span> ---</li>
+          <li><span class="meta-label">Sala:</span> ---</li>
+          <li><span class="meta-label">E-mail:</span> <span class="missing-info">---</span></li>
+          <li><span class="meta-label">Telefone:</span> ---</li>
+          <li><span class="meta-label">Pesquisa:</span> ---</li>
+          <li><span class="meta-label">Bolsa:</span> ---</li>
+          <li><span class="meta-label">Formação:</span> ---</li>
           <li><span class="meta-label">Fonte do perfil:</span> <a href="https://posgraduacao.if.ufg.br/p/41256-docentes-ppgf-instituto-de-fisica-ufg" target="_blank" rel="noopener">Página do PPGF/UFG</a></li>
         </ul>
       </aside>
 
       <section class="content-card">
         <nav class="tabs" aria-label="Seções da página">
-          <button class="tab-button active" data-tab="artigos">Artigos publicados</button>
+          <button class="tab-button active" data-tab="artigos">Artigos relacionados</button>
           <button class="tab-button" data-tab="estatisticas">Estatísticas do docente</button>
         </nav>
 
         <div id="artigos" class="tab-panel active">
-          <h2>Artigos publicados</h2>
+          <h2>Artigos relacionados</h2>
           
             <div class="article-list">
               
                 <article class="article-item">
                   <span class="article-year">2026</span>
                   <h3 class="article-title">Electronic and optical properties of ultra-wide gap two-dimensional germanium dioxide</h3>
-                  <p class="article-authors">Rafael Franco Ribeiro Reis; Gabriel Elyas Gama Araújo; Danilo Kuritza; José Eduardo Padilha; Alexandre Cavalheiro Dias; Andréia Luisa da Rosa; Renato Borges Pontes</p>
-                  <p><a href="https://doi.org/10.1088/1361-648x/ae3af7" target="_blank" rel="noopener">DOI: 10.1088/1361-648x/ae3af7</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> Rafael Franco Ribeiro Reis; Gabriel Elyas Gama Araújo; Danilo Kuritza; José Eduardo Padilha; Alexandre Cavalheiro Dias; Andréia Luisa da Rosa; Renato Borges Pontes</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: ORCID; Pesquisador: Andréia Luísa da Rosa; ORCID: 0000-0002-2780-6448</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1088/1361-648x/ae3af7" target="_blank" rel="noopener">10.1088/1361-648x/ae3af7</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2026</span>
                   <h3 class="article-title">Interplay between Structural, Electronic, and Topological Properties in Low-Dimensional Tellurium</h3>
-                  <p class="article-authors">Gabriel Elyas Gama Araújo; Andreia Luisa da Rosa</p>
-                  <p><a href="https://doi.org/10.1021/acsomega.5c12108" target="_blank" rel="noopener">DOI: 10.1021/acsomega.5c12108</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> Gabriel Elyas Gama Araújo; Andreia Luisa da Rosa</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: ORCID; Pesquisador: Andréia Luísa da Rosa; ORCID: 0000-0002-2780-6448</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1021/acsomega.5c12108" target="_blank" rel="noopener">10.1021/acsomega.5c12108</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2025</span>
                   <h3 class="article-title">Dispersive and Flat Electronic Bands in Two-Dimensional Triphosphides</h3>
-                  <p class="article-authors">Gabriel Elyas Gama Araújo; Lucca Moraes Gomes; Dominike Pacine de Andrade Deus; Alexandre Cavalheiro Dias; Andréia Luisa da Rosa</p>
-                  <p><a href="https://doi.org/10.1021/acsaem.5c01687" target="_blank" rel="noopener">DOI: 10.1021/acsaem.5c01687</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> Gabriel Elyas Gama Araújo; Lucca Moraes Gomes; Dominike Pacine de Andrade Deus; Alexandre Cavalheiro Dias; Andréia Luisa da Rosa</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: ORCID; Pesquisador: Andréia Luísa da Rosa; ORCID: 0000-0002-2780-6448</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1021/acsaem.5c01687" target="_blank" rel="noopener">10.1021/acsaem.5c01687</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2025</span>
                   <h3 class="article-title">First-principles statistical investigation of thermodynamic behavior with excitonic effects in Mo1−xWxSe2 alloys through a data-driven workflow approach</h3>
-                  <p class="article-authors">Carlos Maciel de O. Bastos; Alexandre C. Dias; Ana Carolina Ferreira de Brito; Ingrid D. Barcelos; Andréia Luisa da Rosa; Danilo Neves Silveira; Maurício J. Piotrowski; Wolfgang Wenzel; Celso R. C. Rêgo; Diego Guedes-Sobrinho</p>
-                  <p><a href="https://doi.org/10.1039/d5ta02721g" target="_blank" rel="noopener">DOI: 10.1039/d5ta02721g</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> Carlos Maciel de O. Bastos; Alexandre C. Dias; Ana Carolina Ferreira de Brito; Ingrid D. Barcelos; Andréia Luisa da Rosa; Danilo Neves Silveira; Maurício J. Piotrowski; Wolfgang Wenzel; Celso R. C. Rêgo; Diego Guedes-Sobrinho</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: ORCID; Pesquisador: Andréia Luísa da Rosa; ORCID: 0000-0002-2780-6448</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1039/d5ta02721g" target="_blank" rel="noopener">10.1039/d5ta02721g</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2024</span>
                   <h3 class="article-title">Interaction of Oxygen with Pristine and Defective $$\rm MoS_2$$ Monolayers</h3>
-                  <p class="article-authors">Murilo Kendjy Vieira Onita; Flavio Bento de Oliveira; Andréia Luisa da Rosa</p>
-                  <p><a href="https://doi.org/10.1007/s13538-023-01388-5" target="_blank" rel="noopener">DOI: 10.1007/s13538-023-01388-5</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> Murilo Kendjy Vieira Onita; Flavio Bento de Oliveira; Andréia Luisa da Rosa</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: ORCID; Pesquisador: Andréia Luísa da Rosa; ORCID: 0000-0002-2780-6448</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1007/s13538-023-01388-5" target="_blank" rel="noopener">10.1007/s13538-023-01388-5</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2024</span>
                   <h3 class="article-title">Magnetic interactions in chromium adsorption on silicene</h3>
-                  <p class="article-authors">Lucca Moraes Gomes; Andreia Luisa da Rosa</p>
-                  <p><a href="https://doi.org/10.1016/j.jmmm.2024.172496" target="_blank" rel="noopener">DOI: 10.1016/j.jmmm.2024.172496</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> Lucca Moraes Gomes; Andreia Luisa da Rosa</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: ORCID; Pesquisador: Andréia Luísa da Rosa; ORCID: 0000-0002-2780-6448</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1016/j.jmmm.2024.172496" target="_blank" rel="noopener">10.1016/j.jmmm.2024.172496</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2024</span>
                   <h3 class="article-title">Signature of excitonic insulators in phosphorene nanoribbons</h3>
-                  <p class="article-authors">Andre Felipe Pereira de Oliveira; Andréia Luisa da Rosa; Alexandre Cavalheiro Dias</p>
-                  <p><a href="https://doi.org/10.1088/1361-648x/ad4b84" target="_blank" rel="noopener">DOI: 10.1088/1361-648x/ad4b84</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> Andre Felipe Pereira de Oliveira; Andréia Luisa da Rosa; Alexandre Cavalheiro Dias</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: ORCID; Pesquisador: Andréia Luísa da Rosa; ORCID: 0000-0002-2780-6448</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1088/1361-648x/ad4b84" target="_blank" rel="noopener">10.1088/1361-648x/ad4b84</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2024</span>
                   <h3 class="article-title">Unveiling excitons in two-dimensional $$\beta$$-pnictogens</h3>
-                  <p class="article-authors">Marcos Rafael Guassi; Rafael Besse; Maurício J. Piotrowski; Celso R. C. Rêgo; Diego Guedes‐Sobrinho; Andréia Luísa da Rosa; Alexandre C. Dias</p>
-                  <p><a href="https://doi.org/10.1038/s41598-024-62094-z" target="_blank" rel="noopener">DOI: 10.1038/s41598-024-62094-z</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> Marcos Rafael Guassi; Rafael Besse; Maurício J. Piotrowski; Celso R. C. Rêgo; Diego Guedes‐Sobrinho; Andréia Luísa da Rosa; Alexandre C. Dias</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: OpenAlex; Pesquisador: Andréia Luísa da Rosa; ORCID: 0000-0002-2780-6448</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1038/s41598-024-62094-z" target="_blank" rel="noopener">10.1038/s41598-024-62094-z</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2023</span>
                   <h3 class="article-title">Replacement of Wet Ball Milling with High-Pressure Grinding Ahead of Mineral Separation</h3>
-                  <p class="article-authors">Claude Gagnon; Andréia Luísa da Rosa; Sami Makni; R.E. McIvor</p>
-                  <p><a href="https://doi.org/10.1007/s42461-023-00880-5" target="_blank" rel="noopener">DOI: 10.1007/s42461-023-00880-5</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> Claude Gagnon; Andréia Luísa da Rosa; Sami Makni; R.E. McIvor</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: OpenAlex; Pesquisador: Andréia Luísa da Rosa; ORCID: 0000-0002-2780-6448</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1007/s42461-023-00880-5" target="_blank" rel="noopener">10.1007/s42461-023-00880-5</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2023</span>
                   <h3 class="article-title">Stability of Subnanometer MoS Wires under a Realistic Environment</h3>
-                  <p class="article-authors">Dominike A. P. de Deus; Daniel F. Souza; Andréia L. da Rosa; Renato B. Pontes; Th. Frauenheim</p>
-                  <p><a href="https://doi.org/10.1021/acs.jpclett.2c02575" target="_blank" rel="noopener">DOI: 10.1021/acs.jpclett.2c02575</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> Dominike A. P. de Deus; Daniel F. Souza; Andréia L. da Rosa; Renato B. Pontes; Th. Frauenheim</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: ORCID; Pesquisador: Andréia Luísa da Rosa; ORCID: 0000-0002-2780-6448</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1021/acs.jpclett.2c02575" target="_blank" rel="noopener">10.1021/acs.jpclett.2c02575</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2022</span>
                   <h3 class="article-title">Chemical Functionalization of Ultrathin Tin Layers</h3>
-                  <p class="article-authors">Andre F. P. de Oliveira; Andreia Luisa da Rosa; Thomas Frauenheim</p>
-                  <p><a href="https://doi.org/10.1002/pssb.202100499" target="_blank" rel="noopener">DOI: 10.1002/pssb.202100499</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> Andre F. P. de Oliveira; Andreia Luisa da Rosa; Thomas Frauenheim</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: ORCID; Pesquisador: Andréia Luísa da Rosa; ORCID: 0000-0002-2780-6448</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1002/pssb.202100499" target="_blank" rel="noopener">10.1002/pssb.202100499</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2022</span>
                   <h3 class="article-title">Electronic structure of molecular hydrogen in MoS2 nanopores</h3>
-                  <p class="article-authors">Murilo Kendjy; Andréia L. da Rosa; Th. Frauenheim</p>
-                  <p><a href="https://doi.org/10.1088/1361-648x/ac3307" target="_blank" rel="noopener">DOI: 10.1088/1361-648x/ac3307</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> Murilo Kendjy; Andréia L. da Rosa; Th. Frauenheim</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: ORCID; Pesquisador: Andréia Luísa da Rosa; ORCID: 0000-0002-2780-6448</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1088/1361-648x/ac3307" target="_blank" rel="noopener">10.1088/1361-648x/ac3307</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2021</span>
                   <h3 class="article-title">New Pentaoctite Phase of Group-V Nanostructures</h3>
-                  <p class="article-authors">da Rosa, A.L.; Pontes, R.B.; Lima, E.N.; Frauenheim, T.</p>
-                  <p><a href="https://doi.org/10.1002/pssb.202100112" target="_blank" rel="noopener">DOI: 10.1002/pssb.202100112</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> da Rosa, A.L.; Pontes, R.B.; Lima, E.N.; Frauenheim, T.</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: ORCID; Pesquisador: Andréia Luísa da Rosa; ORCID: 0000-0002-2780-6448</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1002/pssb.202100112" target="_blank" rel="noopener">10.1002/pssb.202100112</a></p>
                 </article>
               
                 <article class="article-item">
                   <span class="article-year">2021</span>
                   <h3 class="article-title">Tuning electronic and optical properties of bismuth monolayers by molecular adsorption</h3>
-                  <p class="article-authors">Andréia Luísa da Rosa; Erika Nascimento Lima; Maurício Chagas da Silva; Renato Borges Pontes; Tomé Mauro Schmidt; Thomas Frauenheim</p>
-                  <p><a href="https://doi.org/10.1016/j.susc.2021.121849" target="_blank" rel="noopener">DOI: 10.1016/j.susc.2021.121849</a></p>
+                  <p class="article-authors"><span class="meta-label">Autores:</span> Andréia Luísa da Rosa; Erika Nascimento Lima; Maurício Chagas da Silva; Renato Borges Pontes; Tomé Mauro Schmidt; Thomas Frauenheim</p>
+                  <p class="article-meta"><span class="meta-label">Revista e informações:</span> Revista/Fonte: ORCID; Pesquisador: Andréia Luísa da Rosa; ORCID: 0000-0002-2780-6448</p>
+                  <p class="article-meta"><span class="meta-label">DOI:</span> <a href="https://doi.org/10.1016/j.susc.2021.121849" target="_blank" rel="noopener">10.1016/j.susc.2021.121849</a></p>
                 </article>
               
             </div>
