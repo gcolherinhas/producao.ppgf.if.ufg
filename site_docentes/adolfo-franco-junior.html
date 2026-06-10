@@ -1,0 +1,662 @@
+
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Adolfo Franco Júnior</title>
+  <style>
+
+:root {
+  --ufg-blue: #003f73;
+  --ufg-dark-blue: #002b4f;
+  --ufg-green: #00843d;
+  --ufg-gold: #f2c300;
+  --bg: #f5f7fb;
+  --card: #ffffff;
+  --text: #1f2937;
+  --muted: #6b7280;
+  --border: #d7dee8;
+  --shadow: 0 12px 28px rgba(15, 23, 42, 0.10);
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--text);
+  background: var(--bg);
+  line-height: 1.55;
+}
+a { color: var(--ufg-blue); text-decoration: none; }
+a:hover { text-decoration: underline; }
+.site-header {
+  background: linear-gradient(135deg, var(--ufg-blue), var(--ufg-dark-blue));
+  color: #fff;
+  border-bottom: 6px solid var(--ufg-green);
+}
+.site-header .bar {
+  height: 8px;
+  background: linear-gradient(90deg, var(--ufg-green), var(--ufg-gold), var(--ufg-blue));
+}
+.header-inner {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 24px 22px 28px 22px;
+}
+.ufg-line {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 18px;
+  font-size: 0.98rem;
+  opacity: 0.96;
+}
+.ufg-line strong { font-weight: 700; }
+.header-title {
+  margin: 0;
+  font-size: clamp(1.75rem, 3vw, 2.7rem);
+  letter-spacing: -0.03em;
+}
+.header-subtitle {
+  margin: 8px 0 0 0;
+  color: rgba(255,255,255,0.86);
+  font-size: 1rem;
+}
+.container {
+  max-width: 1180px;
+  margin: 28px auto 48px auto;
+  padding: 0 22px;
+}
+.layout {
+  display: grid;
+  grid-template-columns: 290px 1fr;
+  gap: 24px;
+  align-items: start;
+}
+.profile-card, .content-card, .index-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  box-shadow: var(--shadow);
+}
+.profile-card {
+  padding: 18px;
+  position: sticky;
+  top: 18px;
+}
+.profile-photo {
+  display: block;
+  width: 85%;
+  max-height: 280px;
+  margin: 0 auto;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  background: #e5e7eb;
+}
+.placeholder-photo {
+  display: grid;
+  place-items: center;
+  width: 85%;
+  height: 221px;
+  margin: 0 auto;
+  border-radius: 14px;
+  background: #e5e7eb;
+  color: var(--muted);
+  text-align: center;
+  padding: 18px;
+}
+.profile-card h2 {
+  margin: 16px 0 8px 0;
+  font-size: 1.22rem;
+}
+.meta-list { margin: 14px 0 0 0; padding: 0; list-style: none; }
+.meta-list li { padding: 8px 0; border-top: 1px solid #eef2f7; }
+.meta-label { color: var(--muted); display: inline; font-size: 0.93rem; font-weight: 700; margin-right: 4px; }
+.profile-link { display: inline-block; font-weight: 700; }
+.profile-details {
+  border-top: 1px solid #eef2f7;
+  margin-top: 14px;
+  padding-top: 6px;
+}
+.profile-details li { font-size: 0.93rem; }
+.missing-info { color: var(--muted); font-style: italic; }
+
+.content-card { padding: 20px; min-height: 520px; }
+.tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 12px;
+}
+.tab-button {
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 10px 16px;
+  background: #fff;
+  color: var(--ufg-blue);
+  cursor: pointer;
+  font-weight: 700;
+}
+.tab-button.active {
+  background: var(--ufg-blue);
+  border-color: var(--ufg-blue);
+  color: #fff;
+}
+.tab-panel { display: none; }
+.tab-panel.active { display: block; }
+.article-list { display: grid; gap: 14px; }
+.article-item {
+  padding: 16px;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: #fbfdff;
+}
+.article-year {
+  display: inline-block;
+  padding: 3px 8px;
+  border-radius: 999px;
+  background: #e6f0fa;
+  color: var(--ufg-blue);
+  font-weight: 700;
+  font-size: 0.84rem;
+  margin-bottom: 7px;
+}
+.article-title { margin: 0 0 8px 0; font-size: 1.02rem; }
+.article-authors { color: var(--muted); font-size: 0.92rem; margin: 0; }
+.kpi-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(120px, 1fr));
+  gap: 12px;
+  margin-bottom: 20px;
+}
+.kpi {
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 16px;
+  background: #fbfdff;
+}
+.kpi-value { font-size: 2rem; font-weight: 800; color: var(--ufg-blue); line-height: 1; }
+.kpi-label { color: var(--muted); font-size: 0.86rem; margin-top: 6px; }
+.bar-chart {
+  margin-top: 14px;
+  padding: 18px;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  background: #fbfdff;
+}
+.chart-row {
+  display: grid;
+  grid-template-columns: 64px 1fr 44px;
+  gap: 12px;
+  align-items: center;
+  min-height: 34px;
+  margin: 10px 0;
+}
+.chart-year { font-weight: 700; color: var(--ufg-blue); }
+.chart-track {
+  width: 100%;
+  height: 22px;
+  background: #e5e7eb;
+  border-radius: 999px;
+  overflow: hidden;
+  border: 1px solid #d8e0ea;
+}
+.chart-bar {
+  height: 100%;
+  background: linear-gradient(90deg, var(--ufg-blue), var(--ufg-green));
+  border-radius: 999px;
+  min-width: 0;
+}
+.chart-value {
+  color: var(--text);
+  font-weight: 800;
+  text-align: right;
+  font-size: 0.95rem;
+}
+.chart-note { color: var(--muted); font-size: 0.9rem; margin: 8px 0 0 0; }
+.footer {
+  margin-top: 32px;
+  color: var(--muted);
+  font-size: 0.9rem;
+  text-align: center;
+}
+.index-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  gap: 16px;
+}
+.index-card { padding: 16px; }
+.index-card img { width: 100%; height: 180px; object-fit: cover; border-radius: 12px; border: 1px solid var(--border); }
+.index-card h2 { font-size: 1.05rem; margin: 12px 0 6px 0; }
+.back-link { margin-bottom: 16px; display: inline-block; font-weight: 700; }
+@media (max-width: 820px) {
+  .layout { grid-template-columns: 1fr; }
+  .profile-card { position: static; }
+  .kpi-grid { grid-template-columns: repeat(2, minmax(120px, 1fr)); }
+}
+
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="bar"></div>
+    <div class="header-inner">
+      <div class="ufg-line">
+        <span><strong>UNIVERSIDADE FEDERAL DE GOIÁS - UFG</strong><br>INSTITUTO DE FÍSICA · PROGRAMA DE PÓS-GRADUAÇÃO EM FÍSICA</span>
+        <span>PPGF/UFG</span>
+      </div>
+      <h1 class="header-title">Adolfo Franco Júnior</h1>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="layout">
+      <aside class="profile-card">
+        
+          <img class="profile-photo" src="data:image/jpeg;base64,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" alt="Foto de Adolfo Franco Júnior">
+        
+        <h2>Adolfo Franco Júnior</h2>
+        <ul class="meta-list profile-details">
+          
+            <li><a class="profile-link" href="http://lattes.cnpq.br/0187547195548392" target="_blank" rel="noopener">Curriculum Lattes</a></li>
+          
+          <li><span class="meta-label">Apto(a) a orientar:</span> Física Experimental</li>
+          <li><span class="meta-label">Sala:</span> 112 (IF-1)</li>
+          <li><span class="meta-label">E-mail:</span> <a href="mailto:franco@ufg.br">franco@ufg.br</a></li>
+          <li><span class="meta-label">Telefone:</span> (62) 3521-2070</li>
+          <li><span class="meta-label">Pesquisa</span> &#34;Física da Matéria Condensada e Materiais&#34;</li>
+          
+            <li>Bolsista de Produtividade de CNPq - Nível 1C</li>
+          
+          <li><span class="meta-label">Formação:</span> Ph.D University of Oxford - UK - 1996</li>
+          
+            <li><span class="meta-label">ORCID:</span> <a href="https://orcid.org/0000-0001-6428-6640" target="_blank" rel="noopener">0000-0001-6428-6640</a></li>
+          
+          <li><span class="meta-label">Fonte do perfil:</span> <a href="https://posgraduacao.if.ufg.br/p/41256-docentes-ppgf-instituto-de-fisica-ufg" target="_blank" rel="noopener">Página do PPGF/UFG</a></li>
+        </ul>
+      </aside>
+
+      <section class="content-card">
+        <nav class="tabs" aria-label="Seções da página">
+          <button class="tab-button active" data-tab="artigos">Artigos publicados</button>
+          <button class="tab-button" data-tab="estatisticas">Estatísticas do docente</button>
+        </nav>
+
+        <div id="artigos" class="tab-panel active">
+          <h2>Artigos publicados</h2>
+          
+            <div class="article-list">
+              
+                <article class="article-item">
+                  <span class="article-year">2026</span>
+                  <h3 class="article-title">Compositional Optimizations and Magnetic Performances of CoxFe3−xO4$${\mathrm{Co}}_x{\mathrm{Fe}}_{3-x}{\mathrm O}_4$$ Nanoclusters</h3>
+                  <p class="article-authors">Prasun Banerjee; Adolfo Franco Júnior</p>
+                  <p><a href="https://doi.org/10.1002/cnma.202500449" target="_blank" rel="noopener">DOI: 10.1002/cnma.202500449</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2026</span>
+                  <h3 class="article-title">Low-temperature magnetic anomalies in orthorhombic yttrium chromite nanoparticles: Indications of magnetic frustration and glassy-like behavior</h3>
+                  <p class="article-authors">Italo Nuta; A. Franco, Jr.</p>
+                  <p><a href="https://doi.org/10.1016/j.jmmm.2026.174012" target="_blank" rel="noopener">DOI: 10.1016/j.jmmm.2026.174012</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2026</span>
+                  <h3 class="article-title">Room-temperature magnetic behavior of Bi-doped Co0.6Zn0.4Fe2O4ferrite nanoparticles</h3>
+                  <p class="article-authors">Ribeiro Italo Nuta; Isabella Rocha de Macedo; Marcio Solino Pessoa; Prasun Banerjee; Adolfo Franco Junior</p>
+                  <p><a href="https://doi.org/10.1016/j.physb.2025.418079" target="_blank" rel="noopener">DOI: 10.1016/j.physb.2025.418079</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2025</span>
+                  <h3 class="article-title">Cobalt Ferrite–Silica–Gold Nanocomposite: Synthesis, Structural Characterization, and Magneto‐Plasmonic Properties</h3>
+                  <p class="article-authors">Thiago. E. P. Alves; Thatielly F. Almeida; Adolfo Franco, Jr; Clemens Burda</p>
+                  <p><a href="https://doi.org/10.1002/ppsc.202400170" target="_blank" rel="noopener">DOI: 10.1002/ppsc.202400170</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2025</span>
+                  <h3 class="article-title">Deciphering temperature-driven magnetic transformations and canting mechanism in the Y&lt;sub&gt;3&lt;/sub&gt;Fe&lt;sub&gt;5-&lt;i&gt;x&lt;/i&gt; &lt;/sub&gt;Cd&lt;i&gt; &lt;sub&gt;x&lt;/sub&gt; &lt;/i&gt;O&lt;sub&gt;12&lt;/sub&gt; compound: a coupled molecular field and phenomenological analysis</h3>
+                  <p class="article-authors">J. Matilla-Arias; F. Guerrero; Y. Guerra; A. Franco; E. Padrón‐Hernández; R. Peña‐Garcia</p>
+                  <p><a href="https://doi.org/10.1088/1361-648x/adf3a2" target="_blank" rel="noopener">DOI: 10.1088/1361-648x/adf3a2</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2025</span>
+                  <h3 class="article-title">Diabetes Mellitus: pré e pós gestacional</h3>
+                  <p class="article-authors">A. Franco; Francielle Silva de Oliveira; Maria Eduarda Pereira dos Santos; Dario L. Santos</p>
+                  <p><a href="https://doi.org/10.47224/revistamaster.v10i19.698" target="_blank" rel="noopener">DOI: 10.47224/revistamaster.v10i19.698</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2025</span>
+                  <h3 class="article-title">Exploring temperature-dependent negative permittivity in zinc oxide multifunctional metamaterials</h3>
+                  <p class="article-authors">Raphael Lucas de Sousa e Silva; Prasun Banerjee; Adolfo Franco</p>
+                  <p><a href="https://doi.org/10.1063/5.0277733" target="_blank" rel="noopener">DOI: 10.1063/5.0277733</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2025</span>
+                  <h3 class="article-title">Optimizing superparamagnetic CoFe2O4 nanoparticles: bridging theoretical models and experimental observations</h3>
+                  <p class="article-authors">Prasun Banerjee; A Franco Júnior</p>
+                  <p><a href="https://doi.org/10.1088/1402-4896/ae0841" target="_blank" rel="noopener">DOI: 10.1088/1402-4896/ae0841</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2025</span>
+                  <h3 class="article-title">Resistência ao Desgaste do Aço Ferramenta AISI D2 em Condições de Revenimento Estimadas pelo Parâmetro de Hollomon-Jaffe</h3>
+                  <p class="article-authors">Maycoln Depianti Conci; Arthur Barbosa Bezerra; A. Franco; Julio Cesar Araujo Toqueiro; Paula Fernanda da Silva Farina</p>
+                  <p><a href="https://doi.org/10.26678/abcm.cobef2025.cof25-0047" target="_blank" rel="noopener">DOI: 10.26678/abcm.cobef2025.cof25-0047</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2025</span>
+                  <h3 class="article-title">Torpedo Car Lining With Unfired Zero-Carbon Bricks: Performance and Energy Savings Achievements</h3>
+                  <p class="article-authors">C. Pagliosa; Tiago Moreira Pereira; A. Franco; C. Guedes Soares</p>
+                  <p><a href="https://doi.org/10.33313/389/289" target="_blank" rel="noopener">DOI: 10.33313/389/289</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2024</span>
+                  <h3 class="article-title">Effects of rare Earth doping on the structural and dielectric properties of sodium bismuth titanate perovskites</h3>
+                  <p class="article-authors">Stefane Oliveira de Lira; Clemens Burda; A. Franco, Jr.</p>
+                  <p><a href="https://doi.org/10.1016/j.jpcs.2024.112133" target="_blank" rel="noopener">DOI: 10.1016/j.jpcs.2024.112133</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2024</span>
+                  <h3 class="article-title">Investigation of the role of yttrium sesquioxide nanoparticles on the properties of zinc oxide ceramics</h3>
+                  <p class="article-authors">Mônica Pereira Soares; Girija Atrey; Prasun Banerjee; Adolfo Franco Junior</p>
+                  <p><a href="https://doi.org/10.1088/2632-959x/ad5d82" target="_blank" rel="noopener">DOI: 10.1088/2632-959x/ad5d82</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2024</span>
+                  <h3 class="article-title">Narrativa Interativa Gamificada - NIG: Jornada da Mel</h3>
+                  <p class="article-authors">Juliana Evaristo Costa; José Aires de Castro Filho; José Gilvan Rodrigues Maia; Francisco Bruno Nascimento da Rocha; A. Franco; C. de Oliveira; Gabriel Marques do Nascimento; Pedro Jorge Rodrigues Garcia; Júlio Nathanael Silva Mesquita</p>
+                  <p><a href="https://doi.org/10.5753/cbie_estendido.2024.244324" target="_blank" rel="noopener">DOI: 10.5753/cbie_estendido.2024.244324</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2024</span>
+                  <h3 class="article-title">Preparation Regimens to Improve Capsule Endoscopy visualization and diagnostic yield (PrepRICE) – a multicentric randomized trial</h3>
+                  <p class="article-authors">María Manuela Estevinho; M. Sarmento-Costa; A. Franco; Inês Pestana; Pedro Cardoso; Sara Archer; Maria Inês Canha; João Correia; Pedro Mesquita; Lídia Roque-Ramos; Adélia Rodrigues; Catarina Gomes; Sandra Lopes; Rolando Pinho</p>
+                  <p><a href="https://doi.org/10.1055/s-0044-1782824" target="_blank" rel="noopener">DOI: 10.1055/s-0044-1782824</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2024</span>
+                  <h3 class="article-title">TUBERCULOSE NO ESTADO DO CEARÁ: UM ESTUDO CLÍNICO-EPIDEMIOLÓGICO</h3>
+                  <p class="article-authors">Francisco Iuri da Silva Martins; A. Franco; José Aurelio de Almeida Martins; Gustavo da Penha de Paula; Marcelo Vítor de Paiva Amorim; Luanne Eugênia Nunes</p>
+                  <p><a href="https://doi.org/10.51161/v-conais/39472" target="_blank" rel="noopener">DOI: 10.51161/v-conais/39472</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2024</span>
+                  <h3 class="article-title">Tailoring the structural and optical properties of lead-free Na0.5(Bi1-xSmx)0.5TiO3 multifunctional ceramics by Sm-doping</h3>
+                  <p class="article-authors">Fabien Volpi; T.J. Castro; A. Franco; Stéfane Oliveira de Lira; P.C. Morais; S.W. da Silva</p>
+                  <p><a href="https://doi.org/10.1016/j.jallcom.2024.175963" target="_blank" rel="noopener">DOI: 10.1016/j.jallcom.2024.175963</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2023</span>
+                  <h3 class="article-title">An elegant alternative to surgery for the management of an epibronchial esophageal diverticulum</h3>
+                  <p class="article-authors">A. Franco; Inês Simão; Roberta Hack Mendes; André Mascarenhas; Catarina O’Neill; Rui Mendo; Pablo Barreiro</p>
+                  <p><a href="https://doi.org/10.1055/s-0043-1765458" target="_blank" rel="noopener">DOI: 10.1055/s-0043-1765458</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2023</span>
+                  <h3 class="article-title">Complete endoscopic removal of right hepatolithiasis after left hepatectomy</h3>
+                  <p class="article-authors">A. Franco; Inês Simão; Roberta Hack Mendes; André Mascarenhas; Catarina O’Neill; Rui Mendo; T. Bana; Eva Fieira Costa</p>
+                  <p><a href="https://doi.org/10.1055/s-0043-1765319" target="_blank" rel="noopener">DOI: 10.1055/s-0043-1765319</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2023</span>
+                  <h3 class="article-title">Controlled defects and trap-assisted mitigation in Li-intercalated zinc oxide ceramics</h3>
+                  <p class="article-authors">Bhargavi Koneru; P. Banerjee; A. Franco</p>
+                  <p><a href="https://doi.org/10.1007/s42247-023-00450-x" target="_blank" rel="noopener">DOI: 10.1007/s42247-023-00450-x</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2023</span>
+                  <h3 class="article-title">ERCP-directed eletrohydraulic lithotripsy for treatment of cystic duct remnant lithiasis</h3>
+                  <p class="article-authors">A. Franco; Inês Simão; R Mendes; André Mascarenhas; Catarina O’Neill; Rui Mendo; Pedro Figueiredo; T. Bana; Eva Fieira Costa</p>
+                  <p><a href="https://doi.org/10.1055/s-0043-1765524" target="_blank" rel="noopener">DOI: 10.1055/s-0043-1765524</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2023</span>
+                  <h3 class="article-title">Endoscopic intermuscular dissection of a rectal GIST: a breakthrough in the management of subepithelial lesions</h3>
+                  <p class="article-authors">André Mascarenhas; A. Franco; Roberta Hack Mendes; Catarina O’Neill; A. L. Alves; C Chagas; Pablo Barreiro</p>
+                  <p><a href="https://doi.org/10.1055/s-0043-1765293" target="_blank" rel="noopener">DOI: 10.1055/s-0043-1765293</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2023</span>
+                  <h3 class="article-title">Investigation of the ion dynamics by a particular excitation due to the stoichiometric imbalances on BiFeO3 ceramics</h3>
+                  <p class="article-authors">Bhargavi Koneru; Jhilmil Swapnalin; Srinivasan Natarajan; A. Franco, Jr.; P. Banerjee</p>
+                  <p><a href="https://doi.org/10.1016/j.physb.2022.414463" target="_blank" rel="noopener">DOI: 10.1016/j.physb.2022.414463</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2023</span>
+                  <h3 class="article-title">Magnetization of Zn1−Co O nanoparticles: single-ion anisotropy and spin clustering</h3>
+                  <p class="article-authors">X. Gratens; B. de Abreu Silva; Maria Inês Basso Bernardi; H. B. de Carvalho; A. Franco; V. A. Chitta</p>
+                  <p><a href="https://doi.org/10.1016/j.jallcom.2023.168840" target="_blank" rel="noopener">DOI: 10.1016/j.jallcom.2023.168840</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2023</span>
+                  <h3 class="article-title">Zero-Carbon Tempered MgO-ZnO Brick as an Alternative of Fired Magnesia Chrome for Safety Lining of Stainless Steel LadleBárbara</h3>
+                  <p class="article-authors">B. Borges de Melo; A. Franco; C. Lares; C. Pagliosa</p>
+                  <p><a href="https://doi.org/10.33313/387/267" target="_blank" rel="noopener">DOI: 10.33313/387/267</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2022</span>
+                  <h3 class="article-title">Intercalation of Nanoscale Multiferroic Spacers between the Two-Dimensional Interlayers of MXene</h3>
+                  <p class="article-authors">Bhargavi Koneru; Jhilmil Swapnalin; Srinivasan Natarajan; Adolfo Franco Jr; Prasun Banerjee</p>
+                  <p><a href="https://doi.org/10.1021/acsomega.2c02471" target="_blank" rel="noopener">DOI: 10.1021/acsomega.2c02471</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2022</span>
+                  <h3 class="article-title">Investigation of structural, optical and magnetic properties of Y3-xCexFe5-yEryO12 compound</h3>
+                  <p class="article-authors">A, Franco Jr</p>
+                  <p><a href="https://doi.org/10.1016/j.physb.2022.414231" target="_blank" rel="noopener">DOI: 10.1016/j.physb.2022.414231</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2022</span>
+                  <h3 class="article-title">Magnetic properties in randomly diluted magnetic systems: Co-doped ZnO polycrystalline ceramics</h3>
+                  <p class="article-authors">H.V.S. Pessoni; A. Franco</p>
+                  <p><a href="https://doi.org/10.1016/j.jallcom.2022.166264" target="_blank" rel="noopener">DOI: 10.1016/j.jallcom.2022.166264</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2022</span>
+                  <h3 class="article-title">Magnetic-plasmonic properties of CoFe2O4@Au nanocomposite</h3>
+                  <p class="article-authors">A, Franco Jr; T.E.P. Alves; H.V.S. Pessoni; A. Franco; C. Burda; A.C.S. Samia</p>
+                  <p><a href="https://doi.org/10.1016/j.jpcs.2022.110630" target="_blank" rel="noopener">DOI: 10.1016/j.jpcs.2022.110630</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2022</span>
+                  <h3 class="article-title">Multilayer intercalation: MXene/cobalt ferrite electromagnetic wave absorbing two-dimensional materials</h3>
+                  <p class="article-authors">A, Franco Jr; Jhilmil Swapnalin; Bhargavi Koneru; P. Banerjee; Srinivasan Natarajan; A. Franco</p>
+                  <p><a href="https://doi.org/10.1016/j.jpcs.2022.110797" target="_blank" rel="noopener">DOI: 10.1016/j.jpcs.2022.110797</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2022</span>
+                  <h3 class="article-title">Nanoscale-driven single-domain structure in nickel substituted superparamagnetic cobalt ferrites</h3>
+                  <p class="article-authors">A, Franco Jr</p>
+                  <p><a href="https://doi.org/10.1016/j.ssc.2021.114560" target="_blank" rel="noopener">DOI: 10.1016/j.ssc.2021.114560</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2022</span>
+                  <h3 class="article-title">Spin canting and weak long-range ferromagnetic order in a rigid supramolecular framework</h3>
+                  <p class="article-authors">Maykon Alves Lemes; Felipe Terra Martins; H.V.S. Pessoni; A. Franco, Jr.</p>
+                  <p><a href="https://doi.org/10.1016/j.physb.2022.414157" target="_blank" rel="noopener">DOI: 10.1016/j.physb.2022.414157</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2022</span>
+                  <h3 class="article-title">Tailoring the magnetic properties of Zn doped nickel, magnesium and cobalt ferrite ceramics</h3>
+                  <p class="article-authors">Pedro Victor Valadares Romanholo; Thiago Eduardo Pereira Alves; Jhilmil Swapnalin; P. Banerjee; A. Franco, Jr.</p>
+                  <p><a href="https://doi.org/10.1016/j.matchemphys.2022.126072" target="_blank" rel="noopener">DOI: 10.1016/j.matchemphys.2022.126072</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2021</span>
+                  <h3 class="article-title">Effect of Gd3+ ion on the structural and magnetic properties of (Nb and Al) co-doped rutile &lt;mml:math xmlns:mml=&#34;http://www.w3.org/1998/Math/MathML&#34; altimg=&#34;si1.svg&#34;&gt;&lt;mml:mrow&gt;&lt;mml:msub&gt;&lt;mml:mtext&gt;TiO&lt;/mml:mtext&gt;&lt;mml:mn&gt;2&lt;/mml:mn&gt;&lt;/mml:msub&gt;&lt;/mml:mrow&gt;&lt;/mml:math&gt; single crystal</h3>
+                  <p class="article-authors">A, Franco Jr; H.V.S. Pessoni; F.S. Oliveira; L.S.de Faria; A.J.S. Machado; A. Franco</p>
+                  <p><a href="https://doi.org/10.1016/j.ceramint.2020.11.013" target="_blank" rel="noopener">DOI: 10.1016/j.ceramint.2020.11.013</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2021</span>
+                  <h3 class="article-title">Effects of Y and Ni co-doping in Bi2Fe4O9 - BiFeO3 based multiferroic ceramics</h3>
+                  <p class="article-authors">A, Franco Jr; P. Banerjee; A. Franco; R.Z. Xiao</p>
+                  <p><a href="https://doi.org/10.1016/j.matpr.2020.10.302" target="_blank" rel="noopener">DOI: 10.1016/j.matpr.2020.10.302</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2021</span>
+                  <h3 class="article-title">Enhancing the electrical properties of NBT ceramics by the addition of small amounts of Yb</h3>
+                  <p class="article-authors">A, Franco Jr</p>
+                  <p><a href="https://doi.org/10.1016/j.jallcom.2021.159845" target="_blank" rel="noopener">DOI: 10.1016/j.jallcom.2021.159845</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2021</span>
+                  <h3 class="article-title">Morphological, magnetic and EPR studies of ZnO nanostructures doped and co-doped with Ni and Sr</h3>
+                  <p class="article-authors">A, Franco Jr</p>
+                  <p><a href="https://doi.org/10.1016/j.ceramint.2021.07.030" target="_blank" rel="noopener">DOI: 10.1016/j.ceramint.2021.07.030</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2021</span>
+                  <h3 class="article-title">On the correlation of the magnetic properties with the structural parameters in Fe-doped europium chromite</h3>
+                  <p class="article-authors">A, Franco Jr</p>
+                  <p><a href="https://doi.org/10.1063/9.0000010" target="_blank" rel="noopener">DOI: 10.1063/9.0000010</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2021</span>
+                  <h3 class="article-title">Raman spectroscopy study of Ga-doped ZnO ceramics: An estimative of the structural disorder degree</h3>
+                  <p class="article-authors">Gabriela Gomes Miranda; Raphael Lucas de Sousa e Silva; Hermínia Veridiana dos Santos Pessoni; A. Franco, Jr.</p>
+                  <p><a href="https://doi.org/10.1016/j.physb.2020.412726" target="_blank" rel="noopener">DOI: 10.1016/j.physb.2020.412726</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2021</span>
+                  <h3 class="article-title">Recent Developments in Nanomaterials Based Adsorbents for Water Purification Techniques</h3>
+                  <p class="article-authors">Maheshwara Reddy; Bhargavi Koneru; A. Franco; Dinesh Rangappa; P. Banerjee; J Fendler; M Huerta-Fontela; M Galceran; F Ventura; X Qu; J Brame; Q Li; P Alvarez; Y Musico; C Santos; M Dalida; D Rodrigues; V Gupta; I Ali; T Saleh; A Nayak; S Agarwal; H Hu; Q Jin; P Kavan; K Defriend; M Wiesner; A Barron; B Stanton; J Harris; M Miller; M Bruening; Ultrathin; D Bhattacharyya; J Hestekin; P Brushaber; L Cullen; L Bachas; S Sikdar; D Dotzauer; J Dai; L Sun; M Bruening; M Arkas; L Eleades; C Paleos; D Tsiourvas; H Zhang; X Quan; S Chen; H Zhao; Y Zhao; C Athanasekou; G Romanos; F Katsaros; K Kordatos; V Likodimos; P Falaras; R Allabashi; M Arkas; G Hrmann; D Tsiourvas; W Song; R Justice; C Jones; V Grassian; S Larsen; Synthesis; C Orha; A Pop; C Lazau; I Grozescu; V Tiponut; F Manea; X Peng; Y Li; Z Luan; Z Di; H Wang; B Tian; Z Jia; Z.-C Di; J Ding; X.-J Peng; Y.-H Li; Z.-K Luan; J Liang; K Salipira; B Mamba; R Krause; T Malefetse; S Durbach; R Khaydarov; R Khaydarov; O Gapurova; G Poinern; D Parsonage; T Issa; M Ghosh; E Paling</p>
+                  <p><a href="https://doi.org/10.33263/briac125.58215835" target="_blank" rel="noopener">DOI: 10.33263/briac125.58215835</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2021</span>
+                  <h3 class="article-title">Structural, optical and magnetic properties of CoAl Fe2-O4 nanoparticles prepared by combustion reaction method</h3>
+                  <p class="article-authors">A, Franco Jr</p>
+                  <p><a href="https://doi.org/10.1016/j.jallcom.2021.161398" target="_blank" rel="noopener">DOI: 10.1016/j.jallcom.2021.161398</a></p>
+                </article>
+              
+            </div>
+          
+        </div>
+
+        <div id="estatisticas" class="tab-panel">
+          <h2>Estatísticas do docente</h2>
+          <div class="kpi-grid">
+            <div class="kpi"><div class="kpi-value">40</div><div class="kpi-label">Artigos entre 2021-2026</div></div>
+            <div class="kpi"><div class="kpi-value">7</div><div class="kpi-label">Total de alunos</div></div>
+            <div class="kpi"><div class="kpi-value">6</div><div class="kpi-label">Mestrado</div></div>
+            <div class="kpi"><div class="kpi-value">1</div><div class="kpi-label">Doutorado</div></div>
+          </div>
+
+          <h3>Artigos por ano</h3>
+          
+            <div class="bar-chart" role="img" aria-label="Gráfico de barras com o número de artigos por ano">
+              
+                <div class="chart-row">
+                  <div class="chart-year">2026</div>
+                  <div class="chart-track" title="3 artigos em 2026">
+                    <div class="chart-bar" style="width: 37.5%"></div>
+                  </div>
+                  <div class="chart-value">3</div>
+                </div>
+              
+                <div class="chart-row">
+                  <div class="chart-year">2025</div>
+                  <div class="chart-track" title="7 artigos em 2025">
+                    <div class="chart-bar" style="width: 87.5%"></div>
+                  </div>
+                  <div class="chart-value">7</div>
+                </div>
+              
+                <div class="chart-row">
+                  <div class="chart-year">2024</div>
+                  <div class="chart-track" title="6 artigos em 2024">
+                    <div class="chart-bar" style="width: 75.0%"></div>
+                  </div>
+                  <div class="chart-value">6</div>
+                </div>
+              
+                <div class="chart-row">
+                  <div class="chart-year">2023</div>
+                  <div class="chart-track" title="8 artigos em 2023">
+                    <div class="chart-bar" style="width: 100.0%"></div>
+                  </div>
+                  <div class="chart-value">8</div>
+                </div>
+              
+                <div class="chart-row">
+                  <div class="chart-year">2022</div>
+                  <div class="chart-track" title="8 artigos em 2022">
+                    <div class="chart-bar" style="width: 100.0%"></div>
+                  </div>
+                  <div class="chart-value">8</div>
+                </div>
+              
+                <div class="chart-row">
+                  <div class="chart-year">2021</div>
+                  <div class="chart-track" title="8 artigos em 2021">
+                    <div class="chart-bar" style="width: 100.0%"></div>
+                  </div>
+                  <div class="chart-value">8</div>
+                </div>
+              
+              <p class="chart-note">Barras proporcionais ao maior valor anual do período.</p>
+            </div>
+          
+        </div>
+      </section>
+    </section>
+
+    <p class="footer">Página gerada automaticamente. Data da última atualização: 10/06/2026</p>
+  </main>
+
+  <script>
+    document.querySelectorAll('.tab-button').forEach(button => {
+      button.addEventListener('click', () => {
+        const tab = button.dataset.tab;
+        document.querySelectorAll('.tab-button').forEach(b => b.classList.remove('active'));
+        document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+        button.classList.add('active');
+        document.getElementById(tab).classList.add('active');
+      });
+    });
+  </script>
+</body>
+</html>

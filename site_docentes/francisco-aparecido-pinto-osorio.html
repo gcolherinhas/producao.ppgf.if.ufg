@@ -1,0 +1,506 @@
+
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Francisco Aparecido Pinto Osório</title>
+  <style>
+
+:root {
+  --ufg-blue: #003f73;
+  --ufg-dark-blue: #002b4f;
+  --ufg-green: #00843d;
+  --ufg-gold: #f2c300;
+  --bg: #f5f7fb;
+  --card: #ffffff;
+  --text: #1f2937;
+  --muted: #6b7280;
+  --border: #d7dee8;
+  --shadow: 0 12px 28px rgba(15, 23, 42, 0.10);
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--text);
+  background: var(--bg);
+  line-height: 1.55;
+}
+a { color: var(--ufg-blue); text-decoration: none; }
+a:hover { text-decoration: underline; }
+.site-header {
+  background: linear-gradient(135deg, var(--ufg-blue), var(--ufg-dark-blue));
+  color: #fff;
+  border-bottom: 6px solid var(--ufg-green);
+}
+.site-header .bar {
+  height: 8px;
+  background: linear-gradient(90deg, var(--ufg-green), var(--ufg-gold), var(--ufg-blue));
+}
+.header-inner {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 24px 22px 28px 22px;
+}
+.ufg-line {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 18px;
+  font-size: 0.98rem;
+  opacity: 0.96;
+}
+.ufg-line strong { font-weight: 700; }
+.header-title {
+  margin: 0;
+  font-size: clamp(1.75rem, 3vw, 2.7rem);
+  letter-spacing: -0.03em;
+}
+.header-subtitle {
+  margin: 8px 0 0 0;
+  color: rgba(255,255,255,0.86);
+  font-size: 1rem;
+}
+.container {
+  max-width: 1180px;
+  margin: 28px auto 48px auto;
+  padding: 0 22px;
+}
+.layout {
+  display: grid;
+  grid-template-columns: 290px 1fr;
+  gap: 24px;
+  align-items: start;
+}
+.profile-card, .content-card, .index-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  box-shadow: var(--shadow);
+}
+.profile-card {
+  padding: 18px;
+  position: sticky;
+  top: 18px;
+}
+.profile-photo {
+  display: block;
+  width: 85%;
+  max-height: 280px;
+  margin: 0 auto;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  background: #e5e7eb;
+}
+.placeholder-photo {
+  display: grid;
+  place-items: center;
+  width: 85%;
+  height: 221px;
+  margin: 0 auto;
+  border-radius: 14px;
+  background: #e5e7eb;
+  color: var(--muted);
+  text-align: center;
+  padding: 18px;
+}
+.profile-card h2 {
+  margin: 16px 0 8px 0;
+  font-size: 1.22rem;
+}
+.meta-list { margin: 14px 0 0 0; padding: 0; list-style: none; }
+.meta-list li { padding: 8px 0; border-top: 1px solid #eef2f7; }
+.meta-label { color: var(--muted); display: inline; font-size: 0.93rem; font-weight: 700; margin-right: 4px; }
+.profile-link { display: inline-block; font-weight: 700; }
+.profile-details {
+  border-top: 1px solid #eef2f7;
+  margin-top: 14px;
+  padding-top: 6px;
+}
+.profile-details li { font-size: 0.93rem; }
+.missing-info { color: var(--muted); font-style: italic; }
+
+.content-card { padding: 20px; min-height: 520px; }
+.tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 12px;
+}
+.tab-button {
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 10px 16px;
+  background: #fff;
+  color: var(--ufg-blue);
+  cursor: pointer;
+  font-weight: 700;
+}
+.tab-button.active {
+  background: var(--ufg-blue);
+  border-color: var(--ufg-blue);
+  color: #fff;
+}
+.tab-panel { display: none; }
+.tab-panel.active { display: block; }
+.article-list { display: grid; gap: 14px; }
+.article-item {
+  padding: 16px;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: #fbfdff;
+}
+.article-year {
+  display: inline-block;
+  padding: 3px 8px;
+  border-radius: 999px;
+  background: #e6f0fa;
+  color: var(--ufg-blue);
+  font-weight: 700;
+  font-size: 0.84rem;
+  margin-bottom: 7px;
+}
+.article-title { margin: 0 0 8px 0; font-size: 1.02rem; }
+.article-authors { color: var(--muted); font-size: 0.92rem; margin: 0; }
+.kpi-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(120px, 1fr));
+  gap: 12px;
+  margin-bottom: 20px;
+}
+.kpi {
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 16px;
+  background: #fbfdff;
+}
+.kpi-value { font-size: 2rem; font-weight: 800; color: var(--ufg-blue); line-height: 1; }
+.kpi-label { color: var(--muted); font-size: 0.86rem; margin-top: 6px; }
+.bar-chart {
+  margin-top: 14px;
+  padding: 18px;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  background: #fbfdff;
+}
+.chart-row {
+  display: grid;
+  grid-template-columns: 64px 1fr 44px;
+  gap: 12px;
+  align-items: center;
+  min-height: 34px;
+  margin: 10px 0;
+}
+.chart-year { font-weight: 700; color: var(--ufg-blue); }
+.chart-track {
+  width: 100%;
+  height: 22px;
+  background: #e5e7eb;
+  border-radius: 999px;
+  overflow: hidden;
+  border: 1px solid #d8e0ea;
+}
+.chart-bar {
+  height: 100%;
+  background: linear-gradient(90deg, var(--ufg-blue), var(--ufg-green));
+  border-radius: 999px;
+  min-width: 0;
+}
+.chart-value {
+  color: var(--text);
+  font-weight: 800;
+  text-align: right;
+  font-size: 0.95rem;
+}
+.chart-note { color: var(--muted); font-size: 0.9rem; margin: 8px 0 0 0; }
+.footer {
+  margin-top: 32px;
+  color: var(--muted);
+  font-size: 0.9rem;
+  text-align: center;
+}
+.index-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  gap: 16px;
+}
+.index-card { padding: 16px; }
+.index-card img { width: 100%; height: 180px; object-fit: cover; border-radius: 12px; border: 1px solid var(--border); }
+.index-card h2 { font-size: 1.05rem; margin: 12px 0 6px 0; }
+.back-link { margin-bottom: 16px; display: inline-block; font-weight: 700; }
+@media (max-width: 820px) {
+  .layout { grid-template-columns: 1fr; }
+  .profile-card { position: static; }
+  .kpi-grid { grid-template-columns: repeat(2, minmax(120px, 1fr)); }
+}
+
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="bar"></div>
+    <div class="header-inner">
+      <div class="ufg-line">
+        <span><strong>UNIVERSIDADE FEDERAL DE GOIÁS - UFG</strong><br>INSTITUTO DE FÍSICA · PROGRAMA DE PÓS-GRADUAÇÃO EM FÍSICA</span>
+        <span>PPGF/UFG</span>
+      </div>
+      <h1 class="header-title">Francisco Aparecido Pinto Osório</h1>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="layout">
+      <aside class="profile-card">
+        
+          <img class="profile-photo" src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEASABIAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCABsAFEDAREAAhEBAxEB/8QAHAAAAQUBAQEAAAAAAAAAAAAABQIDBAYHAQgA/8QAOxAAAgAEBAQCCAIJBQAAAAAAAQIAAwQRBRIhMQYiQVETYRQyQlJicYGRBxUjM1OSobHB0fAkQ3KCk//EABkBAAIDAQAAAAAAAAAAAAAAAAMEAQIFAP/EACQRAAICAgMBAAICAwAAAAAAAAACAQMSIgQREzIzQgUUMWFx/9oADAMBAAIRAxEAPwDIipR3VxZlNmvvfrCI+N5lE1B3YafWOIH9c0RMjtariOyldzYBjFeyGVSYKCpYXVOX/jeLdEQxw0MxdZqqttb+HHdFWcjTaVC+dVRzvdbrEsVWWOsqXyjPdR3/ALwPoYnIRLZpTHKW119UGI1JiGEG5cmY2uXTSJI2E5n/AGqfYxxX0YhvMyLkQweDPG5TBKhHc6Kb3/zzjuiCw4FhdTivhN4Cy0Ivc72/vA2xGa4ZlNEwjhSVJlXZbm21t4XazEfroX9gs+BSpaaDaKZBvJVBdRhQb2eX+cRmdNSgLE+Gzkz04sw1sNIYSxhWylQFKw6omF9MzMDr107wTrIXl8AcyvfWU1/vaAyjDSXZDLafrEbyuI7otkomw7R3RbKAU1rQ2piBfhLBji1Qal8vo8kgHsWOoHn3izak1xkxseAYYktRlRQojPsfY3KKsS101KoEBmRyIH5lKMugURx3RBn0oF9NREEzAMqJFybixHWLRIsygCpp0p57FRqd7bmGqHxEOTUUPiaiFLWCdKzBZtyR2btBLJYHRAOQDwyc/X3oD2GxOf8Adv34r2T5MVqrbLLt94fMk1bgChEnBKNANX/SE9ydYBcw3x0NRwemGTbWEZNuuA/KlWWKhOx6Wi79Yt0DaSNVSw3ziC0MBq6lCkvfSIIkqmOKVYdSDBUAWRqVLi6WZmG+PMXN4bAkeR06Q7OymZ1tqU1JyBAoXKAejQOYCebZCvGl95n3ioxg5WK0kWhuDGNv4GZXoqP3fBQj5ZbQtbA/xZNHwpWmWtpaE5g06p1DayX7RAXKBQk2F3Koo3Ja0XhQbWAfFMWoJHqVCTm6iW14v5sVi9QeuJSZ8zKTysL3It/GKyhf1UA8QLZEmjmQncRFf0BedSu8QGXXYZWSaQK7CVlYj1QwN7X22h3tcTOrVmYzFpLBtuu4aBdZKGzxbYTkfs38I7AY9VAlYOQEQ3BiGnfh/WzW4aT0Zr1Ms5R15bkXgTjPF+i0fnVfRI2WtZGl5S/Lcrc2F7bXvYQOFyGpsZS5cPcTTainlNVzkcF8qslyW76eUVasKlmQviefMqal5Mp5iSZaKxUDVy3QX6C2sDUM0AGmmvgc+hrfy9ayU75jLVSxuGHKSBYHUnXTlhxMRG6tlC1d4tZiE+qppUuVKM24lbjK29/MQvZiEprYCcT0SME9InPUFTyp6stfko/rC6zsNymp9hviVJM9JSmjlMA4FgOwuB2EGlinFjBmMhxIKKl8nq53y/vQRZxUFZOVhEsPhivbF+gBXKcvww4Y0wX/APCjFJ86rNJOZWWUgVFCqvL52GuveA2qMUfRq0/CpdpxZF9HnqBMUre9tjfe/nC8PiaPmNzpIppmHSpI8OTLe6S16D576+cc9gVatgg6moxJJznmAy5ehWBdjVtOwWkUSUruVTMjjcnUX/nEw4KxRbyUQApr1iGY5KyqY2S9Ui+814HH0cwHp6qbQUmKIHtLcXK/SDg11YzOYAQb5r/eOhwMpsN5F/wCLZhcCtzxmBEPGD2HfwzLrxJnlhiiy2zkdASB/OK2fISjVj0Zgyiqp0Z3Y9hGcxu1LkpzEFkLjcoz9KcJlD/F1vExGQXtV/6NVglT5+alDZBopGlz1iJUJ6Z/QfomaVTyhNKvpqfOO7KtA3iZHhEjTtApLKUrEm/10o9L6RygHkqnFOMPhzPIlIj+lLlYt7PW4hiIF3nUoTziGKmCeagYZvoa8T/MoivSl83Acy/NpDpj9DeH4lV4JXLUUk1kY+sBs63F1Pzi30REno/hDFxVYGk+l5g6gr9f7Qhamxuce7U7W4hIlYiErHzO1iqbxywXWcmCsvFqOa2WRJdntyqLDT6x0qFxUTS4sJsy1LKnWPddB9YrKFZhlClW59EzvoO0BaAkMUzEZgFRnB22gqKL2SU7iCmNes+YBzyMsxT5dVhiFF3nUpuUnVcpU+cdMbYlFbFTnhmI8mJ9lA2YE3vpDUGVGwziEktTI69Br945W2Lwpcfws4sTC535fVvllsbyiW013U9orauQbj24fRr1KJGIVKuArWHKd9IRfU16ZyDlJQkuVmU0vJ71tfpFcmGe2HKzLSryrlissSCcVxNEpwjOuY/w+cci5C9liqAGEyolvPIyyxot4YiMRXoFSn8OawYXSY2Ucu3TWGKPrEm+vGvIrnEvDU6lnTaihGeQeYyx6yD+ogl1DZZCHH5K/LFUzN2H2MB82HPasi4dQ1NXNb0VGcrueg+Z2g3RlQhdsN4YcU6HECvNbkQAn7xP9dvon3VdSZIwDBqJnnehS2cD1nu32B0B+kHWrUFLZsF+Fa9sOrRLnFvR5i8pOvhkdL9jC93HyU0aeR5miysco5eQeKuu+sZ/k2OJrryVYB8QY+J2aTS/pJns22WOijYE/IB2EYRNq5on1eZhe9vP5QT4Fumdh/HJsqYHpKZvV9Zl973YJXUxeXVQNh0kzKhmbaVy/OG6qtgHJ5KsuJJqg2a5ZsyC1vKHJUx1Vchnk7S//IQPzD9KBeHsJp6JDJp8z08ttWc3aY3cxWqrYrdZgobYlm+I7Hy8oY7y1Ep22IuJZWRJfLY3bzJETY2KhONsxEe8tPEUWtoR5fOAN8jf0weopNNUKizxY20aM5h5ZxDFNh0hfVVSBreByzBMciPjOLCRL9Fo9JjCzTB7IPbzgi1N+xabF/UBSicwkShdvV75T1JhmuMhe98VCU+UlPKRFLZ+sP6qpk5ZsMmd/thMwG7xRGyJeo7f4Wg/QHyYYlyFp5Cyx7I28+sRhip1lnowpUKLnbbe/lELBWZybEETmaoqB0Ynk+FRC0tk2JrKi01f7CU5UmchHMBuNvMQRo1EVbFsidhErkKN7Go+R7RlXRsbFTK6nKqumkZJb5FHsjUtboYZpq/Ypey/JBk002qmEJ+sN8z9BBYVn1UDNy0qEaeTLpl/R7j2up+cOoiqZV1zXMRJ2czHmSzm10ijrkErdVURnyS9eQdSdoHhiEh8iF+cUf7WJ7YL5sPTJriflvcX6xMNIsywLxGY3gS9d94Lb8leN+YawwAzZpO+g+kL0jf8h9KS5vJzKACWCkdLQQS/YL4Mi+LOW2ijTyhHlmrxvoiGUkoOUFmy79db3hvj/jE+U0+wigXw6S6swJJvrvrBqv8AIC75G6ia4kkg6neLg1+RPRB0tEEEbF2P5e+u41itnyE4/wCYCehSPcgBvH//2Q==" alt="Foto de Francisco Aparecido Pinto Osório">
+        
+        <h2>Francisco Aparecido Pinto Osório</h2>
+        <ul class="meta-list profile-details">
+          
+            <li><a class="profile-link" href="http://lattes.cnpq.br/1354763162575957" target="_blank" rel="noopener">Curriculum Lattes</a></li>
+          
+          <li><span class="meta-label">Apto(a) a orientar:</span> Física Teórica</li>
+          <li><span class="meta-label">Sala:</span> 238 (IF-2)</li>
+          <li><span class="meta-label">E-mail:</span> <a href="mailto:francisco_osorio@ufg.br">francisco_osorio@ufg.br</a></li>
+          <li><span class="meta-label">Telefone:</span> (62) 3521-2322</li>
+          <li><span class="meta-label">Pesquisa</span> &#34;Física de Semicondutores&#34;</li>
+          
+          <li><span class="meta-label">Formação:</span> Doutorado em Física - USP - 1992</li>
+          
+            <li><span class="meta-label">ORCID:</span> <a href="https://orcid.org/0000-0003-3009-9593" target="_blank" rel="noopener">0000-0003-3009-9593</a></li>
+          
+          <li><span class="meta-label">Fonte do perfil:</span> <a href="https://posgraduacao.if.ufg.br/p/41256-docentes-ppgf-instituto-de-fisica-ufg" target="_blank" rel="noopener">Página do PPGF/UFG</a></li>
+        </ul>
+      </aside>
+
+      <section class="content-card">
+        <nav class="tabs" aria-label="Seções da página">
+          <button class="tab-button active" data-tab="artigos">Artigos publicados</button>
+          <button class="tab-button" data-tab="estatisticas">Estatísticas do docente</button>
+        </nav>
+
+        <div id="artigos" class="tab-panel active">
+          <h2>Artigos publicados</h2>
+          
+            <div class="article-list">
+              
+                <article class="article-item">
+                  <span class="article-year">2025</span>
+                  <h3 class="article-title">Experimental and theoretical investigation of a novel dihydropyridine derivative: Synthesis, photophysical characterization, and enhanced nonlinear optical properties in solvent media</h3>
+                  <p class="article-authors">Sujoy Karmakar; Clodoaldo Valverde; Francisco A. P. Osório; Subham Dey; Subir Podder; Abhik Chatterjee</p>
+                  <p><a href="https://doi.org/10.1016/j.molstruc.2025.143444" target="_blank" rel="noopener">DOI: 10.1016/j.molstruc.2025.143444</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2025</span>
+                  <h3 class="article-title">Exploring the NLO Properties of Brominated Dimethoxybenzaldehydes: From Synthesis to Molecular Modeling</h3>
+                  <p class="article-authors">Clodoaldo Valverde; Igor D. Borges; Marco A. Prazeres; Antônio S. N. Aguiar; Angélica Navarrete; Gerardo Aguirre; Francisco A. P. Osório; Hamilton B. Napolitano</p>
+                  <p><a href="https://doi.org/10.1021/acs.jpca.5c04332" target="_blank" rel="noopener">DOI: 10.1021/acs.jpca.5c04332</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2025</span>
+                  <h3 class="article-title">Mechanoluminescence and nonlinear optical properties of a self-assembled piperazine-based supramolecular system: structural insights and computational analysis</h3>
+                  <p class="article-authors">Krishna Murthy Potla; Suneetha Vankayalapati; Francisco A. P. Osório; Clodoaldo Valverde; Raja Murugesan; Zainab M. Almarhoon; Mahboob Alam; Mohammad Shahidul Islam</p>
+                  <p><a href="https://doi.org/10.1039/d5nj00633c" target="_blank" rel="noopener">DOI: 10.1039/d5nj00633c</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2024</span>
+                  <h3 class="article-title">Exploring the nonlinear optical properties of hypoxanthinium salts: a structural and computational analysis</h3>
+                  <p class="article-authors">Hamza Athmani; Amani Direm; Francisco A. P. Osório; Clodoaldo Valverde</p>
+                  <p><a href="https://doi.org/10.1007/s00894-024-06077-x" target="_blank" rel="noopener">DOI: 10.1007/s00894-024-06077-x</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2024</span>
+                  <h3 class="article-title">Investigating Solvent-Induced Changes in Structure and Nonlinear Optical Behavior of Thiazine Derivatives</h3>
+                  <p class="article-authors">Clodoaldo Valverde; André da Silva; Krishna Murthy Potla; Heibbe de Oliveira; Francisco A. P. Osório; B. Baseia</p>
+                  <p><a href="https://doi.org/10.21577/0103-5053.20240014" target="_blank" rel="noopener">DOI: 10.21577/0103-5053.20240014</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2024</span>
+                  <h3 class="article-title">Investigation of the linear and nonlinear optical properties in the crystalline phase of a pyrimidine derivative—a potential nonlinear optical material: analysis of its structure, reactivity, and docking studies</h3>
+                  <p class="article-authors">Krishna Murthy Potla; Yahya I. Asiri; N. Usha Rani; Francisco A. P. Osório; Clodoaldo Valverde; Murugesan Raja; Sanja J. Armaković; Stevan Armaković</p>
+                  <p><a href="https://doi.org/10.1039/d4ra05681g" target="_blank" rel="noopener">DOI: 10.1039/d4ra05681g</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2024</span>
+                  <h3 class="article-title">Multifaceted Study of a Y-Shaped Pyrimidine Compound: Assessing Structural Properties, Docking Interactions, and Third-Order Nonlinear Optics</h3>
+                  <p class="article-authors">Krishna Murthy Potla; Poojith Nuthalapati; J. MOHAN; Francisco A. P. Osório; Clodoaldo Valverde; Suneetha Vankayalapati; Suchetan Parameshwar Adimule; Sanja J. Armaković; Stevan Armaković; Y. Sheena Mary</p>
+                  <p><a href="https://doi.org/10.1021/acsomega.3c04380" target="_blank" rel="noopener">DOI: 10.1021/acsomega.3c04380</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2024</span>
+                  <h3 class="article-title">Study of Nonlinear Optical Properties of a Self-Healing Organic Crystal</h3>
+                  <p class="article-authors">Clodoaldo Valverde; Francisco A. P. Osório</p>
+                  <p><a href="https://doi.org/10.1021/acsomega.4c06466" target="_blank" rel="noopener">DOI: 10.1021/acsomega.4c06466</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2024</span>
+                  <h3 class="article-title">Understanding Nonlinear Optical Phenomena in N-Pyrimidinyl Stilbazolium Crystals via a Self-Consistent Electrostatic Embedding – DFT Approach</h3>
+                  <p class="article-authors">Renato Medeiros; Leandro R. Franco; Francisco A. P. Osório; Clodoaldo Valverde; Marcos A. Castro; Tertius L. Fonseca</p>
+                  <p><a href="https://doi.org/10.1021/acsomega.4c04215" target="_blank" rel="noopener">DOI: 10.1021/acsomega.4c04215</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2023</span>
+                  <h3 class="article-title">A comparative study of structural and spectroscopic properties of three structurally similar mechanically bending organic single crystals – 2-Amino-3-nitro-5-halo (halo = Cl, Br, or I) pyridine</h3>
+                  <p class="article-authors">Krishna Murthy Potla; Suchetan Parameshwar Adimule; Poojith Nuthalapati; Francisco A. P. Osório; Clodoaldo Valverde; Y. Sheena Mary; Suneetha Vankayalapati</p>
+                  <p><a href="https://doi.org/10.1016/j.saa.2023.123093" target="_blank" rel="noopener">DOI: 10.1016/j.saa.2023.123093</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2023</span>
+                  <h3 class="article-title">Theoretical investigation on the linear and nonlinear optical properties of DAPSH crystal</h3>
+                  <p class="article-authors">Clodoaldo Valverde; Renato Medeiros; Leandro R. Franco; Francisco A. P. Osório; Marcos A. Castro; Tertius L. Fonseca</p>
+                  <p><a href="https://doi.org/10.1038/s41598-023-35442-8" target="_blank" rel="noopener">DOI: 10.1038/s41598-023-35442-8</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2022</span>
+                  <h3 class="article-title">A first principles study of nonlinear optical properties of a quinoline derivative</h3>
+                  <p class="article-authors">Renato Medeiros; Clodoaldo Valverde; Md. Serajul Haque Faizi; Asif Jamal; Francisco A. P. Osório</p>
+                  <p><a href="https://doi.org/10.1002/qua.27066" target="_blank" rel="noopener">DOI: 10.1002/qua.27066</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2022</span>
+                  <h3 class="article-title">Bromine Substitution Effect on Structure, Reactivity, and Linear and Third-Order Nonlinear Optical Properties of 2,3-Dimethoxybenzaldehyde</h3>
+                  <p class="article-authors">Antônio S. N. Aguiar; Viviane Dias dos Santos; Igor D. Borges; Angélica Navarrete; Gerardo Aguirre; Clodoaldo Valverde; Ademir J. Camargo; Solemar S. Oliveira; Francisco A. P. Osório; Tertius L. Fonseca; Hamilton B. Napolitano</p>
+                  <p><a href="https://doi.org/10.1021/acs.jpca.2c04658" target="_blank" rel="noopener">DOI: 10.1021/acs.jpca.2c04658</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2022</span>
+                  <h3 class="article-title">Molecular modeling and nonlinear optical properties of new isostructural halogenated dihydroquinolinones</h3>
+                  <p class="article-authors">Lóide O. Sallum; Clodoaldo Valverde; Igor L. Andrade; Giulio D. C. D’Oliveira; Caridad N. Pérez; Ademir J. Camargo; Francisco A. P. Osório; Tertius L. Fonseca; Hamilton B. Napolitano</p>
+                  <p><a href="https://doi.org/10.1039/d2nj00501h" target="_blank" rel="noopener">DOI: 10.1039/d2nj00501h</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2022</span>
+                  <h3 class="article-title">Remarkable Nonlinear Properties of a Novel Quinolidone Derivative: Joint Synthesis and Molecular Modeling</h3>
+                  <p class="article-authors">Clodoaldo Valverde; Rafael S. Vinhal; Luiz F. N. Naves; Jean M. F. Custódio; B. Baseia; Heibbe C. B. de Oliveira; Caridad N. Pérez; Hamilton B. Napolitano; Francisco A. P. Osório</p>
+                  <p><a href="https://doi.org/10.3390/molecules27082379" target="_blank" rel="noopener">DOI: 10.3390/molecules27082379</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2021</span>
+                  <h3 class="article-title">PCM-DFT Investigation on the Linear and Nonlinear Optical Properties of Two Triazole Derivatives in Different Solvents</h3>
+                  <p class="article-authors">Ítalo N. Ribeiro; Fernando Carlos Goncalves Murga; Marcos Vinícius C. S. Rezende; Andreia R. dos Santos; Juliana G. de Morais; Jeziel Rodrigues dos Santos; Ricardo R. Ternavisk; B. Baseia; Francisco A. P. Osório; Clodoaldo Valverde</p>
+                  <p><a href="https://doi.org/10.26713/jamcnp.v8i2.1609" target="_blank" rel="noopener">DOI: 10.26713/jamcnp.v8i2.1609</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2021</span>
+                  <h3 class="article-title">Relating the crystal structure and third-order nonlinear susceptibility of a new Neolignan derivative</h3>
+                  <p class="article-authors">Jean M. F. Custódio; Fernanda S. Fernandes; Wesley F. Vaz; Allen G. Oliver; Clodoaldo Valverde; Francisco A. P. Osório; Guilherme R. Oliveira; Tertius L. Fonseca</p>
+                  <p><a href="https://doi.org/10.1016/j.molstruc.2021.131566" target="_blank" rel="noopener">DOI: 10.1016/j.molstruc.2021.131566</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2021</span>
+                  <h3 class="article-title">Second-order nonlinear optical properties of two chalcone derivatives: insights from sum-over-states</h3>
+                  <p class="article-authors">Jean M. F. Custódio; Giulio D. C. D’Oliveira; Fernando Gotardo; Leandro H. Zucolotto Cocca; Leonardo De Boni; Caridad N. Pérez; Hamilton B. Napolitano; Francisco A. P. Osório; Clodoaldo Valverde</p>
+                  <p><a href="https://doi.org/10.1039/d0cp06469f" target="_blank" rel="noopener">DOI: 10.1039/d0cp06469f</a></p>
+                </article>
+              
+            </div>
+          
+        </div>
+
+        <div id="estatisticas" class="tab-panel">
+          <h2>Estatísticas do docente</h2>
+          <div class="kpi-grid">
+            <div class="kpi"><div class="kpi-value">18</div><div class="kpi-label">Artigos entre 2021-2026</div></div>
+            <div class="kpi"><div class="kpi-value">0</div><div class="kpi-label">Total de alunos</div></div>
+            <div class="kpi"><div class="kpi-value">0</div><div class="kpi-label">Mestrado</div></div>
+            <div class="kpi"><div class="kpi-value">0</div><div class="kpi-label">Doutorado</div></div>
+          </div>
+
+          <h3>Artigos por ano</h3>
+          
+            <div class="bar-chart" role="img" aria-label="Gráfico de barras com o número de artigos por ano">
+              
+                <div class="chart-row">
+                  <div class="chart-year">2026</div>
+                  <div class="chart-track" title="0 artigos em 2026">
+                    <div class="chart-bar" style="width: 0%"></div>
+                  </div>
+                  <div class="chart-value">0</div>
+                </div>
+              
+                <div class="chart-row">
+                  <div class="chart-year">2025</div>
+                  <div class="chart-track" title="3 artigos em 2025">
+                    <div class="chart-bar" style="width: 50.0%"></div>
+                  </div>
+                  <div class="chart-value">3</div>
+                </div>
+              
+                <div class="chart-row">
+                  <div class="chart-year">2024</div>
+                  <div class="chart-track" title="6 artigos em 2024">
+                    <div class="chart-bar" style="width: 100.0%"></div>
+                  </div>
+                  <div class="chart-value">6</div>
+                </div>
+              
+                <div class="chart-row">
+                  <div class="chart-year">2023</div>
+                  <div class="chart-track" title="2 artigos em 2023">
+                    <div class="chart-bar" style="width: 33.3%"></div>
+                  </div>
+                  <div class="chart-value">2</div>
+                </div>
+              
+                <div class="chart-row">
+                  <div class="chart-year">2022</div>
+                  <div class="chart-track" title="4 artigos em 2022">
+                    <div class="chart-bar" style="width: 66.7%"></div>
+                  </div>
+                  <div class="chart-value">4</div>
+                </div>
+              
+                <div class="chart-row">
+                  <div class="chart-year">2021</div>
+                  <div class="chart-track" title="3 artigos em 2021">
+                    <div class="chart-bar" style="width: 50.0%"></div>
+                  </div>
+                  <div class="chart-value">3</div>
+                </div>
+              
+              <p class="chart-note">Barras proporcionais ao maior valor anual do período.</p>
+            </div>
+          
+        </div>
+      </section>
+    </section>
+
+    <p class="footer">Página gerada automaticamente. Data da última atualização: 10/06/2026</p>
+  </main>
+
+  <script>
+    document.querySelectorAll('.tab-button').forEach(button => {
+      button.addEventListener('click', () => {
+        const tab = button.dataset.tab;
+        document.querySelectorAll('.tab-button').forEach(b => b.classList.remove('active'));
+        document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+        button.classList.add('active');
+        document.getElementById(tab).classList.add('active');
+      });
+    });
+  </script>
+</body>
+</html>

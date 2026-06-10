@@ -1,0 +1,494 @@
+
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Leandro Félix de Sousa Bufaiçal</title>
+  <style>
+
+:root {
+  --ufg-blue: #003f73;
+  --ufg-dark-blue: #002b4f;
+  --ufg-green: #00843d;
+  --ufg-gold: #f2c300;
+  --bg: #f5f7fb;
+  --card: #ffffff;
+  --text: #1f2937;
+  --muted: #6b7280;
+  --border: #d7dee8;
+  --shadow: 0 12px 28px rgba(15, 23, 42, 0.10);
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--text);
+  background: var(--bg);
+  line-height: 1.55;
+}
+a { color: var(--ufg-blue); text-decoration: none; }
+a:hover { text-decoration: underline; }
+.site-header {
+  background: linear-gradient(135deg, var(--ufg-blue), var(--ufg-dark-blue));
+  color: #fff;
+  border-bottom: 6px solid var(--ufg-green);
+}
+.site-header .bar {
+  height: 8px;
+  background: linear-gradient(90deg, var(--ufg-green), var(--ufg-gold), var(--ufg-blue));
+}
+.header-inner {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 24px 22px 28px 22px;
+}
+.ufg-line {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 18px;
+  font-size: 0.98rem;
+  opacity: 0.96;
+}
+.ufg-line strong { font-weight: 700; }
+.header-title {
+  margin: 0;
+  font-size: clamp(1.75rem, 3vw, 2.7rem);
+  letter-spacing: -0.03em;
+}
+.header-subtitle {
+  margin: 8px 0 0 0;
+  color: rgba(255,255,255,0.86);
+  font-size: 1rem;
+}
+.container {
+  max-width: 1180px;
+  margin: 28px auto 48px auto;
+  padding: 0 22px;
+}
+.layout {
+  display: grid;
+  grid-template-columns: 290px 1fr;
+  gap: 24px;
+  align-items: start;
+}
+.profile-card, .content-card, .index-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  box-shadow: var(--shadow);
+}
+.profile-card {
+  padding: 18px;
+  position: sticky;
+  top: 18px;
+}
+.profile-photo {
+  display: block;
+  width: 85%;
+  max-height: 280px;
+  margin: 0 auto;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  background: #e5e7eb;
+}
+.placeholder-photo {
+  display: grid;
+  place-items: center;
+  width: 85%;
+  height: 221px;
+  margin: 0 auto;
+  border-radius: 14px;
+  background: #e5e7eb;
+  color: var(--muted);
+  text-align: center;
+  padding: 18px;
+}
+.profile-card h2 {
+  margin: 16px 0 8px 0;
+  font-size: 1.22rem;
+}
+.meta-list { margin: 14px 0 0 0; padding: 0; list-style: none; }
+.meta-list li { padding: 8px 0; border-top: 1px solid #eef2f7; }
+.meta-label { color: var(--muted); display: inline; font-size: 0.93rem; font-weight: 700; margin-right: 4px; }
+.profile-link { display: inline-block; font-weight: 700; }
+.profile-details {
+  border-top: 1px solid #eef2f7;
+  margin-top: 14px;
+  padding-top: 6px;
+}
+.profile-details li { font-size: 0.93rem; }
+.missing-info { color: var(--muted); font-style: italic; }
+
+.content-card { padding: 20px; min-height: 520px; }
+.tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 12px;
+}
+.tab-button {
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 10px 16px;
+  background: #fff;
+  color: var(--ufg-blue);
+  cursor: pointer;
+  font-weight: 700;
+}
+.tab-button.active {
+  background: var(--ufg-blue);
+  border-color: var(--ufg-blue);
+  color: #fff;
+}
+.tab-panel { display: none; }
+.tab-panel.active { display: block; }
+.article-list { display: grid; gap: 14px; }
+.article-item {
+  padding: 16px;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: #fbfdff;
+}
+.article-year {
+  display: inline-block;
+  padding: 3px 8px;
+  border-radius: 999px;
+  background: #e6f0fa;
+  color: var(--ufg-blue);
+  font-weight: 700;
+  font-size: 0.84rem;
+  margin-bottom: 7px;
+}
+.article-title { margin: 0 0 8px 0; font-size: 1.02rem; }
+.article-authors { color: var(--muted); font-size: 0.92rem; margin: 0; }
+.kpi-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(120px, 1fr));
+  gap: 12px;
+  margin-bottom: 20px;
+}
+.kpi {
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 16px;
+  background: #fbfdff;
+}
+.kpi-value { font-size: 2rem; font-weight: 800; color: var(--ufg-blue); line-height: 1; }
+.kpi-label { color: var(--muted); font-size: 0.86rem; margin-top: 6px; }
+.bar-chart {
+  margin-top: 14px;
+  padding: 18px;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  background: #fbfdff;
+}
+.chart-row {
+  display: grid;
+  grid-template-columns: 64px 1fr 44px;
+  gap: 12px;
+  align-items: center;
+  min-height: 34px;
+  margin: 10px 0;
+}
+.chart-year { font-weight: 700; color: var(--ufg-blue); }
+.chart-track {
+  width: 100%;
+  height: 22px;
+  background: #e5e7eb;
+  border-radius: 999px;
+  overflow: hidden;
+  border: 1px solid #d8e0ea;
+}
+.chart-bar {
+  height: 100%;
+  background: linear-gradient(90deg, var(--ufg-blue), var(--ufg-green));
+  border-radius: 999px;
+  min-width: 0;
+}
+.chart-value {
+  color: var(--text);
+  font-weight: 800;
+  text-align: right;
+  font-size: 0.95rem;
+}
+.chart-note { color: var(--muted); font-size: 0.9rem; margin: 8px 0 0 0; }
+.footer {
+  margin-top: 32px;
+  color: var(--muted);
+  font-size: 0.9rem;
+  text-align: center;
+}
+.index-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  gap: 16px;
+}
+.index-card { padding: 16px; }
+.index-card img { width: 100%; height: 180px; object-fit: cover; border-radius: 12px; border: 1px solid var(--border); }
+.index-card h2 { font-size: 1.05rem; margin: 12px 0 6px 0; }
+.back-link { margin-bottom: 16px; display: inline-block; font-weight: 700; }
+@media (max-width: 820px) {
+  .layout { grid-template-columns: 1fr; }
+  .profile-card { position: static; }
+  .kpi-grid { grid-template-columns: repeat(2, minmax(120px, 1fr)); }
+}
+
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="bar"></div>
+    <div class="header-inner">
+      <div class="ufg-line">
+        <span><strong>UNIVERSIDADE FEDERAL DE GOIÁS - UFG</strong><br>INSTITUTO DE FÍSICA · PROGRAMA DE PÓS-GRADUAÇÃO EM FÍSICA</span>
+        <span>PPGF/UFG</span>
+      </div>
+      <h1 class="header-title">Leandro Félix de Sousa Bufaiçal</h1>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="layout">
+      <aside class="profile-card">
+        
+          <img class="profile-photo" src="data:image/jpeg;base64,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" alt="Foto de Leandro Félix de Sousa Bufaiçal">
+        
+        <h2>Leandro Félix de Sousa Bufaiçal</h2>
+        <ul class="meta-list profile-details">
+          
+            <li><a class="profile-link" href="http://lattes.cnpq.br/1392206843733548" target="_blank" rel="noopener">Curriculum Lattes</a></li>
+          
+          <li><span class="meta-label">Apto(a) a orientar:</span> Física Experimental</li>
+          <li><span class="meta-label">Sala:</span> 108 (IF-1)</li>
+          <li><span class="meta-label">E-mail:</span> <a href="mailto:lbufaical@ufg.br">lbufaical@ufg.br</a></li>
+          <li><span class="meta-label">Telefone:</span> (62) 3521-2068</li>
+          <li><span class="meta-label">Pesquisa</span> &#34;Física dos Materiais&#34;</li>
+          
+            <li>Bolsista de Produtividade de CNPq - Nível 2</li>
+          
+          <li><span class="meta-label">Formação:</span> Doutorado em Física - Unicamp - 2010</li>
+          
+            <li><span class="meta-label">ORCID:</span> <a href="https://orcid.org/0000-0001-7304-7334" target="_blank" rel="noopener">0000-0001-7304-7334</a></li>
+          
+          <li><span class="meta-label">Fonte do perfil:</span> <a href="https://posgraduacao.if.ufg.br/p/41256-docentes-ppgf-instituto-de-fisica-ufg" target="_blank" rel="noopener">Página do PPGF/UFG</a></li>
+        </ul>
+      </aside>
+
+      <section class="content-card">
+        <nav class="tabs" aria-label="Seções da página">
+          <button class="tab-button active" data-tab="artigos">Artigos publicados</button>
+          <button class="tab-button" data-tab="estatisticas">Estatísticas do docente</button>
+        </nav>
+
+        <div id="artigos" class="tab-panel active">
+          <h2>Artigos publicados</h2>
+          
+            <div class="article-list">
+              
+                <article class="article-item">
+                  <span class="article-year">2026</span>
+                  <h3 class="article-title">A Novel Sol-Gel Synthesis Strategy of Co-Based Sillenite Composites for Enhanced Electrocatalysis of Water Splitting</h3>
+                  <p class="article-authors">Acioli, Mayara; Bufaical, Leandro; de Oliveira, P. R. A.; de Sena Silva, Yngrid Synara; Liu, Liying; Silva, Ana Luisa; Carvalho, Nakedia M. F.</p>
+                  <p><a href="https://doi.org/10.1021/acsomega.5c09012" target="_blank" rel="noopener">DOI: 10.1021/acsomega.5c09012</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2026</span>
+                  <h3 class="article-title">Controlling Oxygen Vacancies in BiFeO3 Thin Films via Pyrolysis Temperature and O2 Annealing</h3>
+                  <p class="article-authors">Saulo P. Reis; Marco Antonio M. Teixeira; Fernando B. Minussi; Maria Jesus Hortigüela; Gonzalo Otero-Irurueta; Leandro Bufaiçal; Eudes B. Araújo</p>
+                  <p><a href="https://doi.org/10.3390/nano16070395" target="_blank" rel="noopener">DOI: 10.3390/nano16070395</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2025</span>
+                  <h3 class="article-title">Ba-substitution induced evolution of structural and magnetic properties of La2-xBaxCoIrO6 double perovskites</h3>
+                  <p class="article-authors">Vieira, C. A. S.; Santos, B. J.; Duque, J. G.; Bittar, E. M.; Bufaical, L.</p>
+                  <p><a href="https://doi.org/10.1016/j.jmmm.2025.173678" target="_blank" rel="noopener">DOI: 10.1016/j.jmmm.2025.173678</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2025</span>
+                  <h3 class="article-title">Magnetostriction as the origin of the magnetodielectric effect in &lt;mml:math xmlns:mml=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;mml:mrow&gt;&lt;mml:msub&gt;&lt;mml:mi&gt;La&lt;/mml:mi&gt;&lt;mml:mn&gt;2&lt;/mml:mn&gt;&lt;/mml:msub&gt;&lt;mml:msub&gt;&lt;mml:mi&gt;CoMnO&lt;/mml:mi&gt;&lt;mml:mn&gt;6&lt;/mml:mn&gt;&lt;/mml:msub&gt;&lt;/mml:mrow&gt;&lt;/mml:math&gt;</h3>
+                  <p class="article-authors">M. Boldrin; Akbar Bagri; D. Barlettani; Eleanor Teather; Lucas Squillante; M De Souza; Renato B. Pontes; A. G. Silva; Thiago J. A. Mori; Robin Perry; R. Lora‐Serrano; E. Granado; E. M. Bittar; L. S. I. Veiga; L. Bufaiçal</p>
+                  <p><a href="https://doi.org/10.1103/sjr4-6kdp" target="_blank" rel="noopener">DOI: 10.1103/sjr4-6kdp</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2024</span>
+                  <h3 class="article-title">Essential aspects of the spontaneous exchange bias effect</h3>
+                  <p class="article-authors">L. Bufaiçal; E.M. Bittar</p>
+                  <p><a href="https://doi.org/10.1016/j.jmmm.2024.172109" target="_blank" rel="noopener">DOI: 10.1016/j.jmmm.2024.172109</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2024</span>
+                  <h3 class="article-title">Near-room-temperature ferrimagnetism and half-metallicity in disordered Ca1.5La0.5MnRuO6</h3>
+                  <p class="article-authors">A. G. Silva; R. B. Pontes; M. Boldrin; H. V. S. Pessoni; L. S. I. Veiga; J. R. Jesus; H. Fabrelli; A. R. C. Gonzaga; E. M. Bittar; L. Bufaiçal</p>
+                  <p><a href="https://doi.org/10.1103/physrevb.110.144415" target="_blank" rel="noopener">DOI: 10.1103/physrevb.110.144415</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2024</span>
+                  <h3 class="article-title">Tuning the spontaneous exchange bias effect in &lt;mml:math xmlns:mml=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;mml:mrow&gt;&lt;mml:msub&gt;&lt;mml:mi&gt;La&lt;/mml:mi&gt;&lt;mml:mrow&gt;&lt;mml:mn&gt;1.5&lt;/mml:mn&gt;&lt;/mml:mrow&gt;&lt;/mml:msub&gt;&lt;mml:msub&gt;&lt;mml:mi&gt;Sr&lt;/mml:mi&gt;&lt;mml:mrow&gt;&lt;mml:mn&gt;0.5&lt;/mml:mn&gt;&lt;/mml:mrow&gt;&lt;/mml:msub&gt;&lt;mml:msub&gt;&lt;mml:mi&gt;CoMnO&lt;/mml:mi&gt;&lt;mml:mn&gt;6&lt;/mml:mn&gt;&lt;/mml:msub&gt;&lt;/mml:mrow&gt;&lt;/mml:math&gt; with sintering temperature</h3>
+                  <p class="article-authors">C. Macchiutti; J. R. Jesus; F. B. Carneiro; L. Bufaiçal; Ryan A. Klein; Qiang Zhang; Melanie Kirkham; Chris Brown; R. D. dos Reis; Gloria Ortega Pérez; E. M. Bittar</p>
+                  <p><a href="https://doi.org/10.1103/physrevmaterials.8.044408" target="_blank" rel="noopener">DOI: 10.1103/physrevmaterials.8.044408</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2023</span>
+                  <h3 class="article-title">3d and 5d electronic structures and orbital hybridization in Ba- and Ca-doped La2CoIrO6 double perovskites</h3>
+                  <p class="article-authors">J. R. L. Mardegan; L. S. I. Veiga; T. Pohlmann; S. S. Dhesi; S. Francoual; J. R. Jesus; C. Macchiutti; E. M. Bittar; L. Bufaiçal</p>
+                  <p><a href="https://doi.org/10.1103/physrevb.107.214427" target="_blank" rel="noopener">DOI: 10.1103/physrevb.107.214427</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2023</span>
+                  <h3 class="article-title">Structural transitions and spontaneous exchange bias in La2_xBaxCoMnO6 series</h3>
+                  <p class="article-authors">Fabrelli, H.; Silva, A. G.; Boldrin, M.; Bittar, E. M.; Bufaical, L.</p>
+                  <p><a href="https://doi.org/10.1016/j.jssc.2023.123944" target="_blank" rel="noopener">DOI: 10.1016/j.jssc.2023.123944</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2023</span>
+                  <h3 class="article-title">The Co2+-Ir5+orbital hybridization in LaCaCoIrO6 double perovskite</h3>
+                  <p class="article-authors">Bufaical, L.; Veiga, L. S. I.; Mardegan, J. R. L.; Pohlmann, T.; Francoual, S.; Dhesi, S. S.; Fontes, M. B.; Bittar, E. M.</p>
+                  <p><a href="https://doi.org/10.1016/j.jmmm.2023.171276" target="_blank" rel="noopener">DOI: 10.1016/j.jmmm.2023.171276</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2022</span>
+                  <h3 class="article-title">A stretched exponential-based approach for the magnetic properties of spin glasses</h3>
+                  <p class="article-authors">L. Bufaiçal</p>
+                  <p><a href="https://doi.org/10.1016/j.jmmm.2022.169780" target="_blank" rel="noopener">DOI: 10.1016/j.jmmm.2022.169780</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2022</span>
+                  <h3 class="article-title">Influence of the gas atmosphere on the obtention of cobalt and iron based nanocomposites and core/shell nanoparticles by calcination in the presence of chitosan</h3>
+                  <p class="article-authors">da Silva, R. B.; Carrico, A. S.; Silva Filho, E. D.; da Silva, Fausthon F.; Bufaical, L.; Soares, J. M.; da Costa, J. A. P.; de Araujo, J. H.; Morales, M. A.</p>
+                  <p><a href="https://doi.org/10.1016/j.jssc.2022.123225" target="_blank" rel="noopener">DOI: 10.1016/j.jssc.2022.123225</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2022</span>
+                  <h3 class="article-title">Structural, electronic and magnetic properties of La1.5Ca0.5(Co0.5Fe0.5)IrO6 double perovskite</h3>
+                  <p class="article-authors">L. Bufaiçal; M.A.V. Heringer; J.R. Jesus; A. Caytuero; C. Macchiutti; E.M. Bittar; E. Baggio-Saitovitch</p>
+                  <p><a href="https://doi.org/10.1016/j.jmmm.2022.169408" target="_blank" rel="noopener">DOI: 10.1016/j.jmmm.2022.169408</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2022</span>
+                  <h3 class="article-title">The spontaneous exchange bias effect in La2−xCaxCoMnO6 series</h3>
+                  <p class="article-authors">J.R. Jesus; L. Bufaiçal; E.M. Bittar</p>
+                  <p><a href="https://doi.org/10.1016/j.jmmm.2022.169402" target="_blank" rel="noopener">DOI: 10.1016/j.jmmm.2022.169402</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2021</span>
+                  <h3 class="article-title">Absence of zero-field-cooled exchange bias effect in single crystalline La2−xAx CoMnO6 (A=Ca,Sr) compounds</h3>
+                  <p class="article-authors">C. Macchiutti; J. R. Jesus; F. B. Carneiro; L. Bufaiçal; M. Ciomaga Hatnean; G. Balakrishnan; E. M. Bittar</p>
+                  <p><a href="https://doi.org/10.1103/physrevmaterials.5.094402" target="_blank" rel="noopener">DOI: 10.1103/physrevmaterials.5.094402</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2021</span>
+                  <h3 class="article-title">Griffiths phase and spontaneous exchange bias in La1.5Sr0.5CoMn0.5Fe0.5O6</h3>
+                  <p class="article-authors">A G Silva; K L Salcedo Rodríguez; C P Contreras Medrano; G S G Lourenço; M Boldrin; E Baggio-Saitovitch; L Bufaiçal</p>
+                  <p><a href="https://doi.org/10.1088/1361-648x/abc595" target="_blank" rel="noopener">DOI: 10.1088/1361-648x/abc595</a></p>
+                </article>
+              
+            </div>
+          
+        </div>
+
+        <div id="estatisticas" class="tab-panel">
+          <h2>Estatísticas do docente</h2>
+          <div class="kpi-grid">
+            <div class="kpi"><div class="kpi-value">16</div><div class="kpi-label">Artigos entre 2021-2026</div></div>
+            <div class="kpi"><div class="kpi-value">3</div><div class="kpi-label">Total de alunos</div></div>
+            <div class="kpi"><div class="kpi-value">1</div><div class="kpi-label">Mestrado</div></div>
+            <div class="kpi"><div class="kpi-value">2</div><div class="kpi-label">Doutorado</div></div>
+          </div>
+
+          <h3>Artigos por ano</h3>
+          
+            <div class="bar-chart" role="img" aria-label="Gráfico de barras com o número de artigos por ano">
+              
+                <div class="chart-row">
+                  <div class="chart-year">2026</div>
+                  <div class="chart-track" title="2 artigos em 2026">
+                    <div class="chart-bar" style="width: 50.0%"></div>
+                  </div>
+                  <div class="chart-value">2</div>
+                </div>
+              
+                <div class="chart-row">
+                  <div class="chart-year">2025</div>
+                  <div class="chart-track" title="2 artigos em 2025">
+                    <div class="chart-bar" style="width: 50.0%"></div>
+                  </div>
+                  <div class="chart-value">2</div>
+                </div>
+              
+                <div class="chart-row">
+                  <div class="chart-year">2024</div>
+                  <div class="chart-track" title="3 artigos em 2024">
+                    <div class="chart-bar" style="width: 75.0%"></div>
+                  </div>
+                  <div class="chart-value">3</div>
+                </div>
+              
+                <div class="chart-row">
+                  <div class="chart-year">2023</div>
+                  <div class="chart-track" title="3 artigos em 2023">
+                    <div class="chart-bar" style="width: 75.0%"></div>
+                  </div>
+                  <div class="chart-value">3</div>
+                </div>
+              
+                <div class="chart-row">
+                  <div class="chart-year">2022</div>
+                  <div class="chart-track" title="4 artigos em 2022">
+                    <div class="chart-bar" style="width: 100.0%"></div>
+                  </div>
+                  <div class="chart-value">4</div>
+                </div>
+              
+                <div class="chart-row">
+                  <div class="chart-year">2021</div>
+                  <div class="chart-track" title="2 artigos em 2021">
+                    <div class="chart-bar" style="width: 50.0%"></div>
+                  </div>
+                  <div class="chart-value">2</div>
+                </div>
+              
+              <p class="chart-note">Barras proporcionais ao maior valor anual do período.</p>
+            </div>
+          
+        </div>
+      </section>
+    </section>
+
+    <p class="footer">Página gerada automaticamente. Data da última atualização: 10/06/2026</p>
+  </main>
+
+  <script>
+    document.querySelectorAll('.tab-button').forEach(button => {
+      button.addEventListener('click', () => {
+        const tab = button.dataset.tab;
+        document.querySelectorAll('.tab-button').forEach(b => b.classList.remove('active'));
+        document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+        button.classList.add('active');
+        document.getElementById(tab).classList.add('active');
+      });
+    });
+  </script>
+</body>
+</html>

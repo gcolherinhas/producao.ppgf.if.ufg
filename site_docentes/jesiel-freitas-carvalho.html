@@ -1,0 +1,457 @@
+
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Jesiel Freitas Carvalho</title>
+  <style>
+
+:root {
+  --ufg-blue: #003f73;
+  --ufg-dark-blue: #002b4f;
+  --ufg-green: #00843d;
+  --ufg-gold: #f2c300;
+  --bg: #f5f7fb;
+  --card: #ffffff;
+  --text: #1f2937;
+  --muted: #6b7280;
+  --border: #d7dee8;
+  --shadow: 0 12px 28px rgba(15, 23, 42, 0.10);
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--text);
+  background: var(--bg);
+  line-height: 1.55;
+}
+a { color: var(--ufg-blue); text-decoration: none; }
+a:hover { text-decoration: underline; }
+.site-header {
+  background: linear-gradient(135deg, var(--ufg-blue), var(--ufg-dark-blue));
+  color: #fff;
+  border-bottom: 6px solid var(--ufg-green);
+}
+.site-header .bar {
+  height: 8px;
+  background: linear-gradient(90deg, var(--ufg-green), var(--ufg-gold), var(--ufg-blue));
+}
+.header-inner {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 24px 22px 28px 22px;
+}
+.ufg-line {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 18px;
+  font-size: 0.98rem;
+  opacity: 0.96;
+}
+.ufg-line strong { font-weight: 700; }
+.header-title {
+  margin: 0;
+  font-size: clamp(1.75rem, 3vw, 2.7rem);
+  letter-spacing: -0.03em;
+}
+.header-subtitle {
+  margin: 8px 0 0 0;
+  color: rgba(255,255,255,0.86);
+  font-size: 1rem;
+}
+.container {
+  max-width: 1180px;
+  margin: 28px auto 48px auto;
+  padding: 0 22px;
+}
+.layout {
+  display: grid;
+  grid-template-columns: 290px 1fr;
+  gap: 24px;
+  align-items: start;
+}
+.profile-card, .content-card, .index-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  box-shadow: var(--shadow);
+}
+.profile-card {
+  padding: 18px;
+  position: sticky;
+  top: 18px;
+}
+.profile-photo {
+  display: block;
+  width: 85%;
+  max-height: 280px;
+  margin: 0 auto;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  background: #e5e7eb;
+}
+.placeholder-photo {
+  display: grid;
+  place-items: center;
+  width: 85%;
+  height: 221px;
+  margin: 0 auto;
+  border-radius: 14px;
+  background: #e5e7eb;
+  color: var(--muted);
+  text-align: center;
+  padding: 18px;
+}
+.profile-card h2 {
+  margin: 16px 0 8px 0;
+  font-size: 1.22rem;
+}
+.meta-list { margin: 14px 0 0 0; padding: 0; list-style: none; }
+.meta-list li { padding: 8px 0; border-top: 1px solid #eef2f7; }
+.meta-label { color: var(--muted); display: inline; font-size: 0.93rem; font-weight: 700; margin-right: 4px; }
+.profile-link { display: inline-block; font-weight: 700; }
+.profile-details {
+  border-top: 1px solid #eef2f7;
+  margin-top: 14px;
+  padding-top: 6px;
+}
+.profile-details li { font-size: 0.93rem; }
+.missing-info { color: var(--muted); font-style: italic; }
+
+.content-card { padding: 20px; min-height: 520px; }
+.tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 12px;
+}
+.tab-button {
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 10px 16px;
+  background: #fff;
+  color: var(--ufg-blue);
+  cursor: pointer;
+  font-weight: 700;
+}
+.tab-button.active {
+  background: var(--ufg-blue);
+  border-color: var(--ufg-blue);
+  color: #fff;
+}
+.tab-panel { display: none; }
+.tab-panel.active { display: block; }
+.article-list { display: grid; gap: 14px; }
+.article-item {
+  padding: 16px;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: #fbfdff;
+}
+.article-year {
+  display: inline-block;
+  padding: 3px 8px;
+  border-radius: 999px;
+  background: #e6f0fa;
+  color: var(--ufg-blue);
+  font-weight: 700;
+  font-size: 0.84rem;
+  margin-bottom: 7px;
+}
+.article-title { margin: 0 0 8px 0; font-size: 1.02rem; }
+.article-authors { color: var(--muted); font-size: 0.92rem; margin: 0; }
+.kpi-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(120px, 1fr));
+  gap: 12px;
+  margin-bottom: 20px;
+}
+.kpi {
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 16px;
+  background: #fbfdff;
+}
+.kpi-value { font-size: 2rem; font-weight: 800; color: var(--ufg-blue); line-height: 1; }
+.kpi-label { color: var(--muted); font-size: 0.86rem; margin-top: 6px; }
+.bar-chart {
+  margin-top: 14px;
+  padding: 18px;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  background: #fbfdff;
+}
+.chart-row {
+  display: grid;
+  grid-template-columns: 64px 1fr 44px;
+  gap: 12px;
+  align-items: center;
+  min-height: 34px;
+  margin: 10px 0;
+}
+.chart-year { font-weight: 700; color: var(--ufg-blue); }
+.chart-track {
+  width: 100%;
+  height: 22px;
+  background: #e5e7eb;
+  border-radius: 999px;
+  overflow: hidden;
+  border: 1px solid #d8e0ea;
+}
+.chart-bar {
+  height: 100%;
+  background: linear-gradient(90deg, var(--ufg-blue), var(--ufg-green));
+  border-radius: 999px;
+  min-width: 0;
+}
+.chart-value {
+  color: var(--text);
+  font-weight: 800;
+  text-align: right;
+  font-size: 0.95rem;
+}
+.chart-note { color: var(--muted); font-size: 0.9rem; margin: 8px 0 0 0; }
+.footer {
+  margin-top: 32px;
+  color: var(--muted);
+  font-size: 0.9rem;
+  text-align: center;
+}
+.index-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  gap: 16px;
+}
+.index-card { padding: 16px; }
+.index-card img { width: 100%; height: 180px; object-fit: cover; border-radius: 12px; border: 1px solid var(--border); }
+.index-card h2 { font-size: 1.05rem; margin: 12px 0 6px 0; }
+.back-link { margin-bottom: 16px; display: inline-block; font-weight: 700; }
+@media (max-width: 820px) {
+  .layout { grid-template-columns: 1fr; }
+  .profile-card { position: static; }
+  .kpi-grid { grid-template-columns: repeat(2, minmax(120px, 1fr)); }
+}
+
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="bar"></div>
+    <div class="header-inner">
+      <div class="ufg-line">
+        <span><strong>UNIVERSIDADE FEDERAL DE GOIÁS - UFG</strong><br>INSTITUTO DE FÍSICA · PROGRAMA DE PÓS-GRADUAÇÃO EM FÍSICA</span>
+        <span>PPGF/UFG</span>
+      </div>
+      <h1 class="header-title">Jesiel Freitas Carvalho</h1>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="layout">
+      <aside class="profile-card">
+        
+          <img class="profile-photo" src="data:image/jpeg;base64,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" alt="Foto de Jesiel Freitas Carvalho">
+        
+        <h2>Jesiel Freitas Carvalho</h2>
+        <ul class="meta-list profile-details">
+          
+            <li><a class="profile-link" href="http://lattes.cnpq.br/5841291496427516" target="_blank" rel="noopener">Curriculum Lattes</a></li>
+          
+          <li><span class="meta-label">Apto(a) a orientar:</span> Física Experimental</li>
+          <li><span class="meta-label">Sala:</span> 116 (IF-1)</li>
+          <li><span class="meta-label">E-mail:</span> <a href="mailto:carvalho@ufg.br">carvalho@ufg.br</a></li>
+          <li><span class="meta-label">Telefone:</span> (62) 3521-2072</li>
+          <li><span class="meta-label">Pesquisa</span> &#34;Física de Materiais&#34;</li>
+          
+          <li><span class="meta-label">Formação:</span> Doutorado em Ciência e Engenharia de Materiais - USP - 1999</li>
+          
+            <li><span class="meta-label">ORCID:</span> <a href="https://orcid.org/0000-0002-2784-4129" target="_blank" rel="noopener">0000-0002-2784-4129</a></li>
+          
+          <li><span class="meta-label">Fonte do perfil:</span> <a href="https://posgraduacao.if.ufg.br/p/41256-docentes-ppgf-instituto-de-fisica-ufg" target="_blank" rel="noopener">Página do PPGF/UFG</a></li>
+        </ul>
+      </aside>
+
+      <section class="content-card">
+        <nav class="tabs" aria-label="Seções da página">
+          <button class="tab-button active" data-tab="artigos">Artigos publicados</button>
+          <button class="tab-button" data-tab="estatisticas">Estatísticas do docente</button>
+        </nav>
+
+        <div id="artigos" class="tab-panel active">
+          <h2>Artigos publicados</h2>
+          
+            <div class="article-list">
+              
+                <article class="article-item">
+                  <span class="article-year">2026</span>
+                  <h3 class="article-title">Pathways to obtain high-entropy BiFeO3-based thin films modified by rare earth cations</h3>
+                  <p class="article-authors">Marco A.M. Teixeira; Konstantin Romanyuk; Fernando Brondani Minussi; Vladimir V. Shvartsman; Andréi L. Kholkin; Doru C. Lupascu; Soma Salamon; Heiko Wende; J.F. Carvalho; José A. Eiras; Eudes B. Araújo</p>
+                  <p><a href="https://doi.org/10.1016/j.ceramint.2026.01.401" target="_blank" rel="noopener">DOI: 10.1016/j.ceramint.2026.01.401</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2024</span>
+                  <h3 class="article-title">Exploring calcite Coprecipitation: Synthesis, Crystal Growth, and pH effect</h3>
+                  <p class="article-authors">Hannah Larissa Siqueira Matos-Pimentel; Cecília Maria Alves de Oliveira; Flávia Gomes de Souza; Gisane Gasparotto; Breno Leite; J.F. Carvalho</p>
+                  <p><a href="https://doi.org/10.1016/j.jcrysgro.2024.127808" target="_blank" rel="noopener">DOI: 10.1016/j.jcrysgro.2024.127808</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2024</span>
+                  <h3 class="article-title">Study of fixing holographic gratings in Bi&lt;sub&gt;2&lt;/sub&gt;TeO&lt;sub&gt;5&lt;/sub&gt; photorefractive crystals</h3>
+                  <p class="article-authors">Ivan de Oliveira; J.F. Carvalho</p>
+                  <p><a href="https://doi.org/10.1364/josab.516444" target="_blank" rel="noopener">DOI: 10.1364/josab.516444</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2024</span>
+                  <h3 class="article-title">Synthesis and Crystal Growth of Mg-Calcite and Dolomite</h3>
+                  <p class="article-authors">Hannah Larissa Siqueira Matos-Pimentel; Cecília Maria Alves de Oliveira; J.F. Carvalho</p>
+                  <p><a href="https://doi.org/10.1093/mam/ozae044.642" target="_blank" rel="noopener">DOI: 10.1093/mam/ozae044.642</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2024</span>
+                  <h3 class="article-title">Synthesis, luminescent and thermometric properties of the Tb3+ doped Gd2TeO6 phosphor</h3>
+                  <p class="article-authors">K.D. Ferreira; Luana Alves de Queiroz; J.F. Carvalho; Lauro June Queiroz Maia; Ricardo Costa de Santana</p>
+                  <p><a href="https://doi.org/10.1016/j.jallcom.2024.175369" target="_blank" rel="noopener">DOI: 10.1016/j.jallcom.2024.175369</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2024</span>
+                  <h3 class="article-title">Temperature dependent photoluminescence properties of a Y2Ge2O7:Tb3+ phosphors. A dual band ratiometric luminescent thermometer</h3>
+                  <p class="article-authors">Débora Evelyn Taborga dos Santos; Alisson Torquato; Itália Vallerini Barbosa; J.F. Carvalho; Lauro June Queiroz Maia; Ricardo Costa de Santana</p>
+                  <p><a href="https://doi.org/10.1016/j.jallcom.2024.177444" target="_blank" rel="noopener">DOI: 10.1016/j.jallcom.2024.177444</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2024</span>
+                  <h3 class="article-title">Thermal degradation in methylammonium–formamidinium–guanidinium lead iodide perovskites</h3>
+                  <p class="article-authors">Fernando Brondani Minussi; Rogério Marcos Silva; J.F. Carvalho; E. B. Araújo</p>
+                  <p><a href="https://doi.org/10.1039/d4tc00395k" target="_blank" rel="noopener">DOI: 10.1039/d4tc00395k</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2023</span>
+                  <h3 class="article-title">780 nm near-infrared photorefractive holograms recorded in undoped Bi12TiO20 crystal under the action of external electric field</h3>
+                  <p class="article-authors">André L. Moura; Askery Canabarro; Emerson de Lima; W. C. Soares; J.F. Carvalho; M. T. de Araújo; P. V. dos Santos</p>
+                  <p><a href="https://doi.org/10.1016/j.optmat.2023.114032" target="_blank" rel="noopener">DOI: 10.1016/j.optmat.2023.114032</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2022</span>
+                  <h3 class="article-title">Guanidinium substitution-dependent phase transitions, ionic conductivity, and dielectric properties of MAPbI&lt;sub&gt;3&lt;/sub&gt;</h3>
+                  <p class="article-authors">Fernando Brondani Minussi; Eduardo M. Bertoletti; S. P. Reis; J.F. Carvalho; E. B. Araújo</p>
+                  <p><a href="https://doi.org/10.1039/d1cc06642k" target="_blank" rel="noopener">DOI: 10.1039/d1cc06642k</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2022</span>
+                  <h3 class="article-title">Hole-electron competition investigated by holographic recording in Bi12TiO20 crystal under applied electric field</h3>
+                  <p class="article-authors">Wibsson Ribeiro Lopes; P. V. dos Santos; Jerline Rocha; J.F. Carvalho; M. T. de Araújo</p>
+                  <p><a href="https://doi.org/10.1016/j.optmat.2022.112445" target="_blank" rel="noopener">DOI: 10.1016/j.optmat.2022.112445</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2021</span>
+                  <h3 class="article-title">Continuous trap distribution and variation of optical properties with concentration in oxi-fluoroborate glass doped with Nd3+</h3>
+                  <p class="article-authors">Maurício Rodriguez Chialanza; Germán Azcune; Heinkel Bentos Pereira; Gisane Gasparotto; Ricardo Costa de Santana; Lauro June Queiroz Maia; J.F. Carvalho</p>
+                  <p><a href="https://doi.org/10.1016/j.jnoncrysol.2021.120683" target="_blank" rel="noopener">DOI: 10.1016/j.jnoncrysol.2021.120683</a></p>
+                </article>
+              
+            </div>
+          
+        </div>
+
+        <div id="estatisticas" class="tab-panel">
+          <h2>Estatísticas do docente</h2>
+          <div class="kpi-grid">
+            <div class="kpi"><div class="kpi-value">11</div><div class="kpi-label">Artigos entre 2021-2026</div></div>
+            <div class="kpi"><div class="kpi-value">0</div><div class="kpi-label">Total de alunos</div></div>
+            <div class="kpi"><div class="kpi-value">0</div><div class="kpi-label">Mestrado</div></div>
+            <div class="kpi"><div class="kpi-value">0</div><div class="kpi-label">Doutorado</div></div>
+          </div>
+
+          <h3>Artigos por ano</h3>
+          
+            <div class="bar-chart" role="img" aria-label="Gráfico de barras com o número de artigos por ano">
+              
+                <div class="chart-row">
+                  <div class="chart-year">2026</div>
+                  <div class="chart-track" title="1 artigos em 2026">
+                    <div class="chart-bar" style="width: 16.7%"></div>
+                  </div>
+                  <div class="chart-value">1</div>
+                </div>
+              
+                <div class="chart-row">
+                  <div class="chart-year">2025</div>
+                  <div class="chart-track" title="0 artigos em 2025">
+                    <div class="chart-bar" style="width: 0%"></div>
+                  </div>
+                  <div class="chart-value">0</div>
+                </div>
+              
+                <div class="chart-row">
+                  <div class="chart-year">2024</div>
+                  <div class="chart-track" title="6 artigos em 2024">
+                    <div class="chart-bar" style="width: 100.0%"></div>
+                  </div>
+                  <div class="chart-value">6</div>
+                </div>
+              
+                <div class="chart-row">
+                  <div class="chart-year">2023</div>
+                  <div class="chart-track" title="1 artigos em 2023">
+                    <div class="chart-bar" style="width: 16.7%"></div>
+                  </div>
+                  <div class="chart-value">1</div>
+                </div>
+              
+                <div class="chart-row">
+                  <div class="chart-year">2022</div>
+                  <div class="chart-track" title="2 artigos em 2022">
+                    <div class="chart-bar" style="width: 33.3%"></div>
+                  </div>
+                  <div class="chart-value">2</div>
+                </div>
+              
+                <div class="chart-row">
+                  <div class="chart-year">2021</div>
+                  <div class="chart-track" title="1 artigos em 2021">
+                    <div class="chart-bar" style="width: 16.7%"></div>
+                  </div>
+                  <div class="chart-value">1</div>
+                </div>
+              
+              <p class="chart-note">Barras proporcionais ao maior valor anual do período.</p>
+            </div>
+          
+        </div>
+      </section>
+    </section>
+
+    <p class="footer">Página gerada automaticamente. Data da última atualização: 10/06/2026</p>
+  </main>
+
+  <script>
+    document.querySelectorAll('.tab-button').forEach(button => {
+      button.addEventListener('click', () => {
+        const tab = button.dataset.tab;
+        document.querySelectorAll('.tab-button').forEach(b => b.classList.remove('active'));
+        document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+        button.classList.add('active');
+        document.getElementById(tab).classList.add('active');
+      });
+    });
+  </script>
+</body>
+</html>

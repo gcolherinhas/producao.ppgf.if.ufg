@@ -1,0 +1,592 @@
+
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Antônio Alonso</title>
+  <style>
+
+:root {
+  --ufg-blue: #003f73;
+  --ufg-dark-blue: #002b4f;
+  --ufg-green: #00843d;
+  --ufg-gold: #f2c300;
+  --bg: #f5f7fb;
+  --card: #ffffff;
+  --text: #1f2937;
+  --muted: #6b7280;
+  --border: #d7dee8;
+  --shadow: 0 12px 28px rgba(15, 23, 42, 0.10);
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--text);
+  background: var(--bg);
+  line-height: 1.55;
+}
+a { color: var(--ufg-blue); text-decoration: none; }
+a:hover { text-decoration: underline; }
+.site-header {
+  background: linear-gradient(135deg, var(--ufg-blue), var(--ufg-dark-blue));
+  color: #fff;
+  border-bottom: 6px solid var(--ufg-green);
+}
+.site-header .bar {
+  height: 8px;
+  background: linear-gradient(90deg, var(--ufg-green), var(--ufg-gold), var(--ufg-blue));
+}
+.header-inner {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 24px 22px 28px 22px;
+}
+.ufg-line {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 18px;
+  font-size: 0.98rem;
+  opacity: 0.96;
+}
+.ufg-line strong { font-weight: 700; }
+.header-title {
+  margin: 0;
+  font-size: clamp(1.75rem, 3vw, 2.7rem);
+  letter-spacing: -0.03em;
+}
+.header-subtitle {
+  margin: 8px 0 0 0;
+  color: rgba(255,255,255,0.86);
+  font-size: 1rem;
+}
+.container {
+  max-width: 1180px;
+  margin: 28px auto 48px auto;
+  padding: 0 22px;
+}
+.layout {
+  display: grid;
+  grid-template-columns: 290px 1fr;
+  gap: 24px;
+  align-items: start;
+}
+.profile-card, .content-card, .index-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  box-shadow: var(--shadow);
+}
+.profile-card {
+  padding: 18px;
+  position: sticky;
+  top: 18px;
+}
+.profile-photo {
+  display: block;
+  width: 85%;
+  max-height: 280px;
+  margin: 0 auto;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  background: #e5e7eb;
+}
+.placeholder-photo {
+  display: grid;
+  place-items: center;
+  width: 85%;
+  height: 221px;
+  margin: 0 auto;
+  border-radius: 14px;
+  background: #e5e7eb;
+  color: var(--muted);
+  text-align: center;
+  padding: 18px;
+}
+.profile-card h2 {
+  margin: 16px 0 8px 0;
+  font-size: 1.22rem;
+}
+.meta-list { margin: 14px 0 0 0; padding: 0; list-style: none; }
+.meta-list li { padding: 8px 0; border-top: 1px solid #eef2f7; }
+.meta-label { color: var(--muted); display: inline; font-size: 0.93rem; font-weight: 700; margin-right: 4px; }
+.profile-link { display: inline-block; font-weight: 700; }
+.profile-details {
+  border-top: 1px solid #eef2f7;
+  margin-top: 14px;
+  padding-top: 6px;
+}
+.profile-details li { font-size: 0.93rem; }
+.missing-info { color: var(--muted); font-style: italic; }
+
+.content-card { padding: 20px; min-height: 520px; }
+.tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 12px;
+}
+.tab-button {
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 10px 16px;
+  background: #fff;
+  color: var(--ufg-blue);
+  cursor: pointer;
+  font-weight: 700;
+}
+.tab-button.active {
+  background: var(--ufg-blue);
+  border-color: var(--ufg-blue);
+  color: #fff;
+}
+.tab-panel { display: none; }
+.tab-panel.active { display: block; }
+.article-list { display: grid; gap: 14px; }
+.article-item {
+  padding: 16px;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: #fbfdff;
+}
+.article-year {
+  display: inline-block;
+  padding: 3px 8px;
+  border-radius: 999px;
+  background: #e6f0fa;
+  color: var(--ufg-blue);
+  font-weight: 700;
+  font-size: 0.84rem;
+  margin-bottom: 7px;
+}
+.article-title { margin: 0 0 8px 0; font-size: 1.02rem; }
+.article-authors { color: var(--muted); font-size: 0.92rem; margin: 0; }
+.kpi-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(120px, 1fr));
+  gap: 12px;
+  margin-bottom: 20px;
+}
+.kpi {
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 16px;
+  background: #fbfdff;
+}
+.kpi-value { font-size: 2rem; font-weight: 800; color: var(--ufg-blue); line-height: 1; }
+.kpi-label { color: var(--muted); font-size: 0.86rem; margin-top: 6px; }
+.bar-chart {
+  margin-top: 14px;
+  padding: 18px;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  background: #fbfdff;
+}
+.chart-row {
+  display: grid;
+  grid-template-columns: 64px 1fr 44px;
+  gap: 12px;
+  align-items: center;
+  min-height: 34px;
+  margin: 10px 0;
+}
+.chart-year { font-weight: 700; color: var(--ufg-blue); }
+.chart-track {
+  width: 100%;
+  height: 22px;
+  background: #e5e7eb;
+  border-radius: 999px;
+  overflow: hidden;
+  border: 1px solid #d8e0ea;
+}
+.chart-bar {
+  height: 100%;
+  background: linear-gradient(90deg, var(--ufg-blue), var(--ufg-green));
+  border-radius: 999px;
+  min-width: 0;
+}
+.chart-value {
+  color: var(--text);
+  font-weight: 800;
+  text-align: right;
+  font-size: 0.95rem;
+}
+.chart-note { color: var(--muted); font-size: 0.9rem; margin: 8px 0 0 0; }
+.footer {
+  margin-top: 32px;
+  color: var(--muted);
+  font-size: 0.9rem;
+  text-align: center;
+}
+.index-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  gap: 16px;
+}
+.index-card { padding: 16px; }
+.index-card img { width: 100%; height: 180px; object-fit: cover; border-radius: 12px; border: 1px solid var(--border); }
+.index-card h2 { font-size: 1.05rem; margin: 12px 0 6px 0; }
+.back-link { margin-bottom: 16px; display: inline-block; font-weight: 700; }
+@media (max-width: 820px) {
+  .layout { grid-template-columns: 1fr; }
+  .profile-card { position: static; }
+  .kpi-grid { grid-template-columns: repeat(2, minmax(120px, 1fr)); }
+}
+
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="bar"></div>
+    <div class="header-inner">
+      <div class="ufg-line">
+        <span><strong>UNIVERSIDADE FEDERAL DE GOIÁS - UFG</strong><br>INSTITUTO DE FÍSICA · PROGRAMA DE PÓS-GRADUAÇÃO EM FÍSICA</span>
+        <span>PPGF/UFG</span>
+      </div>
+      <h1 class="header-title">Antônio Alonso</h1>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="layout">
+      <aside class="profile-card">
+        
+          <img class="profile-photo" src="data:image/jpeg;base64,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" alt="Foto de Antônio Alonso">
+        
+        <h2>Antônio Alonso</h2>
+        <ul class="meta-list profile-details">
+          
+            <li><a class="profile-link" href="http://lattes.cnpq.br/5013069863616789" target="_blank" rel="noopener">Curriculum Lattes</a></li>
+          
+          <li><span class="meta-label">Apto(a) a orientar:</span> Física Experimental</li>
+          <li><span class="meta-label">Sala:</span> 113 (IF-2)</li>
+          <li><span class="meta-label">E-mail:</span> <a href="mailto:alonso@ufg.br">alonso@ufg.br</a></li>
+          <li><span class="meta-label">Telefone:</span> (62) 3521-2301</li>
+          <li><span class="meta-label">Pesquisa</span> &#34;Biofísica&#34;</li>
+          
+            <li>Bolsista de Produtividade de CNPq - Nível 2</li>
+          
+          <li><span class="meta-label">Formação:</span> Doutorado em Física</li>
+          
+            <li><span class="meta-label">ORCID:</span> <a href="https://orcid.org/0000-0003-4768-6372" target="_blank" rel="noopener">0000-0003-4768-6372</a></li>
+          
+          <li><span class="meta-label">Fonte do perfil:</span> <a href="https://posgraduacao.if.ufg.br/p/41256-docentes-ppgf-instituto-de-fisica-ufg" target="_blank" rel="noopener">Página do PPGF/UFG</a></li>
+        </ul>
+      </aside>
+
+      <section class="content-card">
+        <nav class="tabs" aria-label="Seções da página">
+          <button class="tab-button active" data-tab="artigos">Artigos publicados</button>
+          <button class="tab-button" data-tab="estatisticas">Estatísticas do docente</button>
+        </nav>
+
+        <div id="artigos" class="tab-panel active">
+          <h2>Artigos publicados</h2>
+          
+            <div class="article-list">
+              
+                <article class="article-item">
+                  <span class="article-year">2026</span>
+                  <h3 class="article-title">Nerolidol and a zwitterionic surfactant induce membrane rigidity in and infected macrophages</h3>
+                  <p class="article-authors">Ellyêssa Nascimento Borges; Kleber Santiago Freitas e Silva; Éder Jéferson Souza Cardoso; Rodrigo Saar Gomes; Eliana Martins Lima; Sebastião Antônio Mendanha; Antonio Alonso</p>
+                  <p><a href="https://doi.org/10.1016/j.colsurfb.2025.115156" target="_blank" rel="noopener">DOI: 10.1016/j.colsurfb.2025.115156</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2026</span>
+                  <h3 class="article-title">Photodynamic action of Pd(II)/porphyrin complexes against melanoma cells</h3>
+                  <p class="article-authors">E C F Moraes; Marcos Vinícius Palmeira-Mello; Lívia do Carmo Silva; Juliana Santana de Curcio; Alex M. Graça; Jocely Lucena Dutra; Antônio Alonso; Guilherme Rocha Lino de Souza; Alzir A. Batista; Elisângela de Paula Silveira-Lacerda; Pablo José Gonçalves</p>
+                  <p><a href="https://doi.org/10.1016/j.ejmech.2026.118751" target="_blank" rel="noopener">DOI: 10.1016/j.ejmech.2026.118751</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2025</span>
+                  <h3 class="article-title">Antileishmanial, cytotoxic activities, and membrane rigidity effects of three synthetic compounds</h3>
+                  <p class="article-authors">Cardoso, Eder Jeferson Souza; Borges, Ellyessa Nascimento; Freitas e Silva, Kleber Santiago; Gomes, Rodrigo Saar; Boni, Fabiana Taniguchi; Pereira, Jhon Kennedy Alves; Mangoba, Paula Maria Alexandre; Morais, Luciano; Menegatti, Ricardo; Alonso, Antonio</p>
+                  <p><a href="https://doi.org/10.1016/j.bbamem.2025.184450" target="_blank" rel="noopener">DOI: 10.1016/j.bbamem.2025.184450</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2025</span>
+                  <h3 class="article-title">Characterization of Mn1.3FeTi2Ow and Fe4Mn6V7Ow Nanocomposites by Ferromagnetic Resonance (FMR)</h3>
+                  <p class="article-authors">Samuel Lamarão Alves Monticeli; J. G. Santos; Alessandro Martins; Mauro Guilherme Ferreira Bezerra; Daniela Alves; Antônio Alonso; L. B. Silveira; Laercio do Carmo Rodrigues</p>
+                  <p><a href="https://doi.org/10.54033/cadpedv22n8-064" target="_blank" rel="noopener">DOI: 10.54033/cadpedv22n8-064</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2025</span>
+                  <h3 class="article-title">Miltefosine analogues with comparable antileishmanial activity and significantly reduced macrophage cytotoxicity</h3>
+                  <p class="article-authors">Lais Alonso; Laís Flávia Nunes Lemes; George E Magoulas; Brenda de Lucena Costa; Rodrigo Saar Gomes; Miriam Leandro Dorta; Maria Laura Bolognesi; Luiz Antonio Soares Romeiro; Theodora Calogeropoulou; Antonio Alonso</p>
+                  <p><a href="https://doi.org/10.1590/0074-02760240219" target="_blank" rel="noopener">DOI: 10.1590/0074-02760240219</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2025</span>
+                  <h3 class="article-title">Miltefosine and amphoterin B induce membrane rigidity in Leishmania amazonensis and Leishmania-infected macrophages</h3>
+                  <p class="article-authors">Ellyêssa Nascimento Borges; Kleber Santiago Freitas e Silva; Éder Jéferson Souza Cardoso; Eliana Martins Lima; Sebastião Antonio Mendanha; Antonio Alonso</p>
+                  <p><a href="https://doi.org/10.1016/j.abb.2025.110417" target="_blank" rel="noopener">DOI: 10.1016/j.abb.2025.110417</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2025</span>
+                  <h3 class="article-title">Sustainable Antiparasitic Agents from an Agro-Industrial Waste: Mitochondria-Targeting Cashew Nutshell Liquid-Derived Phosphonium and Ammonium Salts</h3>
+                  <p class="article-authors">Martinengo, Bianca; Baldassarri, Cecilia; Ilbeigi, Kayhan; Alkhalaf, Hamed E.; Sarode, Aditya; Elmahallawy, Ehab Kotb; Kwon, Ba Reum; Agyei, Amos Sarpong; Abdimanova, Aigerim; de Almeida Fiuza, Ludmila Ferreira; Azevedo, Raquel; da Conceicao, Ketlym; Batista, Marcos Meuser; Borges, Ellyessa Nascimento; Silva, Kleber Santiago; Cardoso, Eder Jeferson Souza; Monteiro, Natalia Cipriano; Lemes, Lais Flavia Nunes; Romeiro, Luiz Antonio Soares; Alonso, Antonio; Soeiro, Maria de Nazare Correia; Caljon, Guy; Brooks, Bryan W.; De Koning, Harry P.; Bolognesi, Maria Laura</p>
+                  <p><a href="https://doi.org/10.1021/acs.jmedchem.5c01617" target="_blank" rel="noopener">DOI: 10.1021/acs.jmedchem.5c01617</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2025</span>
+                  <h3 class="article-title">Synthesis Of Mn1.3FeTi2Ow Nanocomposite By Urea Catalyzed Thermal Combustion</h3>
+                  <p class="article-authors">Samuel Lamarão Alves Monticeli; Judes Gonçalves Dos Santos; Luciene Batista Da Silveira; Antônio Alonso; Fernando Fabris</p>
+                  <p><a href="https://doi.org/10.9790/4861-1703020110" target="_blank" rel="noopener">DOI: 10.9790/4861-1703020110</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2024</span>
+                  <h3 class="article-title">Anti-Staphy Peptides Rationally Designed from Cry10Aa Bacterial Protein</h3>
+                  <p class="article-authors">Rios, Thuanny Borba; Maximiano, Mariana Rocha; Fernandes, Fabiano Cavalcanti; Amorim, Gabriella Cavalcante; Porto, William Farias; Buccini, Danieli Fernanda; Marin, Valentina Nieto; Feitosa, Gabriel Cidade; Freitas, Carlos Daniel Pereira; Barra, Juliana Bueno; Alonso, Antonio; de Sa, Maria Fatima Grossi; Liao, Luciano Morais; Franco, Octavio Luiz</p>
+                  <p><a href="https://doi.org/10.1021/acsomega.3c07455" target="_blank" rel="noopener">DOI: 10.1021/acsomega.3c07455</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2024</span>
+                  <h3 class="article-title">Characterization of hair lipid and protein dynamics using EPR spectroscopy and treatment effects</h3>
+                  <p class="article-authors">Ellyêssa Nascimento Borges; Diógenes de Souza Neto; Antonio Alonso</p>
+                  <p><a href="https://doi.org/10.1016/j.molstruc.2023.137225" target="_blank" rel="noopener">DOI: 10.1016/j.molstruc.2023.137225</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2024</span>
+                  <h3 class="article-title">Effect of cationic surfactant on the physicochemical and antibacterial properties of colloidal systems (emulsions and microemulsions)</h3>
+                  <p class="article-authors">M. K. D. Rambo; R. F. Lins; F. L. N Silva; A. Alonso; M. C. D. Rambo; J. E. C Leal; D. de Sousa-Neto</p>
+                  <p><a href="https://doi.org/10.1590/1519-6984.278013" target="_blank" rel="noopener">DOI: 10.1590/1519-6984.278013</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2024</span>
+                  <h3 class="article-title">Ibrutinib topical delivery for melanoma treatment: The effect of nanostructured lipid carriers&#39; composition on the controlled drug skin deposition</h3>
+                  <p class="article-authors">Albuquerque, Lucas F. F.; V. Lins, Fernanda; Bispo, Elizabete C. I.; Borges, Ellyessa N.; Silva, Mateus T.; Gratieri, Tais; Cunha-Filho, Marcilio; Alonso, Antonio; Carvalho, Juliana L.; Saldanha-Araujo, Felipe; Gelfuso, Guilherme M.</p>
+                  <p><a href="https://doi.org/10.1016/j.colsurfb.2024.113875" target="_blank" rel="noopener">DOI: 10.1016/j.colsurfb.2024.113875</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2023</span>
+                  <h3 class="article-title">Antileishmanial activities of three chalcone derivatives and their association with plasma membrane rigidity as assessed by EPR spectroscopy</h3>
+                  <p class="article-authors">Borges, E.N.; Alonso, L.; Silveira, M.B.; Balbinot, R.B.; Nakamura, C.V.; da Rocha, A.L.B.; Arruda, E.L.; dos Santos, G.F.; Vaz, B.G.; Gomides, C.D.; Lião, L.M.; Menegatti, R.; Alonso, A.</p>
+                  <p><a href="https://doi.org/10.1016/j.molstruc.2023.136123" target="_blank" rel="noopener">DOI: 10.1016/j.molstruc.2023.136123</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2023</span>
+                  <h3 class="article-title">Antiprotozoal Activity of Benzoylthiourea Derivatives against Trypanosoma cruzi: Insights into Mechanism of Action</h3>
+                  <p class="article-authors">Pereira, P.M.L.; Fernandes, B.T.; dos Santos, V.R.; Cabral, W.R.C.; Lovo-Martins, M.I.; Alonso, L.; Lancheros, C.A.C.; de Paula, J.C.; Camargo, P.G.; Suzukawa, H.T.; Alonso, A.; Macedo, F.; Nakamura, C.V.; Tavares, E.R.; de Lima Ferreira Bispo, M.; Yamauchi, L.M.; Pinge-Filho, P.; Yamada-Ogatta, S.F.</p>
+                  <p><a href="https://doi.org/10.3390/pathogens12081012" target="_blank" rel="noopener">DOI: 10.3390/pathogens12081012</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2023</span>
+                  <h3 class="article-title">Multidisciplinary development of the Geriatric Core Dataset for a national registry of cancer</h3>
+                  <p class="article-authors">M.G. Maria-José; C. Sánchez-Castellano; Juana María Cano; Mercedes Muñoz Hornillos; Gema Paterna Mellinas; Antônio Alonso; R. Morales Chamorro; Brigitte Montès; AA Rodriguez; A.I. Hormigo-Sánchez; Pablo Cerezuela; José Antonio Serra Rexach; Javier Cassinello; P. López-Pardo; R. Blanco Guerrero; J. Gómez Pavón; R. Feijoo Lorza; Myriam Rodríguez Couso; Raquel Ramírez-Martín; Maria C. Bertomeu; Carmen Guillén‐Ponce</p>
+                  <p><a href="https://doi.org/10.1016/s1879-4068(23)00378-8" target="_blank" rel="noopener">DOI: 10.1016/s1879-4068(23)00378-8</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2023</span>
+                  <h3 class="article-title">Paracoccidioides brasiliensis plasma membrane characterization by EPR spectroscopy and interactions with amphotericin B, miltefosine and nerolidol</h3>
+                  <p class="article-authors">Alonso, L.; Rocha, O.B.; de Carvalho Junior, M.A.B.; Soares, C.M.D.A.; Pereira, M.; Alonso, A.</p>
+                  <p><a href="https://doi.org/10.1080/07391102.2022.2093274" target="_blank" rel="noopener">DOI: 10.1080/07391102.2022.2093274</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2023</span>
+                  <h3 class="article-title">Proteomic Identification of Metabolic Changes in Paracoccidioides Brasiliensis Induced by a Nitroheteroarylchalcone</h3>
+                  <p class="article-authors">Marcos ABC Júnior; Lívia C Silva; Olivia B Rocha; Amanda A Oliveira; Igor G Portis; Antonio Alonso; Lais Alonso; Kleber SF Silva; Marcelo N Gomes; Carolina H Andrade; Célia MA Soares; Maristela Pereira</p>
+                  <p><a href="https://doi.org/10.2217/fmb-2022-0150" target="_blank" rel="noopener">DOI: 10.2217/fmb-2022-0150</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2023</span>
+                  <h3 class="article-title">Proteomic Profiling of &lt;i&gt;Paracoccidioides brasiliensis&lt;/i&gt; in Response to Phenacylideneoxindol Derivative: Unveiling Molecular Targets and Pathways</h3>
+                  <p class="article-authors">Silva, Livia do Carmo; Rocha, Olivia Basso; Portis, Igor Godinho; Santos, Thaynara Gonzaga; Freitas e Silva, Kleber Santiago; dos Santos Filho, Raimundo Francisco; Cunha, Silvio; Alonso, Antonio; Soares, Celia Maria de Almeida; Pereira, Maristela</p>
+                  <p><a href="https://doi.org/10.3390/jof9080854" target="_blank" rel="noopener">DOI: 10.3390/jof9080854</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2023</span>
+                  <h3 class="article-title">Synergistic antifungal interaction of N-(butylcarbamothioyl) benzamide and amphotericin B against Cryptococcus neoformans</h3>
+                  <p class="article-authors">Andriani, G.M.; Spoladori, L.F.D.A.; Fabris, M.; Camargo, P.G.; Pereira, P.M.L.; Santos, J.P.; Bartolomeu-Gonçalves, G.; Alonso, L.; Lancheros, C.A.C.; Alonso, A.; Nakamura, C.V.; Macedo, F.; Pinge-Filho, P.; Yamauchi, L.M.; Bispo, M.D.L.F.; Tavares, E.R.; Yamada-Ogatta, S.F.</p>
+                  <p><a href="https://doi.org/10.3389/fmicb.2023.1040671" target="_blank" rel="noopener">DOI: 10.3389/fmicb.2023.1040671</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2022</span>
+                  <h3 class="article-title">5G architecture for hybrid and multi-cloud environments</h3>
+                  <p class="article-authors">Antônio Alonso; Henrik Saavedra Persson; Hossein Kassaei</p>
+                  <p><a href="https://doi.org/10.23919/etr.2022.9904693" target="_blank" rel="noopener">DOI: 10.23919/etr.2022.9904693</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2022</span>
+                  <h3 class="article-title">Antileishmanial activity of 3,4,5-trisubstituted isoxazoles by interaction with Leishmania amazonensis plasma membrane</h3>
+                  <p class="article-authors">Alonso, L.; Pianoski, K.E.; Alonso, A.; Rosa, F.A.</p>
+                  <p><a href="https://doi.org/10.1016/j.molstruc.2021.131604" target="_blank" rel="noopener">DOI: 10.1016/j.molstruc.2021.131604</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2022</span>
+                  <h3 class="article-title">Combination of lipid nanoparticles and iontophoresis for enhanced lopinavir skin permeation: Impact of electric current on lipid dynamics</h3>
+                  <p class="article-authors">Moura, R.B.P.; Andrade, L.M.; Alonso, L.; Alonso, A.; Marreto, R.N.; Taveira, S.F.</p>
+                  <p><a href="https://doi.org/10.1016/j.ejps.2021.106048" target="_blank" rel="noopener">DOI: 10.1016/j.ejps.2021.106048</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2022</span>
+                  <h3 class="article-title">Ivermectin and curcumin cause plasma membrane rigidity in Leishmania amazonensis due to oxidative stress</h3>
+                  <p class="article-authors">Alonso, L.; Dorta, M.L.; Alonso, A.</p>
+                  <p><a href="https://doi.org/10.1016/j.bbamem.2022.183977" target="_blank" rel="noopener">DOI: 10.1016/j.bbamem.2022.183977</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2022</span>
+                  <h3 class="article-title">Mycobacterium abscessus cell wall and plasma membrane characterization by EPR spectroscopy and effects of amphotericin B, miltefosine and nerolidol</h3>
+                  <p class="article-authors">Alonso, L.; Pimenta, L.K.L.; Kipnis, A.; Alonso, A.</p>
+                  <p><a href="https://doi.org/10.1016/j.bbamem.2022.183872" target="_blank" rel="noopener">DOI: 10.1016/j.bbamem.2022.183872</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2022</span>
+                  <h3 class="article-title">Plasma membrane rigidity effects of 4-hydroxy-2-nonenal in Leishmania, erythrocyte and macrophage</h3>
+                  <p class="article-authors">Alonso, L.; Menegatti, R.; Dorta, M.L.; Alonso, A.</p>
+                  <p><a href="https://doi.org/10.1016/j.tiv.2021.105294" target="_blank" rel="noopener">DOI: 10.1016/j.tiv.2021.105294</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2022</span>
+                  <h3 class="article-title">Proteomic alterations in Paracoccidioides brasiliensis caused by exposure to curcumin</h3>
+                  <p class="article-authors">Rocha, O.B.; Freitas e Silva, K.S.; de Carvalho Junior, M.A.B.; Moraes, D.; Alonso, A.; Alonso, L.; do Carmo Silva, L.; Soares, C.M.A.; Pereira, M.</p>
+                  <p><a href="https://doi.org/10.1016/j.jprot.2022.104683" target="_blank" rel="noopener">DOI: 10.1016/j.jprot.2022.104683</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2021</span>
+                  <h3 class="article-title">Comparative EPR spectroscopy analysis of amphotericin B and miltefosine interactions with Leishmania, erythrocyte and macrophage membranes</h3>
+                  <p class="article-authors">Lais Alonso; Sebastião Antônio Mendanha; Rodrigo Saar Gomes; Miriam Leandro Dorta; Antonio Alonso</p>
+                  <p><a href="https://doi.org/10.1016/j.ejps.2021.105859" target="_blank" rel="noopener">DOI: 10.1016/j.ejps.2021.105859</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2021</span>
+                  <h3 class="article-title">Enhanced nail delivery of voriconazole-loaded nanomicelles by thioglycolic acid pretreatment: A study of protein dynamics and disulfide bond rupture</h3>
+                  <p class="article-authors">Krawczyk-Santos, A.P.; da Rocha, P.B.R.; Kloppel, L.L.; Souza, B.D.S.; Anjos, J.L.V.; Alonso, A.; de Faria, D.L.A.; Gil, O.M.; Gratieri, T.; Marreto, R.N.; Taveira, S.F.</p>
+                  <p><a href="https://doi.org/10.1016/j.ijpharm.2021.120597" target="_blank" rel="noopener">DOI: 10.1016/j.ijpharm.2021.120597</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2021</span>
+                  <h3 class="article-title">Membrane dynamics in Leishmania amazonensis and antileishmanial activities of β-carboline derivatives</h3>
+                  <p class="article-authors">Alonso, L.; de Paula, J.C.; Baréa, P.; Sarragiotto, M.H.; Ueda-Nakamura, T.; Alonso, A.; de Souza Fernandes, N.; Lancheros, C.A.C.; Volpato, H.; Lazarin-Bidóia, D.; Nakamura, C.V.</p>
+                  <p><a href="https://doi.org/10.1016/j.bbamem.2020.183473" target="_blank" rel="noopener">DOI: 10.1016/j.bbamem.2020.183473</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2021</span>
+                  <h3 class="article-title">Nanostructured lipid carriers for hair follicle-targeted delivery of clindamycin and rifampicin to hidradenitis suppurativa treatment</h3>
+                  <p class="article-authors">Pereira, M.N.; Tolentino, S.; Pires, F.Q.; Anjos, J.L.V.; Alonso, A.; Gratieri, T.; Cunha-Filho, M.; Gelfuso, G.M.</p>
+                  <p><a href="https://doi.org/10.1016/j.colsurfb.2020.111448" target="_blank" rel="noopener">DOI: 10.1016/j.colsurfb.2020.111448</a></p>
+                </article>
+              
+            </div>
+          
+        </div>
+
+        <div id="estatisticas" class="tab-panel">
+          <h2>Estatísticas do docente</h2>
+          <div class="kpi-grid">
+            <div class="kpi"><div class="kpi-value">30</div><div class="kpi-label">Artigos entre 2021-2026</div></div>
+            <div class="kpi"><div class="kpi-value">1</div><div class="kpi-label">Total de alunos</div></div>
+            <div class="kpi"><div class="kpi-value">0</div><div class="kpi-label">Mestrado</div></div>
+            <div class="kpi"><div class="kpi-value">1</div><div class="kpi-label">Doutorado</div></div>
+          </div>
+
+          <h3>Artigos por ano</h3>
+          
+            <div class="bar-chart" role="img" aria-label="Gráfico de barras com o número de artigos por ano">
+              
+                <div class="chart-row">
+                  <div class="chart-year">2026</div>
+                  <div class="chart-track" title="2 artigos em 2026">
+                    <div class="chart-bar" style="width: 28.6%"></div>
+                  </div>
+                  <div class="chart-value">2</div>
+                </div>
+              
+                <div class="chart-row">
+                  <div class="chart-year">2025</div>
+                  <div class="chart-track" title="6 artigos em 2025">
+                    <div class="chart-bar" style="width: 85.7%"></div>
+                  </div>
+                  <div class="chart-value">6</div>
+                </div>
+              
+                <div class="chart-row">
+                  <div class="chart-year">2024</div>
+                  <div class="chart-track" title="4 artigos em 2024">
+                    <div class="chart-bar" style="width: 57.1%"></div>
+                  </div>
+                  <div class="chart-value">4</div>
+                </div>
+              
+                <div class="chart-row">
+                  <div class="chart-year">2023</div>
+                  <div class="chart-track" title="7 artigos em 2023">
+                    <div class="chart-bar" style="width: 100.0%"></div>
+                  </div>
+                  <div class="chart-value">7</div>
+                </div>
+              
+                <div class="chart-row">
+                  <div class="chart-year">2022</div>
+                  <div class="chart-track" title="7 artigos em 2022">
+                    <div class="chart-bar" style="width: 100.0%"></div>
+                  </div>
+                  <div class="chart-value">7</div>
+                </div>
+              
+                <div class="chart-row">
+                  <div class="chart-year">2021</div>
+                  <div class="chart-track" title="4 artigos em 2021">
+                    <div class="chart-bar" style="width: 57.1%"></div>
+                  </div>
+                  <div class="chart-value">4</div>
+                </div>
+              
+              <p class="chart-note">Barras proporcionais ao maior valor anual do período.</p>
+            </div>
+          
+        </div>
+      </section>
+    </section>
+
+    <p class="footer">Página gerada automaticamente. Data da última atualização: 10/06/2026</p>
+  </main>
+
+  <script>
+    document.querySelectorAll('.tab-button').forEach(button => {
+      button.addEventListener('click', () => {
+        const tab = button.dataset.tab;
+        document.querySelectorAll('.tab-button').forEach(b => b.classList.remove('active'));
+        document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+        button.classList.add('active');
+        document.getElementById(tab).classList.add('active');
+      });
+    });
+  </script>
+</body>
+</html>

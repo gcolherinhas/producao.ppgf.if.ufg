@@ -1,0 +1,529 @@
+
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tertius Lima da Fonseca</title>
+  <style>
+
+:root {
+  --ufg-blue: #003f73;
+  --ufg-dark-blue: #002b4f;
+  --ufg-green: #00843d;
+  --ufg-gold: #f2c300;
+  --bg: #f5f7fb;
+  --card: #ffffff;
+  --text: #1f2937;
+  --muted: #6b7280;
+  --border: #d7dee8;
+  --shadow: 0 12px 28px rgba(15, 23, 42, 0.10);
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--text);
+  background: var(--bg);
+  line-height: 1.55;
+}
+a { color: var(--ufg-blue); text-decoration: none; }
+a:hover { text-decoration: underline; }
+.site-header {
+  background: linear-gradient(135deg, var(--ufg-blue), var(--ufg-dark-blue));
+  color: #fff;
+  border-bottom: 6px solid var(--ufg-green);
+}
+.site-header .bar {
+  height: 8px;
+  background: linear-gradient(90deg, var(--ufg-green), var(--ufg-gold), var(--ufg-blue));
+}
+.header-inner {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 24px 22px 28px 22px;
+}
+.ufg-line {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 18px;
+  font-size: 0.98rem;
+  opacity: 0.96;
+}
+.ufg-line strong { font-weight: 700; }
+.header-title {
+  margin: 0;
+  font-size: clamp(1.75rem, 3vw, 2.7rem);
+  letter-spacing: -0.03em;
+}
+.header-subtitle {
+  margin: 8px 0 0 0;
+  color: rgba(255,255,255,0.86);
+  font-size: 1rem;
+}
+.container {
+  max-width: 1180px;
+  margin: 28px auto 48px auto;
+  padding: 0 22px;
+}
+.layout {
+  display: grid;
+  grid-template-columns: 290px 1fr;
+  gap: 24px;
+  align-items: start;
+}
+.profile-card, .content-card, .index-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  box-shadow: var(--shadow);
+}
+.profile-card {
+  padding: 18px;
+  position: sticky;
+  top: 18px;
+}
+.profile-photo {
+  display: block;
+  width: 85%;
+  max-height: 280px;
+  margin: 0 auto;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  background: #e5e7eb;
+}
+.placeholder-photo {
+  display: grid;
+  place-items: center;
+  width: 85%;
+  height: 221px;
+  margin: 0 auto;
+  border-radius: 14px;
+  background: #e5e7eb;
+  color: var(--muted);
+  text-align: center;
+  padding: 18px;
+}
+.profile-card h2 {
+  margin: 16px 0 8px 0;
+  font-size: 1.22rem;
+}
+.meta-list { margin: 14px 0 0 0; padding: 0; list-style: none; }
+.meta-list li { padding: 8px 0; border-top: 1px solid #eef2f7; }
+.meta-label { color: var(--muted); display: inline; font-size: 0.93rem; font-weight: 700; margin-right: 4px; }
+.profile-link { display: inline-block; font-weight: 700; }
+.profile-details {
+  border-top: 1px solid #eef2f7;
+  margin-top: 14px;
+  padding-top: 6px;
+}
+.profile-details li { font-size: 0.93rem; }
+.missing-info { color: var(--muted); font-style: italic; }
+
+.content-card { padding: 20px; min-height: 520px; }
+.tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 12px;
+}
+.tab-button {
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 10px 16px;
+  background: #fff;
+  color: var(--ufg-blue);
+  cursor: pointer;
+  font-weight: 700;
+}
+.tab-button.active {
+  background: var(--ufg-blue);
+  border-color: var(--ufg-blue);
+  color: #fff;
+}
+.tab-panel { display: none; }
+.tab-panel.active { display: block; }
+.article-list { display: grid; gap: 14px; }
+.article-item {
+  padding: 16px;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: #fbfdff;
+}
+.article-year {
+  display: inline-block;
+  padding: 3px 8px;
+  border-radius: 999px;
+  background: #e6f0fa;
+  color: var(--ufg-blue);
+  font-weight: 700;
+  font-size: 0.84rem;
+  margin-bottom: 7px;
+}
+.article-title { margin: 0 0 8px 0; font-size: 1.02rem; }
+.article-authors { color: var(--muted); font-size: 0.92rem; margin: 0; }
+.kpi-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(120px, 1fr));
+  gap: 12px;
+  margin-bottom: 20px;
+}
+.kpi {
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 16px;
+  background: #fbfdff;
+}
+.kpi-value { font-size: 2rem; font-weight: 800; color: var(--ufg-blue); line-height: 1; }
+.kpi-label { color: var(--muted); font-size: 0.86rem; margin-top: 6px; }
+.bar-chart {
+  margin-top: 14px;
+  padding: 18px;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  background: #fbfdff;
+}
+.chart-row {
+  display: grid;
+  grid-template-columns: 64px 1fr 44px;
+  gap: 12px;
+  align-items: center;
+  min-height: 34px;
+  margin: 10px 0;
+}
+.chart-year { font-weight: 700; color: var(--ufg-blue); }
+.chart-track {
+  width: 100%;
+  height: 22px;
+  background: #e5e7eb;
+  border-radius: 999px;
+  overflow: hidden;
+  border: 1px solid #d8e0ea;
+}
+.chart-bar {
+  height: 100%;
+  background: linear-gradient(90deg, var(--ufg-blue), var(--ufg-green));
+  border-radius: 999px;
+  min-width: 0;
+}
+.chart-value {
+  color: var(--text);
+  font-weight: 800;
+  text-align: right;
+  font-size: 0.95rem;
+}
+.chart-note { color: var(--muted); font-size: 0.9rem; margin: 8px 0 0 0; }
+.footer {
+  margin-top: 32px;
+  color: var(--muted);
+  font-size: 0.9rem;
+  text-align: center;
+}
+.index-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  gap: 16px;
+}
+.index-card { padding: 16px; }
+.index-card img { width: 100%; height: 180px; object-fit: cover; border-radius: 12px; border: 1px solid var(--border); }
+.index-card h2 { font-size: 1.05rem; margin: 12px 0 6px 0; }
+.back-link { margin-bottom: 16px; display: inline-block; font-weight: 700; }
+@media (max-width: 820px) {
+  .layout { grid-template-columns: 1fr; }
+  .profile-card { position: static; }
+  .kpi-grid { grid-template-columns: repeat(2, minmax(120px, 1fr)); }
+}
+
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="bar"></div>
+    <div class="header-inner">
+      <div class="ufg-line">
+        <span><strong>UNIVERSIDADE FEDERAL DE GOIÁS - UFG</strong><br>INSTITUTO DE FÍSICA · PROGRAMA DE PÓS-GRADUAÇÃO EM FÍSICA</span>
+        <span>PPGF/UFG</span>
+      </div>
+      <h1 class="header-title">Tertius Lima da Fonseca</h1>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="layout">
+      <aside class="profile-card">
+        
+          <img class="profile-photo" src="data:image/jpeg;base64,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" alt="Foto de Tertius Lima da Fonseca">
+        
+        <h2>Tertius Lima da Fonseca</h2>
+        <ul class="meta-list profile-details">
+          
+            <li><a class="profile-link" href="http://lattes.cnpq.br/8193800922148980" target="_blank" rel="noopener">Curriculum Lattes</a></li>
+          
+          <li><span class="meta-label">Apto(a) a orientar:</span> Física Teórica</li>
+          <li><span class="meta-label">Sala:</span> 218 (IF-2)</li>
+          <li><span class="meta-label">E-mail:</span> <a href="mailto:tertius@ufg.br">tertius@ufg.br</a></li>
+          <li><span class="meta-label">Telefone:</span> (62) 3521-2312</li>
+          <li><span class="meta-label">Pesquisa</span> &#34;Física Atômica e Molecular&#34;</li>
+          
+            <li>Bolsista de Produtividade de CNPq - Nível 1D</li>
+          
+          <li><span class="meta-label">Formação:</span> Doutorado em Física - UFPE - 1996</li>
+          
+            <li><span class="meta-label">ORCID:</span> <a href="https://orcid.org/0000-0001-5501-7801" target="_blank" rel="noopener">0000-0001-5501-7801</a></li>
+          
+          <li><span class="meta-label">Fonte do perfil:</span> <a href="https://posgraduacao.if.ufg.br/p/41256-docentes-ppgf-instituto-de-fisica-ufg" target="_blank" rel="noopener">Página do PPGF/UFG</a></li>
+        </ul>
+      </aside>
+
+      <section class="content-card">
+        <nav class="tabs" aria-label="Seções da página">
+          <button class="tab-button active" data-tab="artigos">Artigos publicados</button>
+          <button class="tab-button" data-tab="estatisticas">Estatísticas do docente</button>
+        </nav>
+
+        <div id="artigos" class="tab-panel active">
+          <h2>Artigos publicados</h2>
+          
+            <div class="article-list">
+              
+                <article class="article-item">
+                  <span class="article-year">2026</span>
+                  <h3 class="article-title">Solvent Polarity as a Selective Modulator of the First Hyperpolarizability in Para-Substituted Azo–Carbazole Dyes</h3>
+                  <p class="article-authors">Murilo B. M. Ferreira; Herbert C. Georg; Marcos A. Castro; Tertius L. Fonseca</p>
+                  <p><a href="https://doi.org/10.1021/acsomega.5c12352" target="_blank" rel="noopener">DOI: 10.1021/acsomega.5c12352</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2026</span>
+                  <h3 class="article-title">Water-Mediated Stability of Ionic Liquids Confined in Aqueous Droplets: Molecular Dynamics Insights with Atmospheric Parallels</h3>
+                  <p class="article-authors">Tertius Lima Fonseca; Guilherme Colherinhas</p>
+                  <p><a href="https://doi.org/10.1021/acs.jpcb.5c06039" target="_blank" rel="noopener">DOI: 10.1021/acs.jpcb.5c06039</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2025</span>
+                  <h3 class="article-title">Impact of Chloride and Bromide Composition in Ionic Liquid/Water Electrolytes on the Electrochemical Performance of Graphene-Based Supercapacitors: A Molecular Dynamics Study</h3>
+                  <p class="article-authors">Leonardo B. A. Oliveira; Lucas de S Silva; Henrique de Araujo Chagas; Tertius L. Fonseca; Guilherme Colherinhas</p>
+                  <p><a href="https://doi.org/10.1021/acs.jpcc.5c01816" target="_blank" rel="noopener">DOI: 10.1021/acs.jpcc.5c01816</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2025</span>
+                  <h3 class="article-title">Modeling supercapacitors with integrated conductors via molecular dynamics: Optimization and impacts on energy efficiency</h3>
+                  <p class="article-authors">Henrique de Araujo Chagas; Tertius L. Fonseca; Guilherme Colherinhas</p>
+                  <p><a href="https://doi.org/10.1016/j.jpowsour.2025.238100" target="_blank" rel="noopener">DOI: 10.1016/j.jpowsour.2025.238100</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2025</span>
+                  <h3 class="article-title">Structural and electrochemical properties of graphene-based supercapacitors with water and methanol-co-solvated ionic liquids: a molecular dynamics study</h3>
+                  <p class="article-authors">Lucas de S. Silva; Leonardo Bruno Assis Oliveira; Tertius L. Fonseca; Guilherme Colherinhas</p>
+                  <p><a href="https://doi.org/10.1016/j.molliq.2025.128041" target="_blank" rel="noopener">DOI: 10.1016/j.molliq.2025.128041</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2024</span>
+                  <h3 class="article-title">Calculation of the geometry, absorption spectrum, and first hyperpolarizability of 4,5-dicyanoimidazole derivatives in solution. A multiscale ASEC-FEG study</h3>
+                  <p class="article-authors">Brandao, Idney; Georg, Herbert C.; Castro, Marcos A.; Fonseca, Tertius L.</p>
+                  <p><a href="https://doi.org/10.1063/5.0215931" target="_blank" rel="noopener">DOI: 10.1063/5.0215931</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2024</span>
+                  <h3 class="article-title">Elucidating the Photophysics and Nonlinear Optical Properties of a Novel Azo Prototype for Possible Photonic Applications: A Quantum Chemical Analysis</h3>
+                  <p class="article-authors">Sàvio Fonseca; Neidy S. S. dos Santos; Herbert C. Georg; Tertius L. Fonseca; Patricio F. Provasi; Kaline Coutinho; Sylvio Canuto; Antônio R. da Cunha; Rodrigo Gester</p>
+                  <p><a href="https://doi.org/10.1021/acsomega.4c04240" target="_blank" rel="noopener">DOI: 10.1021/acsomega.4c04240</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2024</span>
+                  <h3 class="article-title">Systematic analysis to evaluate the impact of hydration on electrolytes [emim][BF&lt;sub&gt;4&lt;/sub&gt;] and [cho][gly] in supercapacitors formed by graphene or graphyne electrodes</h3>
+                  <p class="article-authors">De Araujo Chagas, H.; Oliveira, L.B.A.; Fonseca, T.L.; Colherinhas, G.</p>
+                  <p><a href="https://doi.org/10.1016/j.molliq.2024.126280" target="_blank" rel="noopener">DOI: 10.1016/j.molliq.2024.126280</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2024</span>
+                  <h3 class="article-title">Understanding Nonlinear Optical Phenomena in N-Pyrimidinyl Stilbazolium Crystals via a Self-Consistent Electrostatic Embedding - DFT Approach</h3>
+                  <p class="article-authors">Medeiros, Renato; Franco, Leandro R.; Osorio, Francisco A. P.; Valverde, Clodoaldo; Castro, Marcos A.; Fonseca, Tertius L.</p>
+                  <p><a href="https://doi.org/10.1021/acsomega.4c04215" target="_blank" rel="noopener">DOI: 10.1021/acsomega.4c04215</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2023</span>
+                  <h3 class="article-title">Conformational Dependence of the First Hyperpolarizability of the Li@B10H14 in Solution</h3>
+                  <p class="article-authors">Idney Brandão; Tertius L. Fonseca; Herbert C. Georg; Marcos A. Castro; Renato B. Pontes</p>
+                  <p><a href="https://doi.org/10.3390/liquids3010012" target="_blank" rel="noopener">DOI: 10.3390/liquids3010012</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2023</span>
+                  <h3 class="article-title">Elucidating the conformational change and electronic absorption spectrum of &lt;i&gt;p&lt;/i&gt;-dimethylamino-cinnamaldehyde merocyanine across different solvent polarities</h3>
+                  <p class="article-authors">Franco, Leandro R. R.; Fonseca, Tertius L. L.; Coutinho, Kaline; Georg, Herbert C. C.</p>
+                  <p><a href="https://doi.org/10.1063/5.0158994" target="_blank" rel="noopener">DOI: 10.1063/5.0158994</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2023</span>
+                  <h3 class="article-title">Investigating ionic liquid hydration effects at high temperatures: Insights from classic molecular dynamics simulations</h3>
+                  <p class="article-authors">Leonardo Bruno Assis Oliveira; Tertius L. Fonseca; Guilherme Colherinhas</p>
+                  <p><a href="https://doi.org/10.1016/j.molliq.2023.123662" target="_blank" rel="noopener">DOI: 10.1016/j.molliq.2023.123662</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2023</span>
+                  <h3 class="article-title">Second hyperpolarizabilities of alkali- and alkaline-earth-doped boron nitride nanotubes</h3>
+                  <p class="article-authors">Marques, Suelio; Castro, Marcos A.; Pontes, Renato B.; Leao, Salviano A.; Fonseca, Tertius L.</p>
+                  <p><a href="https://doi.org/10.1016/j.cplett.2023.140473" target="_blank" rel="noopener">DOI: 10.1016/j.cplett.2023.140473</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2023</span>
+                  <h3 class="article-title">Theoretical investigation on the linear and nonlinear optical properties of DAPSH crystal</h3>
+                  <p class="article-authors">Valverde, Clodoaldo; Medeiros, Renato; Franco, Leandro R.; Osorio, Francisco A. P.; Castro, Marcos A.; Fonseca, Tertius L.</p>
+                  <p><a href="https://doi.org/10.1038/s41598-023-35442-8" target="_blank" rel="noopener">DOI: 10.1038/s41598-023-35442-8</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2022</span>
+                  <h3 class="article-title">Bromine Substitution Effect on Structure, Reactivity, and Linear and Third-Order Nonlinear Optical Properties of 2,3-Dimethoxybenzaldehyde</h3>
+                  <p class="article-authors">Antônio Sérgio Nakao Aguiar; Viviane Dias dos Santos; Igor Dalarmelino Borges; Angélica Navarrete; Gerardo Aguirre; Clodoaldo Valverde; Ademir João Camargo; Solemar Silva Oliveira; Francisco Aparecido Pinto Osório; Tertius Lima Fonseca; Hamilton Barbosa Napolitano</p>
+                  <p><a href="https://doi.org/10.1021/acs.jpca.2c04658" target="_blank" rel="noopener">DOI: 10.1021/acs.jpca.2c04658</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2022</span>
+                  <h3 class="article-title">Density functional theory investigation of the second hyperpolarizability of the phenol blue in solution</h3>
+                  <p class="article-authors">Brandao, Idney; Fonseca, Tertius L.; Franco, Leandro R.; Georg, Herbert C.; Castro, Marcos A.</p>
+                  <p><a href="https://doi.org/10.1016/j.cplett.2022.139549" target="_blank" rel="noopener">DOI: 10.1016/j.cplett.2022.139549</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2022</span>
+                  <h3 class="article-title">Molecular modeling and nonlinear optical properties of new isostructural halogenated dihydroquinolinones</h3>
+                  <p class="article-authors">Loide O. Sallum; Clodoaldo Valverde; Igor L. Andrade; Giulio D. C. D’Oliveira; Caridad N. Perez; Ademir J. Camargo; Francisco A. P. Osório; Tertius L. Fonseca; Hamilton B. Napolitano</p>
+                  <p><a href="https://doi.org/10.1039/d2nj00501h" target="_blank" rel="noopener">DOI: 10.1039/d2nj00501h</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2022</span>
+                  <h3 class="article-title">Relating the crystal structure and third-order nonlinear susceptibility of a new Neolignan derivative</h3>
+                  <p class="article-authors">Custodio, Jean M. F.; Fernandes, Fernanda S.; Vaz, Wesley F.; Oliver, Allen G.; Valverde, Clodoaldo; Osorio, Francisco A. P.; Oliveira, Guilherme R.; Fonseca, Tertius L.</p>
+                  <p><a href="https://doi.org/10.1016/j.molstruc.2021.131566" target="_blank" rel="noopener">DOI: 10.1016/j.molstruc.2021.131566</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2022</span>
+                  <h3 class="article-title">Second- and third-order nonlinear optical properties of mono-substituted terpenoid-like chalcones</h3>
+                  <p class="article-authors">Manoel, Diego S.; Pelosi, Andre G.; Zucolotto Cocca, Leandro H.; Almeida, Gustavo F. B.; Sciuti, Lucas F.; Rodriguez, Ruben D. F.; Adriano Junior, Luizmar; Lima, Rosa S.; Noda-Perez, Caridad; Martins, Felipe T.; Souza, Marcio A. R.; Goncalves, Pablo J.; Fonseca, Tertius L.; de Boni, Leonardo; Mendonca, Cleber R.</p>
+                  <p><a href="https://doi.org/10.1016/j.jphotochem.2022.113898" target="_blank" rel="noopener">DOI: 10.1016/j.jphotochem.2022.113898</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2021</span>
+                  <h3 class="article-title">Applicability of DFT functionals for evaluating the first hyperpolarizability of phenol blue in solution</h3>
+                  <p class="article-authors">Idney Brandão; Tertius L. Fonseca; Leandro R. Franco; Herbert C. Georg; Marcos A. Castro</p>
+                  <p><a href="https://doi.org/10.1063/5.0033134" target="_blank" rel="noopener">DOI: 10.1063/5.0033134</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2021</span>
+                  <h3 class="article-title">Preferential solvation and optical properties of eumelanin building blocks in binary mixture of methanol and water</h3>
+                  <p class="article-authors">Leonardo Bruno Assis Oliveira; Tertius L. Fonseca; Benedito J. C. Cabral; Kaline Coutinho; Sylvio Canuto</p>
+                  <p><a href="https://doi.org/10.1063/5.0065723" target="_blank" rel="noopener">DOI: 10.1063/5.0065723</a></p>
+                </article>
+              
+            </div>
+          
+        </div>
+
+        <div id="estatisticas" class="tab-panel">
+          <h2>Estatísticas do docente</h2>
+          <div class="kpi-grid">
+            <div class="kpi"><div class="kpi-value">21</div><div class="kpi-label">Artigos entre 2021-2026</div></div>
+            <div class="kpi"><div class="kpi-value">3</div><div class="kpi-label">Total de alunos</div></div>
+            <div class="kpi"><div class="kpi-value">3</div><div class="kpi-label">Mestrado</div></div>
+            <div class="kpi"><div class="kpi-value">0</div><div class="kpi-label">Doutorado</div></div>
+          </div>
+
+          <h3>Artigos por ano</h3>
+          
+            <div class="bar-chart" role="img" aria-label="Gráfico de barras com o número de artigos por ano">
+              
+                <div class="chart-row">
+                  <div class="chart-year">2026</div>
+                  <div class="chart-track" title="2 artigos em 2026">
+                    <div class="chart-bar" style="width: 40.0%"></div>
+                  </div>
+                  <div class="chart-value">2</div>
+                </div>
+              
+                <div class="chart-row">
+                  <div class="chart-year">2025</div>
+                  <div class="chart-track" title="3 artigos em 2025">
+                    <div class="chart-bar" style="width: 60.0%"></div>
+                  </div>
+                  <div class="chart-value">3</div>
+                </div>
+              
+                <div class="chart-row">
+                  <div class="chart-year">2024</div>
+                  <div class="chart-track" title="4 artigos em 2024">
+                    <div class="chart-bar" style="width: 80.0%"></div>
+                  </div>
+                  <div class="chart-value">4</div>
+                </div>
+              
+                <div class="chart-row">
+                  <div class="chart-year">2023</div>
+                  <div class="chart-track" title="5 artigos em 2023">
+                    <div class="chart-bar" style="width: 100.0%"></div>
+                  </div>
+                  <div class="chart-value">5</div>
+                </div>
+              
+                <div class="chart-row">
+                  <div class="chart-year">2022</div>
+                  <div class="chart-track" title="5 artigos em 2022">
+                    <div class="chart-bar" style="width: 100.0%"></div>
+                  </div>
+                  <div class="chart-value">5</div>
+                </div>
+              
+                <div class="chart-row">
+                  <div class="chart-year">2021</div>
+                  <div class="chart-track" title="2 artigos em 2021">
+                    <div class="chart-bar" style="width: 40.0%"></div>
+                  </div>
+                  <div class="chart-value">2</div>
+                </div>
+              
+              <p class="chart-note">Barras proporcionais ao maior valor anual do período.</p>
+            </div>
+          
+        </div>
+      </section>
+    </section>
+
+    <p class="footer">Página gerada automaticamente. Data da última atualização: 10/06/2026</p>
+  </main>
+
+  <script>
+    document.querySelectorAll('.tab-button').forEach(button => {
+      button.addEventListener('click', () => {
+        const tab = button.dataset.tab;
+        document.querySelectorAll('.tab-button').forEach(b => b.classList.remove('active'));
+        document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+        button.classList.add('active');
+        document.getElementById(tab).classList.add('active');
+      });
+    });
+  </script>
+</body>
+</html>

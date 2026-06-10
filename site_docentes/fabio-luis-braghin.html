@@ -1,0 +1,508 @@
+
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Fábio Luís Braghin</title>
+  <style>
+
+:root {
+  --ufg-blue: #003f73;
+  --ufg-dark-blue: #002b4f;
+  --ufg-green: #00843d;
+  --ufg-gold: #f2c300;
+  --bg: #f5f7fb;
+  --card: #ffffff;
+  --text: #1f2937;
+  --muted: #6b7280;
+  --border: #d7dee8;
+  --shadow: 0 12px 28px rgba(15, 23, 42, 0.10);
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--text);
+  background: var(--bg);
+  line-height: 1.55;
+}
+a { color: var(--ufg-blue); text-decoration: none; }
+a:hover { text-decoration: underline; }
+.site-header {
+  background: linear-gradient(135deg, var(--ufg-blue), var(--ufg-dark-blue));
+  color: #fff;
+  border-bottom: 6px solid var(--ufg-green);
+}
+.site-header .bar {
+  height: 8px;
+  background: linear-gradient(90deg, var(--ufg-green), var(--ufg-gold), var(--ufg-blue));
+}
+.header-inner {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 24px 22px 28px 22px;
+}
+.ufg-line {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 18px;
+  font-size: 0.98rem;
+  opacity: 0.96;
+}
+.ufg-line strong { font-weight: 700; }
+.header-title {
+  margin: 0;
+  font-size: clamp(1.75rem, 3vw, 2.7rem);
+  letter-spacing: -0.03em;
+}
+.header-subtitle {
+  margin: 8px 0 0 0;
+  color: rgba(255,255,255,0.86);
+  font-size: 1rem;
+}
+.container {
+  max-width: 1180px;
+  margin: 28px auto 48px auto;
+  padding: 0 22px;
+}
+.layout {
+  display: grid;
+  grid-template-columns: 290px 1fr;
+  gap: 24px;
+  align-items: start;
+}
+.profile-card, .content-card, .index-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  box-shadow: var(--shadow);
+}
+.profile-card {
+  padding: 18px;
+  position: sticky;
+  top: 18px;
+}
+.profile-photo {
+  display: block;
+  width: 85%;
+  max-height: 280px;
+  margin: 0 auto;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  background: #e5e7eb;
+}
+.placeholder-photo {
+  display: grid;
+  place-items: center;
+  width: 85%;
+  height: 221px;
+  margin: 0 auto;
+  border-radius: 14px;
+  background: #e5e7eb;
+  color: var(--muted);
+  text-align: center;
+  padding: 18px;
+}
+.profile-card h2 {
+  margin: 16px 0 8px 0;
+  font-size: 1.22rem;
+}
+.meta-list { margin: 14px 0 0 0; padding: 0; list-style: none; }
+.meta-list li { padding: 8px 0; border-top: 1px solid #eef2f7; }
+.meta-label { color: var(--muted); display: inline; font-size: 0.93rem; font-weight: 700; margin-right: 4px; }
+.profile-link { display: inline-block; font-weight: 700; }
+.profile-details {
+  border-top: 1px solid #eef2f7;
+  margin-top: 14px;
+  padding-top: 6px;
+}
+.profile-details li { font-size: 0.93rem; }
+.missing-info { color: var(--muted); font-style: italic; }
+
+.content-card { padding: 20px; min-height: 520px; }
+.tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 12px;
+}
+.tab-button {
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 10px 16px;
+  background: #fff;
+  color: var(--ufg-blue);
+  cursor: pointer;
+  font-weight: 700;
+}
+.tab-button.active {
+  background: var(--ufg-blue);
+  border-color: var(--ufg-blue);
+  color: #fff;
+}
+.tab-panel { display: none; }
+.tab-panel.active { display: block; }
+.article-list { display: grid; gap: 14px; }
+.article-item {
+  padding: 16px;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: #fbfdff;
+}
+.article-year {
+  display: inline-block;
+  padding: 3px 8px;
+  border-radius: 999px;
+  background: #e6f0fa;
+  color: var(--ufg-blue);
+  font-weight: 700;
+  font-size: 0.84rem;
+  margin-bottom: 7px;
+}
+.article-title { margin: 0 0 8px 0; font-size: 1.02rem; }
+.article-authors { color: var(--muted); font-size: 0.92rem; margin: 0; }
+.kpi-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(120px, 1fr));
+  gap: 12px;
+  margin-bottom: 20px;
+}
+.kpi {
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 16px;
+  background: #fbfdff;
+}
+.kpi-value { font-size: 2rem; font-weight: 800; color: var(--ufg-blue); line-height: 1; }
+.kpi-label { color: var(--muted); font-size: 0.86rem; margin-top: 6px; }
+.bar-chart {
+  margin-top: 14px;
+  padding: 18px;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  background: #fbfdff;
+}
+.chart-row {
+  display: grid;
+  grid-template-columns: 64px 1fr 44px;
+  gap: 12px;
+  align-items: center;
+  min-height: 34px;
+  margin: 10px 0;
+}
+.chart-year { font-weight: 700; color: var(--ufg-blue); }
+.chart-track {
+  width: 100%;
+  height: 22px;
+  background: #e5e7eb;
+  border-radius: 999px;
+  overflow: hidden;
+  border: 1px solid #d8e0ea;
+}
+.chart-bar {
+  height: 100%;
+  background: linear-gradient(90deg, var(--ufg-blue), var(--ufg-green));
+  border-radius: 999px;
+  min-width: 0;
+}
+.chart-value {
+  color: var(--text);
+  font-weight: 800;
+  text-align: right;
+  font-size: 0.95rem;
+}
+.chart-note { color: var(--muted); font-size: 0.9rem; margin: 8px 0 0 0; }
+.footer {
+  margin-top: 32px;
+  color: var(--muted);
+  font-size: 0.9rem;
+  text-align: center;
+}
+.index-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  gap: 16px;
+}
+.index-card { padding: 16px; }
+.index-card img { width: 100%; height: 180px; object-fit: cover; border-radius: 12px; border: 1px solid var(--border); }
+.index-card h2 { font-size: 1.05rem; margin: 12px 0 6px 0; }
+.back-link { margin-bottom: 16px; display: inline-block; font-weight: 700; }
+@media (max-width: 820px) {
+  .layout { grid-template-columns: 1fr; }
+  .profile-card { position: static; }
+  .kpi-grid { grid-template-columns: repeat(2, minmax(120px, 1fr)); }
+}
+
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="bar"></div>
+    <div class="header-inner">
+      <div class="ufg-line">
+        <span><strong>UNIVERSIDADE FEDERAL DE GOIÁS - UFG</strong><br>INSTITUTO DE FÍSICA · PROGRAMA DE PÓS-GRADUAÇÃO EM FÍSICA</span>
+        <span>PPGF/UFG</span>
+      </div>
+      <h1 class="header-title">Fábio Luís Braghin</h1>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="layout">
+      <aside class="profile-card">
+        
+          <img class="profile-photo" src="data:image/jpeg;base64,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" alt="Foto de Fábio Luís Braghin">
+        
+        <h2>Fábio Luís Braghin</h2>
+        <ul class="meta-list profile-details">
+          
+            <li><a class="profile-link" href="http://lattes.cnpq.br/9375085677737347" target="_blank" rel="noopener">Curriculum Lattes</a></li>
+          
+          <li><span class="meta-label">Apto(a) a orientar:</span> Física Teórica</li>
+          <li><span class="meta-label">Sala:</span> 214 (IF-2)</li>
+          <li><span class="meta-label">E-mail:</span> <a href="mailto:braghin@ufg.br">braghin@ufg.br</a></li>
+          <li><span class="meta-label">Telefone:</span> (62) 3521-2308</li>
+          <li><span class="meta-label">Pesquisa</span> &#34;Teoria Quântica de Campos e Cromodinâmica Quântica&#34;</li>
+          
+            <li>Bolsista de Produtividade de CNPq - Nível 2</li>
+          
+          <li><span class="meta-label">Formação:</span> Doutorado em Física Teórica - Université Paris XI (França) - 1996</li>
+          
+            <li><span class="meta-label">ORCID:</span> <a href="https://orcid.org/0000-0002-2321-2167" target="_blank" rel="noopener">0000-0002-2321-2167</a></li>
+          
+          <li><span class="meta-label">Fonte do perfil:</span> <a href="https://posgraduacao.if.ufg.br/p/41256-docentes-ppgf-instituto-de-fisica-ufg" target="_blank" rel="noopener">Página do PPGF/UFG</a></li>
+        </ul>
+      </aside>
+
+      <section class="content-card">
+        <nav class="tabs" aria-label="Seções da página">
+          <button class="tab-button active" data-tab="artigos">Artigos publicados</button>
+          <button class="tab-button" data-tab="estatisticas">Estatísticas do docente</button>
+        </nav>
+
+        <div id="artigos" class="tab-panel active">
+          <h2>Artigos publicados</h2>
+          
+            <div class="article-list">
+              
+                <article class="article-item">
+                  <span class="article-year">2026</span>
+                  <h3 class="article-title">Charge dependence of mesons with flavored contact-interaction couplings</h3>
+                  <p class="article-authors">Fábio L. Braghin; Bruno El-Bennich; Fernando E. Serna</p>
+                  <p><a href="https://doi.org/10.1103/pmwg-8t5d" target="_blank" rel="noopener">DOI: 10.1103/pmwg-8t5d</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2026</span>
+                  <h3 class="article-title">Strongly interacting matter in extreme magnetic fields</h3>
+                  <p class="article-authors">Prabal Adhikari; Martin Ammon; Sidney S. Avancini; Alejandro Ayala; Aritra Bandyopadhyay; David Blaschke; Fabio L. Braghin; Pavel Buividovich; Rafael P. Cardoso; Casey Cartwright; Jorge David Castaño-Yepes; Maxim N. Chernodub; Máximo Coppola; Mayusree Das; Mariana Dutra; Gergely Endrődi; Jianjun Fang; Ricardo L.S. Farias; Eduardo S. Fraga; Arthur Frazon; Kenji Fukushima; Juan D. García-Muñoz; Eduardo Garnacho-Velasco; Daniel Gomez Dumm; Sebastian Grieninger; Francesca Gulminelli; Juan Hernandez; Chowdhury Aminul Islam; Matthias Kaminski; Andrey Kotov; Gastão Krein; Jing Li; Pok Man Lo; Marcelo Loewe; Odilon Lourenço; Gergely Markó; Kau D. Marquez; Ana Mizher; Banibrata Mukhopadhyay; Enrique Muñoz; Santiago Noguera; Rodrigo M. Nunes; Helena Pais; Letícia F. Palhares; Constança Providência; Alfredo Raya; Tulio Restrepo; Juan Cristóbal Rojas; Norberto N. Scoccola; Luigi Scurto; Armen Sedrakian; Dominik Smith; William Rafael Tavares; Maria E. Tejeda-Yeomans; Varese S. Timóteo; Laura Tolos; Cristian Villavicencio; Fridolin Weber; Shigehiro Yasui; Renato Zamora; Zenia Zuraiq</p>
+                  <p><a href="https://doi.org/10.1016/j.ppnp.2025.104199" target="_blank" rel="noopener">DOI: 10.1016/j.ppnp.2025.104199</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2025</span>
+                  <h3 class="article-title">Charged pions asymmetry due to interference from the decay of light neutral axial mesons</h3>
+                  <p class="article-authors">Fabio L Braghin</p>
+                  <p><a href="https://doi.org/10.1088/1361-6471/ad91d0" target="_blank" rel="noopener">DOI: 10.1088/1361-6471/ad91d0</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2025</span>
+                  <h3 class="article-title">Large quark mass Euler–Heisenberg-type action for QCD with quark sources and its Abelian limit</h3>
+                  <p class="article-authors">Igor de M. Froldi; Fabio L. Braghin</p>
+                  <p><a href="https://doi.org/10.1142/s0217751x25501167" target="_blank" rel="noopener">DOI: 10.1142/s0217751x25501167</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2025</span>
+                  <h3 class="article-title">Symmetry breaking effects in pion couplings to constituent quark currents</h3>
+                  <p class="article-authors">Fabio L. Braghin</p>
+                  <p><a href="https://doi.org/10.1140/epja/s10050-025-01620-7" target="_blank" rel="noopener">DOI: 10.1140/epja/s10050-025-01620-7</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2024</span>
+                  <h3 class="article-title">$$U_A(1)$$ symmetry-breaking quark interactions from vacuum polarization</h3>
+                  <p class="article-authors">Fabio L. Braghin</p>
+                  <p><a href="https://doi.org/10.1140/epja/s10050-024-01390-8" target="_blank" rel="noopener">DOI: 10.1140/epja/s10050-024-01390-8</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2024</span>
+                  <h3 class="article-title">Symmetry Restorations in the Singlet Scalar Yukawa Model Within the Auxiliary Field Method</h3>
+                  <p class="article-authors">Anderson A. Nogueira; Fábio L. Braghin</p>
+                  <p><a href="https://doi.org/10.3390/universe11010003" target="_blank" rel="noopener">DOI: 10.3390/universe11010003</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2024</span>
+                  <h3 class="article-title">Yukawa potential under weak magnetic field</h3>
+                  <p class="article-authors">Fábio L. Braghin; Marcelo Loewe; Cristian Villavicencio</p>
+                  <p><a href="https://doi.org/10.1103/physrevd.109.034014" target="_blank" rel="noopener">DOI: 10.1103/physrevd.109.034014</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2023</span>
+                  <h3 class="article-title">Corrigendum: Strangeness content of the pion in the U(3) Nambu–Jona–Lasinio model (2022 J. Phys. G: Nucl. Part. Phys. 49 055101)</h3>
+                  <p class="article-authors">Fábio L Braghin</p>
+                  <p><a href="https://doi.org/10.1088/1361-6471/acf9bb" target="_blank" rel="noopener">DOI: 10.1088/1361-6471/acf9bb</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2023</span>
+                  <h3 class="article-title">Erratum: Pion constituent quark couplings strong form factors: A dynamical approach [Phys. Rev. D 99 , 014001 (2019)]</h3>
+                  <p class="article-authors">Fábio L. Braghin</p>
+                  <p><a href="https://doi.org/10.1103/physrevd.107.079902" target="_blank" rel="noopener">DOI: 10.1103/physrevd.107.079902</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2023</span>
+                  <h3 class="article-title">Quark-antiquark states of the lightest scalar mesons within the Nambu-Jona-Lasinio model with flavor-dependent coupling constants</h3>
+                  <p class="article-authors">Fabio L Braghin</p>
+                  <p><a href="https://doi.org/10.1088/1361-6471/acdaea" target="_blank" rel="noopener">DOI: 10.1088/1361-6471/acdaea</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2023</span>
+                  <h3 class="article-title">U(5) Nambu–Jona–Lasinio model with flavor dependent coupling constants: pseudoscalar and scalar mesons masses</h3>
+                  <p class="article-authors">W. F. de Sousa; F. L. Braghin</p>
+                  <p><a href="https://doi.org/10.1140/epja/s10050-023-01190-6" target="_blank" rel="noopener">DOI: 10.1140/epja/s10050-023-01190-6</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2022</span>
+                  <h3 class="article-title">Classical Yang Mills equations with sources: Consequences of specific scalar potentials</h3>
+                  <p class="article-authors">Igor de M. Froldi; Fabio L. Braghin</p>
+                  <p><a href="https://doi.org/10.1016/j.aop.2022.169026" target="_blank" rel="noopener">DOI: 10.1016/j.aop.2022.169026</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2022</span>
+                  <h3 class="article-title">Constituent quark axial current couplings to light vector mesons in the vacuum and with a weak magnetic field</h3>
+                  <p class="article-authors">Fabio L. Braghin</p>
+                  <p><a href="https://doi.org/10.1103/physrevd.105.054009" target="_blank" rel="noopener">DOI: 10.1103/physrevd.105.054009</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2022</span>
+                  <h3 class="article-title">Magnetic field induced corrections to the NJL model coupling constant from vacuum polarization</h3>
+                  <p class="article-authors">Thiago H. Moreira; Fabio L. Braghin</p>
+                  <p><a href="https://doi.org/10.1103/physrevd.105.114009" target="_blank" rel="noopener">DOI: 10.1103/physrevd.105.114009</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2022</span>
+                  <h3 class="article-title">Spontaneous symmetry breakings in the singlet scalar Yukawa model within the auxiliary field method</h3>
+                  <p class="article-authors">A. A. Nogueira; F. L. Braghin</p>
+                  <p><a href="https://doi.org/10.1142/s0217751x2250066x" target="_blank" rel="noopener">DOI: 10.1142/s0217751x2250066x</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2022</span>
+                  <h3 class="article-title">Strangeness content of the pion in the U(3) Nambu–Jona–Lasinio model</h3>
+                  <p class="article-authors">Fábio L Braghin</p>
+                  <p><a href="https://doi.org/10.1088/1361-6471/ac4d79" target="_blank" rel="noopener">DOI: 10.1088/1361-6471/ac4d79</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2021</span>
+                  <h3 class="article-title">Flavor-dependent U(3) Nambu–Jona-Lasinio coupling constant</h3>
+                  <p class="article-authors">Fabio L. Braghin</p>
+                  <p><a href="https://doi.org/10.1103/physrevd.103.094028" target="_blank" rel="noopener">DOI: 10.1103/physrevd.103.094028</a></p>
+                </article>
+              
+            </div>
+          
+        </div>
+
+        <div id="estatisticas" class="tab-panel">
+          <h2>Estatísticas do docente</h2>
+          <div class="kpi-grid">
+            <div class="kpi"><div class="kpi-value">18</div><div class="kpi-label">Artigos entre 2021-2026</div></div>
+            <div class="kpi"><div class="kpi-value">1</div><div class="kpi-label">Total de alunos</div></div>
+            <div class="kpi"><div class="kpi-value">1</div><div class="kpi-label">Mestrado</div></div>
+            <div class="kpi"><div class="kpi-value">0</div><div class="kpi-label">Doutorado</div></div>
+          </div>
+
+          <h3>Artigos por ano</h3>
+          
+            <div class="bar-chart" role="img" aria-label="Gráfico de barras com o número de artigos por ano">
+              
+                <div class="chart-row">
+                  <div class="chart-year">2026</div>
+                  <div class="chart-track" title="2 artigos em 2026">
+                    <div class="chart-bar" style="width: 40.0%"></div>
+                  </div>
+                  <div class="chart-value">2</div>
+                </div>
+              
+                <div class="chart-row">
+                  <div class="chart-year">2025</div>
+                  <div class="chart-track" title="3 artigos em 2025">
+                    <div class="chart-bar" style="width: 60.0%"></div>
+                  </div>
+                  <div class="chart-value">3</div>
+                </div>
+              
+                <div class="chart-row">
+                  <div class="chart-year">2024</div>
+                  <div class="chart-track" title="3 artigos em 2024">
+                    <div class="chart-bar" style="width: 60.0%"></div>
+                  </div>
+                  <div class="chart-value">3</div>
+                </div>
+              
+                <div class="chart-row">
+                  <div class="chart-year">2023</div>
+                  <div class="chart-track" title="4 artigos em 2023">
+                    <div class="chart-bar" style="width: 80.0%"></div>
+                  </div>
+                  <div class="chart-value">4</div>
+                </div>
+              
+                <div class="chart-row">
+                  <div class="chart-year">2022</div>
+                  <div class="chart-track" title="5 artigos em 2022">
+                    <div class="chart-bar" style="width: 100.0%"></div>
+                  </div>
+                  <div class="chart-value">5</div>
+                </div>
+              
+                <div class="chart-row">
+                  <div class="chart-year">2021</div>
+                  <div class="chart-track" title="1 artigos em 2021">
+                    <div class="chart-bar" style="width: 20.0%"></div>
+                  </div>
+                  <div class="chart-value">1</div>
+                </div>
+              
+              <p class="chart-note">Barras proporcionais ao maior valor anual do período.</p>
+            </div>
+          
+        </div>
+      </section>
+    </section>
+
+    <p class="footer">Página gerada automaticamente. Data da última atualização: 10/06/2026</p>
+  </main>
+
+  <script>
+    document.querySelectorAll('.tab-button').forEach(button => {
+      button.addEventListener('click', () => {
+        const tab = button.dataset.tab;
+        document.querySelectorAll('.tab-button').forEach(b => b.classList.remove('active'));
+        document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+        button.classList.add('active');
+        document.getElementById(tab).classList.add('active');
+      });
+    });
+  </script>
+</body>
+</html>

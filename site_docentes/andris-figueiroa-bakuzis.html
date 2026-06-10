@@ -1,0 +1,669 @@
+
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Andris Figueiroa Bakuzis</title>
+  <style>
+
+:root {
+  --ufg-blue: #003f73;
+  --ufg-dark-blue: #002b4f;
+  --ufg-green: #00843d;
+  --ufg-gold: #f2c300;
+  --bg: #f5f7fb;
+  --card: #ffffff;
+  --text: #1f2937;
+  --muted: #6b7280;
+  --border: #d7dee8;
+  --shadow: 0 12px 28px rgba(15, 23, 42, 0.10);
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--text);
+  background: var(--bg);
+  line-height: 1.55;
+}
+a { color: var(--ufg-blue); text-decoration: none; }
+a:hover { text-decoration: underline; }
+.site-header {
+  background: linear-gradient(135deg, var(--ufg-blue), var(--ufg-dark-blue));
+  color: #fff;
+  border-bottom: 6px solid var(--ufg-green);
+}
+.site-header .bar {
+  height: 8px;
+  background: linear-gradient(90deg, var(--ufg-green), var(--ufg-gold), var(--ufg-blue));
+}
+.header-inner {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 24px 22px 28px 22px;
+}
+.ufg-line {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 18px;
+  font-size: 0.98rem;
+  opacity: 0.96;
+}
+.ufg-line strong { font-weight: 700; }
+.header-title {
+  margin: 0;
+  font-size: clamp(1.75rem, 3vw, 2.7rem);
+  letter-spacing: -0.03em;
+}
+.header-subtitle {
+  margin: 8px 0 0 0;
+  color: rgba(255,255,255,0.86);
+  font-size: 1rem;
+}
+.container {
+  max-width: 1180px;
+  margin: 28px auto 48px auto;
+  padding: 0 22px;
+}
+.layout {
+  display: grid;
+  grid-template-columns: 290px 1fr;
+  gap: 24px;
+  align-items: start;
+}
+.profile-card, .content-card, .index-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  box-shadow: var(--shadow);
+}
+.profile-card {
+  padding: 18px;
+  position: sticky;
+  top: 18px;
+}
+.profile-photo {
+  display: block;
+  width: 85%;
+  max-height: 280px;
+  margin: 0 auto;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  background: #e5e7eb;
+}
+.placeholder-photo {
+  display: grid;
+  place-items: center;
+  width: 85%;
+  height: 221px;
+  margin: 0 auto;
+  border-radius: 14px;
+  background: #e5e7eb;
+  color: var(--muted);
+  text-align: center;
+  padding: 18px;
+}
+.profile-card h2 {
+  margin: 16px 0 8px 0;
+  font-size: 1.22rem;
+}
+.meta-list { margin: 14px 0 0 0; padding: 0; list-style: none; }
+.meta-list li { padding: 8px 0; border-top: 1px solid #eef2f7; }
+.meta-label { color: var(--muted); display: inline; font-size: 0.93rem; font-weight: 700; margin-right: 4px; }
+.profile-link { display: inline-block; font-weight: 700; }
+.profile-details {
+  border-top: 1px solid #eef2f7;
+  margin-top: 14px;
+  padding-top: 6px;
+}
+.profile-details li { font-size: 0.93rem; }
+.missing-info { color: var(--muted); font-style: italic; }
+
+.content-card { padding: 20px; min-height: 520px; }
+.tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 12px;
+}
+.tab-button {
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 10px 16px;
+  background: #fff;
+  color: var(--ufg-blue);
+  cursor: pointer;
+  font-weight: 700;
+}
+.tab-button.active {
+  background: var(--ufg-blue);
+  border-color: var(--ufg-blue);
+  color: #fff;
+}
+.tab-panel { display: none; }
+.tab-panel.active { display: block; }
+.article-list { display: grid; gap: 14px; }
+.article-item {
+  padding: 16px;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: #fbfdff;
+}
+.article-year {
+  display: inline-block;
+  padding: 3px 8px;
+  border-radius: 999px;
+  background: #e6f0fa;
+  color: var(--ufg-blue);
+  font-weight: 700;
+  font-size: 0.84rem;
+  margin-bottom: 7px;
+}
+.article-title { margin: 0 0 8px 0; font-size: 1.02rem; }
+.article-authors { color: var(--muted); font-size: 0.92rem; margin: 0; }
+.kpi-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(120px, 1fr));
+  gap: 12px;
+  margin-bottom: 20px;
+}
+.kpi {
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 16px;
+  background: #fbfdff;
+}
+.kpi-value { font-size: 2rem; font-weight: 800; color: var(--ufg-blue); line-height: 1; }
+.kpi-label { color: var(--muted); font-size: 0.86rem; margin-top: 6px; }
+.bar-chart {
+  margin-top: 14px;
+  padding: 18px;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  background: #fbfdff;
+}
+.chart-row {
+  display: grid;
+  grid-template-columns: 64px 1fr 44px;
+  gap: 12px;
+  align-items: center;
+  min-height: 34px;
+  margin: 10px 0;
+}
+.chart-year { font-weight: 700; color: var(--ufg-blue); }
+.chart-track {
+  width: 100%;
+  height: 22px;
+  background: #e5e7eb;
+  border-radius: 999px;
+  overflow: hidden;
+  border: 1px solid #d8e0ea;
+}
+.chart-bar {
+  height: 100%;
+  background: linear-gradient(90deg, var(--ufg-blue), var(--ufg-green));
+  border-radius: 999px;
+  min-width: 0;
+}
+.chart-value {
+  color: var(--text);
+  font-weight: 800;
+  text-align: right;
+  font-size: 0.95rem;
+}
+.chart-note { color: var(--muted); font-size: 0.9rem; margin: 8px 0 0 0; }
+.footer {
+  margin-top: 32px;
+  color: var(--muted);
+  font-size: 0.9rem;
+  text-align: center;
+}
+.index-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  gap: 16px;
+}
+.index-card { padding: 16px; }
+.index-card img { width: 100%; height: 180px; object-fit: cover; border-radius: 12px; border: 1px solid var(--border); }
+.index-card h2 { font-size: 1.05rem; margin: 12px 0 6px 0; }
+.back-link { margin-bottom: 16px; display: inline-block; font-weight: 700; }
+@media (max-width: 820px) {
+  .layout { grid-template-columns: 1fr; }
+  .profile-card { position: static; }
+  .kpi-grid { grid-template-columns: repeat(2, minmax(120px, 1fr)); }
+}
+
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="bar"></div>
+    <div class="header-inner">
+      <div class="ufg-line">
+        <span><strong>UNIVERSIDADE FEDERAL DE GOIÁS - UFG</strong><br>INSTITUTO DE FÍSICA · PROGRAMA DE PÓS-GRADUAÇÃO EM FÍSICA</span>
+        <span>PPGF/UFG</span>
+      </div>
+      <h1 class="header-title">Andris Figueiroa Bakuzis</h1>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="layout">
+      <aside class="profile-card">
+        
+          <img class="profile-photo" src="data:image/jpeg;base64,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" alt="Foto de Andris Figueiroa Bakuzis">
+        
+        <h2>Andris Figueiroa Bakuzis</h2>
+        <ul class="meta-list profile-details">
+          
+            <li><a class="profile-link" href="http://lattes.cnpq.br/3477269475651042" target="_blank" rel="noopener">Curriculum Lattes</a></li>
+          
+          <li><span class="meta-label">Apto(a) a orientar:</span> Física Experimental</li>
+          <li><span class="meta-label">Sala:</span> 115 (IF-2)</li>
+          <li><span class="meta-label">E-mail:</span> <a href="mailto:bakuzis@ufg.br">bakuzis@ufg.br</a></li>
+          <li><span class="meta-label">Telefone:</span> (62) 3521-2302</li>
+          <li><span class="meta-label">Pesquisa</span> &#34;Nanomagnetismo e Nanomedicina&#34;</li>
+          
+            <li>Bolsista de Produtividade de CNPq - Nível 1C</li>
+          
+          <li><span class="meta-label">Formação:</span> Doutorado em Física - UnB - 2000</li>
+          
+            <li><span class="meta-label">ORCID:</span> <a href="https://orcid.org/0000-0003-3366-106X" target="_blank" rel="noopener">0000-0003-3366-106X</a></li>
+          
+          <li><span class="meta-label">Fonte do perfil:</span> <a href="https://posgraduacao.if.ufg.br/p/41256-docentes-ppgf-instituto-de-fisica-ufg" target="_blank" rel="noopener">Página do PPGF/UFG</a></li>
+        </ul>
+      </aside>
+
+      <section class="content-card">
+        <nav class="tabs" aria-label="Seções da página">
+          <button class="tab-button active" data-tab="artigos">Artigos publicados</button>
+          <button class="tab-button" data-tab="estatisticas">Estatísticas do docente</button>
+        </nav>
+
+        <div id="artigos" class="tab-panel active">
+          <h2>Artigos publicados</h2>
+          
+            <div class="article-list">
+              
+                <article class="article-item">
+                  <span class="article-year">2026</span>
+                  <h3 class="article-title">A Green Sol–Gel Route to Fe &lt;sub&gt;3&lt;/sub&gt; O &lt;sub&gt;4&lt;/sub&gt; @TiO &lt;sub&gt;2&lt;/sub&gt; –CuO Photocatalysts with Structural Stability, Visible–Light Activity, and Magnetic Recoverability</h3>
+                  <p class="article-authors">Gabriel Bardella Stelzer; Isabella Cristina Prescilio; Leonardo G. Vasconcelos; Andris F. Bakuzis; Marcos J. Jacinto</p>
+                  <p><a href="https://doi.org/10.1021/acsomega.5c09939" target="_blank" rel="noopener">DOI: 10.1021/acsomega.5c09939</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2025</span>
+                  <h3 class="article-title">Achieving Permanent Male Infertility by Magnetic Nanoparticle Hyperthermia: A Breakthrough in Animal Fertility Management</h3>
+                  <p class="article-authors">Juliana Lis Mendes Brito; Vanessa Nicolau Lima; José Luiz P. R. Jivago; Aline R. M. Marangon; Marcus Vinícius-Araújo; Andris Figueiroa Bakuzis; Juliana dos Anjos Ribeiro dos Santos; Paulo E. N. Souza; Ricardo Bentes Azevedo; Carolina Madeira Lucci</p>
+                  <p><a href="https://doi.org/10.3390/pharmaceutics17050602" target="_blank" rel="noopener">DOI: 10.3390/pharmaceutics17050602</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2025</span>
+                  <h3 class="article-title">Biosynthesis of enhanced magnetic iron Oxide@ZnO nanocomposites with incorporated Ni species for the photodegradation of dyes</h3>
+                  <p class="article-authors">Isabella Cristina Prescilio; S. Abe; Andris F. Bakuzis; Leonardo Gomes de Vasconcelos; Ericson H. N. S. Thaines; Leonardo Henrique de Morais; Virgínia Cláudia da Silva; Renato G. Freitas; Marcos J. Jacinto</p>
+                  <p><a href="https://doi.org/10.1016/j.apsusc.2025.163385" target="_blank" rel="noopener">DOI: 10.1016/j.apsusc.2025.163385</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2025</span>
+                  <h3 class="article-title">Fe3O4/ZIF-8-90 Nanocomposite as a Strategy for Oncological Treatment</h3>
+                  <p class="article-authors">Julia Fernanda da Costa Araujo; Giovanna Nogueira da Silva Avelino Oliveira Rocha; José Yago Rodrigues Silva; João Victor Ribeiro Rocha; Andris Figueiroa Bakuzis; Severino Alves Junior</p>
+                  <p><a href="https://doi.org/10.1021/acsomega.5c02819" target="_blank" rel="noopener">DOI: 10.1021/acsomega.5c02819</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2025</span>
+                  <h3 class="article-title">Human 3D Lung Cancer Tissue Photothermal Therapy Using Zn- and Co-Doped Magnetite Nanoparticles</h3>
+                  <p class="article-authors">Edynara Cruz de Moraes; Marcella Miranda Siqueira Furtuoso Rodrigues; Rafaela Campos de Menezes; Marcus Vinícius-Araújo; Marize Campos Valadares; Andris Figueiroa Bakuzis</p>
+                  <p><a href="https://doi.org/10.1021/acsbiomaterials.4c01901" target="_blank" rel="noopener">DOI: 10.1021/acsbiomaterials.4c01901</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2025</span>
+                  <h3 class="article-title">Kinetic Monte Carlo Approach as a Tool for the Study of Magnetic Hyperthermia Efficiency</h3>
+                  <p class="article-authors">C. M. Aono; V. R. R. Aquino; A. F. Bakuzis; R. Miotto</p>
+                  <p><a href="https://doi.org/10.1021/acs.jpcc.4c07127" target="_blank" rel="noopener">DOI: 10.1021/acs.jpcc.4c07127</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2025</span>
+                  <h3 class="article-title">Multicore Manganese Ferrite Nanoparticles for Theranostics</h3>
+                  <p class="article-authors">Carlos Eduardo Ribeiro; Marcus Vinícius-Araújo; Andris Figueiroa Bakuzis</p>
+                  <p><a href="https://doi.org/10.1021/acsanm.5c00309" target="_blank" rel="noopener">DOI: 10.1021/acsanm.5c00309</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2025</span>
+                  <h3 class="article-title">Nanoparticle-mediated hyperthermia for male cat neutering: Disrupting fertility without surgery</h3>
+                  <p class="article-authors">Ana Bárbara Rocha Silva; Juliana Lis Mendes Brito; Rafaela Lopes Palmeiro de Souza; Fernanda Souza Natividade Gontijo; Wesley de Souza Barbosa; Letícia Araújo de Santana; Julia Palma Maia de Almeida; Sara Alves Almeida; Edynara Cruz De Moraes; Vanessa Nicolau Lima; Giane Regina Paludo; Paulo Eduardo Narcizo de Souza; Andris F. Bakuzis; Ricardo Bentes Azevedo; Carolina Madeira Lucci</p>
+                  <p><a href="https://doi.org/10.1016/j.theriogenology.2025.117635" target="_blank" rel="noopener">DOI: 10.1016/j.theriogenology.2025.117635</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2025</span>
+                  <h3 class="article-title">Near Infrared Thermoluminescent Liposome Sensor for Real‐Time Monitoring of Photothermal Therapy and Magnetic Hyperthermia</h3>
+                  <p class="article-authors">José Divino Barbosa Vaz; Samuel de Melo Castro; Marcilia Viana Pavam; Eliana Martins Lima; Sebastião Antônio Mendanha; Andris Figueiroa Bakuzis</p>
+                  <p><a href="https://doi.org/10.1002/admt.202401598" target="_blank" rel="noopener">DOI: 10.1002/admt.202401598</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2025</span>
+                  <h3 class="article-title">Nearly Real-Time Monitoring of Magnetic Nanoparticle-Mediated Photothermal Therapy by MRI-Based Proton Resonance Frequency Thermometry</h3>
+                  <p class="article-authors">R. Krause; Maria de Paula Pereira; Carlos Eduardo Ribeiro; João Victor Ribeiro Rocha; Marcus Vinícius‐Araújo; Liliana Martins; Juracy Leandro Santos; Cléver Gomes Cardoso; Marcilia Viana Pavam; Luciano M. Lião; Andris F. Bakuzis</p>
+                  <p><a href="https://doi.org/10.1021/acsanm.5c03647" target="_blank" rel="noopener">DOI: 10.1021/acsanm.5c03647</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2025</span>
+                  <h3 class="article-title">Polymer-Functionalized Magnetic Nanoparticles for Targeted Quercetin Delivery: A Potential Strategy for Colon Cancer Treatment</h3>
+                  <p class="article-authors">Júlia Borges de Macedo; Julia Narayana Schoroeder Bueno; Carla Cristine Kanunfre; José Ricardo de Arruda Miranda; Andris Figueiroa Bakuzis; Priscileila Colerato Ferrari</p>
+                  <p><a href="https://doi.org/10.3390/pharmaceutics17040467" target="_blank" rel="noopener">DOI: 10.3390/pharmaceutics17040467</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2024</span>
+                  <h3 class="article-title">Biomimetic Magnetic Nanocarriers for Cancer Therapy</h3>
+                  <p class="article-authors">João Victor Ribeiro Rocha; R. Krause; Carlos E. R. Cardoso; Nathália C. A. Oliveira; Lucas R. Sousa; Eliana Martins Lima; Marize Campos Valadares; Mauro C. Xavier; Sebastião Antônio Mendanha; Andris F. Bakuzis</p>
+                  <p><a href="https://doi.org/10.1109/intermagshortpapers61879.2024.10576801" target="_blank" rel="noopener">DOI: 10.1109/intermagshortpapers61879.2024.10576801</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2024</span>
+                  <h3 class="article-title">Design of a magnetic nanocarrier containing phyllacanthone as delivery of anticancer phytochemical: Characterization and theranostic in vitro applications</h3>
+                  <p class="article-authors">Giovanna Nogueira da Silva Avelino Oliveira Rocha; José Yago Rodrigues Silva; Dayane Kelly Dias do Nascimento Santos; Arthur Césare Messias Viana Pereira; João Victor Ribeiro Rocha; Cristiane dos Santos Cerqueira Alves; Jackson Roberto Guedes da Silva Almeida; Anderson S. L. Gomes; Andris F. Bakuzis; Severino Alves</p>
+                  <p><a href="https://doi.org/10.1016/j.jallcom.2024.177860" target="_blank" rel="noopener">DOI: 10.1016/j.jallcom.2024.177860</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2024</span>
+                  <h3 class="article-title">Erythrocyte membrane-camouflaged magnetic and up/downconverting nanoparticles for photothermal therapy and luminescent nanothermometry</h3>
+                  <p class="article-authors">Marcus Vinícius-Araújo; Lucas Ribeiro de Sousa; Ricardo Costa de Santana; Sebastião Antonio Mendanha; Andris Figueiroa Bakuzis</p>
+                  <p><a href="https://doi.org/10.1063/5.0211889" target="_blank" rel="noopener">DOI: 10.1063/5.0211889</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2024</span>
+                  <h3 class="article-title">Integration of 3D Fluorescence Imaging and Luminescent Thermometry with Core–Shell Engineered NaYF4:Nd3+/Yb3+/Ho3+ Nanoparticles</h3>
+                  <p class="article-authors">Marcus Vinícius-Araújo; Navadeep Shrivastava; Guilherme Silva Loures; Rafael Freire Krause; Marcelo Henrique Sousa; Ricardo Costa de Santana; Andris Figueiroa Bakuzis</p>
+                  <p><a href="https://doi.org/10.1021/acs.inorgchem.3c03410" target="_blank" rel="noopener">DOI: 10.1021/acs.inorgchem.3c03410</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2024</span>
+                  <h3 class="article-title">Nanopartículas Magnéticas à Base de Óxido de Ferro: Propriedades Magnéticas e Aplicações na Medicina</h3>
+                  <p class="article-authors">Marcus Vinícius-Araújo; João Victor Ribeiro Rocha; Andris F. Bakuzis</p>
+                  <p><a href="https://doi.org/10.1590/1806-9126-rbef-2024-0187" target="_blank" rel="noopener">DOI: 10.1590/1806-9126-rbef-2024-0187</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2024</span>
+                  <h3 class="article-title">Near Infrared Biomimetic Hybrid Magnetic Nanocarrier for MRI-Guided Thermal Therapy</h3>
+                  <p class="article-authors">João Victor Ribeiro Rocha; Rafael Freire Krause; Carlos Eduardo Ribeiro; Nathália Corrêa de Almeida Oliveira; Lucas Ribeiro de Sousa; Juracy Leandro Santos; Samuel de Melo Castro; Marize Campos Valadares; Mauro Cunha Xavier Pinto; Marcilia Viana Pavam; Eliana Martins Lima; Sebastião Antônio Mendanha; Andris Figueiroa Bakuzis</p>
+                  <p><a href="https://doi.org/10.1021/acsami.4c03434" target="_blank" rel="noopener">DOI: 10.1021/acsami.4c03434</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2024</span>
+                  <h3 class="article-title">Utilization of Magonia pubescens extracts in the synthesis of rhodium NPs on Fe3O4@MgO support: A novel catalyst for 4-nitrophenol hydrogenation</h3>
+                  <p class="article-authors">S. Abe; Virgínia Cláudia da Silva; Andris F. Bakuzis; G.B. Stelzer; Marcos J. Jacinto</p>
+                  <p><a href="https://doi.org/10.1016/j.enmm.2024.100921" target="_blank" rel="noopener">DOI: 10.1016/j.enmm.2024.100921</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2023</span>
+                  <h3 class="article-title">Coupling of cationic porphyrins on manganese ferrite nanoparticles: A potential multifunctional nanostructure for theranostics applications</h3>
+                  <p class="article-authors">Eli Silveira-Alves; Fábio C. Bezerra; Rubens A. Guerra; Nícholas Zufelato; Carolina S. Martins; Jaqueline C. Desordi; Anderson R. L. Caires; Andris F. Bakuzis; Pablo José Gonçalves</p>
+                  <p><a href="https://doi.org/10.1016/j.jphotochem.2023.114551" target="_blank" rel="noopener">DOI: 10.1016/j.jphotochem.2023.114551</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2023</span>
+                  <h3 class="article-title">Hybrid Nanoparticles of Citrate-Coated Manganese Ferrite and Gold Nanorods in Magneto-Optical Imaging and Thermal Therapy</h3>
+                  <p class="article-authors">Saeideh Arsalani; Soudabeh Arsalani; Mileni Isikawa; Eder J. Guidelli; Ernesto E. Mazon; Ana Paula Ramos; Andris Bakuzis; Theo Z. Pavan; Oswaldo Baffa; Antonio A. O. Carneiro</p>
+                  <p><a href="https://doi.org/10.3390/nano13030434" target="_blank" rel="noopener">DOI: 10.3390/nano13030434</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2023</span>
+                  <h3 class="article-title">Immunogenic Cell Death Photothermally Mediated by Erythrocyte Membrane-Coated Magnetofluorescent Nanocarriers Improves Survival in Sarcoma Model</h3>
+                  <p class="article-authors">Ailton Antonio Sousa-Junior; Francyelli Mello-Andrade; João Victor Ribeiro Rocha; Tácio Gonçalves Hayasaki; Juliana Santana de Curcio; Lívia do Carmo Silva; Ricardo Costa de Santana; Eliana Martins Lima; Cléver Gomes Cardoso; Elisângela de Paula Silveira-Lacerda; Sebastião Antonio Mendanha; Andris Figueiroa Bakuzis</p>
+                  <p><a href="https://doi.org/10.3390/pharmaceutics15030943" target="_blank" rel="noopener">DOI: 10.3390/pharmaceutics15030943</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2023</span>
+                  <h3 class="article-title">New synthesis route for high quality iron oxide-based nanorings: Structural and magnetothermal evaluations</h3>
+                  <p class="article-authors">V. R. R. Aquino; J.C.R. Aquino; J. A. H. Coaquira; Andris F. Bakuzis; Marcelo Henrique Sousa; P.C. Morais</p>
+                  <p><a href="https://doi.org/10.1016/j.matdes.2023.112082" target="_blank" rel="noopener">DOI: 10.1016/j.matdes.2023.112082</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2023</span>
+                  <h3 class="article-title">Paclitaxel-Loaded Lipid-Coated Magnetic Nanoparticles for Dual Chemo-Magnetic Hyperthermia Therapy of Melanoma</h3>
+                  <p class="article-authors">Relton R. Oliveira; Emílio R. Cintra; Ailton A. Sousa-Junior; Larissa C. Moreira; Artur C. G. da Silva; Ana Luiza R. de Souza; Marize C. Valadares; Marcus S. Carrião; Andris F. Bakuzis; Eliana M. Lima</p>
+                  <p><a href="https://doi.org/10.3390/pharmaceutics15030818" target="_blank" rel="noopener">DOI: 10.3390/pharmaceutics15030818</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2023</span>
+                  <h3 class="article-title">Photothermal Properties of IR-780-Based Nanoparticles Depend on Nanocarrier Design: A Comparative Study on Synthetic Liposomes and Cell Membrane and Hybrid Biomimetic Vesicles</h3>
+                  <p class="article-authors">Júlia Muniz Barcelos; Tácio Gonçalves Hayasaki; Ricardo Costa de Santana; Eliana Martins Lima; Sebastião Antonio Mendanha; Andris Figueiroa Bakuzis</p>
+                  <p><a href="https://doi.org/10.3390/pharmaceutics15020444" target="_blank" rel="noopener">DOI: 10.3390/pharmaceutics15020444</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2022</span>
+                  <h3 class="article-title">A Predictive Pharmacokinetic Model for Immune Cell-Mediated Uptake and Retention of Nanoparticles in Tumors</h3>
+                  <p class="article-authors">Ailton Sousa-Junior; Chun-Ting Yang; Preethi Korangath; Robert Ivkov; Andris Bakuzis</p>
+                  <p><a href="https://doi.org/10.3390/ijms232415664" target="_blank" rel="noopener">DOI: 10.3390/ijms232415664</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2022</span>
+                  <h3 class="article-title">Biodistribution Profile of Magnetic Nanoparticles in Cirrhosis-Associated Hepatocarcinogenesis in Rats by AC Biosusceptometry</h3>
+                  <p class="article-authors">Guilherme A. Soares; Gabriele M. Pereira; Guilherme R. Romualdo; Gabriel G. A. Biasotti; Erick G. Stoppa; Andris F. Bakuzis; Oswaldo Baffa; Luis F. Barbisan; Jose R. A. Miranda</p>
+                  <p><a href="https://doi.org/10.3390/pharmaceutics14091907" target="_blank" rel="noopener">DOI: 10.3390/pharmaceutics14091907</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2022</span>
+                  <h3 class="article-title">Engineering Gold Shelled Nanomagnets for Pre-Setting the Operating Temperature for Magnetic Hyperthermia</h3>
+                  <p class="article-authors">Elis Regina Lima Siqueira; Willie Oliveira Pinheiro; Victor Raul Romero Aquino; Breno Cunha Pinto Coelho; Andris Figueiroa Bakuzis; Ricardo Bentes Azevedo; Marcelo Henrique Sousa; Paulo Cesar Morais</p>
+                  <p><a href="https://doi.org/10.3390/nano12162760" target="_blank" rel="noopener">DOI: 10.3390/nano12162760</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2022</span>
+                  <h3 class="article-title">Folate-Targeted PEGylated Magnetoliposomes for Hyperthermia-Mediated Controlled Release of Doxorubicin</h3>
+                  <p class="article-authors">Emílio R. Cintra; Tácio Gonçalves Hayasaki; Ailton A. Sousa-Junior; Artur Christian Garcia da Silva; Marize Campos Valadares; Andris F. Bakuzis; Sebastião Antônio Mendanha; Eliana Martins Lima</p>
+                  <p><a href="https://doi.org/10.3389/fphar.2022.854430" target="_blank" rel="noopener">DOI: 10.3389/fphar.2022.854430</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2022</span>
+                  <h3 class="article-title">Green synthesis of Fe3O4@ZnO-supported Pd nanoparticles for oxidation and hydrogenation reactions in liquid systems</h3>
+                  <p class="article-authors">Robson da Silva Souto; Samara da Silva Razini; Angélica Correa Kauffmann; Virgínia Claudia Paulino Silva; Paulo Teixeira de Sousa Jr; Andris Bakuzis; Luis Cesar Fontana; Marcos José Jacinto</p>
+                  <p><a href="https://doi.org/10.33448/rsd-v11i14.36004" target="_blank" rel="noopener">DOI: 10.33448/rsd-v11i14.36004</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2022</span>
+                  <h3 class="article-title">Heat Generation in Magnetic Hyperthermia by Manganese Ferrite-Based Nanoparticles Arises from Néel Collective Magnetic Relaxation</h3>
+                  <p class="article-authors">Nicholas Zufelato; Victor R. R. Aquino; Navadeep Shrivastava; Sebastião Mendanha; Ronei Miotto; Andris F. Bakuzis</p>
+                  <p><a href="https://doi.org/10.1021/acsanm.2c01536" target="_blank" rel="noopener">DOI: 10.1021/acsanm.2c01536</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2022</span>
+                  <h3 class="article-title">Long-Term Clearance and Biodistribution of Magnetic Nanoparticles Assessed by AC Biosusceptometry</h3>
+                  <p class="article-authors">Guilherme A. Soares; João V. C. Faria; Leonardo A. Pinto; Andre G. Prospero; Gabriele M. Pereira; Erick G. Stoppa; Lais P. Buranello; Andris F. Bakuzis; Oswaldo Baffa; José R. A. Miranda</p>
+                  <p><a href="https://doi.org/10.3390/ma15062121" target="_blank" rel="noopener">DOI: 10.3390/ma15062121</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2022</span>
+                  <h3 class="article-title">Quantitative imaging of magnetic nanoparticles in an unshielded environment using a large AC susceptibility array</h3>
+                  <p class="article-authors">Guilherme Augusto Soares; Leonardo Antonio Pinto; Maik Liebl; Gabriel Gustavo de Albuquerque Biasotti; André G. Próspero; Erick Stoppa; Andris F. Bakuzis; Oswaldo Baffa; Frank Wiekhorst; José Ricardo de Arruda Miranda</p>
+                  <p><a href="https://doi.org/10.1186/s13036-022-00305-9" target="_blank" rel="noopener">DOI: 10.1186/s13036-022-00305-9</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2022</span>
+                  <h3 class="article-title">Remotely triggered curcumin release from stimuli-responsive magneto-polymeric layer-by-layer engineered nanoplatforms</h3>
+                  <p class="article-authors">Jardim, K.V.; Palomec-Garfias, A.F.; Araújo, M.V.; Márquez-Beltrán, C.; Bakuzis, A.F.; Moya, S.E.; Parize, A.L.; Sousa, M.H.</p>
+                  <p><a href="https://doi.org/10.1002/app.52200" target="_blank" rel="noopener">DOI: 10.1002/app.52200</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2022</span>
+                  <h3 class="article-title">Tumor Vascular Heterogeneity and The Impact of Subtumoral Nanoemulsion Biodistribution</h3>
+                  <p class="article-authors">Jaqueline Vaz de Oliveira; Márcia Cristina Oliveira da Rocha; Ailton A. Sousa-Junior; Mosar Corrêa Rodrigues; Gabriel Ribeiro Farias; Patrícia Bento da Silva; Sônia Nair Báo; Andris F. Bakuzis; Ricardo Bentes Azevedo; P.C. Morais; Luís Alexandre Muehlmann; João Paulo Figueiró Longo</p>
+                  <p><a href="https://doi.org/10.2217/nnm-2022-0176" target="_blank" rel="noopener">DOI: 10.2217/nnm-2022-0176</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2021</span>
+                  <h3 class="article-title">2D quantitative imaging of magnetic nanoparticles by an ac biosusceptometry based scanning approach and inverse problem</h3>
+                  <p class="article-authors">Biasotti, G.G.A.; Próspero, A.G.; Alvarez, M.D.T.; Liebl, M.; Pinto, L.A.; Soares, G.A.; Bakuzis, A.F.; Baffa, O.; Wiekhorst, F.; Miranda, J.R.A.</p>
+                  <p><a href="https://doi.org/10.3390/s21217063" target="_blank" rel="noopener">DOI: 10.3390/s21217063</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2021</span>
+                  <h3 class="article-title">Biosynthesis of Cube-Shaped Fe3O4 Nanoparticles for Removal of Dyes Using Fenton Process</h3>
+                  <p class="article-authors">Jacinto, M.J.; Souto, R.S.; Silva, V.C.P.; Prescilio, I.C.; Kauffmann, A.C.; Soares, M.A.; de Souza, J.R.; Bakuzis, A.F.; Fontana, L.C.</p>
+                  <p><a href="https://doi.org/10.1007/s11270-021-05233-w" target="_blank" rel="noopener">DOI: 10.1007/s11270-021-05233-w</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2021</span>
+                  <h3 class="article-title">Corona Protein Impacts on Alternating Current Biosusceptometry Signal and Circulation Times of Differently Coated Mnfe 2 O 4 Nanoparticles</h3>
+                  <p class="article-authors">Andre Gonçalves Prospero; Lais Pereira Buranello; Carlos AH Fernandes; Lucilene Delazari dos Santos; Guilherme Soares; Bruno C Rossini; Nícholas Zufelato; Andris Figueiroa Bakuzis; Marcos R de Mattos Fontes; José R de Arruda Miranda</p>
+                  <p><a href="https://doi.org/10.2217/nnm-2021-0195" target="_blank" rel="noopener">DOI: 10.2217/nnm-2021-0195</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2021</span>
+                  <h3 class="article-title">Engineering Shape Anisotropy of Fe3O4-γ-Fe2O3Hollow Nanoparticles for Magnetic Hyperthermia</h3>
+                  <p class="article-authors">Niraula, G.; Coaquira, J.A.H.; Zoppellaro, G.; Villar, B.M.G.; Garcia, F.; Bakuzis, A.F.; Longo, J.P.F.; Rodrigues, M.C.; Muraca, D.; Ayesh, A.I.; Sinfrônio, F.S.M.; De Menezes, A.S.; Goya, G.F.; Sharma, S.K.</p>
+                  <p><a href="https://doi.org/10.1021/acsanm.1c00311" target="_blank" rel="noopener">DOI: 10.1021/acsanm.1c00311</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2021</span>
+                  <h3 class="article-title">New prospects in neutering male animals using magnetic nanoparticle hyperthermia</h3>
+                  <p class="article-authors">Jivago, J.L.P.R.; Brito, J.L.M.; Capistrano, G.; Vinícius-Araújo, M.; Verde, E.L.; Bakuzis, A.F.; Souza, P.E.N.; Azevedo, R.B.; Lucci, C.M.</p>
+                  <p><a href="https://doi.org/10.3390/pharmaceutics13091465" target="_blank" rel="noopener">DOI: 10.3390/pharmaceutics13091465</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2021</span>
+                  <h3 class="article-title">Stoichiometry and Orientation- And Shape-Mediated Switching Field Enhancement of the Heating Properties of Fe3 O4 Circular Nanodiscs</h3>
+                  <p class="article-authors">Niraula, G.; Coaquira, J.A.H.; Aragon, F.H.; Bakuzis, A.F.; Villar, B.M.G.; Garcia, F.; Muraca, D.; Zoppellaro, G.; Ayesh, A.I.; Sharma, S.K.</p>
+                  <p><a href="https://doi.org/10.1103/physrevapplied.15.014056" target="_blank" rel="noopener">DOI: 10.1103/physrevapplied.15.014056</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2021</span>
+                  <h3 class="article-title">ZnxMn1- XFe2O4@SiO2: ZNd3+Core-Shell Nanoparticles for Low-Field Magnetic Hyperthermia and Enhanced Photothermal Therapy with the Potential for Nanothermometry</h3>
+                  <p class="article-authors">Vinícius-Araújo, M.; Shrivastava, N.; Sousa-Junior, A.A.; Mendanha, S.A.; Santana, R.C.D.; Bakuzis, A.F.</p>
+                  <p><a href="https://doi.org/10.1021/acsanm.1c00027" target="_blank" rel="noopener">DOI: 10.1021/acsanm.1c00027</a></p>
+                </article>
+              
+            </div>
+          
+        </div>
+
+        <div id="estatisticas" class="tab-panel">
+          <h2>Estatísticas do docente</h2>
+          <div class="kpi-grid">
+            <div class="kpi"><div class="kpi-value">41</div><div class="kpi-label">Artigos entre 2021-2026</div></div>
+            <div class="kpi"><div class="kpi-value">3</div><div class="kpi-label">Total de alunos</div></div>
+            <div class="kpi"><div class="kpi-value">2</div><div class="kpi-label">Mestrado</div></div>
+            <div class="kpi"><div class="kpi-value">1</div><div class="kpi-label">Doutorado</div></div>
+          </div>
+
+          <h3>Artigos por ano</h3>
+          
+            <div class="bar-chart" role="img" aria-label="Gráfico de barras com o número de artigos por ano">
+              
+                <div class="chart-row">
+                  <div class="chart-year">2026</div>
+                  <div class="chart-track" title="1 artigos em 2026">
+                    <div class="chart-bar" style="width: 10.0%"></div>
+                  </div>
+                  <div class="chart-value">1</div>
+                </div>
+              
+                <div class="chart-row">
+                  <div class="chart-year">2025</div>
+                  <div class="chart-track" title="10 artigos em 2025">
+                    <div class="chart-bar" style="width: 100.0%"></div>
+                  </div>
+                  <div class="chart-value">10</div>
+                </div>
+              
+                <div class="chart-row">
+                  <div class="chart-year">2024</div>
+                  <div class="chart-track" title="7 artigos em 2024">
+                    <div class="chart-bar" style="width: 70.0%"></div>
+                  </div>
+                  <div class="chart-value">7</div>
+                </div>
+              
+                <div class="chart-row">
+                  <div class="chart-year">2023</div>
+                  <div class="chart-track" title="6 artigos em 2023">
+                    <div class="chart-bar" style="width: 60.0%"></div>
+                  </div>
+                  <div class="chart-value">6</div>
+                </div>
+              
+                <div class="chart-row">
+                  <div class="chart-year">2022</div>
+                  <div class="chart-track" title="10 artigos em 2022">
+                    <div class="chart-bar" style="width: 100.0%"></div>
+                  </div>
+                  <div class="chart-value">10</div>
+                </div>
+              
+                <div class="chart-row">
+                  <div class="chart-year">2021</div>
+                  <div class="chart-track" title="7 artigos em 2021">
+                    <div class="chart-bar" style="width: 70.0%"></div>
+                  </div>
+                  <div class="chart-value">7</div>
+                </div>
+              
+              <p class="chart-note">Barras proporcionais ao maior valor anual do período.</p>
+            </div>
+          
+        </div>
+      </section>
+    </section>
+
+    <p class="footer">Página gerada automaticamente. Data da última atualização: 10/06/2026</p>
+  </main>
+
+  <script>
+    document.querySelectorAll('.tab-button').forEach(button => {
+      button.addEventListener('click', () => {
+        const tab = button.dataset.tab;
+        document.querySelectorAll('.tab-button').forEach(b => b.classList.remove('active'));
+        document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+        button.classList.add('active');
+        document.getElementById(tab).classList.add('active');
+      });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,655 @@
+
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Wesley Bueno Cardoso</title>
+  <style>
+
+:root {
+  --ufg-blue: #003f73;
+  --ufg-dark-blue: #002b4f;
+  --ufg-green: #00843d;
+  --ufg-gold: #f2c300;
+  --bg: #f5f7fb;
+  --card: #ffffff;
+  --text: #1f2937;
+  --muted: #6b7280;
+  --border: #d7dee8;
+  --shadow: 0 12px 28px rgba(15, 23, 42, 0.10);
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--text);
+  background: var(--bg);
+  line-height: 1.55;
+}
+a { color: var(--ufg-blue); text-decoration: none; }
+a:hover { text-decoration: underline; }
+.site-header {
+  background: linear-gradient(135deg, var(--ufg-blue), var(--ufg-dark-blue));
+  color: #fff;
+  border-bottom: 6px solid var(--ufg-green);
+}
+.site-header .bar {
+  height: 8px;
+  background: linear-gradient(90deg, var(--ufg-green), var(--ufg-gold), var(--ufg-blue));
+}
+.header-inner {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 24px 22px 28px 22px;
+}
+.ufg-line {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 18px;
+  font-size: 0.98rem;
+  opacity: 0.96;
+}
+.ufg-line strong { font-weight: 700; }
+.header-title {
+  margin: 0;
+  font-size: clamp(1.75rem, 3vw, 2.7rem);
+  letter-spacing: -0.03em;
+}
+.header-subtitle {
+  margin: 8px 0 0 0;
+  color: rgba(255,255,255,0.86);
+  font-size: 1rem;
+}
+.container {
+  max-width: 1180px;
+  margin: 28px auto 48px auto;
+  padding: 0 22px;
+}
+.layout {
+  display: grid;
+  grid-template-columns: 290px 1fr;
+  gap: 24px;
+  align-items: start;
+}
+.profile-card, .content-card, .index-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  box-shadow: var(--shadow);
+}
+.profile-card {
+  padding: 18px;
+  position: sticky;
+  top: 18px;
+}
+.profile-photo {
+  display: block;
+  width: 85%;
+  max-height: 280px;
+  margin: 0 auto;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  background: #e5e7eb;
+}
+.placeholder-photo {
+  display: grid;
+  place-items: center;
+  width: 85%;
+  height: 221px;
+  margin: 0 auto;
+  border-radius: 14px;
+  background: #e5e7eb;
+  color: var(--muted);
+  text-align: center;
+  padding: 18px;
+}
+.profile-card h2 {
+  margin: 16px 0 8px 0;
+  font-size: 1.22rem;
+}
+.meta-list { margin: 14px 0 0 0; padding: 0; list-style: none; }
+.meta-list li { padding: 8px 0; border-top: 1px solid #eef2f7; }
+.meta-label { color: var(--muted); display: inline; font-size: 0.93rem; font-weight: 700; margin-right: 4px; }
+.profile-link { display: inline-block; font-weight: 700; }
+.profile-details {
+  border-top: 1px solid #eef2f7;
+  margin-top: 14px;
+  padding-top: 6px;
+}
+.profile-details li { font-size: 0.93rem; }
+.missing-info { color: var(--muted); font-style: italic; }
+
+.content-card { padding: 20px; min-height: 520px; }
+.tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 12px;
+}
+.tab-button {
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 10px 16px;
+  background: #fff;
+  color: var(--ufg-blue);
+  cursor: pointer;
+  font-weight: 700;
+}
+.tab-button.active {
+  background: var(--ufg-blue);
+  border-color: var(--ufg-blue);
+  color: #fff;
+}
+.tab-panel { display: none; }
+.tab-panel.active { display: block; }
+.article-list { display: grid; gap: 14px; }
+.article-item {
+  padding: 16px;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: #fbfdff;
+}
+.article-year {
+  display: inline-block;
+  padding: 3px 8px;
+  border-radius: 999px;
+  background: #e6f0fa;
+  color: var(--ufg-blue);
+  font-weight: 700;
+  font-size: 0.84rem;
+  margin-bottom: 7px;
+}
+.article-title { margin: 0 0 8px 0; font-size: 1.02rem; }
+.article-authors { color: var(--muted); font-size: 0.92rem; margin: 0; }
+.kpi-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(120px, 1fr));
+  gap: 12px;
+  margin-bottom: 20px;
+}
+.kpi {
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 16px;
+  background: #fbfdff;
+}
+.kpi-value { font-size: 2rem; font-weight: 800; color: var(--ufg-blue); line-height: 1; }
+.kpi-label { color: var(--muted); font-size: 0.86rem; margin-top: 6px; }
+.bar-chart {
+  margin-top: 14px;
+  padding: 18px;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  background: #fbfdff;
+}
+.chart-row {
+  display: grid;
+  grid-template-columns: 64px 1fr 44px;
+  gap: 12px;
+  align-items: center;
+  min-height: 34px;
+  margin: 10px 0;
+}
+.chart-year { font-weight: 700; color: var(--ufg-blue); }
+.chart-track {
+  width: 100%;
+  height: 22px;
+  background: #e5e7eb;
+  border-radius: 999px;
+  overflow: hidden;
+  border: 1px solid #d8e0ea;
+}
+.chart-bar {
+  height: 100%;
+  background: linear-gradient(90deg, var(--ufg-blue), var(--ufg-green));
+  border-radius: 999px;
+  min-width: 0;
+}
+.chart-value {
+  color: var(--text);
+  font-weight: 800;
+  text-align: right;
+  font-size: 0.95rem;
+}
+.chart-note { color: var(--muted); font-size: 0.9rem; margin: 8px 0 0 0; }
+.footer {
+  margin-top: 32px;
+  color: var(--muted);
+  font-size: 0.9rem;
+  text-align: center;
+}
+.index-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  gap: 16px;
+}
+.index-card { padding: 16px; }
+.index-card img { width: 100%; height: 180px; object-fit: cover; border-radius: 12px; border: 1px solid var(--border); }
+.index-card h2 { font-size: 1.05rem; margin: 12px 0 6px 0; }
+.back-link { margin-bottom: 16px; display: inline-block; font-weight: 700; }
+@media (max-width: 820px) {
+  .layout { grid-template-columns: 1fr; }
+  .profile-card { position: static; }
+  .kpi-grid { grid-template-columns: repeat(2, minmax(120px, 1fr)); }
+}
+
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="bar"></div>
+    <div class="header-inner">
+      <div class="ufg-line">
+        <span><strong>UNIVERSIDADE FEDERAL DE GOIÁS - UFG</strong><br>INSTITUTO DE FÍSICA · PROGRAMA DE PÓS-GRADUAÇÃO EM FÍSICA</span>
+        <span>PPGF/UFG</span>
+      </div>
+      <h1 class="header-title">Wesley Bueno Cardoso</h1>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="layout">
+      <aside class="profile-card">
+        
+          <img class="profile-photo" src="data:image/jpeg;base64,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" alt="Foto de Wesley Bueno Cardoso">
+        
+        <h2>Wesley Bueno Cardoso</h2>
+        <ul class="meta-list profile-details">
+          
+            <li><a class="profile-link" href="http://lattes.cnpq.br/6845416823133684" target="_blank" rel="noopener">Curriculum Lattes</a></li>
+          
+          <li><span class="meta-label">Apto(a) a orientar:</span> Física Teórica</li>
+          <li><span class="meta-label">Sala:</span> 244 (IF-2)</li>
+          <li><span class="meta-label">E-mail:</span> <a href="mailto:wesleybcardoso@ufg.br">wesleybcardoso@ufg.br</a></li>
+          <li><span class="meta-label">Telefone:</span> (62) 3521-2325</li>
+          <li><span class="meta-label">Pesquisa</span> &#34;Óptica Quântica, Informação Quântica e Teoria Clássica de Campos: Solitons, Vórtices e Breathers&#34;</li>
+          
+            <li>Bolsista de Produtividade de CNPq - Nível 2</li>
+          
+          <li><span class="meta-label">Formação:</span> Doutorado em Física - UFG - 2010</li>
+          
+            <li><span class="meta-label">ORCID:</span> <a href="https://orcid.org/0000-0002-3192-392X" target="_blank" rel="noopener">0000-0002-3192-392X</a></li>
+          
+          <li><span class="meta-label">Fonte do perfil:</span> <a href="https://posgraduacao.if.ufg.br/p/41256-docentes-ppgf-instituto-de-fisica-ufg" target="_blank" rel="noopener">Página do PPGF/UFG</a></li>
+        </ul>
+      </aside>
+
+      <section class="content-card">
+        <nav class="tabs" aria-label="Seções da página">
+          <button class="tab-button active" data-tab="artigos">Artigos publicados</button>
+          <button class="tab-button" data-tab="estatisticas">Estatísticas do docente</button>
+        </nav>
+
+        <div id="artigos" class="tab-panel active">
+          <h2>Artigos publicados</h2>
+          
+            <div class="article-list">
+              
+                <article class="article-item">
+                  <span class="article-year">2026</span>
+                  <h3 class="article-title">Coupling-induced localization in linearly coupled waveguides with spatially modulated nonlinearity</h3>
+                  <p class="article-authors">Bruno M. Miranda; Ardiley T. Avelar; Wesley B. Cardoso</p>
+                  <p><a href="https://doi.org/10.1007/s11082-026-08918-w" target="_blank" rel="noopener">DOI: 10.1007/s11082-026-08918-w</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2026</span>
+                  <h3 class="article-title">Influence of fourth-order dispersion on the formation of localized states in systems with inhomogeneous defocusing nonlinearity</h3>
+                  <p class="article-authors">Fang C. Lee; Mateus C.P. dos Santos; Ardiley T. Avelar; Wesley B. Cardoso</p>
+                  <p><a href="https://doi.org/10.1016/j.chaos.2025.117629" target="_blank" rel="noopener">DOI: 10.1016/j.chaos.2025.117629</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2025</span>
+                  <h3 class="article-title">Alternative split-step method for solving linearly coupled nonlinear Schrödinger equations</h3>
+                  <p class="article-authors">Wesley B. Cardoso</p>
+                  <p><a href="https://doi.org/10.1016/j.cpc.2024.109414" target="_blank" rel="noopener">DOI: 10.1016/j.cpc.2024.109414</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2025</span>
+                  <h3 class="article-title">Analyzing lump-type solutions in scalar field models through configurational information measure</h3>
+                  <p class="article-authors">M.A. Feitosa; Wesley B. Cardoso; D. Bazeia; A.T. Avelar</p>
+                  <p><a href="https://doi.org/10.1016/j.physleta.2024.130096" target="_blank" rel="noopener">DOI: 10.1016/j.physleta.2024.130096</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2025</span>
+                  <h3 class="article-title">Biodegradable ionic liquids in energy storage: Molecular insights into hydration-controlled performance in graphene-based supercapacitors</h3>
+                  
+                  <p><a href="https://doi.org/10.1016/j.cplett.2025.142440" target="_blank" rel="noopener">DOI: 10.1016/j.cplett.2025.142440</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2025</span>
+                  <h3 class="article-title">Diffractive Lugiato-Lefever equation driven by a double tightly focused pump</h3>
+                  
+                  <p><a href="https://doi.org/10.1103/physreve.111.014207" target="_blank" rel="noopener">DOI: 10.1103/physreve.111.014207</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2025</span>
+                  <h3 class="article-title">Effective 1D-equation with a Lambert W function nonlinearity for cigar-shaped Bose-Einstein condensates</h3>
+                  
+                  <p><a href="https://doi.org/10.1016/j.cnsns.2024.108447" target="_blank" rel="noopener">DOI: 10.1016/j.cnsns.2024.108447</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2025</span>
+                  <h3 class="article-title">Inducing localized solutions via interaction in a self-defocusing system with localized pumping</h3>
+                  <p class="article-authors">Wesley B. Cardoso; Mateus C.P. dos Santos</p>
+                  <p><a href="https://doi.org/10.1016/j.physleta.2025.130726" target="_blank" rel="noopener">DOI: 10.1016/j.physleta.2025.130726</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2025</span>
+                  <h3 class="article-title">Insights into Antiviral Candidates against Oropouche Virus: A Molecular Dynamics Study</h3>
+                  
+                  <p><a href="https://doi.org/10.1021/acsphyschemau.5c00042" target="_blank" rel="noopener">DOI: 10.1021/acsphyschemau.5c00042</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2025</span>
+                  <h3 class="article-title">Optical algorithm for derivative of real-valued functions</h3>
+                  <p class="article-authors">Murilo H. Magiotto; Guilherme L. Zanin; Wesley B. Cardoso; Ardiley T. Avelar; Rafael M. Gomes</p>
+                  <p><a href="https://doi.org/10.1016/j.optlastec.2024.112137" target="_blank" rel="noopener">DOI: 10.1016/j.optlastec.2024.112137</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2025</span>
+                  <h3 class="article-title">Saturable nonlinear Schrödinger equation with space- and time-dependent variable coefficients</h3>
+                  <p class="article-authors">Maurilho R. da Rocha; Mateus C. P. dos Santos; Wesley B. Cardoso</p>
+                  <p><a href="https://doi.org/10.1007/s11082-025-08311-z" target="_blank" rel="noopener">DOI: 10.1007/s11082-025-08311-z</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2025</span>
+                  <h3 class="article-title">Spontaneous symmetry breaking induced by inhomogeneous nonlinearity in the coupled nonlinear Schrodinger equation</h3>
+                  
+                  <p><a href="https://doi.org/10.1007/s11071-024-10274-x" target="_blank" rel="noopener">DOI: 10.1007/s11071-024-10274-x</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2025</span>
+                  <h3 class="article-title">Spontaneous symmetry breaking induced by nonlinear interaction in a coupler supported by fractional diffraction</h3>
+                  <p class="article-authors">Mateus C.P. dos Santos; Wesley B. Cardoso</p>
+                  <p><a href="https://doi.org/10.1016/j.physleta.2025.130311" target="_blank" rel="noopener">DOI: 10.1016/j.physleta.2025.130311</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2024</span>
+                  <h3 class="article-title">Can machine learning efficiently predict symmetry breaking in physical problems like Bose-Einstein condensates?</h3>
+                  
+                  <p><a href="https://doi.org/10.1016/j.physd.2024.134198" target="_blank" rel="noopener">DOI: 10.1016/j.physd.2024.134198</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2024</span>
+                  <h3 class="article-title">DFT-based investigation of graphene-mediated manipulation for efficient potassium ion entanglement</h3>
+                  
+                  <p><a href="https://doi.org/10.1016/j.cplett.2023.141056" target="_blank" rel="noopener">DOI: 10.1016/j.cplett.2023.141056</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2024</span>
+                  <h3 class="article-title">Dynamical instability of dark solitons perturbed by an optical lattice in the quasi-one-dimensional Muñoz-Mateo-Delgado equation</h3>
+                  
+                  <p><a href="https://doi.org/10.1007/s11071-024-09371-8" target="_blank" rel="noopener">DOI: 10.1007/s11071-024-09371-8</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2024</span>
+                  <h3 class="article-title">Dynamics of localized solutions in three core coupled waveguides with quasi-periodic nonlinearity</h3>
+                  <p class="article-authors">Bruno M. Miranda; A. T. Avelar; Wesley B. Cardoso; D. Bazeia</p>
+                  <p><a href="https://doi.org/10.1007/s11082-024-07757-x" target="_blank" rel="noopener">DOI: 10.1007/s11082-024-07757-x</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2024</span>
+                  <h3 class="article-title">Evaluating quantum entanglement generation in two-dimensional graphene systems through lithium ion interactions: A DFT-based study</h3>
+                  
+                  <p><a href="https://doi.org/10.1002/jcc.27303" target="_blank" rel="noopener">DOI: 10.1002/jcc.27303</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2024</span>
+                  <h3 class="article-title">Localization of light waves in self-defocusing fractional systems confined by a random potential</h3>
+                  
+                  <p><a href="https://doi.org/10.1007/s11071-023-09151-w" target="_blank" rel="noopener">DOI: 10.1007/s11071-023-09151-w</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2024</span>
+                  <h3 class="article-title">Selecting electronic transitions between graphyne and lithium ions for entanglement generation using new organic material</h3>
+                  
+                  <p><a href="https://doi.org/10.1016/j.comptc.2024.114692" target="_blank" rel="noopener">DOI: 10.1016/j.comptc.2024.114692</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2024</span>
+                  <h3 class="article-title">Single photon hybrid quantum key distribution</h3>
+                  
+                  <p><a href="https://doi.org/10.1088/1402-4896/ad185c" target="_blank" rel="noopener">DOI: 10.1088/1402-4896/ad185c</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2024</span>
+                  <h3 class="article-title">Solitons supported by a self-defocusing trap in a fractional-diffraction waveguide</h3>
+                  
+                  <p><a href="https://doi.org/10.1016/j.cjph.2024.01.025" target="_blank" rel="noopener">DOI: 10.1016/j.cjph.2024.01.025</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2024</span>
+                  <h3 class="article-title">Spontaneous symmetry breaking and vortices in a tri-core nonlinear fractional waveguide</h3>
+                  
+                  <p><a href="https://doi.org/10.1016/j.physd.2024.134412" target="_blank" rel="noopener">DOI: 10.1016/j.physd.2024.134412</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2024</span>
+                  <h3 class="article-title">Stable Patterns in the Lugiato-Lefever Equation with a Confined Vortex Pump</h3>
+                  
+                  <p><a href="https://doi.org/10.3390/sym16040470" target="_blank" rel="noopener">DOI: 10.3390/sym16040470</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2023</span>
+                  <h3 class="article-title">Localized solutions of inhomogeneous saturable nonlinear Schrodinger equation</h3>
+                  
+                  <p><a href="https://doi.org/10.1007/s11071-022-08104-z" target="_blank" rel="noopener">DOI: 10.1007/s11071-022-08104-z</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2023</span>
+                  <h3 class="article-title">Quasi-one-dimensional equation for a tube-shaped dilute Fermi gas</h3>
+                  
+                  <p><a href="https://doi.org/10.1016/j.physleta.2023.128698" target="_blank" rel="noopener">DOI: 10.1016/j.physleta.2023.128698</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2023</span>
+                  <h3 class="article-title">Spontaneous symmetry breaking induced by interaction in linearly coupled binary Bose-Einstein condensates</h3>
+                  
+                  <p><a href="https://doi.org/10.1007/s11071-022-07986-3" target="_blank" rel="noopener">DOI: 10.1007/s11071-022-07986-3</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2022</span>
+                  <h3 class="article-title">An effective equation for quasi-one-dimensional funnel-shaped Bose-Einstein condensates with embedded vorticity</h3>
+                  
+                  <p><a href="https://doi.org/10.1140/epjs/s11734-021-00351-2" target="_blank" rel="noopener">DOI: 10.1140/epjs/s11734-021-00351-2</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2022</span>
+                  <h3 class="article-title">Fullerene C&lt;sub&gt;60&lt;/sub&gt; spectroscopy in [BMIM][PF&lt;sub&gt;6&lt;/sub&gt;] ionic liquid: Molecular dynamics study using polarization effects</h3>
+                  
+                  <p><a href="https://doi.org/10.1016/j.molstruc.2021.131887" target="_blank" rel="noopener">DOI: 10.1016/j.molstruc.2021.131887</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2022</span>
+                  <h3 class="article-title">Modulation of localized solutions of an inhomogeneous cigar-shaped superfluid fermion gas</h3>
+                  
+                  <p><a href="https://doi.org/10.1007/s11071-021-07090-y" target="_blank" rel="noopener">DOI: 10.1007/s11071-021-07090-y</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2022</span>
+                  <h3 class="article-title">Nonclassical properties and Anderson localization of quantum states in coupled waveguides</h3>
+                  
+                  <p><a href="https://doi.org/10.1103/physreva.105.023710" target="_blank" rel="noopener">DOI: 10.1103/physreva.105.023710</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2022</span>
+                  <h3 class="article-title">Symmetry breaking in Bose-Einstein condensates confined by a funnel potential</h3>
+                  
+                  <p><a href="https://doi.org/10.1016/j.physleta.2022.128453" target="_blank" rel="noopener">DOI: 10.1016/j.physleta.2022.128453</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2021</span>
+                  <h3 class="article-title">Anderson localization induced by interaction in linearly coupled binary Bose-Einstein condensates</h3>
+                  
+                  <p><a href="https://doi.org/10.1103/physreve.103.052210" target="_blank" rel="noopener">DOI: 10.1103/physreve.103.052210</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2021</span>
+                  <h3 class="article-title">Effects of chaotic perturbations on a nonlinear system undergoing two-soliton collisions</h3>
+                  
+                  <p><a href="https://doi.org/10.1007/s11071-021-06962-7" target="_blank" rel="noopener">DOI: 10.1007/s11071-021-06962-7</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2021</span>
+                  <h3 class="article-title">Hydroxylic, sulfur-containing and amidic amino acids in water solution: Atomic charges parameters for computational modeling using molecular dynamics simulation and DFT calculations</h3>
+                  
+                  <p><a href="https://doi.org/10.1016/j.molliq.2021.116815" target="_blank" rel="noopener">DOI: 10.1016/j.molliq.2021.116815</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2021</span>
+                  <h3 class="article-title">Linear semi-infinite programming approach for entanglement quantification</h3>
+                  
+                  <p><a href="https://doi.org/10.1103/physreva.104.022413" target="_blank" rel="noopener">DOI: 10.1103/physreva.104.022413</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2021</span>
+                  <h3 class="article-title">Molecular dynamics simulation of docking structures of SARS-CoV-2 main protease and HIV protease inhibitors</h3>
+                  
+                  <p><a href="https://doi.org/10.1016/j.molstruc.2020.129143" target="_blank" rel="noopener">DOI: 10.1016/j.molstruc.2020.129143</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2021</span>
+                  <h3 class="article-title">Propagation of Solitons in Quasi-periodic Nonlinear Coupled Waveguides</h3>
+                  
+                  <p><a href="https://doi.org/10.1007/s13538-020-00836-w" target="_blank" rel="noopener">DOI: 10.1007/s13538-020-00836-w</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2021</span>
+                  <h3 class="article-title">Proposal for Anderson localization in transverse spatial degrees of freedom of photons</h3>
+                  
+                  <p><a href="https://doi.org/10.1016/j.optcom.2021.127225" target="_blank" rel="noopener">DOI: 10.1016/j.optcom.2021.127225</a></p>
+                </article>
+              
+            </div>
+          
+        </div>
+
+        <div id="estatisticas" class="tab-panel">
+          <h2>Estatísticas do docente</h2>
+          <div class="kpi-grid">
+            <div class="kpi"><div class="kpi-value">39</div><div class="kpi-label">Artigos entre 2021-2026</div></div>
+            <div class="kpi"><div class="kpi-value">5</div><div class="kpi-label">Total de alunos</div></div>
+            <div class="kpi"><div class="kpi-value">0</div><div class="kpi-label">Mestrado</div></div>
+            <div class="kpi"><div class="kpi-value">5</div><div class="kpi-label">Doutorado</div></div>
+          </div>
+
+          <h3>Artigos por ano</h3>
+          
+            <div class="bar-chart" role="img" aria-label="Gráfico de barras com o número de artigos por ano">
+              
+                <div class="chart-row">
+                  <div class="chart-year">2026</div>
+                  <div class="chart-track" title="2 artigos em 2026">
+                    <div class="chart-bar" style="width: 18.2%"></div>
+                  </div>
+                  <div class="chart-value">2</div>
+                </div>
+              
+                <div class="chart-row">
+                  <div class="chart-year">2025</div>
+                  <div class="chart-track" title="11 artigos em 2025">
+                    <div class="chart-bar" style="width: 100.0%"></div>
+                  </div>
+                  <div class="chart-value">11</div>
+                </div>
+              
+                <div class="chart-row">
+                  <div class="chart-year">2024</div>
+                  <div class="chart-track" title="11 artigos em 2024">
+                    <div class="chart-bar" style="width: 100.0%"></div>
+                  </div>
+                  <div class="chart-value">11</div>
+                </div>
+              
+                <div class="chart-row">
+                  <div class="chart-year">2023</div>
+                  <div class="chart-track" title="3 artigos em 2023">
+                    <div class="chart-bar" style="width: 27.3%"></div>
+                  </div>
+                  <div class="chart-value">3</div>
+                </div>
+              
+                <div class="chart-row">
+                  <div class="chart-year">2022</div>
+                  <div class="chart-track" title="5 artigos em 2022">
+                    <div class="chart-bar" style="width: 45.5%"></div>
+                  </div>
+                  <div class="chart-value">5</div>
+                </div>
+              
+                <div class="chart-row">
+                  <div class="chart-year">2021</div>
+                  <div class="chart-track" title="7 artigos em 2021">
+                    <div class="chart-bar" style="width: 63.6%"></div>
+                  </div>
+                  <div class="chart-value">7</div>
+                </div>
+              
+              <p class="chart-note">Barras proporcionais ao maior valor anual do período.</p>
+            </div>
+          
+        </div>
+      </section>
+    </section>
+
+    <p class="footer">Página gerada automaticamente. Data da última atualização: 10/06/2026</p>
+  </main>
+
+  <script>
+    document.querySelectorAll('.tab-button').forEach(button => {
+      button.addEventListener('click', () => {
+        const tab = button.dataset.tab;
+        document.querySelectorAll('.tab-button').forEach(b => b.classList.remove('active'));
+        document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+        button.classList.add('active');
+        document.getElementById(tab).classList.add('active');
+      });
+    });
+  </script>
+</body>
+</html>

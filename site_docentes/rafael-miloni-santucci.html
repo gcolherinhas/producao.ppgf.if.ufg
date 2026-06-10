@@ -1,0 +1,466 @@
+
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Rafael Miloni Santucci</title>
+  <style>
+
+:root {
+  --ufg-blue: #003f73;
+  --ufg-dark-blue: #002b4f;
+  --ufg-green: #00843d;
+  --ufg-gold: #f2c300;
+  --bg: #f5f7fb;
+  --card: #ffffff;
+  --text: #1f2937;
+  --muted: #6b7280;
+  --border: #d7dee8;
+  --shadow: 0 12px 28px rgba(15, 23, 42, 0.10);
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--text);
+  background: var(--bg);
+  line-height: 1.55;
+}
+a { color: var(--ufg-blue); text-decoration: none; }
+a:hover { text-decoration: underline; }
+.site-header {
+  background: linear-gradient(135deg, var(--ufg-blue), var(--ufg-dark-blue));
+  color: #fff;
+  border-bottom: 6px solid var(--ufg-green);
+}
+.site-header .bar {
+  height: 8px;
+  background: linear-gradient(90deg, var(--ufg-green), var(--ufg-gold), var(--ufg-blue));
+}
+.header-inner {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 24px 22px 28px 22px;
+}
+.ufg-line {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 18px;
+  font-size: 0.98rem;
+  opacity: 0.96;
+}
+.ufg-line strong { font-weight: 700; }
+.header-title {
+  margin: 0;
+  font-size: clamp(1.75rem, 3vw, 2.7rem);
+  letter-spacing: -0.03em;
+}
+.header-subtitle {
+  margin: 8px 0 0 0;
+  color: rgba(255,255,255,0.86);
+  font-size: 1rem;
+}
+.container {
+  max-width: 1180px;
+  margin: 28px auto 48px auto;
+  padding: 0 22px;
+}
+.layout {
+  display: grid;
+  grid-template-columns: 290px 1fr;
+  gap: 24px;
+  align-items: start;
+}
+.profile-card, .content-card, .index-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  box-shadow: var(--shadow);
+}
+.profile-card {
+  padding: 18px;
+  position: sticky;
+  top: 18px;
+}
+.profile-photo {
+  display: block;
+  width: 85%;
+  max-height: 280px;
+  margin: 0 auto;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  background: #e5e7eb;
+}
+.placeholder-photo {
+  display: grid;
+  place-items: center;
+  width: 85%;
+  height: 221px;
+  margin: 0 auto;
+  border-radius: 14px;
+  background: #e5e7eb;
+  color: var(--muted);
+  text-align: center;
+  padding: 18px;
+}
+.profile-card h2 {
+  margin: 16px 0 8px 0;
+  font-size: 1.22rem;
+}
+.meta-list { margin: 14px 0 0 0; padding: 0; list-style: none; }
+.meta-list li { padding: 8px 0; border-top: 1px solid #eef2f7; }
+.meta-label { color: var(--muted); display: inline; font-size: 0.93rem; font-weight: 700; margin-right: 4px; }
+.profile-link { display: inline-block; font-weight: 700; }
+.profile-details {
+  border-top: 1px solid #eef2f7;
+  margin-top: 14px;
+  padding-top: 6px;
+}
+.profile-details li { font-size: 0.93rem; }
+.missing-info { color: var(--muted); font-style: italic; }
+
+.content-card { padding: 20px; min-height: 520px; }
+.tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 12px;
+}
+.tab-button {
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 10px 16px;
+  background: #fff;
+  color: var(--ufg-blue);
+  cursor: pointer;
+  font-weight: 700;
+}
+.tab-button.active {
+  background: var(--ufg-blue);
+  border-color: var(--ufg-blue);
+  color: #fff;
+}
+.tab-panel { display: none; }
+.tab-panel.active { display: block; }
+.article-list { display: grid; gap: 14px; }
+.article-item {
+  padding: 16px;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: #fbfdff;
+}
+.article-year {
+  display: inline-block;
+  padding: 3px 8px;
+  border-radius: 999px;
+  background: #e6f0fa;
+  color: var(--ufg-blue);
+  font-weight: 700;
+  font-size: 0.84rem;
+  margin-bottom: 7px;
+}
+.article-title { margin: 0 0 8px 0; font-size: 1.02rem; }
+.article-authors { color: var(--muted); font-size: 0.92rem; margin: 0; }
+.kpi-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(120px, 1fr));
+  gap: 12px;
+  margin-bottom: 20px;
+}
+.kpi {
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 16px;
+  background: #fbfdff;
+}
+.kpi-value { font-size: 2rem; font-weight: 800; color: var(--ufg-blue); line-height: 1; }
+.kpi-label { color: var(--muted); font-size: 0.86rem; margin-top: 6px; }
+.bar-chart {
+  margin-top: 14px;
+  padding: 18px;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  background: #fbfdff;
+}
+.chart-row {
+  display: grid;
+  grid-template-columns: 64px 1fr 44px;
+  gap: 12px;
+  align-items: center;
+  min-height: 34px;
+  margin: 10px 0;
+}
+.chart-year { font-weight: 700; color: var(--ufg-blue); }
+.chart-track {
+  width: 100%;
+  height: 22px;
+  background: #e5e7eb;
+  border-radius: 999px;
+  overflow: hidden;
+  border: 1px solid #d8e0ea;
+}
+.chart-bar {
+  height: 100%;
+  background: linear-gradient(90deg, var(--ufg-blue), var(--ufg-green));
+  border-radius: 999px;
+  min-width: 0;
+}
+.chart-value {
+  color: var(--text);
+  font-weight: 800;
+  text-align: right;
+  font-size: 0.95rem;
+}
+.chart-note { color: var(--muted); font-size: 0.9rem; margin: 8px 0 0 0; }
+.footer {
+  margin-top: 32px;
+  color: var(--muted);
+  font-size: 0.9rem;
+  text-align: center;
+}
+.index-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  gap: 16px;
+}
+.index-card { padding: 16px; }
+.index-card img { width: 100%; height: 180px; object-fit: cover; border-radius: 12px; border: 1px solid var(--border); }
+.index-card h2 { font-size: 1.05rem; margin: 12px 0 6px 0; }
+.back-link { margin-bottom: 16px; display: inline-block; font-weight: 700; }
+@media (max-width: 820px) {
+  .layout { grid-template-columns: 1fr; }
+  .profile-card { position: static; }
+  .kpi-grid { grid-template-columns: repeat(2, minmax(120px, 1fr)); }
+}
+
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="bar"></div>
+    <div class="header-inner">
+      <div class="ufg-line">
+        <span><strong>UNIVERSIDADE FEDERAL DE GOIÁS - UFG</strong><br>INSTITUTO DE FÍSICA · PROGRAMA DE PÓS-GRADUAÇÃO EM FÍSICA</span>
+        <span>PPGF/UFG</span>
+      </div>
+      <h1 class="header-title">Rafael Miloni Santucci</h1>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="layout">
+      <aside class="profile-card">
+        
+          <img class="profile-photo" src="data:image/jpeg;base64,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" alt="Foto de Rafael Miloni Santucci">
+        
+        <h2>Rafael Miloni Santucci</h2>
+        <ul class="meta-list profile-details">
+          
+            <li><a class="profile-link" href="http://lattes.cnpq.br/7644987837821138" target="_blank" rel="noopener">Curriculum Lattes</a></li>
+          
+          <li><span class="meta-label">Apto(a) a orientar:</span> Física Experimental</li>
+          <li><span class="meta-label">Sala:</span> Planetário UFG - IESA/UFG</li>
+          <li><span class="meta-label">E-mail:</span> <a href="mailto:rafaelsantucci@ufg.br">rafaelsantucci@ufg.br</a></li>
+          <li><span class="meta-label">Telefone:</span> (62) 3521-2774</li>
+          <li><span class="meta-label">Pesquisa</span> &#34;Astrofísica Estelar&#34;</li>
+          
+            <li>Bolsista de Produtividade em Pesquisa de CNPq - Nível C</li>
+          
+          <li><span class="meta-label">Formação:</span> Doutorado em Astronomia - IAG - 2016</li>
+          
+            <li><span class="meta-label">ORCID:</span> <a href="https://orcid.org/0000-0002-7529-1442" target="_blank" rel="noopener">0000-0002-7529-1442</a></li>
+          
+          <li><span class="meta-label">Fonte do perfil:</span> <a href="https://posgraduacao.if.ufg.br/p/41256-docentes-ppgf-instituto-de-fisica-ufg" target="_blank" rel="noopener">Página do PPGF/UFG</a></li>
+        </ul>
+      </aside>
+
+      <section class="content-card">
+        <nav class="tabs" aria-label="Seções da página">
+          <button class="tab-button active" data-tab="artigos">Artigos publicados</button>
+          <button class="tab-button" data-tab="estatisticas">Estatísticas do docente</button>
+        </nav>
+
+        <div id="artigos" class="tab-panel active">
+          <h2>Artigos publicados</h2>
+          
+            <div class="article-list">
+              
+                <article class="article-item">
+                  <span class="article-year">2025</span>
+                  <h3 class="article-title">Early Coformation of the Milky Way’s Thin and Thick Disks at Redshift z &gt; 2</h3>
+                  <p class="article-authors">Lais Borbolato; Silvia Rossi; Hélio D. Perottoni; Guilherme Limberg; João A. S. Amarante; Anna B. A. Queiroz; Cristina Chiappini; Friedrich Anders; Rafael M. Santucci; Fabrícia O. Barbosa; João V. Nogueira-Santos</p>
+                  <p><a href="https://doi.org/10.3847/1538-4357/ae0c96" target="_blank" rel="noopener">DOI: 10.3847/1538-4357/ae0c96</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2024</span>
+                  <h3 class="article-title">All-sky Kinematics and Chemistry of Monoceros Stellar Overdensity</h3>
+                  <p class="article-authors">Lais Borbolato; Hélio D. Perottoni; Silvia Rossi; Guilherme Limberg; Angeles Pérez-Villegas; Friedrich Anders; Teresa Antoja; Chervin F. P. Laporte; Helio J. Rocha-Pinto; Rafael M. Santucci</p>
+                  <p><a href="https://doi.org/10.3847/1538-4357/ad02fb" target="_blank" rel="noopener">DOI: 10.3847/1538-4357/ad02fb</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2023</span>
+                  <h3 class="article-title">Phase-space Properties and Chemistry of the Sagittarius Stellar Stream Down to the Extremely Metal-poor ([Fe/H] ≲ −3) Regime</h3>
+                  <p class="article-authors">Guilherme Limberg; Anna B. A. Queiroz; Hélio D. Perottoni; Silvia Rossi; João A. S. Amarante; Rafael M. Santucci; Cristina Chiappini; Angeles Pérez-Villegas; Young Sun Lee</p>
+                  <p><a href="https://doi.org/10.3847/1538-4357/acb694" target="_blank" rel="noopener">DOI: 10.3847/1538-4357/acb694</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2023</span>
+                  <h3 class="article-title">The Chemodynamical Nature of the Triangulum–Andromeda Overdensity</h3>
+                  <p class="article-authors">Yuri Abuchaim; Hélio D. Perottoni; Silvia Rossi; Guilherme Limberg; Angeles Pérez-Villegas; Rafael M. Santucci; Vinicius M. Placco; João V. Sales-Silva; Friedrich Anders; Helio J. Rocha-Pinto</p>
+                  <p><a href="https://doi.org/10.3847/1538-4357/acc9bc" target="_blank" rel="noopener">DOI: 10.3847/1538-4357/acc9bc</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2022</span>
+                  <h3 class="article-title">Dynamically Tagged Groups of Metal-poor Stars from the Best and Brightest Survey</h3>
+                  <p class="article-authors">Derek Shank; Timothy C. Beers; Vinicius M. Placco; Guilherme Limberg; Emma Jaques; Zhen Yuan; Kevin C. Schlaufman; Andrew R. Casey; Yang Huang; Young Sun Lee; Kohei Hattori; Rafael M. Santucci</p>
+                  <p><a href="https://doi.org/10.3847/1538-4357/ac409a" target="_blank" rel="noopener">DOI: 10.3847/1538-4357/ac409a</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2022</span>
+                  <h3 class="article-title">Reconstructing the Disrupted Dwarf Galaxy Gaia-Sausage/Enceladus Using Its Stars and Globular Clusters</h3>
+                  <p class="article-authors">Guilherme Limberg; Stefano O. Souza; Angeles Pérez-Villegas; Silvia Rossi; Hélio D. Perottoni; Rafael M. Santucci</p>
+                  <p><a href="https://doi.org/10.3847/1538-4357/ac8159" target="_blank" rel="noopener">DOI: 10.3847/1538-4357/ac8159</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2022</span>
+                  <h3 class="article-title">The SDSS-Gaia View of the Color–Magnitude Relation for Blue Horizontal-branch Stars</h3>
+                  <p class="article-authors">Fabrícia O. Barbosa; Rafael M. Santucci; Silvia Rossi; Guilherme Limberg; Angeles Pérez-Villegas; Hélio D. Perottoni</p>
+                  <p><a href="https://doi.org/10.3847/1538-4357/ac983f" target="_blank" rel="noopener">DOI: 10.3847/1538-4357/ac983f</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2022</span>
+                  <h3 class="article-title">The Unmixed Debris of Gaia-Sausage/Enceladus in the Form of a Pair of Halo Stellar Overdensities</h3>
+                  <p class="article-authors">Hélio D. Perottoni; Guilherme Limberg; João A. S. Amarante; Silvia Rossi; Anna B. A. Queiroz; Rafael M. Santucci; Angeles Pérez-Villegas; Cristina Chiappini</p>
+                  <p><a href="https://doi.org/10.3847/2041-8213/ac88d6" target="_blank" rel="noopener">DOI: 10.3847/2041-8213/ac88d6</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2021</span>
+                  <h3 class="article-title">Abundance Patterns of α and Neutron-capture Elements in the Helmi Stream</h3>
+                  <p class="article-authors">Guilherme Limberg; Rafael M. Santucci; Silvia Rossi; Anna B. A. Queiroz; Cristina Chiappini; Stefano O. Souza; Hélio D. Perottoni; Angeles Pérez-Villegas; Fabrícia O. Barbosa</p>
+                  <p><a href="https://doi.org/10.3847/2041-8213/ac0056" target="_blank" rel="noopener">DOI: 10.3847/2041-8213/ac0056</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2021</span>
+                  <h3 class="article-title">Dynamically Tagged Groups of Very Metal-poor Halo Stars from the HK and Hamburg/ESO Surveys</h3>
+                  <p class="article-authors">Guilherme Limberg; Silvia Rossi; Timothy C. Beers; Hélio D. Perottoni; Angeles Pérez-Villegas; Rafael M. Santucci; Yuri Abuchaim; Vinicius M. Placco; Young Sun Lee; Norbert Christlieb; John E. Norris; Michael S. Bessell; Sean G. Ryan; Ronald Wilhelm; Jaehyon Rhee; Anna Frebel</p>
+                  <p><a href="https://doi.org/10.3847/1538-4357/abcb87" target="_blank" rel="noopener">DOI: 10.3847/1538-4357/abcb87</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2021</span>
+                  <h3 class="article-title">Reinventando o método de Aristarco</h3>
+                  <p class="article-authors">Lucas V. Freitas; Rafael M. Santucci; Ivo A. Marques</p>
+                  <p><a href="https://doi.org/10.1590/1806-9126-rbef-2021-0062" target="_blank" rel="noopener">DOI: 10.1590/1806-9126-rbef-2021-0062</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2021</span>
+                  <h3 class="article-title">Targeting Bright Metal-poor Stars in the Disk and Halo Systems of the Galaxy</h3>
+                  <p class="article-authors">Guilherme Limberg; Rafael M. Santucci; Silvia Rossi; Derek Shank; Vinicius M. Placco; Timothy C. Beers; Kevin C. Schlaufman; Andrew R. Casey; Hélio D. Perottoni; Young Sun Lee</p>
+                  <p><a href="https://doi.org/10.3847/1538-4357/abeefe" target="_blank" rel="noopener">DOI: 10.3847/1538-4357/abeefe</a></p>
+                </article>
+              
+            </div>
+          
+        </div>
+
+        <div id="estatisticas" class="tab-panel">
+          <h2>Estatísticas do docente</h2>
+          <div class="kpi-grid">
+            <div class="kpi"><div class="kpi-value">12</div><div class="kpi-label">Artigos entre 2021-2026</div></div>
+            <div class="kpi"><div class="kpi-value">1</div><div class="kpi-label">Total de alunos</div></div>
+            <div class="kpi"><div class="kpi-value">0</div><div class="kpi-label">Mestrado</div></div>
+            <div class="kpi"><div class="kpi-value">1</div><div class="kpi-label">Doutorado</div></div>
+          </div>
+
+          <h3>Artigos por ano</h3>
+          
+            <div class="bar-chart" role="img" aria-label="Gráfico de barras com o número de artigos por ano">
+              
+                <div class="chart-row">
+                  <div class="chart-year">2026</div>
+                  <div class="chart-track" title="0 artigos em 2026">
+                    <div class="chart-bar" style="width: 0%"></div>
+                  </div>
+                  <div class="chart-value">0</div>
+                </div>
+              
+                <div class="chart-row">
+                  <div class="chart-year">2025</div>
+                  <div class="chart-track" title="1 artigos em 2025">
+                    <div class="chart-bar" style="width: 25.0%"></div>
+                  </div>
+                  <div class="chart-value">1</div>
+                </div>
+              
+                <div class="chart-row">
+                  <div class="chart-year">2024</div>
+                  <div class="chart-track" title="1 artigos em 2024">
+                    <div class="chart-bar" style="width: 25.0%"></div>
+                  </div>
+                  <div class="chart-value">1</div>
+                </div>
+              
+                <div class="chart-row">
+                  <div class="chart-year">2023</div>
+                  <div class="chart-track" title="2 artigos em 2023">
+                    <div class="chart-bar" style="width: 50.0%"></div>
+                  </div>
+                  <div class="chart-value">2</div>
+                </div>
+              
+                <div class="chart-row">
+                  <div class="chart-year">2022</div>
+                  <div class="chart-track" title="4 artigos em 2022">
+                    <div class="chart-bar" style="width: 100.0%"></div>
+                  </div>
+                  <div class="chart-value">4</div>
+                </div>
+              
+                <div class="chart-row">
+                  <div class="chart-year">2021</div>
+                  <div class="chart-track" title="4 artigos em 2021">
+                    <div class="chart-bar" style="width: 100.0%"></div>
+                  </div>
+                  <div class="chart-value">4</div>
+                </div>
+              
+              <p class="chart-note">Barras proporcionais ao maior valor anual do período.</p>
+            </div>
+          
+        </div>
+      </section>
+    </section>
+
+    <p class="footer">Página gerada automaticamente. Data da última atualização: 10/06/2026</p>
+  </main>
+
+  <script>
+    document.querySelectorAll('.tab-button').forEach(button => {
+      button.addEventListener('click', () => {
+        const tab = button.dataset.tab;
+        document.querySelectorAll('.tab-button').forEach(b => b.classList.remove('active'));
+        document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+        button.classList.add('active');
+        document.getElementById(tab).classList.add('active');
+      });
+    });
+  </script>
+</body>
+</html>

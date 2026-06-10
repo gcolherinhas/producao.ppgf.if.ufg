@@ -1,0 +1,494 @@
+
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Norton Gomes de Almeida</title>
+  <style>
+
+:root {
+  --ufg-blue: #003f73;
+  --ufg-dark-blue: #002b4f;
+  --ufg-green: #00843d;
+  --ufg-gold: #f2c300;
+  --bg: #f5f7fb;
+  --card: #ffffff;
+  --text: #1f2937;
+  --muted: #6b7280;
+  --border: #d7dee8;
+  --shadow: 0 12px 28px rgba(15, 23, 42, 0.10);
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--text);
+  background: var(--bg);
+  line-height: 1.55;
+}
+a { color: var(--ufg-blue); text-decoration: none; }
+a:hover { text-decoration: underline; }
+.site-header {
+  background: linear-gradient(135deg, var(--ufg-blue), var(--ufg-dark-blue));
+  color: #fff;
+  border-bottom: 6px solid var(--ufg-green);
+}
+.site-header .bar {
+  height: 8px;
+  background: linear-gradient(90deg, var(--ufg-green), var(--ufg-gold), var(--ufg-blue));
+}
+.header-inner {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 24px 22px 28px 22px;
+}
+.ufg-line {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 18px;
+  font-size: 0.98rem;
+  opacity: 0.96;
+}
+.ufg-line strong { font-weight: 700; }
+.header-title {
+  margin: 0;
+  font-size: clamp(1.75rem, 3vw, 2.7rem);
+  letter-spacing: -0.03em;
+}
+.header-subtitle {
+  margin: 8px 0 0 0;
+  color: rgba(255,255,255,0.86);
+  font-size: 1rem;
+}
+.container {
+  max-width: 1180px;
+  margin: 28px auto 48px auto;
+  padding: 0 22px;
+}
+.layout {
+  display: grid;
+  grid-template-columns: 290px 1fr;
+  gap: 24px;
+  align-items: start;
+}
+.profile-card, .content-card, .index-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  box-shadow: var(--shadow);
+}
+.profile-card {
+  padding: 18px;
+  position: sticky;
+  top: 18px;
+}
+.profile-photo {
+  display: block;
+  width: 85%;
+  max-height: 280px;
+  margin: 0 auto;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  background: #e5e7eb;
+}
+.placeholder-photo {
+  display: grid;
+  place-items: center;
+  width: 85%;
+  height: 221px;
+  margin: 0 auto;
+  border-radius: 14px;
+  background: #e5e7eb;
+  color: var(--muted);
+  text-align: center;
+  padding: 18px;
+}
+.profile-card h2 {
+  margin: 16px 0 8px 0;
+  font-size: 1.22rem;
+}
+.meta-list { margin: 14px 0 0 0; padding: 0; list-style: none; }
+.meta-list li { padding: 8px 0; border-top: 1px solid #eef2f7; }
+.meta-label { color: var(--muted); display: inline; font-size: 0.93rem; font-weight: 700; margin-right: 4px; }
+.profile-link { display: inline-block; font-weight: 700; }
+.profile-details {
+  border-top: 1px solid #eef2f7;
+  margin-top: 14px;
+  padding-top: 6px;
+}
+.profile-details li { font-size: 0.93rem; }
+.missing-info { color: var(--muted); font-style: italic; }
+
+.content-card { padding: 20px; min-height: 520px; }
+.tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 12px;
+}
+.tab-button {
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 10px 16px;
+  background: #fff;
+  color: var(--ufg-blue);
+  cursor: pointer;
+  font-weight: 700;
+}
+.tab-button.active {
+  background: var(--ufg-blue);
+  border-color: var(--ufg-blue);
+  color: #fff;
+}
+.tab-panel { display: none; }
+.tab-panel.active { display: block; }
+.article-list { display: grid; gap: 14px; }
+.article-item {
+  padding: 16px;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: #fbfdff;
+}
+.article-year {
+  display: inline-block;
+  padding: 3px 8px;
+  border-radius: 999px;
+  background: #e6f0fa;
+  color: var(--ufg-blue);
+  font-weight: 700;
+  font-size: 0.84rem;
+  margin-bottom: 7px;
+}
+.article-title { margin: 0 0 8px 0; font-size: 1.02rem; }
+.article-authors { color: var(--muted); font-size: 0.92rem; margin: 0; }
+.kpi-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(120px, 1fr));
+  gap: 12px;
+  margin-bottom: 20px;
+}
+.kpi {
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 16px;
+  background: #fbfdff;
+}
+.kpi-value { font-size: 2rem; font-weight: 800; color: var(--ufg-blue); line-height: 1; }
+.kpi-label { color: var(--muted); font-size: 0.86rem; margin-top: 6px; }
+.bar-chart {
+  margin-top: 14px;
+  padding: 18px;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  background: #fbfdff;
+}
+.chart-row {
+  display: grid;
+  grid-template-columns: 64px 1fr 44px;
+  gap: 12px;
+  align-items: center;
+  min-height: 34px;
+  margin: 10px 0;
+}
+.chart-year { font-weight: 700; color: var(--ufg-blue); }
+.chart-track {
+  width: 100%;
+  height: 22px;
+  background: #e5e7eb;
+  border-radius: 999px;
+  overflow: hidden;
+  border: 1px solid #d8e0ea;
+}
+.chart-bar {
+  height: 100%;
+  background: linear-gradient(90deg, var(--ufg-blue), var(--ufg-green));
+  border-radius: 999px;
+  min-width: 0;
+}
+.chart-value {
+  color: var(--text);
+  font-weight: 800;
+  text-align: right;
+  font-size: 0.95rem;
+}
+.chart-note { color: var(--muted); font-size: 0.9rem; margin: 8px 0 0 0; }
+.footer {
+  margin-top: 32px;
+  color: var(--muted);
+  font-size: 0.9rem;
+  text-align: center;
+}
+.index-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  gap: 16px;
+}
+.index-card { padding: 16px; }
+.index-card img { width: 100%; height: 180px; object-fit: cover; border-radius: 12px; border: 1px solid var(--border); }
+.index-card h2 { font-size: 1.05rem; margin: 12px 0 6px 0; }
+.back-link { margin-bottom: 16px; display: inline-block; font-weight: 700; }
+@media (max-width: 820px) {
+  .layout { grid-template-columns: 1fr; }
+  .profile-card { position: static; }
+  .kpi-grid { grid-template-columns: repeat(2, minmax(120px, 1fr)); }
+}
+
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="bar"></div>
+    <div class="header-inner">
+      <div class="ufg-line">
+        <span><strong>UNIVERSIDADE FEDERAL DE GOIÁS - UFG</strong><br>INSTITUTO DE FÍSICA · PROGRAMA DE PÓS-GRADUAÇÃO EM FÍSICA</span>
+        <span>PPGF/UFG</span>
+      </div>
+      <h1 class="header-title">Norton Gomes de Almeida</h1>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="layout">
+      <aside class="profile-card">
+        
+          <img class="profile-photo" src="data:image/jpeg;base64,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" alt="Foto de Norton Gomes de Almeida">
+        
+        <h2>Norton Gomes de Almeida</h2>
+        <ul class="meta-list profile-details">
+          
+            <li><a class="profile-link" href="http://lattes.cnpq.br/3182841849332242" target="_blank" rel="noopener">Curriculum Lattes</a></li>
+          
+          <li><span class="meta-label">Apto(a) a orientar:</span> Física Teórica</li>
+          <li><span class="meta-label">Sala:</span> 222 (IF-1)</li>
+          <li><span class="meta-label">E-mail:</span> <a href="mailto:norton@ufg.br">norton@ufg.br</a></li>
+          <li><span class="meta-label">Telefone:</span> (62) 3521-2081</li>
+          <li><span class="meta-label">Pesquisa</span> &#34;Óptica Quântica&#34;</li>
+          
+            <li>Bolsista de Produtividade de CNPq - Nível 2</li>
+          
+          <li><span class="meta-label">Formação:</span> Doutorado em Física - UFSCar - 2006</li>
+          
+            <li><span class="meta-label">ORCID:</span> <a href="https://orcid.org/0000-0001-8517-6774" target="_blank" rel="noopener">0000-0001-8517-6774</a></li>
+          
+          <li><span class="meta-label">Fonte do perfil:</span> <a href="https://posgraduacao.if.ufg.br/p/41256-docentes-ppgf-instituto-de-fisica-ufg" target="_blank" rel="noopener">Página do PPGF/UFG</a></li>
+        </ul>
+      </aside>
+
+      <section class="content-card">
+        <nav class="tabs" aria-label="Seções da página">
+          <button class="tab-button active" data-tab="artigos">Artigos publicados</button>
+          <button class="tab-button" data-tab="estatisticas">Estatísticas do docente</button>
+        </nav>
+
+        <div id="artigos" class="tab-panel active">
+          <h2>Artigos publicados</h2>
+          
+            <div class="article-list">
+              
+                <article class="article-item">
+                  <span class="article-year">2026</span>
+                  <h3 class="article-title">Engineered Kerr nonlinearities for precise quantum control of Fock states</h3>
+                  <p class="article-authors">Gabriella G. Damas; Ciro Micheletti Diniz; Norton G. de Almeida; Celso J. Villas-Bôas; G.D. de Moraes Neto</p>
+                  <p><a href="https://doi.org/10.1103/2q95-sfjs" target="_blank" rel="noopener">DOI: 10.1103/2q95-sfjs</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2026</span>
+                  <h3 class="article-title">From superradiance to collective electromagnetically induced transparency in three-level ensembles</h3>
+                  <p class="article-authors">H. Sanchez; L.F. Alves da Silva; M.A. Ponte; M.H.Y. Moussa; Norton G. de Almeida</p>
+                  <p><a href="https://doi.org/10.1103/bjmf-j7zv" target="_blank" rel="noopener">DOI: 10.1103/bjmf-j7zv</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2026</span>
+                  <h3 class="article-title">Pseudo-Hermitian thermal machines</h3>
+                  <p class="article-authors">L.F.A. da Silva; H. Sanchez; M.A. de Ponte; M.H.Y. Moussa; N.G. de Almeida</p>
+                  <p><a href="https://doi.org/10.1016/j.physa.2026.131622" target="_blank" rel="noopener">DOI: 10.1016/j.physa.2026.131622</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2025</span>
+                  <h3 class="article-title">Fundamental limits and experimental implementation of dispersive quantum thermometry</h3>
+                  <p class="article-authors">Daniel Y Akamatsu; Lucas Ferreira R de Moura; Gabriella G Damas; Gentil D de Moraes Neto; Victor Montenegro; Norton G de Almeida</p>
+                  <p><a href="https://doi.org/10.1088/2058-9565/ae0f4e" target="_blank" rel="noopener">DOI: 10.1088/2058-9565/ae0f4e</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2025</span>
+                  <h3 class="article-title">Quantum Features of the Thermal Two‐Qubit Quantum Rabi Model in Ultra‐ and Deep‐Strong Regimes</h3>
+                  <p class="article-authors">Ciro Micheletti Diniz; Gabriella G. Damas; Norton G. de Almeida; Celso J. Villas‐Boas; Gentil D. de Moraes Neto</p>
+                  <p><a href="https://doi.org/10.1002/qute.202500250" target="_blank" rel="noopener">DOI: 10.1002/qute.202500250</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2025</span>
+                  <h3 class="article-title">Quantum Thermodynamic Cycles and Non-Equilibrium Work in Confined Systems</h3>
+                  <p class="article-authors">Cler Trindade Garcez; N. G. de Almeida</p>
+                  <p><a href="https://doi.org/10.1364/fio.2025.jtu5a.36" target="_blank" rel="noopener">DOI: 10.1364/fio.2025.jtu5a.36</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2024</span>
+                  <h3 class="article-title">Exploring the role of criticality in the quantum Otto cycle fueled by the anisotropic quantum Rabi-Stark model</h3>
+                  <p class="article-authors">He-Guang Xu; Jiasen Jin; Norton G. de Almeida; G. D. de Moraes Neto</p>
+                  <p><a href="https://doi.org/10.1103/physrevb.110.134318" target="_blank" rel="noopener">DOI: 10.1103/physrevb.110.134318</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2024</span>
+                  <h3 class="article-title">FATORES QUE INFLUENCIAM A RECORRÊNCIA DA DOAÇÃO DE SANGUE NA FUNDAÇÃO HEMOPA, BELÉM, PARÁ</h3>
+                  <p class="article-authors">N. G. de Almeida; L. Xavier de Silva; N Mandujano Ramos; JCE Correa; NP Rodrigues; RBH Castro</p>
+                  <p><a href="https://doi.org/10.1016/j.htct.2024.09.1303" target="_blank" rel="noopener">DOI: 10.1016/j.htct.2024.09.1303</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2024</span>
+                  <h3 class="article-title">Universal quantum Otto heat machine based on the Dicke model</h3>
+                  <p class="article-authors">He-Guang Xu; Jiasen Jin; G. D. M. Neto; Norton G. de Almeida</p>
+                  <p><a href="https://doi.org/10.1103/physreve.109.014122" target="_blank" rel="noopener">DOI: 10.1103/physreve.109.014122</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2023</span>
+                  <h3 class="article-title">Cooling with fermionic thermal reservoirs</h3>
+                  <p class="article-authors">Gabriella G. Damas; Rogério J. de Assis; Norton G. de Almeida</p>
+                  <p><a href="https://doi.org/10.1103/physreve.107.034128" target="_blank" rel="noopener">DOI: 10.1103/physreve.107.034128</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2023</span>
+                  <h3 class="article-title">Negative temperature is cool for cooling</h3>
+                  <p class="article-authors">Gabriella G. Damas; Rogério J. de Assis; Norton G. de Almeida</p>
+                  <p><a href="https://doi.org/10.1016/j.physleta.2023.129038" target="_blank" rel="noopener">DOI: 10.1016/j.physleta.2023.129038</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2023</span>
+                  <h3 class="article-title">Optimizing resetting of superconducting qubits</h3>
+                  <p class="article-authors">Ciro Micheletti Diniz; Rogério Jorge de Assis; Norton G. de Almeida; Celso J. Villas-Boas</p>
+                  <p><a href="https://doi.org/10.1103/physreva.108.052605" target="_blank" rel="noopener">DOI: 10.1103/physreva.108.052605</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2023</span>
+                  <h3 class="article-title">Quantum Otto-type heat engine with fixed frequency</h3>
+                  <p class="article-authors">Richard Q. Matos; Rogério J. de Assis; Norton G. de Almeida</p>
+                  <p><a href="https://doi.org/10.1103/physreve.108.054131" target="_blank" rel="noopener">DOI: 10.1103/physreve.108.054131</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2023</span>
+                  <h3 class="article-title">Thermodynamics of the Ramsey Zone</h3>
+                  <p class="article-authors">Rogério J. de Assis; Ciro Micheletti Diniz; N. G. de Almeida; Celso Jorge Villas-Bôas</p>
+                  <p><a href="https://doi.org/10.3390/e25101430" target="_blank" rel="noopener">DOI: 10.3390/e25101430</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2021</span>
+                  <h3 class="article-title">Quantum Otto thermal machines powered by Kerr nonlinearity</h3>
+                  <p class="article-authors">Udson C Mendes; José S Sales; Norton G de Almeida</p>
+                  <p><a href="https://doi.org/10.1088/1361-6455/ac291a" target="_blank" rel="noopener">DOI: 10.1088/1361-6455/ac291a</a></p>
+                </article>
+              
+                <article class="article-item">
+                  <span class="article-year">2021</span>
+                  <h3 class="article-title">Two-level quantum Otto heat engine operating with unit efficiency far from the quasi-static regime under a squeezed reservoir</h3>
+                  <p class="article-authors">Rogério J de Assis; José S Sales; Udson C Mendes; Norton G de Almeida</p>
+                  <p><a href="https://doi.org/10.1088/1361-6455/abcfd9" target="_blank" rel="noopener">DOI: 10.1088/1361-6455/abcfd9</a></p>
+                </article>
+              
+            </div>
+          
+        </div>
+
+        <div id="estatisticas" class="tab-panel">
+          <h2>Estatísticas do docente</h2>
+          <div class="kpi-grid">
+            <div class="kpi"><div class="kpi-value">16</div><div class="kpi-label">Artigos entre 2021-2026</div></div>
+            <div class="kpi"><div class="kpi-value">7</div><div class="kpi-label">Total de alunos</div></div>
+            <div class="kpi"><div class="kpi-value">5</div><div class="kpi-label">Mestrado</div></div>
+            <div class="kpi"><div class="kpi-value">2</div><div class="kpi-label">Doutorado</div></div>
+          </div>
+
+          <h3>Artigos por ano</h3>
+          
+            <div class="bar-chart" role="img" aria-label="Gráfico de barras com o número de artigos por ano">
+              
+                <div class="chart-row">
+                  <div class="chart-year">2026</div>
+                  <div class="chart-track" title="3 artigos em 2026">
+                    <div class="chart-bar" style="width: 60.0%"></div>
+                  </div>
+                  <div class="chart-value">3</div>
+                </div>
+              
+                <div class="chart-row">
+                  <div class="chart-year">2025</div>
+                  <div class="chart-track" title="3 artigos em 2025">
+                    <div class="chart-bar" style="width: 60.0%"></div>
+                  </div>
+                  <div class="chart-value">3</div>
+                </div>
+              
+                <div class="chart-row">
+                  <div class="chart-year">2024</div>
+                  <div class="chart-track" title="3 artigos em 2024">
+                    <div class="chart-bar" style="width: 60.0%"></div>
+                  </div>
+                  <div class="chart-value">3</div>
+                </div>
+              
+                <div class="chart-row">
+                  <div class="chart-year">2023</div>
+                  <div class="chart-track" title="5 artigos em 2023">
+                    <div class="chart-bar" style="width: 100.0%"></div>
+                  </div>
+                  <div class="chart-value">5</div>
+                </div>
+              
+                <div class="chart-row">
+                  <div class="chart-year">2022</div>
+                  <div class="chart-track" title="0 artigos em 2022">
+                    <div class="chart-bar" style="width: 0%"></div>
+                  </div>
+                  <div class="chart-value">0</div>
+                </div>
+              
+                <div class="chart-row">
+                  <div class="chart-year">2021</div>
+                  <div class="chart-track" title="2 artigos em 2021">
+                    <div class="chart-bar" style="width: 40.0%"></div>
+                  </div>
+                  <div class="chart-value">2</div>
+                </div>
+              
+              <p class="chart-note">Barras proporcionais ao maior valor anual do período.</p>
+            </div>
+          
+        </div>
+      </section>
+    </section>
+
+    <p class="footer">Página gerada automaticamente. Data da última atualização: 10/06/2026</p>
+  </main>
+
+  <script>
+    document.querySelectorAll('.tab-button').forEach(button => {
+      button.addEventListener('click', () => {
+        const tab = button.dataset.tab;
+        document.querySelectorAll('.tab-button').forEach(b => b.classList.remove('active'));
+        document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+        button.classList.add('active');
+        document.getElementById(tab).classList.add('active');
+      });
+    });
+  </script>
+</body>
+</html>
