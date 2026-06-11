@@ -356,5 +356,267 @@
     }
   ],
   "0009-0009-7507-6425": [],
-  "0009-0008-9595-0362": []
+  "0009-0008-9595-0362": [],
+  "0009-0008-7555-7803": [],
+  "0000-0002-5772-2819": [
+    {
+      "titulo": "Optimizing pH sensor performance with PANI/PMMA composite thin films: Impedimetric and capacitive transduction approaches",
+      "autores": [
+        "Beatriz Cotting Rossignatti",
+        "Marcelo Mulato",
+        "Hugo José Nogueira Pedroza Dias Mello"
+      ],
+      "revista": "Synthetic Metals",
+      "issue": "",
+      "volume": "308",
+      "paginas": "117728",
+      "ano": "2024",
+      "doi": "10.1016/j.synthmet.2024.117728"
+    },
+    {
+      "titulo": "Optimized Drop-Casted Polyaniline Thin Films for High-Sensitivity Electrochemical and Optical pH Sensors",
+      "autores": [
+        "Bruna Eduarda Darolt Mücke",
+        "Beatriz Cotting Rossignatti",
+        "Luis Miguel Gomes Abegão",
+        "Martin Schwellberger Barbosa",
+        "Hugo José Nogueira Pedroza Dias Mello"
+      ],
+      "revista": "Polymers",
+      "issue": "19",
+      "volume": "16",
+      "paginas": "2789",
+      "ano": "2024",
+      "doi": "10.3390/polym16192789"
+    },
+    {
+      "titulo": "Gold-enhanced aptasensors for highly sensitive dengue detection: a cost-effective approach",
+      "autores": [
+        "Bassam Bachour Junior",
+        "Beatriz Cotting Rossignatti",
+        "Hugo José Nogueira Pedroza Dias Mello",
+        "Éder José Guidelli",
+        "Marcelo Mulato"
+      ],
+      "revista": "Surfaces and Interfaces",
+      "issue": "",
+      "volume": "55",
+      "paginas": "105282",
+      "ano": "2024",
+      "doi": "10.1016/j.surfin.2024.105282"
+    },
+    {
+      "titulo": "Thin Films of Polyaniline-Based Nanocomposites with CeO2 and WO3 Metal Oxides Applied to the Impedimetric and Capacitive Transducer Stages in Chemical Sensors",
+      "autores": [
+        "Beatriz Cotting Rossignatti",
+        "Amanda Portes Vieira",
+        "Martin Schwellberger Barbosa",
+        "Luís Miguel Gomes Abegão",
+        "Hugo José Nogueira Pedroza Dias Mello"
+      ],
+      "revista": "Polymers",
+      "issue": "3",
+      "volume": "15",
+      "paginas": "578",
+      "ano": "2023",
+      "doi": "10.3390/polym15030578"
+    }
+  ],
+  "0009-0009-8505-342X": [],
+  "0009-0009-3344-1340": [
+    {
+      "titulo": "Electron correlation in benzene: A QMC study of neutral and charged states",
+      "autores": [
+        "Edson Rodrigues de Oliveira",
+        "Renato Pessoa",
+        "Ladir Cândido"
+      ],
+      "revista": "The Journal of Chemical Physics",
+      "issue": "12",
+      "volume": "162",
+      "paginas": "",
+      "ano": "2025",
+      "doi": "10.1063/5.0244421"
+    }
+  ],
+  "0000-0003-3376-9281": [
+    {
+      "titulo": "Shortcut-error signatures in coherence-retaining endpoint work quasistatistics",
+      "autores": [
+        "Gabriella G. Damas",
+        "Gentil Dias de Moraes Neto"
+      ],
+      "revista": "",
+      "issue": "",
+      "volume": "",
+      "paginas": "",
+      "ano": "2026",
+      "doi": "10.2139/ssrn.6819818"
+    },
+    {
+      "titulo": "Engineered Kerr nonlinearities for precise quantum control of Fock states",
+      "autores": [
+        "Gabriella G. Damas",
+        "Ciro Micheletti Diniz",
+        "Norton G. de Almeida",
+        "Celso J. Villas-Bôas",
+        "G.D. de Moraes Neto"
+      ],
+      "revista": "Physical Review Applied",
+      "issue": "3",
+      "volume": "25",
+      "paginas": "",
+      "ano": "2026",
+      "doi": "10.1103/2q95-sfjs"
+    },
+    {
+      "titulo": "Quantum Features of the Thermal Two‐Qubit Quantum Rabi Model in Ultra‐ and Deep‐Strong Regimes",
+      "autores": [
+        "Ciro Micheletti Diniz",
+        "Gabriella G. Damas",
+        "Norton G. de Almeida",
+        "Celso J. Villas‐Boas",
+        "Gentil D. de Moraes Neto"
+      ],
+      "revista": "Advanced Quantum Technologies",
+      "issue": "10",
+      "volume": "8",
+      "paginas": "",
+      "ano": "2025",
+      "doi": "10.1002/qute.202500250"
+    },
+    {
+      "titulo": "Fundamental limits and experimental implementation of dispersive quantum thermometry",
+      "autores": [
+        "Daniel Y Akamatsu",
+        "Lucas Ferreira R de Moura",
+        "Gabriella G Damas",
+        "Gentil D de Moraes Neto",
+        "Victor Montenegro",
+        "Norton G de Almeida"
+      ],
+      "revista": "Quantum Science and Technology",
+      "issue": "4",
+      "volume": "10",
+      "paginas": "045062",
+      "ano": "2025",
+      "doi": "10.1088/2058-9565/ae0f4e"
+    },
+    {
+      "titulo": "QUTIP como recurso didático para aplicação de conceitos de Mecânica Quântica",
+      "autores": [
+        "Gabriella Gonçalves Damas",
+        "Ângelo Antônio Santos de Oliveira"
+      ],
+      "revista": "#Tear: Revista de Educação, Ciência e Tecnologia",
+      "issue": "2",
+      "volume": "12",
+      "paginas": "",
+      "ano": "2023",
+      "doi": "10.35819/tear.v12.n2.a6799"
+    },
+    {
+      "titulo": "Negative temperature is cool for cooling",
+      "autores": [
+        "Gabriella G. Damas",
+        "Rogério J. de Assis",
+        "Norton G. de Almeida"
+      ],
+      "revista": "Physics Letters A",
+      "issue": "",
+      "volume": "482",
+      "paginas": "129038",
+      "ano": "2023",
+      "doi": "10.1016/j.physleta.2023.129038"
+    },
+    {
+      "titulo": "Cooling with fermionic thermal reservoirs",
+      "autores": [
+        "Gabriella G. Damas",
+        "Rogério J. de Assis",
+        "Norton G. de Almeida"
+      ],
+      "revista": "Physical Review E",
+      "issue": "3",
+      "volume": "107",
+      "paginas": "",
+      "ano": "2023",
+      "doi": "10.1103/physreve.107.034128"
+    }
+  ],
+  "0009-0002-2602-971X": [
+    {
+      "titulo": "Dynamical Casimir Effect Under the Action of Gravitational Waves",
+      "autores": [
+        "Gustavo de Oliveira",
+        "Thiago Henrique Moreira",
+        "Lucas Chibebe Céleri"
+      ],
+      "revista": "Entropy",
+      "issue": "2",
+      "volume": "28",
+      "paginas": "177",
+      "ano": "2026",
+      "doi": "10.3390/e28020177"
+    },
+    {
+      "titulo": "Mutual information and holographic entanglement entropy for strongly coupled <mml:math xmlns:mml=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mml:mrow><mml:mi>R</mml:mi></mml:mrow></mml:math> -charged plasmas",
+      "autores": [
+        "Gustavo de Oliveira",
+        "Ronaldo F. Costa",
+        "Lucas C. Céleri",
+        "Romulo Rougemont"
+      ],
+      "revista": "Physical Review D",
+      "issue": "6",
+      "volume": "112",
+      "paginas": "",
+      "ano": "2025",
+      "doi": "10.1103/ylpl-96p1"
+    },
+    {
+      "titulo": "Homogeneous isotropization dynamics and entropy production in a hot and dense strongly interacting fluid",
+      "autores": [
+        "Gustavo de Oliveira",
+        "Willians Barreto",
+        "Romulo Rougemont"
+      ],
+      "revista": "Journal of High Energy Physics",
+      "issue": "10",
+      "volume": "2025",
+      "paginas": "",
+      "ano": "2025",
+      "doi": "10.1007/jhep10(2025)106"
+    },
+    {
+      "titulo": "Thermodynamic entropy production in the dynamical Casimir effect",
+      "autores": [
+        "Gustavo de Oliveira",
+        "Lucas Chibebe Céleri"
+      ],
+      "revista": "Physical Review A",
+      "issue": "1",
+      "volume": "109",
+      "paginas": "",
+      "ano": "2024",
+      "doi": "10.1103/physreva.109.012807"
+    },
+    {
+      "titulo": "New purely damped pairs of quasinormal modes in a hot and dense strongly-coupled plasma",
+      "autores": [
+        "Gustavo de Oliveira",
+        "Romulo Rougemont"
+      ],
+      "revista": "Journal of High Energy Physics",
+      "issue": "11",
+      "volume": "2024",
+      "paginas": "",
+      "ano": "2024",
+      "doi": "10.1007/jhep11(2024)079"
+    }
+  ],
+  "0009-0008-3403-9460": [],
+  "0009-0002-7374-6551": [],
+  "0009-0007-2356-9944": [],
+  "0009-0006-6016-9029": []
 }
