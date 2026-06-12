@@ -618,5 +618,63 @@
   "0009-0008-3403-9460": [],
   "0009-0002-7374-6551": [],
   "0009-0007-2356-9944": [],
-  "0009-0006-6016-9029": []
+  "0009-0006-6016-9029": [],
+  "0009-0005-0724-8548": [],
+  "0009-0005-4324-6494": [],
+  "0009-0002-3985-2510": [],
+  "0009-0003-0471-0536": [],
+  "0009-0004-2685-6728": [
+    {
+      "titulo": "Real-world deployment of an affordable sub-soil temperature and relative humidity sensing system for precision agriculture",
+      "autores": [
+        "Juracy L Santos Jr",
+        "Lucas H P Silva",
+        "Ian R Andrade",
+        "Renato Rosa",
+        "Luis M G Abegão"
+      ],
+      "revista": "Measurement Science and Technology",
+      "issue": "11",
+      "volume": "36",
+      "paginas": "115113",
+      "ano": "2025",
+      "doi": "10.1088/1361-6501/ae1c63"
+    },
+    {
+      "titulo": "Design and construction of an affordable optical power meter: micro- to milli-Watt in the 400–800 nm range",
+      "autores": [
+        "Juracy L dos Santos Jr",
+        "Ian R Andrade",
+        "Lucas H P Silva",
+        "Luis M G Abegão"
+      ],
+      "revista": "Measurement Science and Technology",
+      "issue": "8",
+      "volume": "35",
+      "paginas": "085208",
+      "ano": "2024",
+      "doi": "10.1088/1361-6501/ad4f04"
+    }
+  ],
+  "0009-0002-1012-8852": [],
+  "0009-0004-5257-1013": [],
+  "0009-0000-5633-9730": [],
+  "0009-0008-5735-5917": [
+    {
+      "titulo": "Work distribution of quantum fields in static curved spacetimes",
+      "autores": [
+        "Rafael L. S. Costa",
+        "Marcos L. W. Basso",
+        "Jonas Maziero",
+        "Lucas C. Céleri"
+      ],
+      "revista": "Physical Review D",
+      "issue": "2",
+      "volume": "113",
+      "paginas": "",
+      "ano": "2026",
+      "doi": "10.1103/d26w-cj7z"
+    }
+  ],
+  "0009-0003-0274-883X": []
 }
