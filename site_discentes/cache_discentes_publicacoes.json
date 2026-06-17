@@ -1010,5 +1010,63 @@
   "0009-0004-6324-6275": [],
   "0009-0001-0580-4038": [],
   "0009-0009-1770-2061": [],
-  "0009-0009-1899-8802": []
+  "0009-0009-1899-8802": [],
+  "0009-0009-4669-8161": [],
+  "0000-0002-3553-6281": [
+    {
+      "titulo": "Large quark mass Euler–Heisenberg-type action for QCD with quark sources and its Abelian limit",
+      "autores": [
+        "Igor de M. Froldi",
+        "Fabio L. Braghin"
+      ],
+      "revista": "International Journal of Modern Physics A",
+      "issue": "27",
+      "volume": "40",
+      "paginas": "",
+      "ano": "2025",
+      "doi": "10.1142/s0217751x25501167"
+    },
+    {
+      "titulo": "Efficiency of the superconducting diode effect of pair-density-wave states in two-dimensional d-wave altermagnets",
+      "autores": [
+        "Igor de M. Froldi",
+        "Hermann Freire"
+      ],
+      "revista": "Annals of Physics",
+      "issue": "",
+      "volume": "483",
+      "paginas": "170273",
+      "ano": "2025",
+      "doi": "10.1016/j.aop.2025.170273"
+    },
+    {
+      "titulo": "Strong pair-density-wave fluctuations in an exactly solvable doped Mott insulator",
+      "autores": [
+        "Igor de M. Froldi",
+        "Carlos Eduardo S. P. Corsino",
+        "Hermann Freire"
+      ],
+      "revista": "Physical Review B",
+      "issue": "24",
+      "volume": "110",
+      "paginas": "",
+      "ano": "2024",
+      "doi": "10.1103/physrevb.110.245136"
+    },
+    {
+      "titulo": "Classical Yang Mills equations with sources: Consequences of specific scalar potentials",
+      "autores": [
+        "Igor de M. Froldi",
+        "Fabio L. Braghin"
+      ],
+      "revista": "Annals of Physics",
+      "issue": "",
+      "volume": "444",
+      "paginas": "169026",
+      "ano": "2022",
+      "doi": "10.1016/j.aop.2022.169026"
+    }
+  ],
+  "0009-0002-1803-3196": [],
+  "0009-0003-6553-2120": []
 }
