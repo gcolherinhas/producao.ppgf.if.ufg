@@ -1068,5 +1068,23 @@
     }
   ],
   "0009-0002-1803-3196": [],
-  "0009-0003-6553-2120": []
+  "0009-0003-6553-2120": [],
+  "0009-0007-3153-4645": [],
+  "0009-0007-6612-0354": [],
+  "0009-0006-7272-8203": [
+    {
+      "titulo": "Quantum Otto-type heat engine with fixed frequency",
+      "autores": [
+        "Richard Q. Matos",
+        "Rogério J. de Assis",
+        "Norton G. de Almeida"
+      ],
+      "revista": "Physical Review E",
+      "issue": "5",
+      "volume": "108",
+      "paginas": "",
+      "ano": "2023",
+      "doi": "10.1103/physreve.108.054131"
+    }
+  ]
 }
