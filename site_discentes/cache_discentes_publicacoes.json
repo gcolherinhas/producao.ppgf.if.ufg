@@ -1086,5 +1086,58 @@
       "ano": "2023",
       "doi": "10.1103/physreve.108.054131"
     }
+  ],
+  "0009-0005-7008-3934": [],
+  "0000-0003-0721-1284": [
+    {
+      "titulo": "Room-temperature magnetic behavior of Bi-doped <mml:math xmlns:mml=\"http://www.w3.org/1998/Math/MathML\" altimg=\"si31.svg\" display=\"inline\" id=\"d1e2798\"> <mml:mrow> <mml:mi mathvariant=\"normal\">Co</mml:mi> <mml:mn>0</mml:mn> <mml:mo>.</mml:mo> <mml:mn>6</mml:mn> <mml:mi mathvariant=\"normal\">Zn</mml:mi> <mml:mn>0</mml:mn> <mml:mo>.</mml:mo> <mml:mn>4</mml:mn> <mml:mi mathvariant=\"normal\">Fe</mml:mi> <mml:mn>2</mml:mn> <mml:mi mathvariant=\"normal\">O</mml:mi> <mml:mn>4</mml:mn> </mml:mrow> </mml:math> ferrite nanoparticles",
+      "autores": [
+        "Ribeiro Italo Nuta",
+        "Isabella Rocha de Macedo",
+        "Marcio Solino Pessoa",
+        "Prasun Banerjee",
+        "Adolfo Franco Junior"
+      ],
+      "revista": "Physica B: Condensed Matter",
+      "issue": "",
+      "volume": "723",
+      "paginas": "418079",
+      "ano": "2026",
+      "doi": "10.1016/j.physb.2025.418079"
+    },
+    {
+      "titulo": "Low-temperature magnetic anomalies in orthorhombic yttrium chromite nanoparticles: Indications of magnetic frustration and glassy-like behavior",
+      "autores": [
+        "Italo Nuta",
+        "A. Franco"
+      ],
+      "revista": "Journal of Magnetism and Magnetic Materials",
+      "issue": "",
+      "volume": "651",
+      "paginas": "174012",
+      "ano": "2026",
+      "doi": "10.1016/j.jmmm.2026.174012"
+    },
+    {
+      "titulo": "PCM-DFT Investigation on the Linear and Nonlinear Optical Properties of Two Triazole Derivatives in Different Solvents",
+      "autores": [
+        "Ítalo N. Ribeiro",
+        "Fernando C.G. Murga",
+        "Marcos V.C.S. Rezende",
+        "Andreia R. dos Santos",
+        "Juliana G. de Morais",
+        "Jeziel R. dos Santos",
+        "Ricardo Ternavisk",
+        "Basilio Baseia",
+        "Francisco A.P. Osório",
+        "Clodoaldo Valverde"
+      ],
+      "revista": "Journal of Atomic, Molecular, Condensed Matter and Nano Physics",
+      "issue": "2",
+      "volume": "8",
+      "paginas": "175-236",
+      "ano": "2021",
+      "doi": "10.26713/jamcnp.v8i2.1609"
+    }
   ]
 }
