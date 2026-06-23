@@ -220,9 +220,9 @@
         "Guilherme Colherinhas"
       ],
       "revista": "The Journal of Physical Chemistry B",
-      "issue": "",
-      "volume": "",
-      "paginas": "",
+      "issue": "23",
+      "volume": "130",
+      "paginas": "5923-5938",
       "ano": "2026",
       "doi": "10.1021/acs.jpcb.6c01636"
     },
@@ -560,7 +560,7 @@
       "doi": "10.3390/e28020177"
     },
     {
-      "titulo": "Mutual information and holographic entanglement entropy for strongly coupled <mml:math xmlns:mml=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mml:mrow><mml:mi>R</mml:mi></mml:mrow></mml:math> -charged plasmas",
+      "titulo": "Mutual information and holographic entanglement entropy for strongly coupled <mml:math xmlns:mml=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"> <mml:mrow> <mml:mi>R</mml:mi> </mml:mrow> </mml:math> -charged plasmas",
       "autores": [
         "Gustavo de Oliveira",
         "Ronaldo F. Costa",
@@ -919,7 +919,7 @@
   "0009-0003-9333-1254": [],
   "0009-0005-4244-0391": [
     {
-      "titulo": "Mutual information and holographic entanglement entropy for strongly coupled <mml:math xmlns:mml=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mml:mrow><mml:mi>R</mml:mi></mml:mrow></mml:math> -charged plasmas",
+      "titulo": "Mutual information and holographic entanglement entropy for strongly coupled <mml:math xmlns:mml=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"> <mml:mrow> <mml:mi>R</mml:mi> </mml:mrow> </mml:math> -charged plasmas",
       "autores": [
         "Gustavo de Oliveira",
         "Ronaldo F. Costa",
@@ -991,7 +991,195 @@
   ],
   "0009-0009-0973-1778": [],
   "0009-0009-7939-5415": [],
-  "0000-0003-4963-7267": [],
+  "0000-0003-4963-7267": [
+    {
+      "titulo": "Temperature Effects on the Structural Stability of EF <sub>4</sub> K Peptide Membranes: Insights into Mono- and Multilayer Architectures",
+      "autores": [
+        "Karinna Mendanha",
+        "Douglas Xavier de Andrade",
+        "Guilherme Colherinhas"
+      ],
+      "revista": "ACS Materials Au",
+      "issue": "2",
+      "volume": "6",
+      "paginas": "437-449",
+      "ano": "2026",
+      "doi": "10.1021/acsmaterialsau.5c00214"
+    },
+    {
+      "titulo": "Peptide–Carbon Nanotube Hybrids under Confinement: Structure and Stability from Atomistic Simulations",
+      "autores": [
+        "Karinna Mendanha",
+        "Guilherme Colherinhas"
+      ],
+      "revista": "ACS Omega",
+      "issue": "",
+      "volume": "",
+      "paginas": "",
+      "ano": "2026",
+      "doi": "10.1021/acsomega.5c12748"
+    },
+    {
+      "titulo": "Hydrogen bonding and membrane anchoring of the antimicrobial peptide NP-3a investigated through molecular dynamics",
+      "autores": [
+        "Ana Clara D. Aquino",
+        "Karinna Mendanha",
+        "Herbert de C. Georg",
+        "Guilherme Colherinhas"
+      ],
+      "revista": "Computational Biology and Chemistry",
+      "issue": "",
+      "volume": "123",
+      "paginas": "108997",
+      "ano": "2026",
+      "doi": "10.1016/j.compbiolchem.2026.108997"
+    },
+    {
+      "titulo": "Cholesterol-Driven Optimization of Liposomal Systems for Ivermectin Capture: Insights from Experimental and Molecular Dynamics Studies",
+      "autores": [
+        "Alexandre C. M. Barros",
+        "Jader Pires",
+        "Karinna Mendanha",
+        "Lucas R. de Sousa",
+        "Bianca B. Fontanezi",
+        "Guilherme Colherinhas",
+        "Ana F. M. Botelho",
+        "Sebastião A. Mendanha",
+        "Eliana M. Lima"
+      ],
+      "revista": "ACS Applied Materials &amp; Interfaces",
+      "issue": "7",
+      "volume": "18",
+      "paginas": "10832-10841",
+      "ano": "2026",
+      "doi": "10.1021/acsami.5c21365"
+    },
+    {
+      "titulo": "Bio-Inspired Peptide Membranes for CO <sub>2</sub> Capture: A Molecular Dynamics Study of A <sub>6</sub> H and A <sub>6</sub> R Interfaces",
+      "autores": [
+        "Karinna Mendanha",
+        "Guilherme Colherinhas"
+      ],
+      "revista": "The Journal of Physical Chemistry B",
+      "issue": "20",
+      "volume": "130",
+      "paginas": "5152-5164",
+      "ano": "2026",
+      "doi": "10.1021/acs.jpcb.6c00256"
+    },
+    {
+      "titulo": "Versatility of self-assembling A6K peptide nanomembranes under thermal variation: A molecular dynamics analysis across the 300–400 K range",
+      "autores": [
+        "Karinna Mendanha",
+        "Douglas X. de Andrade",
+        "Guilherme Colherinhas"
+      ],
+      "revista": "Surfaces and Interfaces",
+      "issue": "",
+      "volume": "69",
+      "paginas": "106746",
+      "ano": "2025",
+      "doi": "10.1016/j.surfin.2025.106746"
+    },
+    {
+      "titulo": "Molecular Dynamics Simulations of Self-Assembled E<sub>2</sub>(SW)<sub>6</sub>E<sub>2</sub> Peptide Nanofibers: Implications for Drug Delivery and Biomimetic Material Design",
+      "autores": [
+        "Karinna Mendanha",
+        "Guilherme Colherinhas"
+      ],
+      "revista": "ACS Physical Chemistry Au",
+      "issue": "3",
+      "volume": "5",
+      "paginas": "302-315",
+      "ano": "2025",
+      "doi": "10.1021/acsphyschemau.5c00028"
+    },
+    {
+      "titulo": "Computational analysis of KGAVK peptide nanorod model: High structural stability under low hydration",
+      "autores": [
+        "Karinna Mendanha",
+        "Guilherme Colherinhas"
+      ],
+      "revista": "Journal of Molecular Liquids",
+      "issue": "",
+      "volume": "437",
+      "paginas": "128515",
+      "ano": "2025",
+      "doi": "10.1016/j.molliq.2025.128515"
+    },
+    {
+      "titulo": "Exploring How System Dimensions and Periodic Boundary Conditions Influence the Molecular Dynamics Simulation of A<sub>6</sub>H Peptide Self-Assembly Nanostructures",
+      "autores": [
+        "Karinna Mendanha",
+        "Guilherme Colherinhas"
+      ],
+      "revista": "The Journal of Physical Chemistry B",
+      "issue": "28",
+      "volume": "128",
+      "paginas": "6853-6865",
+      "ano": "2024",
+      "doi": "10.1021/acs.jpcb.4c03043"
+    },
+    {
+      "titulo": "Employing molecular dynamics simulations and DFT calculations to elucidate the energetic, structural, and spectroscopic attributes of (poly)valines in water solution",
+      "autores": [
+        "R.C. Prado",
+        "K. Mendanha",
+        "L.B.A. Oliveira",
+        "G. Colherinhas"
+      ],
+      "revista": "Chemical Physics Letters",
+      "issue": "",
+      "volume": "847",
+      "paginas": "141364",
+      "ano": "2024",
+      "doi": "10.1016/j.cplett.2024.141364"
+    },
+    {
+      "titulo": "Modeling, energetic and structural analysis of peptide membranes formed by arginine and phenylalanine (R2F4R2) using fully atomistic molecular dynamics",
+      "autores": [
+        "Karinna Mendanha",
+        "Leonardo Bruno Assis Oliveira",
+        "Guilherme Colherinhas"
+      ],
+      "revista": "Journal of Molecular Liquids",
+      "issue": "",
+      "volume": "367",
+      "paginas": "120498",
+      "ano": "2022",
+      "doi": "10.1016/j.molliq.2022.120498"
+    },
+    {
+      "titulo": "TD-DFT absorption spectrum of (poly)threonine in water: A study combining molecular dynamics and quantum mechanics calculations",
+      "autores": [
+        "Karinna Mendanha",
+        "Richard C. Prado",
+        "Leonardo B.A. Oliveira",
+        "Guilherme Colherinhas"
+      ],
+      "revista": "Chemical Physics Letters",
+      "issue": "",
+      "volume": "779",
+      "paginas": "138876",
+      "ano": "2021",
+      "doi": "10.1016/j.cplett.2021.138876"
+    },
+    {
+      "titulo": "Molecular dynamic simulations, <scp>GIAO‐NMR</scp> and <scp>TD‐DFT</scp> spectroscopy analyze for zwitterionic isoleucine (<i>ILE</i>)<sub><i>N</i></sub>, 1 ≤ <i>N</i> ≤ 6, in water solution",
+      "autores": [
+        "Karinna Mendanha",
+        "Richard Costa Prado",
+        "Leonardo Bruno Assis Oliveira",
+        "Guilherme Colherinhas"
+      ],
+      "revista": "Journal of Computational Chemistry",
+      "issue": "5",
+      "volume": "42",
+      "paginas": "344-357",
+      "ano": "2021",
+      "doi": "10.1002/jcc.26460"
+    }
+  ],
   "0009-0002-0555-7126": [
     {
       "titulo": "Galactic Cosmic Ray Interaction with the Perseus Giant Molecular Cloud Using Geant4 Monte Carlo Simulation",
