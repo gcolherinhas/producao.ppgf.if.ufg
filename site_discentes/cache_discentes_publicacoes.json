@@ -1286,5 +1286,63 @@
       "ano": "2021",
       "doi": "10.26713/jamcnp.v8i2.1609"
     }
+  ],
+  "0009-0008-7555-7803": [
+    {
+      "titulo": "Spectral properties of thymine and its interaction with tryptophan and bioinspired membranes",
+      "autores": [
+        "Alexandre Augusto Muniz Garcia",
+        "Nicole Sayuri Miranda Okayama",
+        "Eduardo Sérgio de Souza",
+        "Cássia Alessandra Marquezin"
+      ],
+      "revista": "Spectrochimica Acta Part A: Molecular and Biomolecular Spectroscopy",
+      "issue": "",
+      "volume": "350",
+      "paginas": "127427",
+      "ano": "2026",
+      "doi": "10.1016/j.saa.2025.127427"
+    }
+  ],
+  "0009-0003-6038-5483": [
+    {
+      "titulo": "First-order molecular hyperpolarizability of xanthoangelol derivatives",
+      "autores": [
+        "Felipe A. Santos",
+        "Hugo J. N. P. D. Mello",
+        "Martin S. Barbosa",
+        "Luis M. G. Abegão"
+      ],
+      "revista": "The European Physical Journal Plus",
+      "issue": "9",
+      "volume": "140",
+      "paginas": "",
+      "ano": "2025",
+      "doi": "10.1140/epjp/s13360-025-06830-y"
+    }
+  ],
+  "0000-0001-5493-5555": [
+    {
+      "titulo": "New insights into DPP3Th and C70 based planar solar cells: A study combining DFT and experimental approach",
+      "autores": [
+        "Alfredo Leithold Neto",
+        "Lucas Scalon",
+        "Luis Octavio de Araujo",
+        "Francineide Lopes de Araújo",
+        "Edna Regina Spada",
+        "Mariana Richelle Pereira da Cunha",
+        "Jaqueline Cristine Desordi",
+        "Rafael Carvalho Barreto",
+        "Andreia Gerniski Macedo",
+        "Roberto Mendonça Faria",
+        "Paula Cristina Rodrigues"
+      ],
+      "revista": "Materials Chemistry and Physics",
+      "issue": "",
+      "volume": "262",
+      "paginas": "124271",
+      "ano": "2021",
+      "doi": "10.1016/j.matchemphys.2021.124271"
+    }
   ]
 }
