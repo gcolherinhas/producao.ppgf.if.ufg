@@ -1344,5 +1344,120 @@
       "ano": "2021",
       "doi": "10.1016/j.matchemphys.2021.124271"
     }
+  ],
+  "0000-0002-6802-7408": [
+    {
+      "titulo": "Magnetostriction as the origin of the magnetodielectric effect in <mml:math xmlns:mml=\"http://www.w3.org/1998/Math/MathML\"> <mml:mrow> <mml:msub> <mml:mi>La</mml:mi> <mml:mn>2</mml:mn> </mml:msub> <mml:msub> <mml:mi>CoMnO</mml:mi> <mml:mn>6</mml:mn> </mml:msub> </mml:mrow> </mml:math>",
+      "autores": [
+        "M. Boldrin",
+        "A. Bagri",
+        "D. Barlettani",
+        "E. Teather",
+        "L. Squillante",
+        "M. de Souza",
+        "R. B. Pontes",
+        "A. G. Silva",
+        "T. J. A. Mori",
+        "R. Perry",
+        "R. Lora-Serrano",
+        "E. Granado",
+        "E. M. Bittar",
+        "L. S. I. Veiga",
+        "L. Bufaiçal"
+      ],
+      "revista": "Physical Review Materials",
+      "issue": "9",
+      "volume": "9",
+      "paginas": "",
+      "ano": "2025",
+      "doi": "10.1103/sjr4-6kdp"
+    },
+    {
+      "titulo": "Near-room-temperature ferrimagnetism and half-metallicity in disordered <mml:math xmlns:mml=\"http://www.w3.org/1998/Math/MathML\"> <mml:mrow> <mml:msub> <mml:mi>Ca</mml:mi> <mml:mrow> <mml:mn>1.5</mml:mn> </mml:mrow> </mml:msub> <mml:msub> <mml:mi>La</mml:mi> <mml:mrow> <mml:mn>0.5</mml:mn> </mml:mrow> </mml:msub> </mml:mrow> <mml:msub> <mml:mi>MnRuO</mml:mi> <mml:mn>6</mml:mn> </mml:msub> </mml:math>",
+      "autores": [
+        "A. G. Silva",
+        "R. B. Pontes",
+        "M. Boldrin",
+        "H. V. S. Pessoni",
+        "L. S. I. Veiga",
+        "J. R. Jesus",
+        "H. Fabrelli",
+        "A. R. C. Gonzaga",
+        "E. M. Bittar",
+        "L. Bufaiçal"
+      ],
+      "revista": "Physical Review B",
+      "issue": "14",
+      "volume": "110",
+      "paginas": "",
+      "ano": "2024",
+      "doi": "10.1103/physrevb.110.144415"
+    },
+    {
+      "titulo": "Structural transitions and spontaneous exchange bias in La2−Ba CoMnO6 series",
+      "autores": [
+        "H. Fabrelli",
+        "A.G. Silva",
+        "M. Boldrin",
+        "L. Bufaiçal",
+        "E.M. Bittar"
+      ],
+      "revista": "Journal of Solid State Chemistry",
+      "issue": "",
+      "volume": "322",
+      "paginas": "123944",
+      "ano": "2023",
+      "doi": "10.1016/j.jssc.2023.123944"
+    },
+    {
+      "titulo": "Griffiths phase and spontaneous exchange bias in La <sub>1.5</sub> Sr <sub>0.5</sub> CoMn <sub>0.5</sub> Fe <sub>0.5</sub> O <sub>6</sub>",
+      "autores": [
+        "A G Silva",
+        "K L Salcedo Rodríguez",
+        "C P Contreras Medrano",
+        "G S G Lourenço",
+        "M Boldrin",
+        "E Baggio-Saitovitch",
+        "L Bufaiçal"
+      ],
+      "revista": "Journal of Physics: Condensed Matter",
+      "issue": "6",
+      "volume": "33",
+      "paginas": "065804",
+      "ano": "2021",
+      "doi": "10.1088/1361-648x/abc595"
+    },
+    {
+      "titulo": "Tuning the spontaneous exchange bias effect with Ba to Sr partial substitution in La1.5(Sr0.5−<i>x</i>Ba<i>x</i>)CoMnO6",
+      "autores": [
+        "M. Boldrin",
+        "A. G. Silva",
+        "L. T. Coutrim",
+        "J. R. Jesus",
+        "C. Macchiutti",
+        "E. M. Bittar",
+        "L. Bufaiçal"
+      ],
+      "revista": "Applied Physics Letters",
+      "issue": "21",
+      "volume": "117",
+      "paginas": "",
+      "ano": "2020",
+      "doi": "10.1063/5.0028663"
+    },
+    {
+      "titulo": "The Spontaneous Exchange Bias Effect on La1.5Ba0.5CoMnO6",
+      "autores": [
+        "M. Boldrin",
+        "L. T. Coutrim",
+        "L. Bufaiçal"
+      ],
+      "revista": "Brazilian Journal of Physics",
+      "issue": "6",
+      "volume": "50",
+      "paginas": "711-715",
+      "ano": "2020",
+      "doi": "10.1007/s13538-020-00790-7"
+    }
   ]
 }
