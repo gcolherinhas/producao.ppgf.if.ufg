@@ -1459,5 +1459,21 @@
       "ano": "2020",
       "doi": "10.1007/s13538-020-00790-7"
     }
+  ],
+  "0009-0008-9189-8034": [
+    {
+      "titulo": "Berezinskii-Kosterlitz-Thouless transition in the XY model on the honeycomb lattice: a comprehensive Monte Carlo analysis",
+      "autores": [
+        "Felipe E F de Andrade",
+        "L N Jorge",
+        "Claudio J DaSilva"
+      ],
+      "revista": "Physica Scripta",
+      "issue": "6",
+      "volume": "100",
+      "paginas": "065953",
+      "ano": "2025",
+      "doi": "10.1088/1402-4896/add62a"
+    }
   ]
 }
