@@ -1,4 +1,21 @@
 {
+  "0009-0008-7555-7803": [
+    {
+      "titulo": "Spectral properties of thymine and its interaction with tryptophan and bioinspired membranes",
+      "autores": [
+        "Alexandre Augusto Muniz Garcia",
+        "Nicole Sayuri Miranda Okayama",
+        "Eduardo Sérgio de Souza",
+        "Cássia Alessandra Marquezin"
+      ],
+      "revista": "Spectrochimica Acta Part A: Molecular and Biomolecular Spectroscopy",
+      "issue": "",
+      "volume": "350",
+      "paginas": "127427",
+      "ano": "2026",
+      "doi": "10.1016/j.saa.2025.127427"
+    }
+  ],
   "0000-0002-9478-8606": [
     {
       "titulo": "<scp>BarcodingGO</scp>: A problem‐based approach to teach concepts related to <scp>environmental‐DNA</scp> and bioinformatics",
@@ -17,6 +34,181 @@
       "doi": "10.1002/bmb.21424"
     }
   ],
+  "0000-0002-5772-2819": [
+    {
+      "titulo": "Mixed (Mo,W) oxide/sulfide composite nanostructures: Synthesis and gas-sensing properties",
+      "autores": [
+        "Gustavo N. Pereira",
+        "Rafael C. Barbosa",
+        "Beatriz C. Rossignatti",
+        "Rafael A. da Silva",
+        "Ranilson A. da Silva",
+        "Hugo J.N.P.D. Mello",
+        "Marcelo O. Orlandi",
+        "Martin S. Barbosa"
+      ],
+      "revista": "Journal of Alloys and Compounds Communications",
+      "issue": "",
+      "volume": "6",
+      "paginas": "100072",
+      "ano": "2025",
+      "doi": "10.1016/j.jacomc.2025.100072"
+    },
+    {
+      "titulo": "Optimizing pH sensor performance with PANI/PMMA composite thin films: Impedimetric and capacitive transduction approaches",
+      "autores": [
+        "Beatriz Cotting Rossignatti",
+        "Marcelo Mulato",
+        "Hugo José Nogueira Pedroza Dias Mello"
+      ],
+      "revista": "Synthetic Metals",
+      "issue": "",
+      "volume": "308",
+      "paginas": "117728",
+      "ano": "2024",
+      "doi": "10.1016/j.synthmet.2024.117728"
+    },
+    {
+      "titulo": "Optimized Drop-Casted Polyaniline Thin Films for High-Sensitivity Electrochemical and Optical pH Sensors",
+      "autores": [
+        "Bruna Eduarda Darolt Mücke",
+        "Beatriz Cotting Rossignatti",
+        "Luis Miguel Gomes Abegão",
+        "Martin Schwellberger Barbosa",
+        "Hugo José Nogueira Pedroza Dias Mello"
+      ],
+      "revista": "Polymers",
+      "issue": "19",
+      "volume": "16",
+      "paginas": "2789",
+      "ano": "2024",
+      "doi": "10.3390/polym16192789"
+    },
+    {
+      "titulo": "Gold-enhanced aptasensors for highly sensitive dengue detection: a cost-effective approach",
+      "autores": [
+        "Bassam Bachour Junior",
+        "Beatriz Cotting Rossignatti",
+        "Hugo José Nogueira Pedroza Dias Mello",
+        "Éder José Guidelli",
+        "Marcelo Mulato"
+      ],
+      "revista": "Surfaces and Interfaces",
+      "issue": "",
+      "volume": "55",
+      "paginas": "105282",
+      "ano": "2024",
+      "doi": "10.1016/j.surfin.2024.105282"
+    },
+    {
+      "titulo": "Thin Films of Polyaniline-Based Nanocomposites with CeO2 and WO3 Metal Oxides Applied to the Impedimetric and Capacitive Transducer Stages in Chemical Sensors",
+      "autores": [
+        "Beatriz Cotting Rossignatti",
+        "Amanda Portes Vieira",
+        "Martin Schwellberger Barbosa",
+        "Luís Miguel Gomes Abegão",
+        "Hugo José Nogueira Pedroza Dias Mello"
+      ],
+      "revista": "Polymers",
+      "issue": "3",
+      "volume": "15",
+      "paginas": "578",
+      "ano": "2023",
+      "doi": "10.3390/polym15030578"
+    }
+  ],
+  "0009-0003-0999-3379": [
+    {
+      "titulo": "Quantum Thermodynamic Cycles and Non-Equilibrium Work in Confined Systems",
+      "autores": [
+        "Cler Trindade Garcez",
+        "Norton Gomes de Almeida"
+      ],
+      "revista": "Quantum Thermodynamic Cycles and Non-Equilibrium Work in Confined Systems",
+      "issue": "",
+      "volume": "",
+      "paginas": "JTu5A.36",
+      "ano": "2025",
+      "doi": "10.1364/FIO.2025.JTu5A.36"
+    }
+  ],
+  "0009-0009-3344-1340": [
+    {
+      "titulo": "Electron correlation in benzene: A QMC study of neutral and charged states",
+      "autores": [
+        "Edson Rodrigues de Oliveira",
+        "Renato Pessoa",
+        "Ladir Cândido"
+      ],
+      "revista": "The Journal of Chemical Physics",
+      "issue": "12",
+      "volume": "162",
+      "paginas": "",
+      "ano": "2025",
+      "doi": "10.1063/5.0244421"
+    }
+  ],
+  "0000-0001-6666-2726": [
+    {
+      "titulo": "Molecular Dynamics Study of Functionalized Gold Nanoparticles: Structural and Aggregation Behavior under Varying Ionic Strength",
+      "autores": [
+        "Esequias Coelho",
+        "Douglas Xavier de Andrade",
+        "Agnaldo Rosa de Almeida",
+        "Guilherme Colherinhas"
+      ],
+      "revista": "ACS Physical Chemistry Au",
+      "issue": "6",
+      "volume": "5",
+      "paginas": "699-715",
+      "ano": "2025",
+      "doi": "10.1021/acsphyschemau.5c00077"
+    },
+    {
+      "titulo": "Investigating the Impact of Positively Charged Gold Nanoparticle (AuNP) Concentration in Water/Cl<sup>–</sup> Solutions Using Molecular Dynamics Simulations",
+      "autores": [
+        "Esequias Coelho",
+        "Douglas Xavier de Andrade",
+        "Agnaldo Rosa de Almeida",
+        "Guilherme Colherinhas"
+      ],
+      "revista": "ACS Omega",
+      "issue": "20",
+      "volume": "10",
+      "paginas": "20610-20622",
+      "ano": "2025",
+      "doi": "10.1021/acsomega.5c01441"
+    },
+    {
+      "titulo": "Dynamic interactions of negatively charged gold nanoparticles (AuNPs) in aqueous environments with different ionic compositions",
+      "autores": [
+        "Esequias Coelho",
+        "Douglas Xavier",
+        "Agnaldo Almeida",
+        "Guilherme Colherinhas"
+      ],
+      "revista": "Journal of Molecular Liquids",
+      "issue": "",
+      "volume": "413",
+      "paginas": "126021",
+      "ano": "2024",
+      "doi": "10.1016/j.molliq.2024.126021"
+    },
+    {
+      "titulo": "Exploring Fullerenol-C60(OH)24 interactions with lipid bilayers: Molecular dynamics study of agglomeration and surface deposition",
+      "autores": [
+        "Esequias Coelho",
+        "Douglas X. de Andrade",
+        "Guilherme Colherinhas"
+      ],
+      "revista": "Journal of Molecular Liquids",
+      "issue": "",
+      "volume": "391",
+      "paginas": "123205",
+      "ano": "2023",
+      "doi": "10.1016/j.molliq.2023.123205"
+    }
+  ],
   "0009-0008-1830-2812": [
     {
       "titulo": "Influence of fourth-order dispersion on the formation of localized states in systems with inhomogeneous defocusing nonlinearity",
@@ -32,6 +224,331 @@
       "paginas": "117629",
       "ano": "2026",
       "doi": "10.1016/j.chaos.2025.117629"
+    }
+  ],
+  "0009-0003-6038-5483": [
+    {
+      "titulo": "First-order molecular hyperpolarizability of xanthoangelol derivatives",
+      "autores": [
+        "Felipe A. Santos",
+        "Hugo J. N. P. D. Mello",
+        "Martin S. Barbosa",
+        "Luis M. G. Abegão"
+      ],
+      "revista": "The European Physical Journal Plus",
+      "issue": "9",
+      "volume": "140",
+      "paginas": "",
+      "ano": "2025",
+      "doi": "10.1140/epjp/s13360-025-06830-y"
+    }
+  ],
+  "0009-0008-9189-8034": [
+    {
+      "titulo": "Berezinskii-Kosterlitz-Thouless transition in the XY model on the honeycomb lattice: a comprehensive Monte Carlo analysis",
+      "autores": [
+        "Felipe E F de Andrade",
+        "L N Jorge",
+        "Claudio J DaSilva"
+      ],
+      "revista": "Physica Scripta",
+      "issue": "6",
+      "volume": "100",
+      "paginas": "065953",
+      "ano": "2025",
+      "doi": "10.1088/1402-4896/add62a"
+    }
+  ],
+  "0000-0002-1976-9210": [
+    {
+      "titulo": "Tailoring Y2Ge2O7:Tm3+ nanophosphors for dual-mode photonic functionality: for high-sensitivity near-infrared thermometry and blue light emission",
+      "autores": [
+        "Alisson Torquato",
+        "Débora Evelyn Taborga dos Santos",
+        "Rogéria Rocha Gonçalves",
+        "Lauro June Queiroz Maia",
+        "Ricardo Costa de Santana"
+      ],
+      "revista": "Ceramics International",
+      "issue": "11",
+      "volume": "52",
+      "paginas": "17572-17583",
+      "ano": "2026",
+      "doi": "10.1016/j.ceramint.2026.02.342"
+    },
+    {
+      "titulo": "Structural and Spectral Effects on Luminescence Thermometry in Nd³⁺-Doped Aluminosilicate Glass and Glass-Ceramics",
+      "autores": [
+        "Alisson Torquato",
+        "Itamar Nunes",
+        "Tasso O. Sales",
+        "Carlos Jacinto",
+        "Raja J. Amjad",
+        "Mohammad Reza Dousti"
+      ],
+      "revista": "",
+      "issue": "",
+      "volume": "",
+      "paginas": "",
+      "ano": "2026",
+      "doi": "10.2139/ssrn.6531999"
+    },
+    {
+      "titulo": "Temperature dependent photoluminescence properties of a Y2Ge2O7:Tb3+ phosphors. A dual band ratiometric luminescent thermometer",
+      "autores": [
+        "Débora Evelyn Taborga dos Santos",
+        "Alisson Torquato",
+        "Itália Vallerini Barbosa",
+        "Jesiel Freitas Carvalho",
+        "Lauro June Queiroz Maia",
+        "Ricardo Costa de Santana"
+      ],
+      "revista": "Journal of Alloys and Compounds",
+      "issue": "",
+      "volume": "1010",
+      "paginas": "177444",
+      "ano": "2025",
+      "doi": "10.1016/j.jallcom.2024.177444"
+    },
+    {
+      "titulo": "Development and spectroscopy study of YPO4:Tm3+ nanopowders",
+      "autores": [
+        "Alisson Torquato",
+        "Ricardo Costa de Santana",
+        "Lauro June Queiroz Maia"
+      ],
+      "revista": "Journal of Alloys and Compounds",
+      "issue": "",
+      "volume": "1037",
+      "paginas": "182612",
+      "ano": "2025",
+      "doi": "10.1016/j.jallcom.2025.182612"
+    },
+    {
+      "titulo": "Spectroscopic study of Er3+-doped zinc-tellurite glass and opaque glass-ceramic",
+      "autores": [
+        "L.N. Lindolfo da Silva",
+        "Alisson Torquato",
+        "I. Nunes de Assis",
+        "M. Reza Dousti"
+      ],
+      "revista": "Solid State Sciences",
+      "issue": "",
+      "volume": "112",
+      "paginas": "106444",
+      "ano": "2021",
+      "doi": "10.1016/j.solidstatesciences.2020.106444"
+    },
+    {
+      "titulo": "Influence of PbF2 content on optical thermometry of Er3+/Yb3+ co-doped tungsten sodium phosphate glasses",
+      "autores": [
+        "Alisson Torquato",
+        "Rafael A. de Oliveira",
+        "Tasso O. Sales",
+        "Gael Y. Poirier",
+        "Gislene Batista",
+        "Fabia C. Cassanjes",
+        "Carlos Jacinto",
+        "M. Reza Dousti"
+      ],
+      "revista": "Optical Materials",
+      "issue": "",
+      "volume": "112",
+      "paginas": "110723",
+      "ano": "2021",
+      "doi": "10.1016/j.optmat.2020.110723"
+    },
+    {
+      "titulo": "Enhanced thermometry parameters in Er3+-doped zinc tellurite glasses containing silver nanoparticles",
+      "autores": [
+        "Alisson Torquato",
+        "Rafael A. de Oliveira",
+        "Tasso O. Sales",
+        "Carlos Jacinto",
+        "M. Reza Dousti"
+      ],
+      "revista": "Optik",
+      "issue": "",
+      "volume": "240",
+      "paginas": "166929",
+      "ano": "2021",
+      "doi": "10.1016/j.ijleo.2021.166929"
+    }
+  ],
+  "0000-0003-3376-9281": [
+    {
+      "titulo": "Shortcut-error signatures in coherence-retaining endpoint work quasistatistics",
+      "autores": [
+        "Gabriella G. Damas",
+        "Gentil Dias de Moraes Neto"
+      ],
+      "revista": "",
+      "issue": "",
+      "volume": "",
+      "paginas": "",
+      "ano": "2026",
+      "doi": "10.2139/ssrn.6819818"
+    },
+    {
+      "titulo": "Engineered Kerr nonlinearities for precise quantum control of Fock states",
+      "autores": [
+        "Gabriella G. Damas",
+        "Ciro Micheletti Diniz",
+        "Norton G. de Almeida",
+        "Celso J. Villas-Bôas",
+        "G.D. de Moraes Neto"
+      ],
+      "revista": "Physical Review Applied",
+      "issue": "3",
+      "volume": "25",
+      "paginas": "",
+      "ano": "2026",
+      "doi": "10.1103/2q95-sfjs"
+    },
+    {
+      "titulo": "Quantum Features of the Thermal Two‐Qubit Quantum Rabi Model in Ultra‐ and Deep‐Strong Regimes",
+      "autores": [
+        "Ciro Micheletti Diniz",
+        "Gabriella G. Damas",
+        "Norton G. de Almeida",
+        "Celso J. Villas‐Boas",
+        "Gentil D. de Moraes Neto"
+      ],
+      "revista": "Advanced Quantum Technologies",
+      "issue": "10",
+      "volume": "8",
+      "paginas": "",
+      "ano": "2025",
+      "doi": "10.1002/qute.202500250"
+    },
+    {
+      "titulo": "Fundamental limits and experimental implementation of dispersive quantum thermometry",
+      "autores": [
+        "Daniel Y Akamatsu",
+        "Lucas Ferreira R de Moura",
+        "Gabriella G Damas",
+        "Gentil D de Moraes Neto",
+        "Victor Montenegro",
+        "Norton G de Almeida"
+      ],
+      "revista": "Quantum Science and Technology",
+      "issue": "4",
+      "volume": "10",
+      "paginas": "045062",
+      "ano": "2025",
+      "doi": "10.1088/2058-9565/ae0f4e"
+    },
+    {
+      "titulo": "QUTIP como recurso didático para aplicação de conceitos de Mecânica Quântica",
+      "autores": [
+        "Gabriella Gonçalves Damas",
+        "Ângelo Antônio Santos de Oliveira"
+      ],
+      "revista": "#Tear: Revista de Educação, Ciência e Tecnologia",
+      "issue": "2",
+      "volume": "12",
+      "paginas": "",
+      "ano": "2023",
+      "doi": "10.35819/tear.v12.n2.a6799"
+    },
+    {
+      "titulo": "Negative temperature is cool for cooling",
+      "autores": [
+        "Gabriella G. Damas",
+        "Rogério J. de Assis",
+        "Norton G. de Almeida"
+      ],
+      "revista": "Physics Letters A",
+      "issue": "",
+      "volume": "482",
+      "paginas": "129038",
+      "ano": "2023",
+      "doi": "10.1016/j.physleta.2023.129038"
+    },
+    {
+      "titulo": "Cooling with fermionic thermal reservoirs",
+      "autores": [
+        "Gabriella G. Damas",
+        "Rogério J. de Assis",
+        "Norton G. de Almeida"
+      ],
+      "revista": "Physical Review E",
+      "issue": "3",
+      "volume": "107",
+      "paginas": "",
+      "ano": "2023",
+      "doi": "10.1103/physreve.107.034128"
+    }
+  ],
+  "0009-0002-2602-971X": [
+    {
+      "titulo": "Dynamical Casimir Effect Under the Action of Gravitational Waves",
+      "autores": [
+        "Gustavo de Oliveira",
+        "Thiago Henrique Moreira",
+        "Lucas Chibebe Céleri"
+      ],
+      "revista": "Entropy",
+      "issue": "2",
+      "volume": "28",
+      "paginas": "177",
+      "ano": "2026",
+      "doi": "10.3390/e28020177"
+    },
+    {
+      "titulo": "Mutual information and holographic entanglement entropy for strongly coupled <mml:math xmlns:mml=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"> <mml:mrow> <mml:mi>R</mml:mi> </mml:mrow> </mml:math> -charged plasmas",
+      "autores": [
+        "Gustavo de Oliveira",
+        "Ronaldo F. Costa",
+        "Lucas C. Céleri",
+        "Romulo Rougemont"
+      ],
+      "revista": "Physical Review D",
+      "issue": "6",
+      "volume": "112",
+      "paginas": "",
+      "ano": "2025",
+      "doi": "10.1103/ylpl-96p1"
+    },
+    {
+      "titulo": "Homogeneous isotropization dynamics and entropy production in a hot and dense strongly interacting fluid",
+      "autores": [
+        "Gustavo de Oliveira",
+        "Willians Barreto",
+        "Romulo Rougemont"
+      ],
+      "revista": "Journal of High Energy Physics",
+      "issue": "10",
+      "volume": "2025",
+      "paginas": "",
+      "ano": "2025",
+      "doi": "10.1007/jhep10(2025)106"
+    },
+    {
+      "titulo": "Thermodynamic entropy production in the dynamical Casimir effect",
+      "autores": [
+        "Gustavo de Oliveira",
+        "Lucas Chibebe Céleri"
+      ],
+      "revista": "Physical Review A",
+      "issue": "1",
+      "volume": "109",
+      "paginas": "",
+      "ano": "2024",
+      "doi": "10.1103/physreva.109.012807"
+    },
+    {
+      "titulo": "New purely damped pairs of quasinormal modes in a hot and dense strongly-coupled plasma",
+      "autores": [
+        "Gustavo de Oliveira",
+        "Romulo Rougemont"
+      ],
+      "revista": "Journal of High Energy Physics",
+      "issue": "11",
+      "volume": "2024",
+      "paginas": "",
+      "ano": "2024",
+      "doi": "10.1007/jhep11(2024)079"
     }
   ],
   "0000-0002-7696-010X": [
@@ -211,405 +728,6 @@
       "doi": "10.1016/j.molliq.2022.119494"
     }
   ],
-  "0009-0002-0539-1103": [
-    {
-      "titulo": "Hydration and Molar Ratio Effects in Choline Chloride-Phenol Deep Eutectic Solvents",
-      "autores": [
-        "Lucas de S. Silva",
-        "Guilherme Colherinhas"
-      ],
-      "revista": "The Journal of Physical Chemistry B",
-      "issue": "23",
-      "volume": "130",
-      "paginas": "5923-5938",
-      "ano": "2026",
-      "doi": "10.1021/acs.jpcb.6c01636"
-    },
-    {
-      "titulo": "Ester-Based Electrolyte Mixtures for Graphene Supercapacitors: A Molecular Dynamics Investigation",
-      "autores": [
-        "Lucas de S. Silva",
-        "Guilherme Colherinhas"
-      ],
-      "revista": "The Journal of Physical Chemistry B",
-      "issue": "7",
-      "volume": "130",
-      "paginas": "2178-2193",
-      "ano": "2026",
-      "doi": "10.1021/acs.jpcb.5c06507"
-    },
-    {
-      "titulo": "Chloride substitution and hydration effects in [emim][bnz] electrolytes for lightweight supercapacitors",
-      "autores": [
-        "Leonardo B.A. Oliveira",
-        "Lucas de S. Silva",
-        "Tertius L. Fonseca",
-        "Guilherme Colherinhas"
-      ],
-      "revista": "Journal of Molecular Liquids",
-      "issue": "",
-      "volume": "443",
-      "paginas": "129142",
-      "ano": "2026",
-      "doi": "10.1016/j.molliq.2025.129142"
-    },
-    {
-      "titulo": "Sustainable supercapacitors using advanced hydrated amino acid ionic liquids: A novel approach to biodegradable energy storage",
-      "autores": [
-        "Lucas de S. Silva",
-        "Henrique de A. Chagas",
-        "G. Colherinhas"
-      ],
-      "revista": "Journal of Molecular Liquids",
-      "issue": "",
-      "volume": "417",
-      "paginas": "126638",
-      "ano": "2025",
-      "doi": "10.1016/j.molliq.2024.126638"
-    },
-    {
-      "titulo": "Structural and electrochemical properties of graphene-based supercapacitors with water and methanol-co-solvated ionic liquids: a molecular dynamics study",
-      "autores": [
-        "Lucas de S. Silva",
-        "Leonardo B.A. Oliveira",
-        "Tertius L. Fonseca",
-        "Guilherme Colherinhas"
-      ],
-      "revista": "Journal of Molecular Liquids",
-      "issue": "",
-      "volume": "434",
-      "paginas": "128041",
-      "ano": "2025",
-      "doi": "10.1016/j.molliq.2025.128041"
-    },
-    {
-      "titulo": "Impact of Chloride and Bromide Composition in Ionic Liquid/Water Electrolytes on the Electrochemical Performance of Graphene-Based Supercapacitors: A Molecular Dynamics Study",
-      "autores": [
-        "Leonardo B. A. Oliveira",
-        "Lucas de S Silva",
-        "Henrique de Araujo Chagas",
-        "Tertius L. Fonseca",
-        "Guilherme Colherinhas"
-      ],
-      "revista": "The Journal of Physical Chemistry C",
-      "issue": "30",
-      "volume": "129",
-      "paginas": "13532-13541",
-      "ano": "2025",
-      "doi": "10.1021/acs.jpcc.5c01816"
-    },
-    {
-      "titulo": "Exploring MXene Materials in Energy Storage Devices: A Review of Supercapacitor Applications",
-      "autores": [
-        "Lucas de Sousa Silva",
-        "Eudes Eterno Fileti",
-        "Guilherme Colherinhas"
-      ],
-      "revista": "ACS Materials Au",
-      "issue": "6",
-      "volume": "5",
-      "paginas": "920-939",
-      "ano": "2025",
-      "doi": "10.1021/acsmaterialsau.5c00102"
-    },
-    {
-      "titulo": "Evaluation of Structural and Electrochemical Properties of Supercapacitors with Graphene Electrodes and Hydrated Pure or Mixed [bmim]-Based Ionic Liquids via Molecular Dynamics",
-      "autores": [
-        "Lucas de S. Silva",
-        "Guilherme Colherinhas"
-      ],
-      "revista": "ACS Physical Chemistry Au",
-      "issue": "5",
-      "volume": "5",
-      "paginas": "519-532",
-      "ano": "2025",
-      "doi": "10.1021/acsphyschemau.5c00036"
-    },
-    {
-      "titulo": "Selecting electronic transitions between graphyne and lithium ions for entanglement generation using new organic material",
-      "autores": [
-        "Lucas S. Silva",
-        "Wesley B. Cardoso",
-        "Guilherme Colherinhas"
-      ],
-      "revista": "Computational and Theoretical Chemistry",
-      "issue": "",
-      "volume": "1238",
-      "paginas": "114692",
-      "ano": "2024",
-      "doi": "10.1016/j.comptc.2024.114692"
-    },
-    {
-      "titulo": "Evaluating quantum entanglement generation in two-dimensional graphene systems through lithium ion interactions: A DFT-based study",
-      "autores": [
-        "Lucas de S. Silva",
-        "Guilherme Colherinhas",
-        "Wesley B. Cardoso"
-      ],
-      "revista": "Journal of Computational Chemistry",
-      "issue": "13",
-      "volume": "45",
-      "paginas": "1002-1007",
-      "ano": "2024",
-      "doi": "10.1002/jcc.27303"
-    }
-  ],
-  "0000-0002-5772-2819": [
-    {
-      "titulo": "Optimizing pH sensor performance with PANI/PMMA composite thin films: Impedimetric and capacitive transduction approaches",
-      "autores": [
-        "Beatriz Cotting Rossignatti",
-        "Marcelo Mulato",
-        "Hugo José Nogueira Pedroza Dias Mello"
-      ],
-      "revista": "Synthetic Metals",
-      "issue": "",
-      "volume": "308",
-      "paginas": "117728",
-      "ano": "2024",
-      "doi": "10.1016/j.synthmet.2024.117728"
-    },
-    {
-      "titulo": "Optimized Drop-Casted Polyaniline Thin Films for High-Sensitivity Electrochemical and Optical pH Sensors",
-      "autores": [
-        "Bruna Eduarda Darolt Mücke",
-        "Beatriz Cotting Rossignatti",
-        "Luis Miguel Gomes Abegão",
-        "Martin Schwellberger Barbosa",
-        "Hugo José Nogueira Pedroza Dias Mello"
-      ],
-      "revista": "Polymers",
-      "issue": "19",
-      "volume": "16",
-      "paginas": "2789",
-      "ano": "2024",
-      "doi": "10.3390/polym16192789"
-    },
-    {
-      "titulo": "Gold-enhanced aptasensors for highly sensitive dengue detection: a cost-effective approach",
-      "autores": [
-        "Bassam Bachour Junior",
-        "Beatriz Cotting Rossignatti",
-        "Hugo José Nogueira Pedroza Dias Mello",
-        "Éder José Guidelli",
-        "Marcelo Mulato"
-      ],
-      "revista": "Surfaces and Interfaces",
-      "issue": "",
-      "volume": "55",
-      "paginas": "105282",
-      "ano": "2024",
-      "doi": "10.1016/j.surfin.2024.105282"
-    },
-    {
-      "titulo": "Thin Films of Polyaniline-Based Nanocomposites with CeO2 and WO3 Metal Oxides Applied to the Impedimetric and Capacitive Transducer Stages in Chemical Sensors",
-      "autores": [
-        "Beatriz Cotting Rossignatti",
-        "Amanda Portes Vieira",
-        "Martin Schwellberger Barbosa",
-        "Luís Miguel Gomes Abegão",
-        "Hugo José Nogueira Pedroza Dias Mello"
-      ],
-      "revista": "Polymers",
-      "issue": "3",
-      "volume": "15",
-      "paginas": "578",
-      "ano": "2023",
-      "doi": "10.3390/polym15030578"
-    }
-  ],
-  "0009-0009-3344-1340": [
-    {
-      "titulo": "Electron correlation in benzene: A QMC study of neutral and charged states",
-      "autores": [
-        "Edson Rodrigues de Oliveira",
-        "Renato Pessoa",
-        "Ladir Cândido"
-      ],
-      "revista": "The Journal of Chemical Physics",
-      "issue": "12",
-      "volume": "162",
-      "paginas": "",
-      "ano": "2025",
-      "doi": "10.1063/5.0244421"
-    }
-  ],
-  "0000-0003-3376-9281": [
-    {
-      "titulo": "Shortcut-error signatures in coherence-retaining endpoint work quasistatistics",
-      "autores": [
-        "Gabriella G. Damas",
-        "Gentil Dias de Moraes Neto"
-      ],
-      "revista": "",
-      "issue": "",
-      "volume": "",
-      "paginas": "",
-      "ano": "2026",
-      "doi": "10.2139/ssrn.6819818"
-    },
-    {
-      "titulo": "Engineered Kerr nonlinearities for precise quantum control of Fock states",
-      "autores": [
-        "Gabriella G. Damas",
-        "Ciro Micheletti Diniz",
-        "Norton G. de Almeida",
-        "Celso J. Villas-Bôas",
-        "G.D. de Moraes Neto"
-      ],
-      "revista": "Physical Review Applied",
-      "issue": "3",
-      "volume": "25",
-      "paginas": "",
-      "ano": "2026",
-      "doi": "10.1103/2q95-sfjs"
-    },
-    {
-      "titulo": "Quantum Features of the Thermal Two‐Qubit Quantum Rabi Model in Ultra‐ and Deep‐Strong Regimes",
-      "autores": [
-        "Ciro Micheletti Diniz",
-        "Gabriella G. Damas",
-        "Norton G. de Almeida",
-        "Celso J. Villas‐Boas",
-        "Gentil D. de Moraes Neto"
-      ],
-      "revista": "Advanced Quantum Technologies",
-      "issue": "10",
-      "volume": "8",
-      "paginas": "",
-      "ano": "2025",
-      "doi": "10.1002/qute.202500250"
-    },
-    {
-      "titulo": "Fundamental limits and experimental implementation of dispersive quantum thermometry",
-      "autores": [
-        "Daniel Y Akamatsu",
-        "Lucas Ferreira R de Moura",
-        "Gabriella G Damas",
-        "Gentil D de Moraes Neto",
-        "Victor Montenegro",
-        "Norton G de Almeida"
-      ],
-      "revista": "Quantum Science and Technology",
-      "issue": "4",
-      "volume": "10",
-      "paginas": "045062",
-      "ano": "2025",
-      "doi": "10.1088/2058-9565/ae0f4e"
-    },
-    {
-      "titulo": "QUTIP como recurso didático para aplicação de conceitos de Mecânica Quântica",
-      "autores": [
-        "Gabriella Gonçalves Damas",
-        "Ângelo Antônio Santos de Oliveira"
-      ],
-      "revista": "#Tear: Revista de Educação, Ciência e Tecnologia",
-      "issue": "2",
-      "volume": "12",
-      "paginas": "",
-      "ano": "2023",
-      "doi": "10.35819/tear.v12.n2.a6799"
-    },
-    {
-      "titulo": "Negative temperature is cool for cooling",
-      "autores": [
-        "Gabriella G. Damas",
-        "Rogério J. de Assis",
-        "Norton G. de Almeida"
-      ],
-      "revista": "Physics Letters A",
-      "issue": "",
-      "volume": "482",
-      "paginas": "129038",
-      "ano": "2023",
-      "doi": "10.1016/j.physleta.2023.129038"
-    },
-    {
-      "titulo": "Cooling with fermionic thermal reservoirs",
-      "autores": [
-        "Gabriella G. Damas",
-        "Rogério J. de Assis",
-        "Norton G. de Almeida"
-      ],
-      "revista": "Physical Review E",
-      "issue": "3",
-      "volume": "107",
-      "paginas": "",
-      "ano": "2023",
-      "doi": "10.1103/physreve.107.034128"
-    }
-  ],
-  "0009-0002-2602-971X": [
-    {
-      "titulo": "Dynamical Casimir Effect Under the Action of Gravitational Waves",
-      "autores": [
-        "Gustavo de Oliveira",
-        "Thiago Henrique Moreira",
-        "Lucas Chibebe Céleri"
-      ],
-      "revista": "Entropy",
-      "issue": "2",
-      "volume": "28",
-      "paginas": "177",
-      "ano": "2026",
-      "doi": "10.3390/e28020177"
-    },
-    {
-      "titulo": "Mutual information and holographic entanglement entropy for strongly coupled <mml:math xmlns:mml=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"> <mml:mrow> <mml:mi>R</mml:mi> </mml:mrow> </mml:math> -charged plasmas",
-      "autores": [
-        "Gustavo de Oliveira",
-        "Ronaldo F. Costa",
-        "Lucas C. Céleri",
-        "Romulo Rougemont"
-      ],
-      "revista": "Physical Review D",
-      "issue": "6",
-      "volume": "112",
-      "paginas": "",
-      "ano": "2025",
-      "doi": "10.1103/ylpl-96p1"
-    },
-    {
-      "titulo": "Homogeneous isotropization dynamics and entropy production in a hot and dense strongly interacting fluid",
-      "autores": [
-        "Gustavo de Oliveira",
-        "Willians Barreto",
-        "Romulo Rougemont"
-      ],
-      "revista": "Journal of High Energy Physics",
-      "issue": "10",
-      "volume": "2025",
-      "paginas": "",
-      "ano": "2025",
-      "doi": "10.1007/jhep10(2025)106"
-    },
-    {
-      "titulo": "Thermodynamic entropy production in the dynamical Casimir effect",
-      "autores": [
-        "Gustavo de Oliveira",
-        "Lucas Chibebe Céleri"
-      ],
-      "revista": "Physical Review A",
-      "issue": "1",
-      "volume": "109",
-      "paginas": "",
-      "ano": "2024",
-      "doi": "10.1103/physreva.109.012807"
-    },
-    {
-      "titulo": "New purely damped pairs of quasinormal modes in a hot and dense strongly-coupled plasma",
-      "autores": [
-        "Gustavo de Oliveira",
-        "Romulo Rougemont"
-      ],
-      "revista": "Journal of High Energy Physics",
-      "issue": "11",
-      "volume": "2024",
-      "paginas": "",
-      "ano": "2024",
-      "doi": "10.1007/jhep11(2024)079"
-    }
-  ],
   "0009-0004-2685-6728": [
     {
       "titulo": "Real-world deployment of an affordable sub-soil temperature and relative humidity sensing system for precision agriculture",
@@ -643,213 +761,59 @@
       "doi": "10.1088/1361-6501/ad4f04"
     }
   ],
-  "0009-0008-5735-5917": [
+  "0000-0002-3553-6281": [
     {
-      "titulo": "Work distribution of quantum fields in static curved spacetimes",
+      "titulo": "Large quark mass Euler–Heisenberg-type action for QCD with quark sources and its Abelian limit",
       "autores": [
-        "Rafael L. S. Costa",
-        "Marcos L. W. Basso",
-        "Jonas Maziero",
-        "Lucas C. Céleri"
+        "Igor de M. Froldi",
+        "Fabio L. Braghin"
       ],
-      "revista": "Physical Review D",
-      "issue": "2",
-      "volume": "113",
+      "revista": "International Journal of Modern Physics A",
+      "issue": "27",
+      "volume": "40",
       "paginas": "",
-      "ano": "2026",
-      "doi": "10.1103/d26w-cj7z"
-    }
-  ],
-  "0009-0003-0999-3379": [
-    {
-      "titulo": "Quantum Thermodynamic Cycles and Non-Equilibrium Work in Confined Systems",
-      "autores": [
-        "Cler Trindade Garcez",
-        "Norton Gomes de Almeida"
-      ],
-      "revista": "Quantum Thermodynamic Cycles and Non-Equilibrium Work in Confined Systems",
-      "issue": "",
-      "volume": "",
-      "paginas": "JTu5A.36",
       "ano": "2025",
-      "doi": "10.1364/FIO.2025.JTu5A.36"
-    }
-  ],
-  "0000-0001-6666-2726": [
-    {
-      "titulo": "Molecular Dynamics Study of Functionalized Gold Nanoparticles: Structural and Aggregation Behavior under Varying Ionic Strength",
-      "autores": [
-        "Esequias Coelho",
-        "Douglas Xavier de Andrade",
-        "Agnaldo Rosa de Almeida",
-        "Guilherme Colherinhas"
-      ],
-      "revista": "ACS Physical Chemistry Au",
-      "issue": "6",
-      "volume": "5",
-      "paginas": "699-715",
-      "ano": "2025",
-      "doi": "10.1021/acsphyschemau.5c00077"
+      "doi": "10.1142/s0217751x25501167"
     },
     {
-      "titulo": "Investigating the Impact of Positively Charged Gold Nanoparticle (AuNP) Concentration in Water/Cl<sup>–</sup> Solutions Using Molecular Dynamics Simulations",
+      "titulo": "Efficiency of the superconducting diode effect of pair-density-wave states in two-dimensional d-wave altermagnets",
       "autores": [
-        "Esequias Coelho",
-        "Douglas Xavier de Andrade",
-        "Agnaldo Rosa de Almeida",
-        "Guilherme Colherinhas"
+        "Igor de M. Froldi",
+        "Hermann Freire"
       ],
-      "revista": "ACS Omega",
-      "issue": "20",
-      "volume": "10",
-      "paginas": "20610-20622",
+      "revista": "Annals of Physics",
+      "issue": "",
+      "volume": "483",
+      "paginas": "170273",
       "ano": "2025",
-      "doi": "10.1021/acsomega.5c01441"
+      "doi": "10.1016/j.aop.2025.170273"
     },
     {
-      "titulo": "Dynamic interactions of negatively charged gold nanoparticles (AuNPs) in aqueous environments with different ionic compositions",
+      "titulo": "Strong pair-density-wave fluctuations in an exactly solvable doped Mott insulator",
       "autores": [
-        "Esequias Coelho",
-        "Douglas Xavier",
-        "Agnaldo Almeida",
-        "Guilherme Colherinhas"
+        "Igor de M. Froldi",
+        "Carlos Eduardo S. P. Corsino",
+        "Hermann Freire"
       ],
-      "revista": "Journal of Molecular Liquids",
-      "issue": "",
-      "volume": "413",
-      "paginas": "126021",
+      "revista": "Physical Review B",
+      "issue": "24",
+      "volume": "110",
+      "paginas": "",
       "ano": "2024",
-      "doi": "10.1016/j.molliq.2024.126021"
+      "doi": "10.1103/physrevb.110.245136"
     },
     {
-      "titulo": "Exploring Fullerenol-C60(OH)24 interactions with lipid bilayers: Molecular dynamics study of agglomeration and surface deposition",
+      "titulo": "Classical Yang Mills equations with sources: Consequences of specific scalar potentials",
       "autores": [
-        "Esequias Coelho",
-        "Douglas X. de Andrade",
-        "Guilherme Colherinhas"
+        "Igor de M. Froldi",
+        "Fabio L. Braghin"
       ],
-      "revista": "Journal of Molecular Liquids",
+      "revista": "Annals of Physics",
       "issue": "",
-      "volume": "391",
-      "paginas": "123205",
-      "ano": "2023",
-      "doi": "10.1016/j.molliq.2023.123205"
-    }
-  ],
-  "0000-0002-1976-9210": [
-    {
-      "titulo": "Tailoring Y2Ge2O7:Tm3+ nanophosphors for dual-mode photonic functionality: for high-sensitivity near-infrared thermometry and blue light emission",
-      "autores": [
-        "Alisson Torquato",
-        "Débora Evelyn Taborga dos Santos",
-        "Rogéria Rocha Gonçalves",
-        "Lauro June Queiroz Maia",
-        "Ricardo Costa de Santana"
-      ],
-      "revista": "Ceramics International",
-      "issue": "11",
-      "volume": "52",
-      "paginas": "17572-17583",
-      "ano": "2026",
-      "doi": "10.1016/j.ceramint.2026.02.342"
-    },
-    {
-      "titulo": "Structural and Spectral Effects on Luminescence Thermometry in Nd³⁺-Doped Aluminosilicate Glass and Glass-Ceramics",
-      "autores": [
-        "Alisson Torquato",
-        "Itamar Nunes",
-        "Tasso O. Sales",
-        "Carlos Jacinto",
-        "Raja J. Amjad",
-        "Mohammad Reza Dousti"
-      ],
-      "revista": "",
-      "issue": "",
-      "volume": "",
-      "paginas": "",
-      "ano": "2026",
-      "doi": "10.2139/ssrn.6531999"
-    },
-    {
-      "titulo": "Temperature dependent photoluminescence properties of a Y2Ge2O7:Tb3+ phosphors. A dual band ratiometric luminescent thermometer",
-      "autores": [
-        "Débora Evelyn Taborga dos Santos",
-        "Alisson Torquato",
-        "Itália Vallerini Barbosa",
-        "Jesiel Freitas Carvalho",
-        "Lauro June Queiroz Maia",
-        "Ricardo Costa de Santana"
-      ],
-      "revista": "Journal of Alloys and Compounds",
-      "issue": "",
-      "volume": "1010",
-      "paginas": "177444",
-      "ano": "2025",
-      "doi": "10.1016/j.jallcom.2024.177444"
-    },
-    {
-      "titulo": "Development and spectroscopy study of YPO4:Tm3+ nanopowders",
-      "autores": [
-        "Alisson Torquato",
-        "Ricardo Costa de Santana",
-        "Lauro June Queiroz Maia"
-      ],
-      "revista": "Journal of Alloys and Compounds",
-      "issue": "",
-      "volume": "1037",
-      "paginas": "182612",
-      "ano": "2025",
-      "doi": "10.1016/j.jallcom.2025.182612"
-    },
-    {
-      "titulo": "Spectroscopic study of Er3+-doped zinc-tellurite glass and opaque glass-ceramic",
-      "autores": [
-        "L.N. Lindolfo da Silva",
-        "Alisson Torquato",
-        "I. Nunes de Assis",
-        "M. Reza Dousti"
-      ],
-      "revista": "Solid State Sciences",
-      "issue": "",
-      "volume": "112",
-      "paginas": "106444",
-      "ano": "2021",
-      "doi": "10.1016/j.solidstatesciences.2020.106444"
-    },
-    {
-      "titulo": "Influence of PbF2 content on optical thermometry of Er3+/Yb3+ co-doped tungsten sodium phosphate glasses",
-      "autores": [
-        "Alisson Torquato",
-        "Rafael A. de Oliveira",
-        "Tasso O. Sales",
-        "Gael Y. Poirier",
-        "Gislene Batista",
-        "Fabia C. Cassanjes",
-        "Carlos Jacinto",
-        "M. Reza Dousti"
-      ],
-      "revista": "Optical Materials",
-      "issue": "",
-      "volume": "112",
-      "paginas": "110723",
-      "ano": "2021",
-      "doi": "10.1016/j.optmat.2020.110723"
-    },
-    {
-      "titulo": "Enhanced thermometry parameters in Er3+-doped zinc tellurite glasses containing silver nanoparticles",
-      "autores": [
-        "Alisson Torquato",
-        "Rafael A. de Oliveira",
-        "Tasso O. Sales",
-        "Carlos Jacinto",
-        "M. Reza Dousti"
-      ],
-      "revista": "Optik",
-      "issue": "",
-      "volume": "240",
-      "paginas": "166929",
-      "ano": "2021",
-      "doi": "10.1016/j.ijleo.2021.166929"
+      "volume": "444",
+      "paginas": "169026",
+      "ano": "2022",
+      "doi": "10.1016/j.aop.2022.169026"
     }
   ],
   "0009-0004-8793-5833": [
@@ -870,94 +834,247 @@
       "doi": "10.1016/j.physb.2025.418079"
     }
   ],
-  "0009-0006-0463-589X": [
+  "0000-0003-0721-1284": [
     {
-      "titulo": "Fundamental limits and experimental implementation of dispersive quantum thermometry",
+      "titulo": "Room-temperature magnetic behavior of Bi-doped <mml:math xmlns:mml=\"http://www.w3.org/1998/Math/MathML\" altimg=\"si31.svg\" display=\"inline\" id=\"d1e2798\"> <mml:mrow> <mml:mi mathvariant=\"normal\">Co</mml:mi> <mml:mn>0</mml:mn> <mml:mo>.</mml:mo> <mml:mn>6</mml:mn> <mml:mi mathvariant=\"normal\">Zn</mml:mi> <mml:mn>0</mml:mn> <mml:mo>.</mml:mo> <mml:mn>4</mml:mn> <mml:mi mathvariant=\"normal\">Fe</mml:mi> <mml:mn>2</mml:mn> <mml:mi mathvariant=\"normal\">O</mml:mi> <mml:mn>4</mml:mn> </mml:mrow> </mml:math> ferrite nanoparticles",
       "autores": [
-        "Daniel Y Akamatsu",
-        "Lucas Ferreira R de Moura",
-        "Gabriella G Damas",
-        "Gentil D de Moraes Neto",
-        "Victor Montenegro",
-        "Norton G de Almeida"
+        "Ribeiro Italo Nuta",
+        "Isabella Rocha de Macedo",
+        "Marcio Solino Pessoa",
+        "Prasun Banerjee",
+        "Adolfo Franco Junior"
       ],
-      "revista": "Quantum Science and Technology",
-      "issue": "4",
-      "volume": "10",
-      "paginas": "045062",
-      "ano": "2025",
-      "doi": "10.1088/2058-9565/ae0f4e"
-    }
-  ],
-  "0009-0005-4244-0391": [
-    {
-      "titulo": "Mutual information and holographic entanglement entropy for strongly coupled <mml:math xmlns:mml=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"> <mml:mrow> <mml:mi>R</mml:mi> </mml:mrow> </mml:math> -charged plasmas",
-      "autores": [
-        "Gustavo de Oliveira",
-        "Ronaldo F. Costa",
-        "Lucas C. Céleri",
-        "Romulo Rougemont"
-      ],
-      "revista": "Physical Review D",
-      "issue": "6",
-      "volume": "112",
-      "paginas": "",
-      "ano": "2025",
-      "doi": "10.1103/ylpl-96p1"
-    }
-  ],
-  "0000-0001-5325-1661": [
-    {
-      "titulo": "Erythrocyte membrane-camouflaged magnetic and up/downconverting nanoparticles for photothermal therapy and luminescent nanothermometry",
-      "autores": [
-        "Marcus Vinícius-Araújo",
-        "Lucas Ribeiro de Sousa",
-        "Ricardo Costa de Santana",
-        "Sebastião Antonio Mendanha",
-        "Andris Figueiroa Bakuzis"
-      ],
-      "revista": "Applied Physics Letters",
-      "issue": "5",
-      "volume": "125",
-      "paginas": "",
-      "ano": "2024",
-      "doi": "10.1063/5.0211889"
-    }
-  ],
-  "0009-0008-0167-7706": [
-    {
-      "titulo": "Experimental Investigation of the role of Spatial Correlations in Optical Integration with Heralded Single Photons",
-      "autores": [
-        "L. Marques Fagundes",
-        "R. C. Souza Pimenta",
-        "M. H. Magiotto",
-        "R. M. Gomes",
-        "E. I. Duzzioni",
-        "R. Medeiros de Araújo",
-        "P. H. Souto Ribeiro"
-      ],
-      "revista": "Brazilian Journal of Physics",
-      "issue": "2",
-      "volume": "56",
-      "paginas": "",
+      "revista": "Physica B: Condensed Matter",
+      "issue": "",
+      "volume": "723",
+      "paginas": "418079",
       "ano": "2026",
-      "doi": "10.1007/s13538-025-02006-2"
+      "doi": "10.1016/j.physb.2025.418079"
     },
     {
-      "titulo": "Optical algorithm for derivative of real-valued functions",
+      "titulo": "Low-temperature magnetic anomalies in orthorhombic yttrium chromite nanoparticles: Indications of magnetic frustration and glassy-like behavior",
       "autores": [
-        "Murilo H. Magiotto",
-        "Guilherme L. Zanin",
-        "Wesley B. Cardoso",
-        "Ardiley T. Avelar",
-        "Rafael M. Gomes"
+        "Italo Nuta",
+        "A. Franco"
       ],
-      "revista": "Optics &amp; Laser Technology",
+      "revista": "Journal of Magnetism and Magnetic Materials",
       "issue": "",
-      "volume": "182",
-      "paginas": "112137",
+      "volume": "651",
+      "paginas": "174012",
+      "ano": "2026",
+      "doi": "10.1016/j.jmmm.2026.174012"
+    },
+    {
+      "titulo": "PCM-DFT Investigation on the Linear and Nonlinear Optical Properties of Two Triazole Derivatives in Different Solvents",
+      "autores": [
+        "Ítalo N. Ribeiro",
+        "Fernando C.G. Murga",
+        "Marcos V.C.S. Rezende",
+        "Andreia R. dos Santos",
+        "Juliana G. de Morais",
+        "Jeziel R. dos Santos",
+        "Ricardo Ternavisk",
+        "Basilio Baseia",
+        "Francisco A.P. Osório",
+        "Clodoaldo Valverde"
+      ],
+      "revista": "Journal of Atomic, Molecular, Condensed Matter and Nano Physics",
+      "issue": "2",
+      "volume": "8",
+      "paginas": "175-236",
+      "ano": "2021",
+      "doi": "10.26713/jamcnp.v8i2.1609"
+    }
+  ],
+  "0000-0001-5493-5555": [
+    {
+      "titulo": "TiO2-based photoreforming of alcohols as an alternative pathway for low-carbon H2 evolution",
+      "autores": [
+        "Ribeiro N. Ribeiro",
+        "Kamila R. M. Amaral",
+        "Jaqueline C. Desordi",
+        "Karen K. L. Augusto",
+        "Pablo J. Gonçalves",
+        "Christian G. Alonso",
+        "Jia Hong Pan",
+        "Cauê Ribeiro",
+        "Osmando F. Lopes",
+        "Detlef W. Bahnemann",
+        "Barbara N. Nunes",
+        "Antonio Otavio T. Patrocinio"
+      ],
+      "revista": "Energy Materials",
+      "issue": "6",
+      "volume": "6",
+      "paginas": "",
+      "ano": "2026",
+      "doi": "10.20517/energymater.2026.62"
+    },
+    {
+      "titulo": "Solvent-dependent photophysics of a hydroxychalcone: UV–Vis/fluorescence solvatochromism, hydrogen bonding, and computed hyper-Rayleigh first hyperpolarizability",
+      "autores": [
+        "Cristiane Alves da Fonseca E. Santo",
+        "Ademir J. Camargo",
+        "Gilberto L.B. Aquino",
+        "Jaqueline C. Desordi",
+        "Amanda G. Claudino",
+        "Pablo J. Gonçalves",
+        "Francisco A.P. Osório",
+        "Clodoaldo Valverde"
+      ],
+      "revista": "Spectrochimica Acta Part A: Molecular and Biomolecular Spectroscopy",
+      "issue": "",
+      "volume": "358",
+      "paginas": "127870",
+      "ano": "2026",
+      "doi": "10.1016/j.saa.2026.127870"
+    },
+    {
+      "titulo": "Mechanistic Insights into CO <sub>2</sub> -to-CO Photoreduction by Proton-Responsive Imidazole–Pyridine Re(I) Complexes",
+      "autores": [
+        "Marcos E. G. Carmo",
+        "Gabrielly Moreira",
+        "Vanessa F. Silva",
+        "Jaqueline C. Desordi",
+        "Pablo J. Gonçalves",
+        "Antonio E. Hora Machado",
+        "Renato N. Sampaio",
+        "Gerald J. Meyer",
+        "Antonio O. T. Patrocinio"
+      ],
+      "revista": "Inorganic Chemistry",
+      "issue": "16",
+      "volume": "65",
+      "paginas": "9188-9198",
+      "ano": "2026",
+      "doi": "10.1021/acs.inorgchem.6c00967"
+    },
+    {
+      "titulo": "Insights into bovine serum albumin (BSA) photooxidation mediated by mono-cationic porphyrins with Pd(II), Pt(II), and Ru(II) bipyridyl complexes",
+      "autores": [
+        "Juliany Naura Marciel Silva",
+        "Jaqueline C. Desordi",
+        "Eli Silveira Alves Ducas",
+        "Otávio Augusto Chaves",
+        "Marcos Eduardo Gomes Carmo",
+        "Antonio Otávio Toledo Patrocinio",
+        "Bernardo Almeida Iglesias",
+        "Pablo José Gonçalves"
+      ],
+      "revista": "Journal of Photochemistry and Photobiology A: Chemistry",
+      "issue": "",
+      "volume": "472",
+      "paginas": "116793",
+      "ano": "2026",
+      "doi": "10.1016/j.jphotochem.2025.116793"
+    },
+    {
+      "titulo": "Breaking antibiotic resistance: Porphyrin-driven photoinactivation and priming effect on mastitis-related MDR bacteria",
+      "autores": [
+        "Luiz Henrique Barbosa Pires",
+        "Taise Maria dos Anjos Oliveira",
+        "Jaqueline C. Desordi",
+        "Eli Silveira Alves Ducas",
+        "Lucas Soares Souza",
+        "Edynara Cruz de Moraes",
+        "Ana Carolina Borsanelli",
+        "Alzir Azevedo Batista",
+        "Pablo José Gonçalves",
+        "Guilherme Rocha Lino de Souza"
+      ],
+      "revista": "Journal of Photochemistry and Photobiology B: Biology",
+      "issue": "",
+      "volume": "271",
+      "paginas": "113246",
       "ano": "2025",
-      "doi": "10.1016/j.optlastec.2024.112137"
+      "doi": "10.1016/j.jphotobiol.2025.113246"
+    },
+    {
+      "titulo": "Daylight photodynamic inactivation of cattle tick Rhipicephalus microplus by porphyrins: An alternative for the ectoparasite control",
+      "autores": [
+        "Isabela Castro Pereira Gomes",
+        "Lorena Dias Amor Divino",
+        "Fernanda Meneses Rodrigues",
+        "Cinthya Marques Fortes Fleury",
+        "Eli Silveira Alves Ducas",
+        "Jaqueline Cristine Desordi",
+        "Bernardo Almeida Iglesias",
+        "Ricardo Costa Santana",
+        "Caio Márcio Oliveira Monteiro",
+        "Welber Daniel Zanetti Lopes",
+        "Pablo José Gonçalves",
+        "Guilherme Rocha Lino Souza"
+      ],
+      "revista": "Journal of Photochemistry and Photobiology B: Biology",
+      "issue": "",
+      "volume": "251",
+      "paginas": "112847",
+      "ano": "2024",
+      "doi": "10.1016/j.jphotobiol.2024.112847"
+    },
+    {
+      "titulo": "Effects of solvent vapor annealing on the optical properties and surface adhesion of conjugated D : A thin films",
+      "autores": [
+        "Tainã Reges Casagrande",
+        "Juscelino Valter Barbosas Júnior",
+        "Jaqueline Cristine Desordi",
+        "Mariana Richelle Pereira da Cunha",
+        "Anderson Emanuel Ximim Gavim",
+        "Luciano Nassif Vidal",
+        "Paula Cristina Rodrigues",
+        "Indrani Coondoo",
+        "Douglas J. Coutinho",
+        "Roberto Mendonça Faria",
+        "Andreia Gerniski Macedo"
+      ],
+      "revista": "Physical Chemistry Chemical Physics",
+      "issue": "37",
+      "volume": "25",
+      "paginas": "25280-25288",
+      "ano": "2023",
+      "doi": "10.1039/d3cp02937a"
+    },
+    {
+      "titulo": "Coupling of cationic porphyrins on manganese ferrite nanoparticles: A potential multifunctional nanostructure for theranostics applications",
+      "autores": [
+        "Eli Silveira-Alves Jr",
+        "Fabio C. Bezerra",
+        "Rubens A. Guerra",
+        "Nicholas Zufelato",
+        "Carolina S. Martins",
+        "Jaqueline C. Desordi",
+        "Anderson R.L. Caires",
+        "Andris F. Bakuzis",
+        "Pablo J. Gonçalves"
+      ],
+      "revista": "Journal of Photochemistry and Photobiology A: Chemistry",
+      "issue": "",
+      "volume": "438",
+      "paginas": "114551",
+      "ano": "2023",
+      "doi": "10.1016/j.jphotochem.2023.114551"
+    },
+    {
+      "titulo": "New insights into DPP3Th and C70 based planar solar cells: A study combining DFT and experimental approach",
+      "autores": [
+        "Alfredo Leithold Neto",
+        "Lucas Scalon",
+        "Luis Octavio de Araujo",
+        "Francineide Lopes de Araújo",
+        "Edna Regina Spada",
+        "Mariana Richelle Pereira da Cunha",
+        "Jaqueline Cristine Desordi",
+        "Rafael Carvalho Barreto",
+        "Andreia Gerniski Macedo",
+        "Roberto Mendonça Faria",
+        "Paula Cristina Rodrigues"
+      ],
+      "revista": "Materials Chemistry and Physics",
+      "issue": "",
+      "volume": "262",
+      "paginas": "124271",
+      "ano": "2021",
+      "doi": "10.1016/j.matchemphys.2021.124271"
     }
   ],
   "0000-0003-4963-7267": [
@@ -1151,6 +1268,16 @@
   ],
   "0009-0002-0555-7126": [
     {
+      "titulo": "Molecular cloud as multimessenger source",
+      "autores": [],
+      "revista": "Boletim da Sociedade Astronômica Brasileira, 36, no. 1, 155-156",
+      "issue": "",
+      "volume": "",
+      "paginas": "",
+      "ano": "2025",
+      "doi": ""
+    },
+    {
       "titulo": "Galactic Cosmic Ray Interaction with the Perseus Giant Molecular Cloud Using Geant4 Monte Carlo Simulation",
       "autores": [
         "Luan Torres",
@@ -1162,61 +1289,248 @@
       "paginas": "218",
       "ano": "2025",
       "doi": "10.3390/universe11070218"
-    }
-  ],
-  "0000-0002-3553-6281": [
-    {
-      "titulo": "Large quark mass Euler–Heisenberg-type action for QCD with quark sources and its Abelian limit",
-      "autores": [
-        "Igor de M. Froldi",
-        "Fabio L. Braghin"
-      ],
-      "revista": "International Journal of Modern Physics A",
-      "issue": "27",
-      "volume": "40",
-      "paginas": "",
-      "ano": "2025",
-      "doi": "10.1142/s0217751x25501167"
     },
     {
-      "titulo": "Efficiency of the superconducting diode effect of pair-density-wave states in two-dimensional d-wave altermagnets",
-      "autores": [
-        "Igor de M. Froldi",
-        "Hermann Freire"
-      ],
-      "revista": "Annals of Physics",
+      "titulo": "Nuvens moleculares como fontes multi-mensageiras: raios cósmicos, raios gama e neutrinos.",
+      "autores": [],
+      "revista": "Biblioteca digital de teses e dissertações",
       "issue": "",
-      "volume": "483",
-      "paginas": "170273",
-      "ano": "2025",
-      "doi": "10.1016/j.aop.2025.170273"
-    },
-    {
-      "titulo": "Strong pair-density-wave fluctuations in an exactly solvable doped Mott insulator",
-      "autores": [
-        "Igor de M. Froldi",
-        "Carlos Eduardo S. P. Corsino",
-        "Hermann Freire"
-      ],
-      "revista": "Physical Review B",
-      "issue": "24",
-      "volume": "110",
+      "volume": "",
       "paginas": "",
       "ano": "2024",
-      "doi": "10.1103/physrevb.110.245136"
+      "doi": ""
+    }
+  ],
+  "0009-0002-0539-1103": [
+    {
+      "titulo": "Hydration and Molar Ratio Effects in Choline Chloride-Phenol Deep Eutectic Solvents",
+      "autores": [
+        "Lucas de S. Silva",
+        "Guilherme Colherinhas"
+      ],
+      "revista": "The Journal of Physical Chemistry B",
+      "issue": "23",
+      "volume": "130",
+      "paginas": "5923-5938",
+      "ano": "2026",
+      "doi": "10.1021/acs.jpcb.6c01636"
     },
     {
-      "titulo": "Classical Yang Mills equations with sources: Consequences of specific scalar potentials",
+      "titulo": "Ester-Based Electrolyte Mixtures for Graphene Supercapacitors: A Molecular Dynamics Investigation",
       "autores": [
-        "Igor de M. Froldi",
-        "Fabio L. Braghin"
+        "Lucas de S. Silva",
+        "Guilherme Colherinhas"
       ],
-      "revista": "Annals of Physics",
+      "revista": "The Journal of Physical Chemistry B",
+      "issue": "7",
+      "volume": "130",
+      "paginas": "2178-2193",
+      "ano": "2026",
+      "doi": "10.1021/acs.jpcb.5c06507"
+    },
+    {
+      "titulo": "Chloride substitution and hydration effects in [emim][bnz] electrolytes for lightweight supercapacitors",
+      "autores": [
+        "Leonardo B.A. Oliveira",
+        "Lucas de S. Silva",
+        "Tertius L. Fonseca",
+        "Guilherme Colherinhas"
+      ],
+      "revista": "Journal of Molecular Liquids",
       "issue": "",
-      "volume": "444",
-      "paginas": "169026",
-      "ano": "2022",
-      "doi": "10.1016/j.aop.2022.169026"
+      "volume": "443",
+      "paginas": "129142",
+      "ano": "2026",
+      "doi": "10.1016/j.molliq.2025.129142"
+    },
+    {
+      "titulo": "Sustainable supercapacitors using advanced hydrated amino acid ionic liquids: A novel approach to biodegradable energy storage",
+      "autores": [
+        "Lucas de S. Silva",
+        "Henrique de A. Chagas",
+        "G. Colherinhas"
+      ],
+      "revista": "Journal of Molecular Liquids",
+      "issue": "",
+      "volume": "417",
+      "paginas": "126638",
+      "ano": "2025",
+      "doi": "10.1016/j.molliq.2024.126638"
+    },
+    {
+      "titulo": "Structural and electrochemical properties of graphene-based supercapacitors with water and methanol-co-solvated ionic liquids: a molecular dynamics study",
+      "autores": [
+        "Lucas de S. Silva",
+        "Leonardo B.A. Oliveira",
+        "Tertius L. Fonseca",
+        "Guilherme Colherinhas"
+      ],
+      "revista": "Journal of Molecular Liquids",
+      "issue": "",
+      "volume": "434",
+      "paginas": "128041",
+      "ano": "2025",
+      "doi": "10.1016/j.molliq.2025.128041"
+    },
+    {
+      "titulo": "Impact of Chloride and Bromide Composition in Ionic Liquid/Water Electrolytes on the Electrochemical Performance of Graphene-Based Supercapacitors: A Molecular Dynamics Study",
+      "autores": [
+        "Leonardo B. A. Oliveira",
+        "Lucas de S Silva",
+        "Henrique de Araujo Chagas",
+        "Tertius L. Fonseca",
+        "Guilherme Colherinhas"
+      ],
+      "revista": "The Journal of Physical Chemistry C",
+      "issue": "30",
+      "volume": "129",
+      "paginas": "13532-13541",
+      "ano": "2025",
+      "doi": "10.1021/acs.jpcc.5c01816"
+    },
+    {
+      "titulo": "Exploring MXene Materials in Energy Storage Devices: A Review of Supercapacitor Applications",
+      "autores": [
+        "Lucas de Sousa Silva",
+        "Eudes Eterno Fileti",
+        "Guilherme Colherinhas"
+      ],
+      "revista": "ACS Materials Au",
+      "issue": "6",
+      "volume": "5",
+      "paginas": "920-939",
+      "ano": "2025",
+      "doi": "10.1021/acsmaterialsau.5c00102"
+    },
+    {
+      "titulo": "Evaluation of Structural and Electrochemical Properties of Supercapacitors with Graphene Electrodes and Hydrated Pure or Mixed [bmim]-Based Ionic Liquids via Molecular Dynamics",
+      "autores": [
+        "Lucas de S. Silva",
+        "Guilherme Colherinhas"
+      ],
+      "revista": "ACS Physical Chemistry Au",
+      "issue": "5",
+      "volume": "5",
+      "paginas": "519-532",
+      "ano": "2025",
+      "doi": "10.1021/acsphyschemau.5c00036"
+    },
+    {
+      "titulo": "Selecting electronic transitions between graphyne and lithium ions for entanglement generation using new organic material",
+      "autores": [
+        "Lucas S. Silva",
+        "Wesley B. Cardoso",
+        "Guilherme Colherinhas"
+      ],
+      "revista": "Computational and Theoretical Chemistry",
+      "issue": "",
+      "volume": "1238",
+      "paginas": "114692",
+      "ano": "2024",
+      "doi": "10.1016/j.comptc.2024.114692"
+    },
+    {
+      "titulo": "Evaluating quantum entanglement generation in two-dimensional graphene systems through lithium ion interactions: A DFT-based study",
+      "autores": [
+        "Lucas de S. Silva",
+        "Guilherme Colherinhas",
+        "Wesley B. Cardoso"
+      ],
+      "revista": "Journal of Computational Chemistry",
+      "issue": "13",
+      "volume": "45",
+      "paginas": "1002-1007",
+      "ano": "2024",
+      "doi": "10.1002/jcc.27303"
+    }
+  ],
+  "0009-0006-0463-589X": [
+    {
+      "titulo": "Fundamental limits and experimental implementation of dispersive quantum thermometry",
+      "autores": [
+        "Daniel Y Akamatsu",
+        "Lucas Ferreira R de Moura",
+        "Gabriella G Damas",
+        "Gentil D de Moraes Neto",
+        "Victor Montenegro",
+        "Norton G de Almeida"
+      ],
+      "revista": "Quantum Science and Technology",
+      "issue": "4",
+      "volume": "10",
+      "paginas": "045062",
+      "ano": "2025",
+      "doi": "10.1088/2058-9565/ae0f4e"
+    }
+  ],
+  "0000-0001-5325-1661": [
+    {
+      "titulo": "Lipid phase organization controls drug partitioning and release across lipid nanocarriers",
+      "autores": [
+        "Jader Pires",
+        "Lucas R. de Sousa",
+        "Bianca B. Fontanezi",
+        "Sebastião A. Mendanha",
+        "Eliana M. Lima"
+      ],
+      "revista": "RSC Pharmaceutics",
+      "issue": "",
+      "volume": "",
+      "paginas": "",
+      "ano": "2026",
+      "doi": "10.1039/d6pm00126b"
+    },
+    {
+      "titulo": "Erythrocyte membrane-camouflaged magnetic and up/downconverting nanoparticles for photothermal therapy and luminescent nanothermometry",
+      "autores": [
+        "Marcus Vinícius-Araújo",
+        "Lucas Ribeiro de Sousa",
+        "Ricardo Costa de Santana",
+        "Sebastião Antonio Mendanha",
+        "Andris Figueiroa Bakuzis"
+      ],
+      "revista": "Applied Physics Letters",
+      "issue": "5",
+      "volume": "125",
+      "paginas": "",
+      "ano": "2024",
+      "doi": "10.1063/5.0211889"
+    }
+  ],
+  "0009-0008-0167-7706": [
+    {
+      "titulo": "Experimental Investigation of the role of Spatial Correlations in Optical Integration with Heralded Single Photons",
+      "autores": [
+        "L. Marques Fagundes",
+        "R. C. Souza Pimenta",
+        "M. H. Magiotto",
+        "R. M. Gomes",
+        "E. I. Duzzioni",
+        "R. Medeiros de Araújo",
+        "P. H. Souto Ribeiro"
+      ],
+      "revista": "Brazilian Journal of Physics",
+      "issue": "2",
+      "volume": "56",
+      "paginas": "",
+      "ano": "2026",
+      "doi": "10.1007/s13538-025-02006-2"
+    },
+    {
+      "titulo": "Optical algorithm for derivative of real-valued functions",
+      "autores": [
+        "Murilo H. Magiotto",
+        "Guilherme L. Zanin",
+        "Wesley B. Cardoso",
+        "Ardiley T. Avelar",
+        "Rafael M. Gomes"
+      ],
+      "revista": "Optics &amp; Laser Technology",
+      "issue": "",
+      "volume": "182",
+      "paginas": "112137",
+      "ano": "2025",
+      "doi": "10.1016/j.optlastec.2024.112137"
     }
   ],
   "0009-0006-7272-8203": [
@@ -1235,245 +1549,35 @@
       "doi": "10.1103/physreve.108.054131"
     }
   ],
-  "0000-0003-0721-1284": [
+  "0009-0005-4244-0391": [
     {
-      "titulo": "Room-temperature magnetic behavior of Bi-doped <mml:math xmlns:mml=\"http://www.w3.org/1998/Math/MathML\" altimg=\"si31.svg\" display=\"inline\" id=\"d1e2798\"> <mml:mrow> <mml:mi mathvariant=\"normal\">Co</mml:mi> <mml:mn>0</mml:mn> <mml:mo>.</mml:mo> <mml:mn>6</mml:mn> <mml:mi mathvariant=\"normal\">Zn</mml:mi> <mml:mn>0</mml:mn> <mml:mo>.</mml:mo> <mml:mn>4</mml:mn> <mml:mi mathvariant=\"normal\">Fe</mml:mi> <mml:mn>2</mml:mn> <mml:mi mathvariant=\"normal\">O</mml:mi> <mml:mn>4</mml:mn> </mml:mrow> </mml:math> ferrite nanoparticles",
+      "titulo": "As obras “Cosmos” e “A Escalada do Homem” e os professores universitários de Física no Brasil",
       "autores": [
-        "Ribeiro Italo Nuta",
-        "Isabella Rocha de Macedo",
-        "Marcio Solino Pessoa",
-        "Prasun Banerjee",
-        "Adolfo Franco Junior"
+        "Ronaldo Ferreira Costa",
+        "Lucas Faria de Moura",
+        "Ivo De Almeida Marques"
       ],
-      "revista": "Physica B: Condensed Matter",
+      "revista": "Sitientibus Série Ciências Físicas",
       "issue": "",
-      "volume": "723",
-      "paginas": "418079",
+      "volume": "22",
+      "paginas": "1-14",
       "ano": "2026",
-      "doi": "10.1016/j.physb.2025.418079"
+      "doi": "10.13102/sscf.v22i.12349"
     },
     {
-      "titulo": "Low-temperature magnetic anomalies in orthorhombic yttrium chromite nanoparticles: Indications of magnetic frustration and glassy-like behavior",
+      "titulo": "Mutual information and holographic entanglement entropy for strongly coupled <mml:math xmlns:mml=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"> <mml:mrow> <mml:mi>R</mml:mi> </mml:mrow> </mml:math> -charged plasmas",
       "autores": [
-        "Italo Nuta",
-        "A. Franco"
+        "Gustavo de Oliveira",
+        "Ronaldo F. Costa",
+        "Lucas C. Céleri",
+        "Romulo Rougemont"
       ],
-      "revista": "Journal of Magnetism and Magnetic Materials",
-      "issue": "",
-      "volume": "651",
-      "paginas": "174012",
-      "ano": "2026",
-      "doi": "10.1016/j.jmmm.2026.174012"
-    },
-    {
-      "titulo": "PCM-DFT Investigation on the Linear and Nonlinear Optical Properties of Two Triazole Derivatives in Different Solvents",
-      "autores": [
-        "Ítalo N. Ribeiro",
-        "Fernando C.G. Murga",
-        "Marcos V.C.S. Rezende",
-        "Andreia R. dos Santos",
-        "Juliana G. de Morais",
-        "Jeziel R. dos Santos",
-        "Ricardo Ternavisk",
-        "Basilio Baseia",
-        "Francisco A.P. Osório",
-        "Clodoaldo Valverde"
-      ],
-      "revista": "Journal of Atomic, Molecular, Condensed Matter and Nano Physics",
-      "issue": "2",
-      "volume": "8",
-      "paginas": "175-236",
-      "ano": "2021",
-      "doi": "10.26713/jamcnp.v8i2.1609"
-    }
-  ],
-  "0009-0008-7555-7803": [
-    {
-      "titulo": "Spectral properties of thymine and its interaction with tryptophan and bioinspired membranes",
-      "autores": [
-        "Alexandre Augusto Muniz Garcia",
-        "Nicole Sayuri Miranda Okayama",
-        "Eduardo Sérgio de Souza",
-        "Cássia Alessandra Marquezin"
-      ],
-      "revista": "Spectrochimica Acta Part A: Molecular and Biomolecular Spectroscopy",
-      "issue": "",
-      "volume": "350",
-      "paginas": "127427",
-      "ano": "2026",
-      "doi": "10.1016/j.saa.2025.127427"
-    }
-  ],
-  "0009-0003-6038-5483": [
-    {
-      "titulo": "First-order molecular hyperpolarizability of xanthoangelol derivatives",
-      "autores": [
-        "Felipe A. Santos",
-        "Hugo J. N. P. D. Mello",
-        "Martin S. Barbosa",
-        "Luis M. G. Abegão"
-      ],
-      "revista": "The European Physical Journal Plus",
-      "issue": "9",
-      "volume": "140",
+      "revista": "Physical Review D",
+      "issue": "6",
+      "volume": "112",
       "paginas": "",
       "ano": "2025",
-      "doi": "10.1140/epjp/s13360-025-06830-y"
-    }
-  ],
-  "0000-0001-5493-5555": [
-    {
-      "titulo": "New insights into DPP3Th and C70 based planar solar cells: A study combining DFT and experimental approach",
-      "autores": [
-        "Alfredo Leithold Neto",
-        "Lucas Scalon",
-        "Luis Octavio de Araujo",
-        "Francineide Lopes de Araújo",
-        "Edna Regina Spada",
-        "Mariana Richelle Pereira da Cunha",
-        "Jaqueline Cristine Desordi",
-        "Rafael Carvalho Barreto",
-        "Andreia Gerniski Macedo",
-        "Roberto Mendonça Faria",
-        "Paula Cristina Rodrigues"
-      ],
-      "revista": "Materials Chemistry and Physics",
-      "issue": "",
-      "volume": "262",
-      "paginas": "124271",
-      "ano": "2021",
-      "doi": "10.1016/j.matchemphys.2021.124271"
-    }
-  ],
-  "0000-0002-6802-7408": [
-    {
-      "titulo": "Magnetostriction as the origin of the magnetodielectric effect in <mml:math xmlns:mml=\"http://www.w3.org/1998/Math/MathML\"> <mml:mrow> <mml:msub> <mml:mi>La</mml:mi> <mml:mn>2</mml:mn> </mml:msub> <mml:msub> <mml:mi>CoMnO</mml:mi> <mml:mn>6</mml:mn> </mml:msub> </mml:mrow> </mml:math>",
-      "autores": [
-        "M. Boldrin",
-        "A. Bagri",
-        "D. Barlettani",
-        "E. Teather",
-        "L. Squillante",
-        "M. de Souza",
-        "R. B. Pontes",
-        "A. G. Silva",
-        "T. J. A. Mori",
-        "R. Perry",
-        "R. Lora-Serrano",
-        "E. Granado",
-        "E. M. Bittar",
-        "L. S. I. Veiga",
-        "L. Bufaiçal"
-      ],
-      "revista": "Physical Review Materials",
-      "issue": "9",
-      "volume": "9",
-      "paginas": "",
-      "ano": "2025",
-      "doi": "10.1103/sjr4-6kdp"
-    },
-    {
-      "titulo": "Near-room-temperature ferrimagnetism and half-metallicity in disordered <mml:math xmlns:mml=\"http://www.w3.org/1998/Math/MathML\"> <mml:mrow> <mml:msub> <mml:mi>Ca</mml:mi> <mml:mrow> <mml:mn>1.5</mml:mn> </mml:mrow> </mml:msub> <mml:msub> <mml:mi>La</mml:mi> <mml:mrow> <mml:mn>0.5</mml:mn> </mml:mrow> </mml:msub> </mml:mrow> <mml:msub> <mml:mi>MnRuO</mml:mi> <mml:mn>6</mml:mn> </mml:msub> </mml:math>",
-      "autores": [
-        "A. G. Silva",
-        "R. B. Pontes",
-        "M. Boldrin",
-        "H. V. S. Pessoni",
-        "L. S. I. Veiga",
-        "J. R. Jesus",
-        "H. Fabrelli",
-        "A. R. C. Gonzaga",
-        "E. M. Bittar",
-        "L. Bufaiçal"
-      ],
-      "revista": "Physical Review B",
-      "issue": "14",
-      "volume": "110",
-      "paginas": "",
-      "ano": "2024",
-      "doi": "10.1103/physrevb.110.144415"
-    },
-    {
-      "titulo": "Structural transitions and spontaneous exchange bias in La2−Ba CoMnO6 series",
-      "autores": [
-        "H. Fabrelli",
-        "A.G. Silva",
-        "M. Boldrin",
-        "L. Bufaiçal",
-        "E.M. Bittar"
-      ],
-      "revista": "Journal of Solid State Chemistry",
-      "issue": "",
-      "volume": "322",
-      "paginas": "123944",
-      "ano": "2023",
-      "doi": "10.1016/j.jssc.2023.123944"
-    },
-    {
-      "titulo": "Griffiths phase and spontaneous exchange bias in La <sub>1.5</sub> Sr <sub>0.5</sub> CoMn <sub>0.5</sub> Fe <sub>0.5</sub> O <sub>6</sub>",
-      "autores": [
-        "A G Silva",
-        "K L Salcedo Rodríguez",
-        "C P Contreras Medrano",
-        "G S G Lourenço",
-        "M Boldrin",
-        "E Baggio-Saitovitch",
-        "L Bufaiçal"
-      ],
-      "revista": "Journal of Physics: Condensed Matter",
-      "issue": "6",
-      "volume": "33",
-      "paginas": "065804",
-      "ano": "2021",
-      "doi": "10.1088/1361-648x/abc595"
-    },
-    {
-      "titulo": "Tuning the spontaneous exchange bias effect with Ba to Sr partial substitution in La1.5(Sr0.5−<i>x</i>Ba<i>x</i>)CoMnO6",
-      "autores": [
-        "M. Boldrin",
-        "A. G. Silva",
-        "L. T. Coutrim",
-        "J. R. Jesus",
-        "C. Macchiutti",
-        "E. M. Bittar",
-        "L. Bufaiçal"
-      ],
-      "revista": "Applied Physics Letters",
-      "issue": "21",
-      "volume": "117",
-      "paginas": "",
-      "ano": "2020",
-      "doi": "10.1063/5.0028663"
-    },
-    {
-      "titulo": "The Spontaneous Exchange Bias Effect on La1.5Ba0.5CoMnO6",
-      "autores": [
-        "M. Boldrin",
-        "L. T. Coutrim",
-        "L. Bufaiçal"
-      ],
-      "revista": "Brazilian Journal of Physics",
-      "issue": "6",
-      "volume": "50",
-      "paginas": "711-715",
-      "ano": "2020",
-      "doi": "10.1007/s13538-020-00790-7"
-    }
-  ],
-  "0009-0008-9189-8034": [
-    {
-      "titulo": "Berezinskii-Kosterlitz-Thouless transition in the XY model on the honeycomb lattice: a comprehensive Monte Carlo analysis",
-      "autores": [
-        "Felipe E F de Andrade",
-        "L N Jorge",
-        "Claudio J DaSilva"
-      ],
-      "revista": "Physica Scripta",
-      "issue": "6",
-      "volume": "100",
-      "paginas": "065953",
-      "ano": "2025",
-      "doi": "10.1088/1402-4896/add62a"
+      "doi": "10.1103/ylpl-96p1"
     }
   ]
 }
