@@ -1591,5 +1591,22 @@
       "ano": "2022",
       "doi": ""
     }
+  ],
+  "0009-0008-5735-5917": [
+    {
+      "titulo": "Work distribution of quantum fields in static curved spacetimes",
+      "autores": [
+        "Rafael L. S. Costa",
+        "Marcos L. W. Basso",
+        "Jonas Maziero",
+        "Lucas C. Céleri"
+      ],
+      "revista": "Physical Review D",
+      "issue": "2",
+      "volume": "113",
+      "paginas": "",
+      "ano": "2026",
+      "doi": "10.1103/d26w-cj7z"
+    }
   ]
 }
