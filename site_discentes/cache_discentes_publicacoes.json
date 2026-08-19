@@ -1625,5 +1625,28 @@
       "ano": "2026",
       "doi": "10.1021/acsomega.6c05167"
     }
+  ],
+  "0009-0002-7374-6551": [
+    {
+      "titulo": "Structural, electronic, and magnetic properties of the hexagonal double perovskite Ba2FeIrO6: A combined computational and experimental investigation",
+      "autores": [
+        "P. Cândido",
+        "L. Bufaiçal",
+        "L. Ghivelder",
+        "Mariana Lumi Ichihara Sado",
+        "Alysson M.A. Silva",
+        "H. Fabrelli",
+        "E.M. Bittar",
+        "J.F. Carvalho",
+        "R.C. Santana",
+        "Renato B. Pontes"
+      ],
+      "revista": "Journal of Alloys and Compounds",
+      "issue": "",
+      "volume": "1080",
+      "paginas": "190275",
+      "ano": "2026",
+      "doi": "10.1016/j.jallcom.2026.190275"
+    }
   ]
 }
